@@ -807,7 +807,7 @@ def render_html(lang_code, data):
 </body>
 </html>"""
     
-    out_dir = "/home/robi/Projects/tayronaguide" if data["dir"] == "" else f"/home/robi/Projects/tayronaguide/{data['dir']}"
+    out_dir = "/home/robi/Projects/tayronaguide.com" if data["dir"] == "" else f"/home/robi/Projects/tayronaguide.com/{data['dir']}"
     os.makedirs(out_dir, exist_ok=True)
     file_path = os.path.join(out_dir, "index.html")
     with open(file_path, "w", encoding="utf-8") as f:
