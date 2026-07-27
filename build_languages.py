@@ -312,8 +312,8 @@ def render_html(lang_code, data):
     # Always use root-relative paths for assets
     css_path = "/style.css"
     js_path = "/app.js"
-    hero_img = "/images/tayrona_hero.jpg"
-    trek_img = "/images/tayrona_guide_trek.jpg"
+    hero_img = "/public/images/tayrona_hero.jpg"
+    trek_img = "/public/images/tayrona_guide_trek.jpg"
     
     lang_links = ""
     for code, info in languages.items():
