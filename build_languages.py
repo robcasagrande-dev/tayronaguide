@@ -29,7 +29,7 @@ languages = {
             "trust2_title": "Queue Fast-Track",
             "trust2_sub": "Guides handle morning tickets",
             "trust3_title": "Official Lodging Partner",
-            "trust3_sub": "Kasankala & Kali Hotels"
+            "trust3_sub": "Villa María Tayrona & Kali Hotels"
         },
         "truth": {
             "tag": "⚠️ Essential Entry Knowledge",
@@ -60,6 +60,14 @@ languages = {
             "item2": "✅ When you arrive, your entrance is seamless—you walk right past the main line.",
             "item3": "✅ Learn indigenous Tayrona history, spot wildlife, and navigate trails safely.",
             "btn": "🥾 Reserve a Guided Tour & Skip Queue &rarr;"
+        },
+        "tours": {
+            "pkg2_desc": "Includes 1 night stay near park gate at Villa María Tayrona / Casa Isabella, morning queue fast-track, guided trek to Arrecifes & Cabo San Juan, gourmet dining at Kasankala Restaurant, and Girona Travels private transport."
+        },
+        "stays": {
+            "villa_title": "🌿 Villa María Tayrona & Kasankala Restaurant",
+            "villa_desc": "Villa María Tayrona is a luxury jungle eco-lodge located right near the El Zaino entrance, featuring eco-luxury rooms, pool, and gourmet dining at Kasankala Restaurant.",
+            "villa_btn": "View Rooms at ParqueTayrona.org &rarr;"
         }
     },
     "es": {
@@ -90,7 +98,7 @@ languages = {
             "trust2_title": "Entrada Preferencial",
             "trust2_sub": "Tu guía gestiona tus tickets",
             "trust3_title": "Aliado Oficial de Hospedaje",
-            "trust3_sub": "Kasankala y Kali Hotels"
+            "trust3_sub": "Villa María Tayrona y Kali Hotels"
         },
         "truth": {
             "tag": "⚠️ Información Esencial de Ingreso",
@@ -121,6 +129,14 @@ languages = {
             "item2": "✅ Al llegar, tu ingreso es fluido: pasas directo sin hacer fila.",
             "item3": "✅ Aprende historia indígena Tayrona, avista fauna silvestre y camina seguro.",
             "btn": "🥾 Reservar Tour Guiado y Saltarse la Fila &rarr;"
+        },
+        "tours": {
+            "pkg2_desc": "Incluye 1 noche de hospedaje cerca del parque en Villa María Tayrona / Casa Isabella, entrada preferencial sin fila, trek guiado a Arrecifes y Cabo San Juan, cena gourmet en Restaurante Kasankala y transporte privado Girona Travels."
+        },
+        "stays": {
+            "villa_title": "🌿 Villa María Tayrona y Restaurante Kasankala",
+            "villa_desc": "Villa María Tayrona es un eco-lodge de lujo en la selva ubicado cerca de la entrada El Zaino, con habitaciones ecológicas de lujo, piscina y gastronomía gourmet en el Restaurante Kasankala.",
+            "villa_btn": "Ver Habitaciones en ParqueTayrona.org &rarr;"
         }
     },
     "it": {
@@ -151,7 +167,7 @@ languages = {
             "trust2_title": "Accesso Fast-Track",
             "trust2_sub": "La guida acquista i biglietti all'alba",
             "trust3_title": "Partner Ufficiale Alloggi",
-            "trust3_sub": "Kasankala & Kali Hotels"
+            "trust3_sub": "Villa María Tayrona & Kali Hotels"
         },
         "truth": {
             "tag": "⚠️ Informazioni Essenziali d'Ingresso",
@@ -182,6 +198,14 @@ languages = {
             "item2": "✅ Al tuo arrivo l'ingresso è immediato: passi direttamente senza fare coda.",
             "item3": "✅ Scopri la storia indigena Tayrona, avvista la fauna selvatica ed esplora in sicurezza.",
             "btn": "🥾 Prenota Tour Guidato e Salta la Coda &rarr;"
+        },
+        "tours": {
+            "pkg2_desc": "Include 1 notte vicina al parco presso Villa María Tayrona / Casa Isabella, accesso fast-track all'ingresso, trekking guidato ad Arrecifes e Cabo San Juan, cena al Ristorante Kasankala e trasporto privato Girona Travels."
+        },
+        "stays": {
+            "villa_title": "🌿 Villa María Tayrona & Ristorante Kasankala",
+            "villa_desc": "Villa María Tayrona è un eco-lodge di lusso nella giungla situato vicino all'ingresso El Zaino, con camere di lusso ecologiche, piscina e cucina gourmet al Ristorante Kasankala.",
+            "villa_btn": "Vedi Camere su ParqueTayrona.org &rarr;"
         }
     },
     "fr": {
@@ -212,7 +236,7 @@ languages = {
             "trust2_title": "Accès Fast-Track",
             "trust2_sub": "Votre guide gère vos billets à l'aube",
             "trust3_title": "Partenaire Officiel d'Hébergement",
-            "trust3_sub": "Kasankala & Kali Hotels"
+            "trust3_sub": "Villa María Tayrona & Kali Hotels"
         },
         "truth": {
             "tag": "⚠️ Informations Essentielles d'Entrée",
@@ -243,6 +267,14 @@ languages = {
             "item2": "✅ À votre arrivée, l'accès est immédiat : vous entrez directement.",
             "item3": "✅ Découvrez l'histoire indigène Tayrona, observez la faune et randonnez en sécurité.",
             "btn": "🥾 Réserver une Visite Guidée & Éviter la File &rarr;"
+        },
+        "tours": {
+            "pkg2_desc": "Comprend 1 nuit près du parc à Villa María Tayrona / Casa Isabella, accès fast-track au guichet, randonnée guidée à Arrecifes & Cabo San Juan, dîner gourmand au Restaurant Kasankala et transport privé Girona Travels."
+        },
+        "stays": {
+            "villa_title": "🌿 Villa María Tayrona & Restaurant Kasankala",
+            "villa_desc": "Villa María Tayrona est un éco-lodge de luxe dans la jungle situé près de l'entrée El Zaino, comprenant des chambres éco-luxe, une piscine et une cuisine gourmande au Restaurant Kasankala.",
+            "villa_btn": "Voir les Chambres sur ParqueTayrona.org &rarr;"
         }
     },
     "de": {
@@ -273,7 +305,7 @@ languages = {
             "trust2_title": "Schnellzugang",
             "trust2_sub": "Guide kauft Tickets am frühen Morgen",
             "trust3_title": "Offizieller Unterkunftspartner",
-            "trust3_sub": "Kasankala & Kali Hotels"
+            "trust3_sub": "Villa María Tayrona & Kali Hotels"
         },
         "truth": {
             "tag": "⚠️ Wichtiges Wissen für den Einlass",
@@ -304,12 +336,19 @@ languages = {
             "item2": "✅ Bei Ihrer Ankunft gehen Sie ohne Wartezeit direkt durch den Eingang.",
             "item3": "✅ Erfahren Sie mehr über die indigene Geschichte der Tayrona und wandern Sie sicher.",
             "btn": "🥾 Geführte Tour Buchen & Schlange Umgehen &rarr;"
+        },
+        "tours": {
+            "pkg2_desc": "Inklusive 1 Übernachtung nahe dem Park in Villa María Tayrona / Casa Isabella, Schnellzugang am Eingang, geführter Wanderung nach Arrecifes & Cabo San Juan, Gourmet-Abendessen im Restaurant Kasankala und Girona Travels Privat-Transport."
+        },
+        "stays": {
+            "villa_title": "🌿 Villa María Tayrona & Restaurant Kasankala",
+            "villa_desc": "Villa María Tayrona ist eine Luxus-Öko-Lodge im Dschungel nahe dem Eingang El Zaino mit Öko-Luxuszimmern, Pool und Gourmet-Gastronomie im Restaurant Kasankala.",
+            "villa_btn": "Zimmer auf ParqueTayrona.org Ansehen &rarr;"
         }
     }
 }
 
 def render_html(lang_code, data):
-    # Always use root-relative paths for assets
     css_path = "/style.css"
     js_path = "/app.js"
     hero_img = "/public/images/tayrona_hero.jpg"
@@ -336,7 +375,7 @@ def render_html(lang_code, data):
   <meta property="og:url" content="https://tayronaguide.com/{data['dir']}">
   <meta property="og:title" content="{data['title']}">
   <meta property="og:description" content="{data['description']}">
-  <meta property="og:image" content="https://tayronaguide.com/images/tayrona_hero.jpg">
+  <meta property="og:image" content="https://tayronaguide.com/public/images/tayrona_hero.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -557,11 +596,11 @@ def render_html(lang_code, data):
         <div class="tour-card featured-card">
           <div class="tour-badge badge-accent">Best Value</div>
           <h3 class="tour-title">2-Day Tayrona Eco-Lodge & Trail Package</h3>
-          <p class="tour-desc">Includes 1 night stay near park gate at Kasankala / Casa Isabella, morning queue fast-track, guided trek to Arrecifes & Cabo San Juan, and Girona Travels private transport.</p>
+          <p class="tour-desc">{data['tours']['pkg2_desc']}</p>
           <div class="tour-highlights">
             <span>🌙 2 Days / 1 Night</span>
             <span>🏨 Lodging Included</span>
-            <span>🚌 Private Transport</span>
+            <span>🍽️ Kasankala Dining</span>
           </div>
           <div class="tour-footer">
             <a href="https://parquetayrona.org" target="_blank" class="btn btn-accent btn-block">Book Stay & Tour Package &rarr;</a>
@@ -642,9 +681,9 @@ def render_html(lang_code, data):
       <div class="lodging-grid">
         <div class="lodging-card">
           <div class="lodging-content">
-            <h3>🌿 Kasankala Luxury Eco-Lodge</h3>
-            <p>Immersed in lush nature right near the El Zaino entrance. Features eco-luxury rooms, pool, and direct Girona Travels tour departure point.</p>
-            <a href="https://parquetayrona.org" target="_blank" class="btn btn-outline btn-sm">View Rooms at ParqueTayrona.org &rarr;</a>
+            <h3>{data['stays']['villa_title']}</h3>
+            <p>{data['stays']['villa_desc']}</p>
+            <a href="https://parquetayrona.org" target="_blank" class="btn btn-outline btn-sm">{data['stays']['villa_btn']}</a>
           </div>
         </div>
 
@@ -754,7 +793,7 @@ def render_html(lang_code, data):
         <ul>
           <li><a href="https://gironatravels.com" target="_blank">Girona Travels (Official Operator)</a></li>
           <li><a href="https://parquetayrona.org" target="_blank">ParqueTayrona.org (Booking Hub)</a></li>
-          <li><a href="https://kasankala.com" target="_blank">Kasankala Eco-Lodge</a></li>
+          <li><a href="https://kasankala.com" target="_blank">Kasankala Restaurant</a></li>
           <li><a href="https://kalihotels.com" target="_blank">Kali Hotels Collection</a></li>
         </ul>
       </div>
