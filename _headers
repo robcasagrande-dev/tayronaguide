@@ -1,0 +1,9 @@
+/images/*
+  Content-Type: image/jpeg
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+/public/images/*
+  Content-Type: image/jpeg
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *

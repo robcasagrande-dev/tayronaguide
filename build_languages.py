@@ -3,7 +3,7 @@ import os
 languages = {
     "en": {
         "dir": "",
-        "img_prefix": "",
+        "img_prefix": "/",
         "lang_name": "English",
         "flag": "🇬🇧",
         "title": "Tayrona National Park Guide 2026 | Official Ticket Info & Guided Tours",
@@ -64,7 +64,7 @@ languages = {
     },
     "es": {
         "dir": "es",
-        "img_prefix": "../",
+        "img_prefix": "/",
         "lang_name": "Español",
         "flag": "🇪🇸",
         "title": "Guía Parque Nacional Tayrona 2026 | Entradas y Tours Guiados",
@@ -125,7 +125,7 @@ languages = {
     },
     "it": {
         "dir": "it",
-        "img_prefix": "../",
+        "img_prefix": "/",
         "lang_name": "Italiano",
         "flag": "🇮🇹",
         "title": "Guida Parco Nazionale Tayrona 2026 | Biglietti e Tour Guidati",
@@ -186,7 +186,7 @@ languages = {
     },
     "fr": {
         "dir": "fr",
-        "img_prefix": "../",
+        "img_prefix": "/",
         "lang_name": "Français",
         "flag": "🇫🇷",
         "title": "Guide Parc National Tayrona 2026 | Infos Billets & Visites Guidées",
@@ -247,7 +247,7 @@ languages = {
     },
     "de": {
         "dir": "de",
-        "img_prefix": "../",
+        "img_prefix": "/",
         "lang_name": "Deutsch",
         "flag": "🇩🇪",
         "title": "Tayrona Nationalpark Reiseführer 2026 | Ticket-Info & Geführte Touren",
@@ -309,7 +309,11 @@ languages = {
 }
 
 def render_html(lang_code, data):
-    p = data["img_prefix"]
+    # Always use root-relative paths for assets
+    css_path = "/style.css"
+    js_path = "/app.js"
+    hero_img = "/images/tayrona_hero.jpg"
+    trek_img = "/images/tayrona_guide_trek.jpg"
     
     lang_links = ""
     for code, info in languages.items():
@@ -340,7 +344,7 @@ def render_html(lang_code, data):
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="{p}style.css">
+  <link rel="stylesheet" href="{css_path}">
 </head>
 <body>
 
@@ -352,7 +356,7 @@ def render_html(lang_code, data):
   <!-- Header / Navigation -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="{p}index.html" class="brand-logo">
+      <a href="/" class="brand-logo">
         <span class="logo-icon">🌿</span>
         <span class="logo-text">Tayrona<strong>Guide</strong></span>
       </a>
@@ -387,7 +391,7 @@ def render_html(lang_code, data):
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <div class="hero-bg" style="background-image: url('{p}images/tayrona_hero.jpg');"></div>
+    <div class="hero-bg" style="background-image: url('{hero_img}');"></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="hero-badge">
@@ -490,7 +494,7 @@ def render_html(lang_code, data):
     <div class="container">
       <div class="feature-grid">
         <div class="feature-media">
-          <img src="{p}images/tayrona_guide_trek.jpg" alt="Certified local guide in Tayrona National Park" class="feature-img">
+          <img src="{trek_img}" alt="Certified local guide leading hiking group in Tayrona National Park" class="feature-img">
           <div class="floating-badge">
             <span class="badge-icon">⚡</span>
             <div>
@@ -730,7 +734,7 @@ def render_html(lang_code, data):
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
-        <a href="{p}index.html" class="brand-logo">
+        <a href="/" class="brand-logo">
           <span class="logo-icon">🌿</span>
           <span class="logo-text">Tayrona<strong>Guide</strong></span>
         </a>
@@ -760,7 +764,7 @@ def render_html(lang_code, data):
     </div>
   </footer>
 
-  <script src="{p}app.js"></script>
+  <script src="{js_path}"></script>
 </body>
 </html>"""
     
