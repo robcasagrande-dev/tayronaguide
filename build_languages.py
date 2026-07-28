@@ -1264,3 +1264,22 @@ def render_html(lang_code, data):
 for lang_code, data in languages.items():
     render_html(lang_code, data)
 
+import shutil
+
+def sync_to_dirs():
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    for target in ["public", "dist"]:
+        target_dir = os.path.join(base_dir, target)
+        os.makedirs(target_dir, exist_ok=True)
+        for f in ["index.html", "app.js", "style.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
+            src = os.path.join(base_dir, f)
+            if os.path.exists(src):
+                shutil.copy2(src, os.path.join(target_dir, f))
+        for lang in ["es", "it", "fr", "de"]:
+            lang_src = os.path.join(base_dir, lang)
+            lang_dest = os.path.join(target_dir, lang)
+            if os.path.exists(lang_src):
+                shutil.copytree(lang_src, lang_dest, dirs_exist_ok=True)
+
+sync_to_dirs()
+print("Synced build output across root, public/, and dist/ directories for Cloudflare Pages.")
