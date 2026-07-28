@@ -8,28 +8,47 @@ languages = {
         "flag": "🇬🇧",
         "title": "Tayrona National Park Guide 2026 | Official Ticket Info & Guided Tours",
         "description": "Official 2026 Tayrona National Park Travel Guide. Learn how entry passes work, avoid online ticket scams, skip the 2-hour gate queue with certified local guides, and book stays near park entrances.",
-        "announcement": "⚠️ <strong>TICKET ALERT:</strong> Park entry passes CANNOT be reserved online in advance. <a href=\"#ticket-truth\">Read how to skip the 2-hour entrance line &rarr;</a>",
+        "announcement": "✨ <strong>0% HOTEL VAT CAMPAIGN:</strong> Colombians & Foreigners pay 0% IVA on hotel stays! <a href=\"#wizard\">Build your elastic trip &rarr;</a>",
         "nav": {
-            "truth": "Ticket Truth & Info",
-            "skip": "⚡ Skip the Queue",
+            "truth": "Ticket Truth",
+            "no_vat": "0% VAT Campaign",
+            "packages": "Packages",
+            "wizard": "⚡ Trip Architect",
+            "skip": "Skip Queue",
             "tours": "Guided Tours",
-            "trails": "Trails & Beaches",
-            "stays": "Lodging & Stays",
+            "trails": "Trails",
+            "stays": "Lodging",
             "faq": "FAQ",
             "btn": "Book Stay & Tours &rarr;"
         },
         "hero": {
-            "badge": "Verified 2026 Park Travel Guide",
-            "title": "Experience <span>Tayrona National Park</span> Without the Stress",
-            "subtitle": "Everything you need to know about park entry fees, avoiding ticket scams, navigating jungle trails, and skipping the 2-hour entrance line with a certified local guide.",
-            "btn1": "⚡ How to Skip the Entrance Line",
-            "btn2": "🏨 Reserve Lodging & Tours at ParqueTayrona.org",
-            "trust1_title": "100% Scam-Free Info",
-            "trust1_sub": "Verified park entry rules",
-            "trust2_title": "Queue Fast-Track",
-            "trust2_sub": "Guides handle morning tickets",
-            "trust3_title": "Official Lodging Partner",
-            "trust3_sub": "Villa María Tayrona & Kali Hotels"
+            "badge": "Verified 2026 Park Travel Guide & Hospitality Hub",
+            "title": "Experience <span>Santa Marta & Tayrona</span> Without the Stress",
+            "subtitle": "Discover curated packages combining Kali Hotel Santa Marta, Villa Matrix Tayrona, Girona Travel transfers, and an exclusive elastic trip builder with 0% hotel VAT for EVERYONE.",
+            "btn1": "⚡ Build Your Trip (0% VAT)",
+            "btn2": "🏨 View Bundled Packages",
+            "trust1_title": "0% VAT Guarantee",
+            "trust1_sub": "No IVA for Colombians & Foreigners",
+            "trust2_title": "Girona Travel Fast-Track",
+            "trust2_sub": "Queue skip at park gate",
+            "trust3_title": "Kali Hotel + Villa Matrix",
+            "trust3_sub": "City & Jungle Luxury Duo"
+        },
+        "no_vat": {
+            "tag": "✨ 2026 Hospitality Equity Campaign",
+            "title": "Colombians Should Not Pay VAT at Hotels <span>As Foreigners Do</span>",
+            "subtitle": "In Colombia, international tourists are exempt from 19% hotel VAT (IVA). We believe Colombian travelers deserve the exact same tax-free experience! At Kali Hotel Santa Marta & Villa Matrix Tayrona, we offer a 0% VAT rate for ALL guests.",
+            "card1_title": "🇨🇴 Colombian Nationals",
+            "card1_desc": "Save 19% IVA automatically! We absorb hotel tax so domestic travelers enjoy the exact same 0% VAT pricing as foreign visitors.",
+            "card2_title": "🌎 International Travelers",
+            "card2_desc": "100% Tax-Exempt & Transparent pricing. No surprise fees, no hidden taxes, and clear upfront rate guarantees at check-in.",
+            "card3_title": "🏨 Kali Hotel & Villa Matrix",
+            "card3_desc": "Valid across all stay combinations: Kali Hotel in Santa Marta Historic Center and Villa Matrix Tayrona Nature Sanctuary."
+        },
+        "packages": {
+            "tag": "📦 Curated All-Inclusive Combos",
+            "title": "Santa Marta, Tayrona & Girona Travel Packages",
+            "subtitle": "Turnkey travel packages combining Kali Hotel (City), Villa Matrix (Tayrona Nature), Girona Travel Transfers & Fast-Track Guided Tours."
         },
         "truth": {
             "tag": "⚠️ Essential Entry Knowledge",
@@ -77,28 +96,47 @@ languages = {
         "flag": "🇪🇸",
         "title": "Guía Parque Nacional Tayrona 2026 | Entradas y Tours Guiados",
         "description": "Guía oficial 2026 del Parque Nacional Tayrona. Aprende cómo funcionan las entradas, evita estafas en línea y sáltate la fila de 2 horas con guías locales certificados.",
-        "announcement": "⚠️ <strong>ALERTA DE ENTRADAS:</strong> Las entradas al parque NO se pueden reservar en línea. <a href=\"#ticket-truth\">Lee cómo saltarte la fila de 2 horas &rarr;</a>",
+        "announcement": "✨ <strong>CAMPAÑA SIN IVA:</strong> ¡Colombianos y extranjeros pagan 0% IVA en hospedaje! <a href=\"#wizard\">Diseña tu viaje elástico &rarr;</a>",
         "nav": {
-            "truth": "Verdad sobre Entradas",
-            "skip": "⚡ Saltarse la Fila",
+            "truth": "Verdad Entradas",
+            "no_vat": "Campaña Sin IVA",
+            "packages": "Paquetes",
+            "wizard": "⚡ Diseñador de Viaje",
+            "skip": "Saltarse Fila",
             "tours": "Tours Guiados",
-            "trails": "Senderos y Playas",
+            "trails": "Senderos",
             "stays": "Alojamientos",
-            "faq": "Preguntas Frecuentes",
+            "faq": "FAQ",
             "btn": "Reservar Hospedaje y Tours &rarr;"
         },
         "hero": {
-            "badge": "Guía de Viaje Verificada 2026",
-            "title": "Disfruta el <span>Parque Nacional Tayrona</span> Sin Estrés",
-            "subtitle": "Todo lo que necesitas saber sobre las tarifas de entrada, evitar estafas en línea, recorrer senderos y saltarte la fila de 2 horas con un guía local certificado.",
-            "btn1": "⚡ Cómo Saltarte la Fila de Entrada",
-            "btn2": "🏨 Reservar Hospedaje y Tours en ParqueTayrona.org",
-            "trust1_title": "Información 100% Verificada",
-            "trust1_sub": "Sin estafas en entradas",
-            "trust2_title": "Entrada Preferencial",
-            "trust2_sub": "Tu guía gestiona tus tickets",
-            "trust3_title": "Aliado Oficial de Hospedaje",
-            "trust3_sub": "Villa María Tayrona y Kali Hotels"
+            "badge": "Guía de Viaje Verificada 2026 y Centro Turístico",
+            "title": "Disfruta <span>Santa Marta y Tayrona</span> Sin Estrés",
+            "subtitle": "Descubre paquetes exclusivos combinando Kali Hotel Santa Marta, Villa Matrix Tayrona, transportes Girona Travel y un diseñador elástico con tarifa SIN IVA para TODOS.",
+            "btn1": "⚡ Diseña tu Viaje (0% IVA)",
+            "btn2": "🏨 Ver Paquetes Combinados",
+            "trust1_title": "Garantía Sin IVA",
+            "trust1_sub": "0% IVA para colombianos y extranjeros",
+            "trust2_title": "Girona Travel Fast-Track",
+            "trust2_sub": "Ingreso preferencial en taquilla",
+            "trust3_title": "Kali Hotel + Villa Matrix",
+            "trust3_sub": "Dúo Ciudad y Selva de Lujo"
+        },
+        "no_vat": {
+            "tag": "✨ Campaña de Equidad Hotelera 2026",
+            "title": "Los Colombianos No Deberían Pagar IVA <span>Como los Extranjeros</span>",
+            "subtitle": "En Colombia, los turistas internacionales están exentos del 19% de IVA hotelero. ¡Creemos que los viajeros colombianos merecen el mismo beneficio! En Kali Hotel Santa Marta y Villa Matrix Tayrona ofrecemos tarifa 0% IVA para TODOS.",
+            "card1_title": "🇨🇴 Nacionales Colombianos",
+            "card1_desc": "¡Ahorra el 19% de IVA automáticamente! Absorbemos el impuesto hotelero para que disfrutes la misma tarifa exenta que los extranjeros.",
+            "card2_title": "🌎 Turistas Internacionales",
+            "card2_desc": "Tarifa 100% exenta de impuestos según la normativa oficial de turismo en Colombia. Transparencia total sin sorpresas al momento del check-in.",
+            "card3_title": "🏨 Kali Hotel y Villa Matrix",
+            "card3_desc": "Válido en todas las combinaciones: Kali Hotel en el Centro Histórico de Santa Marta y Villa Matrix en el Parque Tayrona."
+        },
+        "packages": {
+            "tag": "📦 Combos Todo Incluido",
+            "title": "Paquetes Santa Marta, Tayrona y Girona Travel",
+            "subtitle": "Paquetes turísticos completos que combinan Kali Hotel (Ciudad), Villa Matrix (Selva Tayrona), transportes Girona Travel y tours guiados preferenciales."
         },
         "truth": {
             "tag": "⚠️ Información Esencial de Ingreso",
@@ -146,28 +184,47 @@ languages = {
         "flag": "🇮🇹",
         "title": "Guida Parco Nazionale Tayrona 2026 | Biglietti e Tour Guidati",
         "description": "Guida ufficiale 2026 del Parco Nazionale Tayrona. Scopri come funzionano i biglietti d'ingresso, evita le truffe online e salta la coda di 2 ore con guide locali certificate.",
-        "announcement": "⚠️ <strong>ALLERTA BIGLIETTI:</strong> I biglietti NON possono essere prenotati online. <a href=\"#ticket-truth\">Scopri come saltare la coda di 2 ore &rarr;</a>",
+        "announcement": "✨ <strong>CAMPAGNA NO IVA HOTEL:</strong> Colombiani e stranieri pagano 0% IVA! <a href=\"#wizard\">Crea il tuo viaggio elastico &rarr;</a>",
         "nav": {
-            "truth": "Verità sui Biglietti",
-            "skip": "⚡ Saltare la Coda",
+            "truth": "Verità Biglietti",
+            "no_vat": "Campagna No IVA",
+            "packages": "Pacchetti",
+            "wizard": "⚡ Configura Viaggio",
+            "skip": "Salta Coda",
             "tours": "Tour Guidati",
-            "trails": "Sentieri e Spiagge",
+            "trails": "Sentieri",
             "stays": "Alloggi",
             "faq": "FAQ",
             "btn": "Prenota Soggiorno e Tour &rarr;"
         },
         "hero": {
             "badge": "Guida di Viaggio Verificata 2026",
-            "title": "Vivi il <span>Parco Nazionale Tayrona</span> Senza Stress",
-            "subtitle": "Tutto ciò che devi sapere sulle tariffe d'ingresso, come evitare le truffe online e saltare la coda di 2 ore con una guida locale certificata.",
-            "btn1": "⚡ Come Saltare la Coda all'Ingresso",
-            "btn2": "🏨 Prenota Alloggio e Tour su ParqueTayrona.org",
-            "trust1_title": "Info 100% Senza Truffe",
-            "trust1_sub": "Regole ufficiali modificate",
-            "trust2_title": "Accesso Fast-Track",
-            "trust2_sub": "La guida acquista i biglietti all'alba",
-            "trust3_title": "Partner Ufficiale Alloggi",
-            "trust3_sub": "Villa María Tayrona & Kali Hotels"
+            "title": "Vivi <span>Santa Marta & Tayrona</span> Senza Stress",
+            "subtitle": "Scopri i pacchetti che combinano Kali Hotel Santa Marta, Villa Matrix Tayrona, trasferimenti Girona Travel e un wizard elastico con prezzo SENZA IVA per TUTTI.",
+            "btn1": "⚡ Configura il Tuo Viaggio (0% IVA)",
+            "btn2": "🏨 Vedi i Pacchetti",
+            "trust1_title": "Garanzia 0% IVA",
+            "trust1_sub": "No IVA per colombiani e stranieri",
+            "trust2_title": "Girona Travel Fast-Track",
+            "trust2_sub": "Salta la coda all'ingresso",
+            "trust3_title": "Kali Hotel + Villa Matrix",
+            "trust3_sub": "Città e Natura di Lusso"
+        },
+        "no_vat": {
+            "tag": "✨ Campagna Equità Alberghiera 2026",
+            "title": "I Colombiani Non Dovrebbero Pagare l'IVA <span>Come gli Stranieri</span>",
+            "subtitle": "In Colombia, i turisti internazionali sono esenti dall'IVA del 19% sugli hotel. Riteniamo che anche i viaggiatori colombiani debbano godere dello stesso beneficio! Presso Kali Hotel Santa Marta e Villa Matrix Tayrona offriamo la tariffa 0% IVA per TUTTI.",
+            "card1_title": "🇨🇴 Cittadini Colombiani",
+            "card1_desc": "Risparmia l'IVA del 19% automaticamente! Assorbiamo la tassa alberghiera così paghi la stessa tariffa esente degli stranieri.",
+            "card2_title": "🌎 Turisti Internazionali",
+            "card2_desc": "Tariffa esente da imposte secondo le norme ufficiali colombiane. Trasparenza totale senza sorprese al check-in.",
+            "card3_title": "🏨 Kali Hotel & Villa Matrix",
+            "card3_desc": "Valido per tutte le combinazioni: Kali Hotel nel centro storico di Santa Marta e Villa Matrix nella riserva di Tayrona."
+        },
+        "packages": {
+            "tag": "📦 Pacchetti Tutto Incluso",
+            "title": "Pacchetti Santa Marta, Tayrona e Girona Travel",
+            "subtitle": "Pacchetti completi che combinano Kali Hotel (Città), Villa Matrix (Natura Tayrona), trasferimenti Girona Travel e tour guidati salta-coda."
         },
         "truth": {
             "tag": "⚠️ Informazioni Essenziali d'Ingresso",
@@ -178,33 +235,33 @@ languages = {
             "warn_body": "Per disposizione di <em>Parques Nacionales Naturales de Colombia</em>, i biglietti ufficiali si <strong>pagano esclusivamente di persona alle biglietterie del parco</strong> (El Zaino o Palangana) in contanti o carta all'arrivo.",
             "sol_title": "⚡ Come Evitare l'Acquisto di Persona e Saltare la Coda:",
             "sol_desc": "<strong>Prenotando un tour guidato con Girona Travels eviti tutto questo stress!</strong> La tua guida locale arriva alla biglietteria di mattina presto, gestisce la fila e acquista i biglietti e l'assicurazione per te. Al tuo arrivo entri direttamente al parco senza fare la fila.",
-            "sol_btn": "Prenota il Tuo Tour Guidato &rarr;",
+            "sol_btn": "Prenota Tour Guidato &rarr;",
             "box1_title": "🎫 Tariffe d'Ingresso (Tariffe 2026)",
-            "box1_item1": "<strong>Turisti Stranieri:</strong> ~90.000 COP ($22 USD)",
-            "box1_item2": "<strong>Cittadini Colombiani:</strong> ~35.000 COP ($9 USD)",
-            "box1_item3": "<strong>Assicurazione Medica Giornaliera:</strong> ~6.000 COP/giorno ($1.50 USD)",
-            "box2_title": "📄 Documenti Obbligatori all'Ingresso",
-            "box2_item1": "<strong>Passaporto Fisico Originale</strong> o Carta d'Identità",
+            "box1_item1": "<strong>Turisti Stranieri:</strong> ~90,000 COP ($22 USD)",
+            "box1_item2": "<strong>Cittadini / Residenti Colombiani:</strong> ~35,000 COP ($9 USD)",
+            "box1_item3": "<strong>Assicurazione Medica Giornaliera Obbligatoria:</strong> ~6,000 COP/giorno ($1.50 USD)",
+            "box2_title": "📄 Requisiti Obbligatori per la Biglietteria",
+            "box2_item1": "<strong>Passaporto Fisico Originale</strong> o Carta d'Identità Colombiana",
             "box2_item2": "Contanti (COP) o carta di credito per biglietti e assicurazione",
             "box2_item3": "Vietata la plastica monouso (Politica Ecologica)"
         },
         "skip": {
-            "tag": "🚀 La Soluzione Esclusiva",
+            "tag": "🚀 La Soluzione Strategica",
             "title": "Come Saltare la Coda di 2 Ore all'Ingresso",
-            "desc": "La coda all'ingresso di El Zaino sotto il sole del mattino può richiedere da <strong>1 a oltre 2 ore</strong> mentre centinaia di viaggiatori attendono di pagare e registrare i documenti.",
-            "box_title": "🔑 Il Vantaggio dei Tour Guidati Girona Travels:",
-            "box_desc": "Anche se non puoi acquistare i biglietti online da solo, <strong>prenotando un tour guidato con Girona Travels</strong> la tua guida arriva presto alla biglietteria e fa la fila per te.",
-            "item1": "✅ La tua guida Girona Travels fa la fila mattutina per te.",
-            "item2": "✅ Al tuo arrivo l'ingresso è immediato: passi direttamente senza fare coda.",
-            "item3": "✅ Scopri la storia indigena Tayrona, avvista la fauna selvatica ed esplora in sicurezza.",
+            "desc": "La coda all'ingresso di El Zaino sotto il calore del mattino può richiedere da <strong>1 a 2+ ore</strong> per pagare i biglietti e verificare i documenti.",
+            "box_title": "🔑 Il Vantaggio del Tour Guidato Girona Travels:",
+            "box_desc": "Anche se non puoi acquistare i biglietti online da solo, <strong>prenotando un tour guidato con Girona Travels</strong> la tua guida arriva presto e gestisce la fila per te.",
+            "item1": "✅ La guida Girona Travels fa la fila all'alba al posto tuo.",
+            "item2": "✅ All'arrivo entri senza fare alcuna coda.",
+            "item3": "✅ Scopri la storia indigena Tayrona, avvista la fauna e cammina in sicurezza.",
             "btn": "🥾 Prenota Tour Guidato e Salta la Coda &rarr;"
         },
         "tours": {
-            "pkg2_desc": "Include 1 notte vicina al parco presso Villa María Tayrona / Casa Isabella, accesso fast-track all'ingresso, trekking guidato ad Arrecifes e Cabo San Juan, cena al Ristorante Kasankala e trasporto privato Girona Travels."
+            "pkg2_desc": "Include 1 notte vicino al parco a Villa María Tayrona / Casa Isabella, ingresso fast-track, trek guidato ad Arrecifes e Cabo San Juan, cena gourmet al Ristorante Kasankala e trasporto privato Girona Travels."
         },
         "stays": {
-            "villa_title": "🌿 Villa María Tayrona & Ristorante Kasankala",
-            "villa_desc": "Villa María Tayrona è un eco-lodge di lusso nella giungla situato vicino all'ingresso El Zaino, con camere di lusso ecologiche, piscina e cucina gourmet al Ristorante Kasankala.",
+            "villa_title": "🌿 Villa María Tayrona e Ristorante Kasankala",
+            "villa_desc": "Villa María Tayrona è un eco-lodge di lusso situato vicino all'ingresso El Zaino, con camere ecologiche di lusso, piscina e ristorazione gourmet presso il Ristorante Kasankala.",
             "villa_btn": "Vedi Camere su ParqueTayrona.org &rarr;"
         }
     },
@@ -213,67 +270,86 @@ languages = {
         "img_prefix": "/",
         "lang_name": "Français",
         "flag": "🇫🇷",
-        "title": "Guide Parc National Tayrona 2026 | Infos Billets & Visites Guidées",
-        "description": "Guide de voyage officiel 2026 du parc national Tayrona. Découvrez le fonctionnement des billets, évitez les arnaques en ligne et évitez la file d'attente de 2 heures grâce à des guides locaux certifiés.",
-        "announcement": "⚠️ <strong>ALERTE BILLETS :</strong> Les billets NE PEUVENT PAS être réservés en ligne. <a href=\"#ticket-truth\">Découvrez comment éviter 2h de queue &rarr;</a>",
+        "title": "Guide Parc National Tayrona 2026 | Billets et Visites Guidées",
+        "description": "Guide officiel 2026 du Parc National Tayrona. Découvrez le fonctionnement des billets, évitez les arnaques et évitez la file de 2 heures avec des guides locaux certifiés.",
+        "announcement": "✨ <strong>CAMPAGNE HÔTEL SANS TVA:</strong> Colombiens et étrangers ne paient pas de TVA! <a href=\"#wizard\">Concevez votre voyage &rarr;</a>",
         "nav": {
-            "truth": "Vérité sur les Billets",
-            "skip": "⚡ Éviter la File",
+            "truth": "Vérité Billets",
+            "no_vat": "Campagne Sans TVA",
+            "packages": "Forfaits",
+            "wizard": "⚡ Planificateur",
+            "skip": "Éviter la File",
             "tours": "Visites Guidées",
-            "trails": "Sentiers & Plages",
+            "trails": "Sentiers",
             "stays": "Hébergements",
             "faq": "FAQ",
-            "btn": "Réserver Séjour & Tours &rarr;"
+            "btn": "Réserver Séjour et Tours &rarr;"
         },
         "hero": {
-            "badge": "Guide de Voyage Vérifié 2026",
-            "title": "Découvrez le <span>Parc National Tayrona</span> Sans Stress",
-            "subtitle": "Tout ce que vous devez savoir sur les tarifs d'entrée, éviter les arnaques en ligne et sauter la file d'attente de 2 heures avec un guide local certifié.",
-            "btn1": "⚡ Comment Éviter la File d'Attente",
-            "btn2": "🏨 Réserver Hébergements & Tours sur ParqueTayrona.org",
-            "trust1_title": "Infos 100% Sans Arnaque",
-            "trust1_sub": "Règles d'entrée vérifiées",
-            "trust2_title": "Accès Fast-Track",
-            "trust2_sub": "Votre guide gère vos billets à l'aube",
-            "trust3_title": "Partenaire Officiel d'Hébergement",
-            "trust3_sub": "Villa María Tayrona & Kali Hotels"
+            "badge": "Guide Touristique Vérifié 2026",
+            "title": "Découvrez <span>Santa Marta & Tayrona</span> Sans Stress",
+            "subtitle": "Combinez Kali Hotel Santa Marta, Villa Matrix Tayrona, les transports Girona Travel et un planificateur élastique avec 0% de TVA pour TOUS.",
+            "btn1": "⚡ Créez votre Voyage (0% TVA)",
+            "btn2": "🏨 Voir les Forfaits",
+            "trust1_title": "Garantie 0% TVA",
+            "trust1_sub": "Pas de TVA pour Colombiens et étrangers",
+            "trust2_title": "Girona Travel Fast-Track",
+            "trust2_sub": "Entrée prioritaire au parc",
+            "trust3_title": "Kali Hotel + Villa Matrix",
+            "trust3_sub": "Luxe Ville et Jungle"
+        },
+        "no_vat": {
+            "tag": "✨ Campagne Équité Hôtelière 2026",
+            "title": "Les Colombiens Ne Devraient Pas Payer la TVA <span>Comme les Étrangers</span>",
+            "subtitle": "En Colombie, les touristes internationaux sont exonérés de 19% de TVA sur les hôtels. Nous pensons que les voyageurs colombiens méritent le même privilège! À Kali Hotel Santa Marta et Villa Matrix Tayrona, nous offrons un tarif 0% TVA pour TOUS.",
+            "card1_title": "🇨🇴 Citoyens Colombiens",
+            "card1_desc": "Économisez 19% de TVA automatiquement! Nous prenons en charge la taxe pour vous offrir le même tarif exonéré que les visiteurs étrangers.",
+            "card2_title": "🌎 Touristes Internationaux",
+            "card2_desc": "Tarif 100% exonéré selon les règles du tourisme colombien. Transparence totale sans frais cachés au check-in.",
+            "card3_title": "🏨 Kali Hotel & Villa Matrix",
+            "card3_desc": "Valable pour toutes les combinaisons: Kali Hotel dans le centre historique de Santa Marta et Villa Matrix au Parc Tayrona."
+        },
+        "packages": {
+            "tag": "📦 Offres Combinées",
+            "title": "Forfaits Santa Marta, Tayrona et Girona Travel",
+            "subtitle": "Des séjours clés en main combinant Kali Hotel (Ville), Villa Matrix (Jungle Tayrona), transports Girona Travel et visites guidées prioritaires."
         },
         "truth": {
             "tag": "⚠️ Informations Essentielles d'Entrée",
             "title": "La Vérité sur l'Achat des Billets pour Tayrona",
-            "lead": "Ne tombez pas dans les arnaques sur Internet. Comprenez le fonctionnement officiel.",
-            "warn_title": "Avertissement : Les Billets Officiels NE PEUVENT PAS Être Réservés en Ligne à l'Avance",
-            "warn_desc": "NE FAITES PAS confiance aux sites tiers affirmant vendre des billets officiels en ligne.",
-            "warn_body": "Selon la réglementation des <em>Parques Nacionales Naturales de Colombia</em>, les billets officiels sont <strong>payés exclusivement en personne aux guichets du parc</strong> (El Zaino ou Palangana) en espèces ou carte à votre arrivée.",
-            "sol_title": "⚡ Comment Éviter l'Achat en Personne & Sauter la File :",
-            "sol_desc": "<strong>En réservant une visite guidée avec Girona Travels, vous évitez toutes ces démarches !</strong> Votre guide local certifié arrive très tôt le matin au guichet, gère la file d'attente et achète vos billets et assurance obligatoire pour vous. À votre arrivée, vous entrez directement dans le parc sans faire la queue.",
-            "sol_btn": "Réserver Votre Visite Guidée &rarr;",
+            "lead": "Ne tombez pas dans les arnaques en ligne. Comprenez le fonctionnement des billets officiels.",
+            "warn_title": "Attention: Les Billets Officiels Ne Peuvent Pas Être Réservés en Ligne",
+            "warn_desc": "Ne faites pas confiance aux sites tiers affirmant vendre des billets officiels sur Internet.",
+            "warn_body": "Selon la réglementation des <em>Parques Nacionales Naturales de Colombia</em>, les billets s'achètent <strong>strictement en personne aux guichets du parc</strong> (El Zaino ou Palangana) en espèces ou carte à votre arrivée.",
+            "sol_title": "⚡ Comment Éviter l'Achat en Personne et Passer la File:",
+            "sol_desc": "<strong>En réservant une visite guidée avec Girona Travels, vous évitez tout ce stress!</strong> Votre guide arrive tôt le matin au guichet, achète vos billets et votre assurance. À votre arrivée, vous entrez directement sans faire la queue.",
+            "sol_btn": "Réserver une Visite Guidée &rarr;",
             "box1_title": "🎫 Tarifs d'Entrée (Tarifs 2026)",
-            "box1_item1": "<strong>Touristes Étrangers :</strong> ~90 000 COP ($22 USD)",
-            "box1_item2": "<strong>Citoyens Colombiens :</strong> ~35 000 COP ($9 USD)",
-            "box1_item3": "<strong>Assurance Médicale Obligatoire :</strong> ~6 000 COP/jour ($1.50 USD)",
-            "box2_title": "📄 Documents Obligatoires au Guichet",
-            "box2_item1": "<strong>Passeport Physique Original</strong> ou Carte d'Identité",
-            "box2_item2": "Espèces (COP) ou carte bancaire pour l'entrée et l'assurance",
+            "box1_item1": "<strong>Touristes Étrangers:</strong> ~90 000 COP ($22 USD)",
+            "box1_item2": "<strong>Citoyens / Résidents Colombiens:</strong> ~35 000 COP ($9 USD)",
+            "box1_item3": "<strong>Assurance Médicale Obligatoire:</strong> ~6 000 COP/jour ($1.50 USD)",
+            "box2_title": "📄 Requis Obligatoires pour le Guichet",
+            "box2_item1": "<strong>Passeport Physique Original</strong> ou Carte d'Identité Colombienne",
+            "box2_item2": "Espèces (COP) ou carte pour l'entrée et l'assurance",
             "box2_item3": "Plastiques à usage unique interdits (Politique Écologique)"
         },
         "skip": {
-            "tag": "🚀 La Solution Privilégiée",
-            "title": "Comment Éviter la File d'Attente de 2 Heures",
-            "desc": "La file d'attente à l'entrée d'El Zaino sous la chaleur du matin peut facilement durer <strong>1 à 2 heures et plus</strong> pendant que des centaines de visiteurs attendent.",
-            "box_title": "🔑 L'Avantage de la Visite Guidée Girona Travels :",
-            "box_desc": "Même si vous ne pouvez pas acheter vos billets en ligne vous-même, <strong>en réservant une visite guidée avec Girona Travels</strong>, votre guide arrive tôt le matin et s'occupe de la file d'attente pour vous.",
-            "item1": "✅ Votre guide Girona Travels fait la queue matinale pour vous.",
-            "item2": "✅ À votre arrivée, l'accès est immédiat : vous entrez directement.",
-            "item3": "✅ Découvrez l'histoire indigène Tayrona, observez la faune et randonnez en sécurité.",
-            "btn": "🥾 Réserver une Visite Guidée & Éviter la File &rarr;"
+            "tag": "🚀 La Solution Stratégique",
+            "title": "Comment Éviter la File de 2 Heures à l'Entrée",
+            "desc": "La file à l'entrée d'El Zaino sous la chaleur matinale peut durer de <strong>1 à 2+ heures</strong>.",
+            "box_title": "🔑 L'Avantage de la Visite Guidée Girona Travels:",
+            "box_desc": "Même s'il est impossible d'acheter les billets en ligne vous-même, <strong>en réservant avec Girona Travels</strong>, votre guide fait la queue très tôt pour vous.",
+            "item1": "✅ Votre guide Girona Travels fait la queue à l'aube pour vous.",
+            "item2": "✅ À votre arrivée, vous entrez sans attendre.",
+            "item3": "✅ Découvrez l'histoire indigène Tayrona et observez la faune en sécurité.",
+            "btn": "🥾 Réserver une Visite et Éviter la File &rarr;"
         },
         "tours": {
-            "pkg2_desc": "Comprend 1 nuit près du parc à Villa María Tayrona / Casa Isabella, accès fast-track au guichet, randonnée guidée à Arrecifes & Cabo San Juan, dîner gourmand au Restaurant Kasankala et transport privé Girona Travels."
+            "pkg2_desc": "Inclut 1 nuit près du parc à Villa María Tayrona / Casa Isabella, entrée prioritaire sans file, randonnée guidée à Arrecifes & Cabo San Juan, dîner gastronomique au Restaurant Kasankala et transport privé Girona Travels."
         },
         "stays": {
-            "villa_title": "🌿 Villa María Tayrona & Restaurant Kasankala",
-            "villa_desc": "Villa María Tayrona est un éco-lodge de luxe dans la jungle situé près de l'entrée El Zaino, comprenant des chambres éco-luxe, une piscine et une cuisine gourmande au Restaurant Kasankala.",
+            "villa_title": "🌿 Villa María Tayrona et Restaurant Kasankala",
+            "villa_desc": "Villa María Tayrona est un éco-lodge de luxe dans la jungle près de l'entrée El Zaino, proposant des chambres écologiques de luxe, une piscine et une cuisine gastronomique au Restaurant Kasankala.",
             "villa_btn": "Voir les Chambres sur ParqueTayrona.org &rarr;"
         }
     },
@@ -282,83 +358,102 @@ languages = {
         "img_prefix": "/",
         "lang_name": "Deutsch",
         "flag": "🇩🇪",
-        "title": "Tayrona Nationalpark Reiseführer 2026 | Ticket-Info & Geführte Touren",
-        "description": "Offizieller Reiseführer 2026 für den Tayrona-Nationalpark. Erfahren Sie, wie Eintrittskarten funktionieren, vermeiden Sie Online-Abzocke und umgehen Sie die 2-Stunden-Warteschlange mit zertifizierten lokalen Guides.",
-        "announcement": "⚠️ <strong>TICKET-HINWEIS:</strong> Eintrittskarten können NICHT online gebucht werden. <a href=\"#ticket-truth\">So umgehen Sie die 2-Stunden-Warteschlange &rarr;</a>",
+        "title": "Tayrona Nationalpark Reiseführer 2026 | Tickets & Geführte Touren",
+        "description": "Offizieller Reiseführer 2026 für den Tayrona-Nationalpark. Erfahren Sie, wie Eintrittskarten funktionieren, vermeiden Sie Online-Betrug und überspringen Sie die 2-Stunden-Schlange mit zertifizierten lokalen Guides.",
+        "announcement": "✨ <strong>0% MWST. HOTEL-AKTION:</strong> Kolumbianer & Ausländer zahlen 0% MwSt.! <a href=\"#wizard\">Reise konfigurieren &rarr;</a>",
         "nav": {
-            "truth": "Wahrheit über Tickets",
-            "skip": "⚡ Warteschlange Umgehen",
+            "truth": "Ticket Wahrheiten",
+            "no_vat": "0% MwSt. Aktion",
+            "packages": "Pakete",
+            "wizard": "⚡ Reise-Planer",
+            "skip": "Schlange Meiden",
             "tours": "Geführte Touren",
-            "trails": "Wanderwege & Strände",
+            "trails": "Wanderwege",
             "stays": "Unterkünfte",
             "faq": "FAQ",
             "btn": "Unterkunft & Touren Buchen &rarr;"
         },
         "hero": {
-            "badge": "Geprüfter Reiseführer 2026",
-            "title": "Erleben Sie den <span>Tayrona Nationalpark</span> Ohne Stress",
-            "subtitle": "Alles, was Sie über Eintrittspreise, Online-Abzocke, Dschungelpfade und das Umgehen der 2-Stunden-Warteschlange mit einem zertifizierten lokalen Guide wissen müssen.",
-            "btn1": "⚡ So Umgehen Sie die Warteschlange",
-            "btn2": "🏨 Unterkunft & Touren auf ParqueTayrona.org Buchen",
-            "trust1_title": "100% Geprüfte Info",
-            "trust1_sub": "Keine Ticket-Fallen",
-            "trust2_title": "Schnellzugang",
-            "trust2_sub": "Guide kauft Tickets am frühen Morgen",
-            "trust3_title": "Offizieller Unterkunftspartner",
-            "trust3_sub": "Villa María Tayrona & Kali Hotels"
+            "badge": "Verifizierter Reiseführer 2026",
+            "title": "Erleben Sie <span>Santa Marta & Tayrona</span> Ohne Stress",
+            "subtitle": "Kombinieren Sie Kali Hotel Santa Marta, Villa Matrix Tayrona, Girona Travel Transfers und einen elastischen Reiseplaner mit 0% MwSt. für ALLE.",
+            "btn1": "⚡ Reise Planen (0% MwSt.)",
+            "btn2": "🏨 Kombi-Pakete Ansehen",
+            "trust1_title": "0% MwSt. Garantie",
+            "trust1_sub": "Keine MwSt. für Kolumbianer & Ausländer",
+            "trust2_title": "Girona Travel Fast-Track",
+            "trust2_sub": "Einlass ohne Wartezeit",
+            "trust3_title": "Kali Hotel + Villa Matrix",
+            "trust3_sub": "Stadt & Dschungel Luxus"
+        },
+        "no_vat": {
+            "tag": "✨ Hotel-Gerechtigkeits-Kampagne 2026",
+            "title": "Kolumbianer Sollten Keine MwSt. Zahlen <span>Wie Ausländische Touristen</span>",
+            "subtitle": "In Kolumbien sind ausländische Touristen von 19% Hotel-MwSt. befreit. Wir glauben, kolumbianische Reisende verdienen das gleiche Recht! Im Kali Hotel Santa Marta & Villa Matrix Tayrona bieten wir 0% MwSt. für ALLE Gäste.",
+            "card1_title": "🇨🇴 Kolumbianische Staatsbürger",
+            "card1_desc": "Sparen Sie automatisch 19% MwSt.! Wir übernehmen die Steuer, sodass Sie den gleichen steuerfreien Preis wie internationale Gäste zahlen.",
+            "card2_title": "🌎 Internationale Touristen",
+            "card2_desc": "100% steuerfrei nach offiziellen kolumbianischen Tourismusregeln. Vollständige Transparenz ohne versteckte Gebühren beim Check-in.",
+            "card3_title": "🏨 Kali Hotel & Villa Matrix",
+            "card3_desc": "Gültig für alle Kombinationen: Kali Hotel im historischen Zentrum von Santa Marta & Villa Matrix im Tayrona-Park."
+        },
+        "packages": {
+            "tag": "📦 All-Inclusive Pakete",
+            "title": "Santa Marta, Tayrona & Girona Travel Pakete",
+            "subtitle": "Komplettpakete kombiniert aus Kali Hotel (Stadt), Villa Matrix (Tayrona Natur), Girona Travel Transfers und geführten Touren."
         },
         "truth": {
-            "tag": "⚠️ Wichtiges Wissen für den Einlass",
+            "tag": "⚠️ Wichtiges Wissen zum Einlass",
             "title": "Die Wahrheit über den Kauf von Tayrona-Tickets",
-            "lead": "Fallen Sie nicht auf Online-Fallen herein. Verstehen Sie, wie die offiziellen Tickets funktionieren.",
-            "warn_title": "Warnung: Offizielle Park-Tickets können NICHT im Voraus online gebucht werden",
-            "warn_desc": "Vertrauen Sie KEINEN Drittanbieter-Websites, die behaupten, offizielle Eintrittskarten im Internet zu verkaufen.",
-            "warn_body": "Gemäß den Bestimmungen von <em>Parques Nacionales Naturales de Colombia</em> werden offizielle Eintrittskarten <strong>ausschließlich persönlich an den Parktoren</strong> (El Zaino oder Palangana) bar oder per Kreditkarte bezahlt.",
-            "sol_title": "⚡ So vermeiden Sie den Ticketkauf vor Ort & umgehen die Schlange:",
-            "sol_desc": "<strong>Wenn Sie eine geführte Tour mit Girona Travels buchen, ersparen Sie sich diesen Aufwand komplett!</strong> Ihr zertifizierter lokaler Guide kommt früh am Morgen zum Ticket-Schalter, kauft Ihre Eintrittskarten und die obligatorische Versicherung für Sie. Bei Ihrer Ankunft gelangen Sie ohne Wartezeit direkt in den Park.",
+            "lead": "Fallen Sie nicht auf Online-Betrug herein. Verstehen Sie, wie die offiziellen Tickets funktionieren.",
+            "warn_title": "Warnung: Offizielle Park-Tickets Können Nicht Im Voraus Online Reserviert Werden",
+            "warn_desc": "Vertrauen Sie KANEN Drittanbieter-Websites, die behaupten, offizielle Tickets im Internet zu verkaufen.",
+            "warn_body": "Gemäß den Bestimmungen von <em>Parques Nacionales Naturales de Colombia</em> werden offizielle Eintrittskarten <strong>ausschließlich persönlich an den Parktoren</strong> (El Zaino oder Palangana) in bar oder mit Karte vor Ort bezahlt.",
+            "sol_title": "⚡ Wie Sie den Vor-Ort-Kauf Vermeiden & Die Schlange Überspringen:",
+            "sol_desc": "<strong>Wenn Sie eine geführte Tour mit Girona Travels buchen, vermeiden Sie diesen Stress!</strong> Ihr zertifizierter Guide kommt frühmorgens am Schalter an, kauft Ihre Tickets und Ihre Versicherung. Bei Ihrer Ankunft gehen Sie direkt ohne Wartezeit hinein.",
             "sol_btn": "Geführte Tour Buchen &rarr;",
-            "box1_title": "🎫 Eintrittspreise (Tarife 2026)",
+            "box1_title": "🎫 Eintrittspreise (Preise 2026)",
             "box1_item1": "<strong>Ausländische Touristen:</strong> ~90.000 COP ($22 USD)",
             "box1_item2": "<strong>Kolumbianische Staatsbürger:</strong> ~35.000 COP ($9 USD)",
-            "box1_item3": "<strong>Obligatorische Tagesversicherung:</strong> ~6.000 COP/Tag ($1.50 USD)",
+            "box1_item3": "<strong>Obligatorische Tages-Krankenversicherung:</strong> ~6.000 COP/Tag ($1.50 USD)",
             "box2_title": "📄 Erforderliche Dokumente am Eingang",
-            "box2_item1": "<strong>Originaler Reisepass</strong> oder Personalausweis",
+            "box2_item1": "<strong>Originaler Physischer Reisepass</strong> oder kolumbianische Cédula",
             "box2_item2": "Bargeld (COP) oder Kreditkarte für Eintritt & Versicherung",
             "box2_item3": "Einwegplastik streng verboten (Öko-Richtlinie)"
         },
         "skip": {
             "tag": "🚀 Die Insider-Lösung",
-            "title": "Wie Sie die 2-Stunden-Warteschlange Umgehen",
-            "desc": "Die Warteschlange am Eingang El Zaino in der Morgenhitze kann leicht <strong>1 bis über 2 Stunden</strong> dauern, während hunderte Besucher warten.",
-            "box_title": "🔑 Der Vorteil Geführter Touren mit Girona Travels:",
-            "box_desc": "Obwohl Sie Tickets nicht selbst online kaufen können, <strong>übernimmt Ihr Guide bei einer Buchung mit Girona Travels</strong> den Ticketkauf am frühen Morgen für Sie.",
-            "item1": "✅ Ihr Girona Travels Guide steht morgens früh in der Warteschlange für Sie.",
-            "item2": "✅ Bei Ihrer Ankunft gehen Sie ohne Wartezeit direkt durch den Eingang.",
-            "item3": "✅ Erfahren Sie mehr über die indigene Geschichte der Tayrona und wandern Sie sicher.",
-            "btn": "🥾 Geführte Tour Buchen & Schlange Umgehen &rarr;"
+            "title": "So Überspringen Sie Die 2-Stunden-Schlange",
+            "desc": "Die Schlange am Eingang El Zaino in der Morgenhitze kann leicht <strong>1 bis 2+ Stunden</strong> dauern.",
+            "box_title": "🔑 Der Vorteil Mit Girona Travels Guides:",
+            "box_desc": "Obwohl Sie selbst keine Tickets online kaufen können, <strong>übernimmt Ihr Guide bei einer Buchung über Girona Travels</strong> den Ticketkauf frühmorgens für Sie.",
+            "item1": "✅ Ihr Girona Travels Guide wartet morgens in der Schlange für Sie.",
+            "item2": "✅ Bei Ihrer Ankunft gehen Sie ohne Wartezeit direkt hinein.",
+            "item3": "✅ Erfahren Sie mehr über die Geschichte der Tayrona und wandern Sie sicher.",
+            "btn": "🥾 Geführte Tour Buchen & Schlange Meiden &rarr;"
         },
         "tours": {
-            "pkg2_desc": "Inklusive 1 Übernachtung nahe dem Park in Villa María Tayrona / Casa Isabella, Schnellzugang am Eingang, geführter Wanderung nach Arrecifes & Cabo San Juan, Gourmet-Abendessen im Restaurant Kasankala und Girona Travels Privat-Transport."
+            "pkg2_desc": "Inklusive 1 Übernachtung nahe am Park in Villa María Tayrona / Casa Isabella, Fast-Track-Einlass, geführter Wanderung nach Arrecifes & Cabo San Juan, Gourmet-Abendessen im Kasankala Restaurant und Girona Travels Transfer."
         },
         "stays": {
-            "villa_title": "🌿 Villa María Tayrona & Restaurant Kasankala",
-            "villa_desc": "Villa María Tayrona ist eine Luxus-Öko-Lodge im Dschungel nahe dem Eingang El Zaino mit Öko-Luxuszimmern, Pool und Gourmet-Gastronomie im Restaurant Kasankala.",
+            "villa_title": "🌿 Villa María Tayrona & Kasankala Restaurant",
+            "villa_desc": "Villa María Tayrona ist eine Luxus-Dschungel-Ökolodge nahe dem Eingang El Zaino mit Öko-Luxuszimmern, Pool und Gourmet-Gastronomie im Kasankala Restaurant.",
             "villa_btn": "Zimmer auf ParqueTayrona.org Ansehen &rarr;"
         }
     }
 }
 
 def render_html(lang_code, data):
-    css_path = "/style.css"
     js_path = "/app.js"
+    css_path = "/style.css"
     hero_img = "/public/images/tayrona_hero.jpg"
-    trek_img = "/public/images/tayrona_guide_trek.jpg"
-    
+    trek_img = "/public/images/tayrona_trek.jpg"
+
     lang_links = ""
-    for code, info in languages.items():
-        active = "class=\"active-lang\"" if code == lang_code else ""
-        target_path = "/" if code == "en" else f"/{code}/"
-        lang_links += f"<li><a href=\"{target_path}\" {active}>{info['flag']} {info['lang_name']} ({code.upper()})</a></li>\n"
+    for code, ldata in languages.items():
+        active_cls = ' class="active-lang"' if code == lang_code else ""
+        href = "/" if ldata["dir"] == "" else f"/{ldata['dir']}/"
+        lang_links += f'<li><a href="{href}"{active_cls}>{ldata["flag"]} {ldata["lang_name"]} ({code.upper()})</a></li>\n'
 
     html = f"""<!DOCTYPE html>
 <html lang="{lang_code}">
@@ -367,12 +462,12 @@ def render_html(lang_code, data):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{data['title']}</title>
   <meta name="description" content="{data['description']}">
-  <meta name="keywords" content="Tayrona National Park, Tayrona guide, Tayrona tickets, Tayrona entrance fee, Parque Tayrona, Cabo San Juan, El Zaino entrance, Tayrona guided tours">
-  <link rel="canonical" href="https://tayronaguide.com/{data['dir']}">
+  <meta name="keywords" content="Tayrona National Park, Tayrona guide, Kali Hotel, Villa Matrix, Girona Travel, Tayrona tickets, Parque Tayrona, Cabo San Juan, Santa Marta">
+  <link rel="canonical" href="https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}">
   
-  <!-- Open Graph / Social Media -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tayronaguide.com/{data['dir']}">
+  <meta property="og:url" content="https://tayronaguide.com/">
   <meta property="og:title" content="{data['title']}">
   <meta property="og:description" content="{data['description']}">
   <meta property="og:image" content="https://tayronaguide.com/public/images/tayrona_hero.jpg">
@@ -401,10 +496,12 @@ def render_html(lang_code, data):
       </a>
 
       <nav class="nav-links" id="navLinks">
+        <a href="#no-vat" class="nav-link">{data['nav']['no_vat']}</a>
+        <a href="#packages" class="nav-link">{data['nav']['packages']}</a>
+        <a href="#wizard" class="nav-link highlight-link">{data['nav']['wizard']}</a>
         <a href="#ticket-truth" class="nav-link">{data['nav']['truth']}</a>
-        <a href="#skip-queue" class="nav-link highlight-link">{data['nav']['skip']}</a>
+        <a href="#skip-queue" class="nav-link">{data['nav']['skip']}</a>
         <a href="#guided-tours" class="nav-link">{data['nav']['tours']}</a>
-        <a href="#trails" class="nav-link">{data['nav']['trails']}</a>
         <a href="#where-to-stay" class="nav-link">{data['nav']['stays']}</a>
         <a href="#faq" class="nav-link">{data['nav']['faq']}</a>
       </nav>
@@ -440,10 +537,10 @@ def render_html(lang_code, data):
       <p class="hero-subtitle">{data['hero']['subtitle']}</p>
 
       <div class="hero-cta-group">
-        <a href="#skip-queue" class="btn btn-accent btn-lg">
+        <a href="#wizard" class="btn btn-accent btn-lg">
           {data['hero']['btn1']}
         </a>
-        <a href="https://parquetayrona.org" target="_blank" class="btn btn-outline btn-lg">
+        <a href="#packages" class="btn btn-outline btn-lg">
           {data['hero']['btn2']}
         </a>
       </div>
@@ -475,7 +572,404 @@ def render_html(lang_code, data):
     </div>
   </section>
 
-  <!-- Section 1: The Ticket Truth & Scam Warning -->
+  <!-- Section 1: No VAT Campaign Banner -->
+  <section class="vat-campaign-section" id="no-vat">
+    <div class="container">
+      <div class="vat-hero-banner">
+        <div class="vat-badge-tag">
+          <span>✨</span> {data['no_vat']['tag']}
+        </div>
+        <h2 class="vat-title">{data['no_vat']['title']}</h2>
+        <p class="vat-subtitle">{data['no_vat']['subtitle']}</p>
+      </div>
+
+      <div class="vat-grid">
+        <div class="vat-card">
+          <span class="vat-card-icon">🇨🇴</span>
+          <h3>{data['no_vat']['card1_title']}</h3>
+          <p>{data['no_vat']['card1_desc']}</p>
+          <span class="vat-highlight-pill">19% IVA Absorbed & Exempt</span>
+        </div>
+
+        <div class="vat-card">
+          <span class="vat-card-icon">🌎</span>
+          <h3>{data['no_vat']['card2_title']}</h3>
+          <p>{data['no_vat']['card2_desc']}</p>
+          <span class="vat-highlight-pill">Official 0% Tourist Rate</span>
+        </div>
+
+        <div class="vat-card">
+          <span class="vat-card-icon">🏨</span>
+          <h3>{data['no_vat']['card3_title']}</h3>
+          <p>{data['no_vat']['card3_desc']}</p>
+          <span class="vat-highlight-pill">City & Jungle Eco-Duo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Bundled Packages Showcase -->
+  <section class="packages-section" id="packages">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">{data['packages']['tag']}</span>
+        <h2 class="section-title">{data['packages']['title']}</h2>
+        <p class="section-desc">{data['packages']['subtitle']}</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Package 1 -->
+        <div class="pkg-card">
+          <div class="pkg-header">
+            <div class="pkg-duration">3 Days / 2 Nights</div>
+            <h3 class="pkg-title">Express City & Tayrona Escape</h3>
+            <div class="pkg-price-box">
+              <span class="pkg-price-val">$180 USD</span>
+              <span class="pkg-price-unit">/ person</span>
+              <span class="pkg-vat-no-tax">0% VAT</span>
+            </div>
+          </div>
+          <div class="pkg-body">
+            <ul class="pkg-features-list">
+              <li><span class="check">✓</span> 1 Night Kali Hotel Santa Marta (Historic Center)</li>
+              <li><span class="check">✓</span> 1 Night Villa Matrix Tayrona (Eco-Lodge)</li>
+              <li><span class="check">✓</span> Girona Travel Airport Pick-up & Transfers</li>
+              <li><span class="check">✓</span> Tayrona Guided Expedition + Fast-Track Queue</li>
+              <li><span class="check">✓</span> 0% VAT Guarantee for Colombians & Foreigners</li>
+            </ul>
+            <div class="pkg-footer">
+              <a href="#wizard" class="btn btn-outline btn-block">Customize in Wizard &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 2 (Featured) -->
+        <div class="pkg-card featured">
+          <div class="pkg-badge-popular">Most Popular</div>
+          <div class="pkg-header">
+            <div class="pkg-duration">4 Days / 3 Nights</div>
+            <h3 class="pkg-title">Complete Tayrona Eco & Coffee Trail</h3>
+            <div class="pkg-price-box">
+              <span class="pkg-price-val">$290 USD</span>
+              <span class="pkg-price-unit">/ person</span>
+              <span class="pkg-vat-no-tax">0% VAT</span>
+            </div>
+          </div>
+          <div class="pkg-body">
+            <ul class="pkg-features-list">
+              <li><span class="check">✓</span> 1 Night Kali Hotel Santa Marta</li>
+              <li><span class="check">✓</span> 2 Nights Villa Matrix Tayrona (Pool & Jungle)</li>
+              <li><span class="check">✓</span> Girona Travel Door-to-Door Private Transfers</li>
+              <li><span class="check">✓</span> Fast-Track Tayrona Park Expedition</li>
+              <li><span class="check">✓</span> Minca Coffee, Cocoa & Waterfall Day Tour</li>
+              <li><span class="check">✓</span> 0% VAT Rate Guarantee for All Guests</li>
+            </ul>
+            <div class="pkg-footer">
+              <a href="#wizard" class="btn btn-accent btn-block glow-btn">Customize in Wizard &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="pkg-card">
+          <div class="pkg-header">
+            <div class="pkg-duration">5 Days / 4 Nights</div>
+            <h3 class="pkg-title">Grand Caribbean Luxe & Sea Explorer</h3>
+            <div class="pkg-price-box">
+              <span class="pkg-price-val">$420 USD</span>
+              <span class="pkg-price-unit">/ person</span>
+              <span class="pkg-vat-no-tax">0% VAT</span>
+            </div>
+          </div>
+          <div class="pkg-body">
+            <ul class="pkg-features-list">
+              <li><span class="check">✓</span> 2 Nights Kali Hotel Santa Marta</li>
+              <li><span class="check">✓</span> 2 Nights Villa Matrix Tayrona Sanctuary</li>
+              <li><span class="check">✓</span> Private Girona Airport & Inter-Hotel Transfers</li>
+              <li><span class="check">✓</span> Tayrona Fast-Track Guided Hike</li>
+              <li><span class="check">✓</span> Santa Marta Bay Sunset Catamaran Cruise</li>
+              <li><span class="check">✓</span> Kasankala Gourmet Jungle Dinner</li>
+            </ul>
+            <div class="pkg-footer">
+              <a href="#wizard" class="btn btn-outline btn-block">Customize in Wizard &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Interactive Elastic Trip Builder Wizard -->
+  <section class="wizard-section" id="wizard">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">⚡ Exclusive Interactive Wizard</span>
+        <h2 class="section-title">Build Your Elastic Santa Marta & Tayrona Trip</h2>
+        <p class="section-desc">Land at 9:00 AM or 8:00 PM? Our elastic algorithm designs your personalized itinerary with 0% VAT prices!</p>
+      </div>
+
+      <div class="wizard-box" id="tripWizard">
+        <!-- Stepper Navigation -->
+        <div class="wizard-stepper">
+          <button class="wizard-step-item active" data-step="1">
+            <div class="wizard-step-circle">1</div>
+            <span class="wizard-step-label">Arrival & Rate</span>
+          </button>
+          <button class="wizard-step-item" data-step="2">
+            <div class="wizard-step-circle">2</div>
+            <span class="wizard-step-label">Stays & Tayrona</span>
+          </button>
+          <button class="wizard-step-item" data-step="3">
+            <div class="wizard-step-circle">3</div>
+            <span class="wizard-step-label">Excursions</span>
+          </button>
+          <button class="wizard-step-item" data-step="4">
+            <div class="wizard-step-circle">4</div>
+            <span class="wizard-step-label">Return Leg</span>
+          </button>
+          <button class="wizard-step-item" data-step="5">
+            <div class="wizard-step-circle">5</div>
+            <span class="wizard-step-label">Itinerary & Quote</span>
+          </button>
+        </div>
+
+        <!-- Panel 1: Traveler Type & Flight Arrival -->
+        <div class="wizard-panel active" data-panel="1">
+          <h3 class="panel-title">Step 1: Select Traveler Type & Flight Arrival Time</h3>
+          <p class="panel-subtitle">Enjoy 0% Hotel VAT whether you are Colombian or International!</p>
+
+          <h4 style="color:#fff; margin-bottom:12px;">1. Select Rate Guarantee:</h4>
+          <div class="options-grid">
+            <div class="opt-card selected" data-wiz-nat="colombian">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">🇨🇴</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">Colombian Resident / National</div>
+              <div class="opt-card-desc">Save 19% IVA! We absorb hotel VAT so you pay 0% tax just like foreign visitors.</div>
+              <span class="opt-card-tag">✨ 0% IVA Rate Guarantee</span>
+            </div>
+
+            <div class="opt-card" data-wiz-nat="foreigner">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">🌎</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">International Traveler</div>
+              <div class="opt-card-desc">100% Tax-Exempt stay under official Colombian tourism rules. Clear upfront rates.</div>
+              <span class="opt-card-tag">✨ 0% VAT Tax Exempt</span>
+            </div>
+          </div>
+
+          <h4 style="color:#fff; margin-bottom:12px;">2. When does your flight arrive at Santa Marta (SMR)?</h4>
+          <div class="options-grid">
+            <div class="opt-card selected" data-wiz-arrival="morning">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">☀️</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">Morning Arrival (Before 12:00 PM)</div>
+              <div class="opt-card-desc">Land early! Choose between direct transfer to Villa Matrix Tayrona or spending Night 1 in Santa Marta City.</div>
+              <span class="opt-card-tag">⚡ Fast-Track Connection</span>
+            </div>
+
+            <div class="opt-card" data-wiz-arrival="afternoon">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">🌙</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">Afternoon / Evening Arrival (After 12:00 PM)</div>
+              <div class="opt-card-desc">Recommended: Stay Night 1 at Kali Hotel in Santa Marta, move to Villa Matrix on Day 2 afternoon.</div>
+              <span class="opt-card-tag">🌆 Relaxed City Arrival</span>
+            </div>
+          </div>
+
+          <!-- Morning Options -->
+          <div id="wizMorningOptions">
+            <h4 style="color:#fff; margin-bottom:12px;">3. Morning Arrival Preference:</h4>
+            <div class="options-grid">
+              <div class="opt-card selected" data-wiz-morning-choice="direct_vm">
+                <div class="opt-card-title">Move Directly to Villa Matrix (Tayrona)</div>
+                <div class="opt-card-desc">Girona Travel driver picks you up at airport and takes you straight to Villa Matrix eco-lodge for afternoon pool relaxation.</div>
+              </div>
+              <div class="opt-card" data-wiz-morning-choice="stay_sm">
+                <div class="opt-card-title">Stay Night 1 at Kali Hotel (Santa Marta)</div>
+                <div class="opt-card-desc">Check into Kali Hotel in historic center, enjoy city beaches & dining, then move to Villa Matrix on Day 2.</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="wizAfternoonNotice" style="display:none;" class="opt-card selected">
+            <div class="opt-card-title">✔ Preserved Recommendation for Afternoon Arrival:</div>
+            <div class="opt-card-desc">Stay Night 1 at Kali Hotel Santa Marta. On Day 2 afternoon, private Girona Travel transfer to Villa Matrix near Tayrona Park.</div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Stays & Tayrona Park Visit -->
+        <div class="wizard-panel" data-panel="2">
+          <h3 class="panel-title">Step 2: Tayrona Park Expedition & Extra Stay Days</h3>
+          <p class="panel-subtitle">Customize when you visit Tayrona Park and add extra relaxation days!</p>
+
+          <h4 style="color:#fff; margin-bottom:12px;">When would you like to trek Tayrona National Park?</h4>
+          <div class="options-grid">
+            <div class="opt-card selected" data-wiz-tayrona-day="day2">
+              <div class="opt-card-title">Day 2: Early Morning Tayrona Expedition</div>
+              <div class="opt-card-desc">Girona Travel guide fast-tracks your entry queue early in the morning! Full day hike to Cabo San Juan.</div>
+            </div>
+            <div class="opt-card" data-wiz-tayrona-day="day3">
+              <div class="opt-card-title">Day 3: Tayrona Park Expedition</div>
+              <div class="opt-card-desc">Spend Day 2 relaxing or doing another activity first, then visit Tayrona Park on Day 3.</div>
+            </div>
+          </div>
+
+          <h4 style="color:#fff; margin-bottom:12px;">Add Extra Nights for Pure Relaxation:</h4>
+          <div class="counter-widget">
+            <div class="counter-info">
+              <h4>Extra Nights at Villa Matrix (Tayrona Nature Sanctuary)</h4>
+              <p>Eco-luxury rooms, pool, rainforest tranquility & zero VAT.</p>
+            </div>
+            <div class="counter-controls">
+              <button class="counter-btn" id="vmDaysMinus">-</button>
+              <span class="counter-val" id="vmDaysVal">0</span>
+              <button class="counter-btn" id="vmDaysPlus">+</button>
+            </div>
+          </div>
+
+          <div class="counter-widget">
+            <div class="counter-info">
+              <h4>Extra Nights at Kali Hotel (Santa Marta City)</h4>
+              <p>Boutique hotel in historic center, dining, nightlife & rooftop pool.</p>
+            </div>
+            <div class="counter-controls">
+              <button class="counter-btn" id="smDaysMinus">-</button>
+              <span class="counter-val" id="smDaysVal">0</span>
+              <button class="counter-btn" id="smDaysPlus">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Extra Excursions -->
+        <div class="wizard-panel" data-panel="3">
+          <h3 class="panel-title">Step 3: Add Girona Travel Excursions & Experiences</h3>
+          <p class="panel-subtitle">Select any extra day tours to enrich your Caribbean journey (Click to select/unselect)</p>
+
+          <div class="options-grid">
+            <div class="opt-card" data-wiz-excursion="minca">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">☕</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">Minca Coffee, Cocoa & Waterfalls</div>
+              <div class="opt-card-desc">Day tour into Sierra Nevada mountains. Organic coffee finca, chocolate workshop & Marinka waterfalls.</div>
+              <span class="opt-card-tag">+$40 USD / person</span>
+            </div>
+
+            <div class="opt-card" data-wiz-excursion="tubing">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">🛶</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">Don Diego River Tubing & Tayronaka</div>
+              <div class="opt-card-desc">Float down pristine jungle river to the ocean. Spot wildlife & explore ancient indigenous stone terraces.</div>
+              <span class="opt-card-tag">+$35 USD / person</span>
+            </div>
+
+            <div class="opt-card" data-wiz-excursion="catamaran">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">⛵</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">Santa Marta Bay Sunset Catamaran</div>
+              <div class="opt-card-desc">Sunset sail across Santa Marta bay with music, cocktails, and stunning coastline view.</div>
+              <span class="opt-card-tag">+$50 USD / person</span>
+            </div>
+
+            <div class="opt-card" data-wiz-excursion="kasankala">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">🍽️</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">Kasankala Gourmet Jungle Dinner</div>
+              <div class="opt-card-desc">Multi-course gourmet Caribbean tasting dinner in the jungle dining room at Kasankala.</div>
+              <span class="opt-card-tag">+$45 USD / person</span>
+            </div>
+
+            <div class="opt-card" data-wiz-excursion="lostcity">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">🥾</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">Lost City 4-Day Trek Extension</div>
+              <div class="opt-card-desc">Add an epic 4-day guided jungle trek into the Sierra Nevada mountains to Ciudad Perdida.</div>
+              <span class="opt-card-tag">+$320 USD / person</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4: Return Leg -->
+        <div class="wizard-panel" data-panel="4">
+          <h3 class="panel-title">Step 4: Return Leg & Airport Transport</h3>
+          <p class="panel-subtitle">Choose how you wish to conclude your stay</p>
+
+          <div class="options-grid">
+            <div class="opt-card selected" data-wiz-return="direct_airport">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">🚖</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">Direct Transfer to SMR Airport</div>
+              <div class="opt-card-desc">Private Girona Travel driver picks you up from Villa Matrix / Kali Hotel and takes you directly to airport for your flight.</div>
+            </div>
+
+            <div class="opt-card" data-wiz-return="sm_extra_night">
+              <div class="opt-card-header">
+                <span class="opt-card-icon">🌆</span>
+                <div class="opt-radio-circle"></div>
+              </div>
+              <div class="opt-card-title">Add Final Night at Kali Hotel (Santa Marta)</div>
+              <div class="opt-card-desc">Return to Santa Marta for a final evening of dining, drinks & shopping in historic center before airport transfer next day.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 5: Summary & WhatsApp Direct Booking -->
+        <div class="wizard-panel" data-panel="5">
+          <h3 class="panel-title">Your Elastic Trip Itinerary & 0% VAT Quote</h3>
+          <p class="panel-subtitle">Review your custom day-by-day itinerary and book directly with 0% VAT rate guarantee!</p>
+
+          <div class="summary-container">
+            <div class="timeline-box">
+              <h3>📅 Day-by-Day Customized Timeline</h3>
+              <div class="timeline-list" id="wizTimelineList">
+                <!-- Dynamic timeline JS -->
+              </div>
+            </div>
+
+            <div class="quote-box">
+              <div class="quote-box-header">
+                <h4>🏷️ Estimated Price & 0% VAT Quote</h4>
+              </div>
+              <div id="wizQuoteBreakdown">
+                <!-- Dynamic price breakdown JS -->
+              </div>
+
+              <a href="#" id="wizWhatsappBtn" target="_blank" class="btn-whatsapp">
+                <span>📲 Request Reservation on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nav Buttons -->
+        <div class="wizard-nav-actions">
+          <button class="btn btn-outline" id="wizPrevBtn" style="visibility:hidden;">&larr; Back</button>
+          <button class="btn btn-accent glow-btn" id="wizNextBtn">Next Step &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Ticket Truth & Scam Warning -->
   <section class="section section-dark" id="ticket-truth">
     <div class="container">
       <div class="section-header text-center">
@@ -495,13 +989,13 @@ def render_html(lang_code, data):
         <div class="warning-body">
           <p>{data['truth']['warn_body']}</p>
           
-          <!-- Highlighted Solution Banner -->
+          <!-- Guided Solution Banner -->
           <div class="guided-solution-banner">
             <div class="banner-icon">⚡</div>
             <div class="banner-text">
               <h4>{data['truth']['sol_title']}</h4>
               <p>{data['truth']['sol_desc']}</p>
-              <a href="#guided-tours" class="btn btn-accent btn-sm margin-top-sm">{data['truth']['sol_btn']}</a>
+              <a href="#wizard" class="btn btn-accent btn-sm margin-top-sm">{data['truth']['sol_btn']}</a>
             </div>
           </div>
 
@@ -528,12 +1022,12 @@ def render_html(lang_code, data):
     </div>
   </section>
 
-  <!-- Section 2: The VIP Skip-The-Queue Secret -->
+  <!-- Section 5: VIP Skip-The-Queue -->
   <section class="section section-feature" id="skip-queue">
     <div class="container">
       <div class="feature-grid">
         <div class="feature-media">
-          <img src="{trek_img}" alt="Certified local guide leading hiking group in Tayrona National Park" class="feature-img">
+          <img src="{trek_img}" alt="Certified local guide leading group in Tayrona National Park" class="feature-img">
           <div class="floating-badge">
             <span class="badge-icon">⚡</span>
             <div>
@@ -559,17 +1053,17 @@ def render_html(lang_code, data):
           </div>
 
           <div class="feature-cta">
-            <a href="https://parquetayrona.org" target="_blank" class="btn btn-accent btn-lg glow-btn">
+            <a href="#wizard" class="btn btn-accent btn-lg glow-btn">
               {data['skip']['btn']}
             </a>
-            <span class="sub-text">Direct booking available at ParqueTayrona.org & GironaTravels.com</span>
+            <span class="sub-text">Direct booking available at GironaTravels.com & ParqueTayrona.org</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Guided Tours Showcase -->
+  <!-- Section 6: Guided Tours Showcase -->
   <section class="section" id="guided-tours">
     <div class="container">
       <div class="section-header text-center">
@@ -589,7 +1083,7 @@ def render_html(lang_code, data):
             <span>⚡ Queue Fast-Track</span>
           </div>
           <div class="tour-footer">
-            <a href="https://parquetayrona.org" target="_blank" class="btn btn-primary btn-block">Reserve Tour &rarr;</a>
+            <a href="#wizard" class="btn btn-primary btn-block">Reserve Tour in Wizard &rarr;</a>
           </div>
         </div>
 
@@ -603,7 +1097,7 @@ def render_html(lang_code, data):
             <span>🍽️ Kasankala Dining</span>
           </div>
           <div class="tour-footer">
-            <a href="https://parquetayrona.org" target="_blank" class="btn btn-accent btn-block">Book Stay & Tour Package &rarr;</a>
+            <a href="#wizard" class="btn btn-accent btn-block">Book Stay & Tour Package &rarr;</a>
           </div>
         </div>
 
@@ -617,65 +1111,20 @@ def render_html(lang_code, data):
             <span>👨‍👩‍👧 Private Group</span>
           </div>
           <div class="tour-footer">
-            <a href="https://parquetayrona.org" target="_blank" class="btn btn-primary btn-block">Inquire Private Tour &rarr;</a>
+            <a href="#wizard" class="btn btn-primary btn-block">Inquire Private Tour &rarr;</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 4: Trail & Beach Guide -->
-  <section class="section section-dark" id="trails">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag">🗺️ Interactive Trail Guide</span>
-        <h2 class="section-title">Top Destinations in Tayrona National Park</h2>
-        <p class="section-lead">Plan your route from the main El Zaino entrance to iconic beaches.</p>
-      </div>
-
-      <div class="trail-grid">
-        <div class="trail-card">
-          <div class="trail-header">
-            <h3>🏝️ Cabo San Juan del Guía</h3>
-            <span class="trail-time">2.5 hr hike from entrance</span>
-          </div>
-          <p>The iconic twin-cove beach featuring the famous hammock hut on the granite hill. Safe for swimming, calm turquoise waters.</p>
-        </div>
-
-        <div class="trail-card">
-          <div class="trail-header">
-            <h3>🌊 Arrecifes Beach</h3>
-            <span class="trail-time">1.5 hr hike from entrance</span>
-          </div>
-          <p>Dramatic coastline with massive granite boulders. Strong dangerous currents—swimming is prohibited, but scenery is breathtaking.</p>
-        </div>
-
-        <div class="trail-card">
-          <div class="trail-header">
-            <h3>🌴 La Piscina</h3>
-            <span class="trail-time">2 hr hike from entrance</span>
-          </div>
-          <p>A natural reef barrier creates a tranquil, pool-like bay perfect for swimming and snorkeling with colorful tropical fish.</p>
-        </div>
-
-        <div class="trail-card">
-          <div class="trail-header">
-            <h3>🐒 Bunkuany & Tayku Sacred Trails</h3>
-            <span class="trail-time">Full day mountain trek</span>
-          </div>
-          <p>Ancient stone terraces and sacred indigenous Kogui settlements hidden in the high jungle of the Sierra Nevada.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5: Where to Stay (Lodging Showcase) -->
+  <!-- Section 7: Lodging Showcase -->
   <section class="section" id="where-to-stay">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag">🏨 Official Lodging Partner</span>
-        <h2 class="section-title">Where to Stay Near Tayrona Park Entrances</h2>
-        <p class="section-lead">Stay minutes from the park gate to enjoy early morning access and relaxing luxury.</p>
+        <h2 class="section-title">Where to Stay: Kali Hotel & Villa Matrix</h2>
+        <p class="section-lead">Enjoy city vibe at Kali Hotel Santa Marta & jungle eco-luxury at Villa Matrix Tayrona with 0% VAT.</p>
       </div>
 
       <div class="lodging-grid">
@@ -683,75 +1132,65 @@ def render_html(lang_code, data):
           <div class="lodging-content">
             <h3>{data['stays']['villa_title']}</h3>
             <p>{data['stays']['villa_desc']}</p>
-            <a href="https://parquetayrona.org" target="_blank" class="btn btn-outline btn-sm">{data['stays']['villa_btn']}</a>
+            <a href="#wizard" class="btn btn-outline btn-sm">Book in Wizard &rarr;</a>
           </div>
         </div>
 
         <div class="lodging-card">
           <div class="lodging-content">
-            <h3>🏛️ Casa Isabella & Casa Leda</h3>
-            <p>Boutique heritage lodging combining historic charm, swimming pools, and personalized tour concierge services.</p>
-            <a href="https://parquetayrona.org" target="_blank" class="btn btn-outline btn-sm">View Availability &rarr;</a>
+            <h3>🏛️ Kali Hotel Santa Marta</h3>
+            <p>Boutique hotel in the heart of Santa Marta historic center, featuring stylish rooms, rooftop pool, and fine dining.</p>
+            <a href="#wizard" class="btn btn-outline btn-sm">Book in Wizard &rarr;</a>
           </div>
         </div>
 
         <div class="lodging-card">
           <div class="lodging-content">
-            <h3>🏨 Kali Hotels Collection</h3>
-            <p>Premium hotel accommodations offering full Girona Travels transport packages, park tour booking, and gourmet dining.</p>
-            <a href="https://parquetayrona.org" target="_blank" class="btn btn-outline btn-sm">Explore Kali Hotels &rarr;</a>
+            <h3>🌴 Villa Matrix Tayrona Nature Sanctuary</h3>
+            <p>Eco-luxury sanctuary right near Tayrona entrance, featuring jungle suites, pool, river views & Kasankala dining.</p>
+            <a href="#wizard" class="btn btn-outline btn-sm">Book in Wizard &rarr;</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 6: FAQ Accordion -->
+  <!-- Section 8: FAQ Accordion -->
   <section class="section section-dark" id="faq">
     <div class="container max-w-4xl">
       <div class="section-header text-center">
         <span class="section-tag">❓ Frequently Asked Questions</span>
-        <h2 class="section-title">Tayrona Park Entry FAQ</h2>
+        <h2 class="section-title">Tayrona & Hotel FAQ</h2>
       </div>
 
       <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">
+            Why do Colombians pay 0% VAT (IVA) on hotel stays with Kali Hotels & Villa Matrix?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Under Colombian law, foreign tourists are tax-exempt from 19% VAT on lodging. As part of our 2026 Hospitality Equity Campaign, Girona Travel, Kali Hotel & Villa Matrix absorb the tax for Colombian residents so EVERY guest enjoys 0% VAT rates!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How does the Elastic Trip Architect wizard work if my flight lands after 12:00 PM?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>If your flight arrives in Santa Marta after 12:00 PM, the wizard automatically places your 1st night at Kali Hotel in Santa Marta historic center. On Day 2 afternoon, private Girona Travel transport moves you to Villa Matrix near Tayrona, allowing you to trek Tayrona Park on Day 2 afternoon or Day 3 without rushing!</p>
+          </div>
+        </div>
+
         <div class="faq-item">
           <button class="faq-question">
             Can I buy Tayrona entrance tickets online before I travel?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>No. Official entrance passes cannot be reserved online in advance by tourists. Passes must be purchased in person at the park gates (El Zaino or Palangana) using cash (COP) or credit card.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            How does booking a guided tour with Girona Travels help me skip the ticket line?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>When you book a certified guided tour with Girona Travels, your guide arrives at the ticket booth early in the morning before the park opens to purchase entry passes on your behalf. When you arrive, you walk past the main queue directly into the park!</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            Is medical insurance required to enter Tayrona National Park?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes. Daily medical insurance is mandatory for all visitors and costs approximately 6,000 COP (~$1.50 USD) per day, paid at the gate alongside entry fees.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            Are plastics allowed in Tayrona Park?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Single-use plastics (water bottles, plastic bags, plastic utensils) are strictly prohibited inside the park to protect the ecosystem. Bring a reusable water bottle.</p>
+            <p>No. Official entrance passes cannot be reserved online in advance by individual tourists. However, when you book a guided tour with Girona Travels, your guide buys your entry passes early in the morning so you skip the line.</p>
           </div>
         </div>
       </div>
@@ -761,10 +1200,10 @@ def render_html(lang_code, data):
   <!-- CTA Banner Footer -->
   <section class="cta-banner">
     <div class="container text-center">
-      <h2>Ready to Explore Tayrona National Park Stress-Free?</h2>
-      <p>Reserve your certified Girona Travels local guide, private transport, and hotel stay near the park entrance today.</p>
-      <a href="https://parquetayrona.org" target="_blank" class="btn btn-accent btn-xl glow-btn">
-        🚀 Book Tours & Stays at ParqueTayrona.org &rarr;
+      <h2>Ready for an Unforgettable Tayrona & Santa Marta Experience?</h2>
+      <p>Enjoy 0% VAT rates at Kali Hotel & Villa Matrix with Girona Travel private transport and certified guides.</p>
+      <a href="#wizard" class="btn btn-accent btn-xl glow-btn">
+        🚀 Launch Trip Architect &rarr;
       </a>
     </div>
   </section>
@@ -777,29 +1216,29 @@ def render_html(lang_code, data):
           <span class="logo-icon">🌿</span>
           <span class="logo-text">Tayrona<strong>Guide</strong></span>
         </a>
-        <p class="footer-text">The official verified travel guide for Tayrona National Park, Colombia. Managed in partnership with Girona Travels & ParqueTayrona.org.</p>
+        <p class="footer-text">The official verified travel guide for Tayrona National Park & Santa Marta. Managed in partnership with Girona Travels, Kali Hotels & Villa Matrix.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Navigation</h4>
         <ul>
+          <li><a href="#no-vat">0% VAT Campaign</a></li>
+          <li><a href="#packages">Bundled Packages</a></li>
+          <li><a href="#wizard">Elastic Trip Architect</a></li>
           <li><a href="#ticket-truth">Ticket Truth</a></li>
-          <li><a href="#skip-queue">Skip the Queue</a></li>
-          <li><a href="#guided-tours">Guided Tours</a></li>
-          <li><a href="#trails">Trail Maps</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Official Partner Sites</h4>
+        <h4>Official Partners</h4>
         <ul>
           <li><a href="https://gironatravels.com" target="_blank">Girona Travels (Official Operator)</a></li>
-          <li><a href="https://parquetayrona.org" target="_blank">ParqueTayrona.org (Booking Hub)</a></li>
-          <li><a href="https://kasankala.com" target="_blank">Kasankala Restaurant</a></li>
           <li><a href="https://kalihotels.com" target="_blank">Kali Hotels Collection</a></li>
+          <li><a href="https://parquetayrona.org" target="_blank">ParqueTayrona.org</a></li>
+          <li><a href="https://kasankala.com" target="_blank">Kasankala Restaurant</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom text-center">
-      <p>&copy; 2026 TayronaGuide.com. All rights reserved. Powered by Girona Travels & ParqueTayrona.org.</p>
+      <p>&copy; 2026 TayronaGuide.com. All rights reserved. Powered by Girona Travels & Kali Hotels.</p>
     </div>
   </footer>
 
