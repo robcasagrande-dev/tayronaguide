@@ -1253,7 +1253,8 @@ def render_html(lang_code, data):
 </body>
 </html>"""
     
-    out_dir = "/home/robi/Projects/tayronaguide.com" if data["dir"] == "" else f"/home/robi/Projects/tayronaguide.com/{data['dir']}"
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    out_dir = base_dir if data["dir"] == "" else os.path.join(base_dir, data["dir"])
     os.makedirs(out_dir, exist_ok=True)
     file_path = os.path.join(out_dir, "index.html")
     with open(file_path, "w", encoding="utf-8") as f:
@@ -1262,3 +1263,4 @@ def render_html(lang_code, data):
 
 for lang_code, data in languages.items():
     render_html(lang_code, data)
+
