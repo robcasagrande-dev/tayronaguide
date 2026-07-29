@@ -478,6 +478,7 @@ def render_html(lang_code, data):
             # legacy fallback
             badges_list = [{"label": t.get("badge"), "class": t.get("badge_class", "")}]
             
+        ribbon_html = f"""<div class=\"tour-ribbon\">{t.get("ribbon", "")}</div>""" if t.get("ribbon") else ""
         badge_html = "<div class=\"tour-img-badges\">"
         for b in badges_list:
             badge_html += f"""<span class="tour-img-badge {b.get('class', '')}">{b.get('label', '')}</span>"""
@@ -491,6 +492,7 @@ def render_html(lang_code, data):
         dynamic_tours_html += f"""
         <div class="tour-card reveal">
           <div class="tour-image-wrapper">
+            {ribbon_html}
             {badge_html}
             <img src="{t.get("image", "")}" alt="{t["nombre"][lang_key]}" />
           </div>

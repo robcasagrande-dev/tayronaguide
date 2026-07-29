@@ -2031,3 +2031,21 @@ img { max-width: 100%; height: auto; display: block; }
   .vat-grid { grid-template-columns: 1fr; }
   .packages-grid { grid-template-columns: 1fr; }
 }
+
+.tour-ribbon {
+  position: absolute;
+  top: 24px;
+  right: -32px;
+  width: 140px;
+  background: var(--c-gold);
+  color: #000;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 6px 0;
+  transform: rotate(45deg);
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}

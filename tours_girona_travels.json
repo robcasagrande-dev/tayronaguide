@@ -44,12 +44,9 @@
       {
         "label": "Best Selling",
         "class": "badge-green"
-      },
-      {
-        "label": "⚡ Skip The Line",
-        "class": "badge-gold"
       }
-    ]
+    ],
+    "ribbon": "⚡ Fast-Track"
   },
   {
     "id": "tubbing-rio-guachaca",
