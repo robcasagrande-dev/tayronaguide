@@ -1046,7 +1046,21 @@ def render_html(lang_code, data):
       </div>
     </div>
   </footer>
-  <script src="{data['img_prefix']}script.js"></script>
+  <script>
+    (function() {{
+      const els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      const obs = new IntersectionObserver((entries, obs) => {{
+        entries.forEach(e => {{
+          if (e.isIntersecting) {{
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }}
+        }});
+      }}, {{ threshold: 0.10, rootMargin: '0px 0px -40px 0px' }});
+      els.forEach(function(el) {{ obs.observe(el); }});
+    }})();
+  </script>
 </body>
 </html>
 """
