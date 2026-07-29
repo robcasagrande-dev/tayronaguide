@@ -486,7 +486,7 @@ def render_html(lang_code, data):
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{css_path}">
-  <link rel="stylesheet" href="/concierge-module.css?v=20260729_girona_tours_ui">
+  <link rel="stylesheet" href="/concierge-module.css?v=20260729_premium_ui">
 </head>
 <body>
 
@@ -577,7 +577,7 @@ def render_html(lang_code, data):
   <!-- Section 1: No VAT Campaign Banner -->
   <section class="vat-campaign-section" id="no-vat">
     <div class="container">
-      <div class="vat-hero-banner">
+      <div class="vat-hero-banner reveal">
         <div class="vat-badge-tag">
           <span>✨</span> {data['no_vat']['tag']}
         </div>
@@ -586,25 +586,25 @@ def render_html(lang_code, data):
       </div>
 
       <div class="vat-grid">
-        <div class="vat-card">
-          <span class="vat-card-icon">🇨🇴</span>
+        <div class="vat-card reveal">
+          <div class="vat-card-icon-wrap">🇨🇴</div>
           <h3>{data['no_vat']['card1_title']}</h3>
           <p>{data['no_vat']['card1_desc']}</p>
-          <span class="vat-highlight-pill">19% IVA Absorbed & Exempt</span>
+          <span class="vat-highlight-pill">19% IVA Absorbed &amp; Exempt</span>
         </div>
 
-        <div class="vat-card">
-          <span class="vat-card-icon">🌎</span>
+        <div class="vat-card reveal">
+          <div class="vat-card-icon-wrap">🌎</div>
           <h3>{data['no_vat']['card2_title']}</h3>
           <p>{data['no_vat']['card2_desc']}</p>
           <span class="vat-highlight-pill">Official 0% Tourist Rate</span>
         </div>
 
-        <div class="vat-card">
-          <span class="vat-card-icon">🏨</span>
+        <div class="vat-card reveal">
+          <div class="vat-card-icon-wrap">🏨</div>
           <h3>{data['no_vat']['card3_title']}</h3>
           <p>{data['no_vat']['card3_desc']}</p>
-          <span class="vat-highlight-pill">City & Jungle Eco-Duo</span>
+          <span class="vat-highlight-pill">City &amp; Jungle Eco-Duo</span>
         </div>
       </div>
     </div>
@@ -717,13 +717,13 @@ def render_html(lang_code, data):
       </div>
 
       <div class="tours-grid">
-        <div class="tour-card">
+        <div class="tour-card reveal">
           <div class="tour-image-wrapper">
+            <span class="tour-img-badge badge-green">Most Popular</span>
             <img src="/images/tours/cabo_san_juan_tour.jpg" alt="Cabo San Juan Day Trek" />
           </div>
           <div class="tour-card-body">
             <div>
-              <div class="tour-badge">Most Popular</div>
               <h3 class="tour-title">Cabo San Juan Day Trek + Fast-Track Entry</h3>
               <p class="tour-desc">Full-day guided hike through jungle trails to Cabo San Juan beach. Includes early ticket queue handling by Girona Travels, bilingual guide, and fruit tasting.</p>
               <div class="tour-highlights">
@@ -738,14 +738,14 @@ def render_html(lang_code, data):
           </div>
         </div>
 
-        <div class="tour-card featured-card">
+        <div class="tour-card reveal">
           <div class="tour-image-wrapper">
+            <span class="tour-img-badge badge-gold">Best Value</span>
             <img src="/images/tours/tayrona_ecolodge_tour.jpg" alt="2-Day Tayrona Eco-Lodge" />
           </div>
           <div class="tour-card-body">
             <div>
-              <div class="tour-badge badge-accent">Best Value</div>
-              <h3 class="tour-title">2-Day Tayrona Eco-Lodge & Trail Package</h3>
+              <h3 class="tour-title">2-Day Tayrona Eco-Lodge &amp; Trail Package</h3>
               <p class="tour-desc">{data['tours']['pkg2_desc']}</p>
               <div class="tour-highlights">
                 <span>🌙 2 Days / 1 Night</span>
@@ -754,19 +754,19 @@ def render_html(lang_code, data):
               </div>
             </div>
             <div class="tour-footer">
-              <a href="#concierge" class="btn btn-accent btn-block">Book Stay & Tour Package &rarr;</a>
+              <a href="#concierge" class="btn btn-accent btn-block">Book Stay &amp; Tour Package &rarr;</a>
             </div>
           </div>
         </div>
 
-        <div class="tour-card">
+        <div class="tour-card reveal">
           <div class="tour-image-wrapper">
-            <img src="/images/tours/bunkuany_ruins_tour.jpg" alt="Bunkuany Ruins & Kogui Indigenous Experience" />
+            <span class="tour-img-badge">Cultural Trek</span>
+            <img src="/images/tours/bunkuany_ruins_tour.jpg" alt="Bunkuany Ruins &amp; Kogui Indigenous Experience" />
           </div>
           <div class="tour-card-body">
             <div>
-              <div class="tour-badge">Cultural Trek</div>
-              <h3 class="tour-title">Bunkuany Ruins & Kogui Indigenous Experience</h3>
+              <h3 class="tour-title">Bunkuany Ruins &amp; Kogui Indigenous Experience</h3>
               <p class="tour-desc">Private certified Girona Travels guide exploring ancient Bunkuany stone terraces, visiting the sacred Kogui village of Tayku, and mountain rivers.</p>
               <div class="tour-highlights">
                 <span>🐒 Wildlife Focus</span>
@@ -781,8 +781,8 @@ def render_html(lang_code, data):
         </div>
       </div>
 
-      <div style="text-align:center;margin-top:40px;">
-        <a href="#concierge" class="btn btn-accent btn-lg glow-btn" style="padding:16px 36px;font-size:1.05rem;font-weight:600;border-radius:9999px;">
+      <div class="tours-cta-wrap">
+        <a href="#concierge" class="btn btn-accent btn-lg glow-btn" style="padding:16px 40px;font-size:1.05rem;font-weight:700;border-radius:9999px;">
           See All Girona Travels Tours &rarr;
         </a>
       </div>
@@ -799,32 +799,51 @@ def render_html(lang_code, data):
       </div>
 
       <div class="lodging-grid">
-        <div class="lodging-card">
-          <div class="lodging-content">
-            <h3>{data['stays']['villa_title']}</h3>
-            <p>{data['stays']['villa_desc']}</p>
-            <a href="#concierge" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
+        <div class="lodging-card reveal">
+          <div class="lodging-card-body">
+            <div class="lodging-icon-row">
+              <div class="lodging-icon-wrap">🌿</div>
+              <span class="lodging-label">Nature Eco-Lodge</span>
+            </div>
+            <div class="lodging-content">
+              <h3>Villa María Tayrona</h3>
+              <p>{data['stays']['villa_desc']}</p>
+              <a href="#concierge" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
+            </div>
           </div>
         </div>
 
-        <div class="lodging-card">
-          <div class="lodging-content">
-            <h3>🏛️ Kali Hotel Santa Marta</h3>
-            <p>Boutique hotel in the heart of Santa Marta historic center, featuring stylish rooms, rooftop pool, and fine dining.</p>
-            <a href="#concierge" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
+        <div class="lodging-card reveal">
+          <div class="lodging-card-body">
+            <div class="lodging-icon-row">
+              <div class="lodging-icon-wrap">🏛️</div>
+              <span class="lodging-label">City Boutique Hotel</span>
+            </div>
+            <div class="lodging-content">
+              <h3>Kali Hotel Santa Marta</h3>
+              <p>Boutique hotel in the heart of Santa Marta historic center, featuring stylish rooms, rooftop pool, and fine dining. 0% VAT for all guests.</p>
+              <a href="#concierge" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
+            </div>
           </div>
         </div>
 
-        <div class="lodging-card">
-          <div class="lodging-content">
-            <h3>🌴 Villa María Tayrona Nature Sanctuary</h3>
-            <p>Eco-luxury sanctuary right near Tayrona entrance, featuring jungle suites, pool, river views & Kasankala dining.</p>
-            <a href="#concierge" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
+        <div class="lodging-card reveal">
+          <div class="lodging-card-body">
+            <div class="lodging-icon-row">
+              <div class="lodging-icon-wrap">🍽️</div>
+              <span class="lodging-label">Jungle Dining</span>
+            </div>
+            <div class="lodging-content">
+              <h3>Kasankala Restaurant</h3>
+              <p>Gourmet jungle dining at Villa María Tayrona. Fresh Caribbean ingredients, al fresco ambiance overlooking the rainforest canopy.</p>
+              <a href="https://kasankala.com" target="_blank" class="btn btn-outline btn-sm">Visit Kasankala &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- Section 8: FAQ Accordion -->
   <section class="section section-dark" id="faq">
@@ -913,8 +932,25 @@ def render_html(lang_code, data):
     </div>
   </footer>
 
-  <script src="/concierge-module.js?v=20260729_girona_tours_ui"></script>
+  <script src="/concierge-module.js?v=20260729_premium_ui"></script>
   <script src="{js_path}"></script>
+
+  <!-- Scroll Reveal Observer -->
+  <script>
+    (function() {{
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var obs = new IntersectionObserver(function(entries) {{
+        entries.forEach(function(e) {{
+          if (e.isIntersecting) {{
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }}
+        }});
+      }}, {{ threshold: 0.10, rootMargin: '0px 0px -40px 0px' }});
+      els.forEach(function(el) {{ obs.observe(el); }});
+    }})();
+  </script>
 </body>
 </html>"""
     

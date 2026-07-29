@@ -6,27 +6,27 @@
 
 /* --- Design Tokens (mirrored from parent style.css) ----------------------- */
 :root {
-  --wiz-primary: #0c2b21;
-  --wiz-primary-light: #164e3d;
-  --wiz-accent: #10b981;
-  --wiz-accent-hover: #059669;
-  --wiz-gold: #f59e0b;
-  --wiz-gold-hover: #d97706;
-  --wiz-bg-dark: #071510;
-  --wiz-bg-card: rgba(15, 34, 27, 0.80);
-  --wiz-bg-card-hover: rgba(22, 78, 61, 0.70);
-  --wiz-bg-option: rgba(16, 185, 129, 0.08);
-  --wiz-bg-option-selected: rgba(16, 185, 129, 0.20);
-  --wiz-text-main: #f1f5f9;
-  --wiz-text-muted: #94a3b8;
-  --wiz-border: rgba(255, 255, 255, 0.08);
-  --wiz-border-accent: rgba(16, 185, 129, 0.5);
-  --wiz-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  --wiz-glow: 0 0 30px rgba(16, 185, 129, 0.25);
+  --wiz-primary: #030f0a;
+  --wiz-primary-light: #0a2016;
+  --wiz-accent: #00d97e;
+  --wiz-accent-hover: #00f090;
+  --wiz-gold: #f7b731;
+  --wiz-gold-hover: #e8a820;
+  --wiz-bg-dark: #030f0a;
+  --wiz-bg-card: rgba(255, 255, 255, 0.028);
+  --wiz-bg-card-hover: rgba(255, 255, 255, 0.052);
+  --wiz-bg-option: rgba(255, 255, 255, 0.022);
+  --wiz-bg-option-selected: rgba(0, 217, 126, 0.10);
+  --wiz-text-main: #edf2f0;
+  --wiz-text-muted: #6e9280;
+  --wiz-border: rgba(255, 255, 255, 0.07);
+  --wiz-border-accent: rgba(0, 217, 126, 0.35);
+  --wiz-shadow: 0 24px 70px rgba(0, 0, 0, 0.65);
+  --wiz-glow: 0 0 50px rgba(0, 217, 126, 0.12);
   --wiz-radius-sm: 10px;
   --wiz-radius-md: 16px;
   --wiz-radius-lg: 24px;
-  --wiz-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --wiz-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --font-heading: 'Inter', 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
