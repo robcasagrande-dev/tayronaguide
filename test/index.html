@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tayrona Trip Wizard Test</title>
+  <link rel="stylesheet" href="wizard-module.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    
+    /* Navigation Simulation */
+    .mock-nav {
+      background: #111;
+      padding: 1rem;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="mock-nav">TayronaGuide.com</div>
+
+  <div id="wizard-container"></div>
+
+  <script src="wizard-module.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize wizard
+      TripWizard.init('#wizard-container', { lang: 'en' });
+    });
+  </script>
+</body>
+</html>

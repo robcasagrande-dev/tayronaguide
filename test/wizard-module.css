@@ -1,0 +1,952 @@
+/* ==========================================================================
+   TAYRONA GUIDE — TRIP WIZARD MODULE (2026)
+   Standalone CSS for wizard-module. Inherits design tokens from parent site
+   but is fully self-contained for independent development/testing.
+   ========================================================================== */
+
+/* --- Design Tokens (mirrored from parent style.css) ----------------------- */
+:root {
+  --wiz-primary: #0c2b21;
+  --wiz-primary-light: #164e3d;
+  --wiz-accent: #10b981;
+  --wiz-accent-hover: #059669;
+  --wiz-gold: #f59e0b;
+  --wiz-gold-hover: #d97706;
+  --wiz-bg-dark: #071510;
+  --wiz-bg-card: rgba(15, 34, 27, 0.80);
+  --wiz-bg-card-hover: rgba(22, 78, 61, 0.70);
+  --wiz-bg-option: rgba(16, 185, 129, 0.08);
+  --wiz-bg-option-selected: rgba(16, 185, 129, 0.20);
+  --wiz-text-main: #f1f5f9;
+  --wiz-text-muted: #94a3b8;
+  --wiz-border: rgba(255, 255, 255, 0.08);
+  --wiz-border-accent: rgba(16, 185, 129, 0.5);
+  --wiz-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --wiz-glow: 0 0 30px rgba(16, 185, 129, 0.25);
+  --wiz-radius-sm: 10px;
+  --wiz-radius-md: 16px;
+  --wiz-radius-lg: 24px;
+  --wiz-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* --- Wizard Section Wrapper ---------------------------------------------- */
+.trip-wizard-section {
+  padding: 80px 0;
+  background: var(--wiz-bg-dark);
+  font-family: var(--font-body);
+  color: var(--wiz-text-main);
+}
+
+.trip-wizard-section .container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* --- Section Header ------------------------------------------------------- */
+.wizard-section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.wizard-section-tag {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--wiz-accent);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 100px;
+  padding: 6px 18px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.wizard-section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: var(--wiz-text-main);
+}
+
+.wizard-section-title span {
+  color: var(--wiz-accent);
+}
+
+.wizard-section-subtitle {
+  font-size: 1rem;
+  color: var(--wiz-text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* --- Wizard Box ----------------------------------------------------------- */
+.trip-wizard-box {
+  background: var(--wiz-bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--wiz-border);
+  border-radius: var(--wiz-radius-lg);
+  box-shadow: var(--wiz-shadow);
+  overflow: hidden;
+}
+
+/* --- Progress Bar --------------------------------------------------------- */
+.wizard-progress-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+.wizard-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--wiz-accent), var(--wiz-gold));
+  border-radius: 4px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+}
+
+/* --- Stepper -------------------------------------------------------------- */
+.wizard-stepper {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 28px 24px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.wizard-stepper::-webkit-scrollbar { display: none; }
+
+.wizard-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: default;
+  padding: 0 12px;
+  position: relative;
+  min-width: 80px;
+}
+
+.wizard-step-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: calc(50% + 16px);
+  right: calc(-50% + 16px);
+  height: 2px;
+  background: var(--wiz-border);
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+.wizard-step-item.completed:not(:last-child)::after {
+  background: var(--wiz-accent);
+}
+
+.wizard-step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--wiz-text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  position: relative;
+  z-index: 1;
+  transition: var(--wiz-transition);
+}
+
+.wizard-step-item.active .wizard-step-circle {
+  border-color: var(--wiz-accent);
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--wiz-accent);
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.4);
+}
+
+.wizard-step-item.completed .wizard-step-circle {
+  border-color: var(--wiz-accent);
+  background: var(--wiz-accent);
+  color: #fff;
+}
+
+.wizard-step-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--wiz-text-muted);
+  text-align: center;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.wizard-step-item.active .wizard-step-label {
+  color: var(--wiz-accent);
+}
+
+.wizard-step-item.completed .wizard-step-label {
+  color: var(--wiz-text-muted);
+}
+
+/* --- Panel Container ------------------------------------------------------ */
+.wizard-panels {
+  padding: 36px 36px 28px;
+}
+
+@media (max-width: 600px) {
+  .wizard-panels { padding: 24px 20px 20px; }
+}
+
+.wizard-panel {
+  display: none;
+  animation: panelFadeIn 0.4s ease forwards;
+}
+
+.wizard-panel.active {
+  display: block;
+}
+
+@keyframes panelFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.wizard-panel-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--wiz-text-main);
+}
+
+.wizard-panel-title .step-emoji {
+  margin-right: 8px;
+}
+
+.wizard-panel-subtitle {
+  font-size: 0.875rem;
+  color: var(--wiz-text-muted);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+/* --- Option Grid ---------------------------------------------------------- */
+.wizard-options-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.wizard-options-grid.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.wizard-options-grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wizard-options-grid.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 600px) {
+  .wizard-options-grid.cols-3,
+  .wizard-options-grid.cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wizard-options-grid.cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Option Card ---------------------------------------------------------- */
+.wizard-option {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--wiz-bg-option);
+  border: 2px solid var(--wiz-border);
+  border-radius: var(--wiz-radius-md);
+  padding: 16px 14px;
+  cursor: pointer;
+  transition: var(--wiz-transition);
+  text-align: left;
+  color: var(--wiz-text-main);
+  font-family: var(--font-body);
+}
+
+.wizard-option:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: var(--wiz-bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.wizard-option.selected {
+  border-color: var(--wiz-accent);
+  background: var(--wiz-bg-option-selected);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+.wizard-option.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.option-emoji {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.option-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.option-sub {
+  font-size: 0.75rem;
+  color: var(--wiz-text-muted);
+  line-height: 1.4;
+}
+
+/* --- Check Icon on selected options --------------------------------------- */
+.wizard-option.selected .option-label::after {
+  content: ' ✓';
+  color: var(--wiz-accent);
+}
+
+/* --- Info Boxes ----------------------------------------------------------- */
+.wizard-info-box {
+  background: rgba(16, 185, 129, 0.07);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: var(--wiz-radius-sm);
+  padding: 14px 16px;
+  font-size: 0.82rem;
+  color: var(--wiz-text-muted);
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+.wizard-info-box strong {
+  color: var(--wiz-accent);
+}
+
+.wizard-gold-box {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: var(--wiz-radius-sm);
+  padding: 14px 16px;
+  font-size: 0.82rem;
+  color: var(--wiz-text-muted);
+  line-height: 1.6;
+  margin-top: 14px;
+}
+
+.wizard-gold-box strong {
+  color: var(--wiz-gold);
+}
+
+/* --- Night Counter -------------------------------------------------------- */
+.wizard-night-counter {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.night-counter-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--wiz-bg-option);
+  border: 1px solid var(--wiz-border);
+  border-radius: var(--wiz-radius-md);
+  padding: 16px 18px;
+  gap: 16px;
+}
+
+.night-counter-info {
+  flex: 1;
+}
+
+.night-counter-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.night-counter-sub {
+  font-size: 0.75rem;
+  color: var(--wiz-text-muted);
+  margin-top: 3px;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counter-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--wiz-border-accent);
+  background: transparent;
+  color: var(--wiz-accent);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--wiz-transition);
+  line-height: 1;
+}
+
+.counter-btn:hover {
+  background: rgba(16, 185, 129, 0.15);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+.counter-value {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--wiz-text-main);
+  min-width: 24px;
+  text-align: center;
+}
+
+/* --- Day Builder (Panel 4) ------------------------------------------------ */
+.wizard-day-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wizard-day-card {
+  background: var(--wiz-bg-option);
+  border: 1px solid var(--wiz-border);
+  border-radius: var(--wiz-radius-md);
+  overflow: hidden;
+}
+
+.wizard-day-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--wiz-border);
+}
+
+.day-number {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--wiz-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 6px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.day-location {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--wiz-text-main);
+}
+
+.day-location span {
+  color: var(--wiz-text-muted);
+  font-weight: 400;
+  font-size: 0.78rem;
+  margin-left: 6px;
+}
+
+.day-activity-selector {
+  padding: 16px 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.day-activity-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--wiz-radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--wiz-transition);
+}
+
+.day-activity-option:hover {
+  background: rgba(16, 185, 129, 0.07);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.day-activity-option input[type="radio"],
+.day-activity-option input[type="checkbox"] {
+  accent-color: var(--wiz-accent);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.day-activity-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.day-activity-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--wiz-text-main);
+}
+
+.day-activity-desc {
+  font-size: 0.73rem;
+  color: var(--wiz-text-muted);
+  line-height: 1.5;
+}
+
+/* --- Tour Grid (multi-select) --------------------------------------------- */
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.tour-card {
+  background: var(--wiz-bg-option);
+  border: 2px solid var(--wiz-border);
+  border-radius: var(--wiz-radius-md);
+  padding: 16px;
+  cursor: pointer;
+  transition: var(--wiz-transition);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tour-card:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  transform: translateY(-2px);
+  background: var(--wiz-bg-card-hover);
+}
+
+.tour-card.selected {
+  border-color: var(--wiz-accent);
+  background: var(--wiz-bg-option-selected);
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.18);
+}
+
+.tour-card-emoji {
+  font-size: 1.5rem;
+}
+
+.tour-card-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--wiz-text-main);
+  line-height: 1.3;
+}
+
+.tour-card-desc {
+  font-size: 0.72rem;
+  color: var(--wiz-text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.tour-card-check {
+  align-self: flex-end;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--wiz-border-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: transparent;
+  transition: var(--wiz-transition);
+}
+
+.tour-card.selected .tour-card-check {
+  background: var(--wiz-accent);
+  border-color: var(--wiz-accent);
+  color: #fff;
+}
+
+/* --- Summary (Panel 5) ---------------------------------------------------- */
+.wizard-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.summary-section-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--wiz-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Timeline */
+.wizard-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 32px;
+}
+
+.wizard-timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--wiz-accent), rgba(16,185,129,0.1));
+}
+
+.timeline-item {
+  position: relative;
+  padding: 12px 0 12px 16px;
+  border-bottom: 1px solid var(--wiz-border);
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -27px;
+  top: 17px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--wiz-accent);
+  border: 2px solid var(--wiz-bg-dark);
+  box-shadow: 0 0 8px rgba(16,185,129,0.5);
+}
+
+.timeline-day-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--wiz-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+}
+
+.timeline-day-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--wiz-text-main);
+  margin-bottom: 4px;
+}
+
+.timeline-day-detail {
+  font-size: 0.78rem;
+  color: var(--wiz-text-muted);
+  line-height: 1.5;
+}
+
+/* Quote Breakdown */
+.quote-breakdown {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--wiz-border);
+  border-radius: var(--wiz-radius-md);
+  overflow: hidden;
+}
+
+.quote-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 18px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--wiz-border);
+}
+
+.quote-row:last-child {
+  border-bottom: none;
+}
+
+.quote-row.total {
+  background: rgba(16, 185, 129, 0.08);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.quote-label {
+  color: var(--wiz-text-muted);
+}
+
+.quote-row.total .quote-label {
+  color: var(--wiz-text-main);
+}
+
+.quote-price {
+  color: var(--wiz-text-main);
+  font-weight: 600;
+}
+
+.quote-row.total .quote-price {
+  color: var(--wiz-accent);
+  font-size: 1.1rem;
+}
+
+.quote-discount {
+  color: var(--wiz-gold);
+  font-size: 0.75rem;
+}
+
+/* --- CTA Buttons ---------------------------------------------------------- */
+.wizard-cta-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.wiz-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 13px 24px;
+  border: none;
+  cursor: pointer;
+  transition: var(--wiz-transition);
+  text-decoration: none;
+}
+
+.wiz-btn-primary {
+  background: var(--wiz-accent);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(16,185,129,0.35);
+}
+
+.wiz-btn-primary:hover {
+  background: var(--wiz-accent-hover);
+  box-shadow: 0 0 30px rgba(16,185,129,0.5);
+  transform: translateY(-2px);
+}
+
+.wiz-btn-gold {
+  background: var(--wiz-gold);
+  color: #1a1a1a;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(245,158,11,0.3);
+}
+
+.wiz-btn-gold:hover {
+  background: var(--wiz-gold-hover);
+  transform: translateY(-2px);
+}
+
+.wiz-btn-outline {
+  background: transparent;
+  color: var(--wiz-text-muted);
+  border: 1px solid var(--wiz-border);
+}
+
+.wiz-btn-outline:hover {
+  border-color: rgba(16,185,129,0.4);
+  color: var(--wiz-text-main);
+}
+
+.wiz-btn-ghost {
+  background: transparent;
+  color: var(--wiz-text-muted);
+  padding: 13px 12px;
+  font-size: 0.85rem;
+}
+
+.wiz-btn-ghost:hover {
+  color: var(--wiz-text-main);
+}
+
+/* --- Nav Actions ---------------------------------------------------------- */
+.wizard-nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 36px 28px;
+  border-top: 1px solid var(--wiz-border);
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .wizard-nav-actions { padding: 16px 20px 20px; }
+}
+
+/* --- Divider ------------------------------------------------------------- */
+.wiz-divider {
+  height: 1px;
+  background: var(--wiz-border);
+  margin: 24px 0;
+}
+
+/* --- Pax Counter ---------------------------------------------------------- */
+.pax-selector {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--wiz-bg-option);
+  border: 1px solid var(--wiz-border);
+  border-radius: var(--wiz-radius-md);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+
+.pax-label {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.pax-label span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--wiz-text-muted);
+  margin-top: 2px;
+}
+
+/* --- Tooltip / Badge ------------------------------------------------------ */
+.wiz-badge {
+  display: inline-block;
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--wiz-gold);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 100px;
+  padding: 2px 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+.wiz-badge.green {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--wiz-accent);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+/* --- Checkbox toggle (add-on) --------------------------------------------- */
+.wiz-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--wiz-bg-option);
+  border: 1px solid var(--wiz-border);
+  border-radius: var(--wiz-radius-md);
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: var(--wiz-transition);
+}
+
+.wiz-toggle-row:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.wiz-toggle-row.selected {
+  border-color: var(--wiz-accent);
+  background: var(--wiz-bg-option-selected);
+}
+
+.wiz-toggle-checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--wiz-border-accent);
+  background: transparent;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: transparent;
+  transition: var(--wiz-transition);
+}
+
+.wiz-toggle-row.selected .wiz-toggle-checkbox {
+  background: var(--wiz-accent);
+  border-color: var(--wiz-accent);
+  color: #fff;
+}
+
+.wiz-toggle-text strong {
+  font-size: 0.88rem;
+}
+
+.wiz-toggle-text p {
+  font-size: 0.75rem;
+  color: var(--wiz-text-muted);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+/* --- Reset button --------------------------------------------------------- */
+.wiz-restart-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--wiz-text-muted);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.wiz-restart-btn:hover { color: var(--wiz-text-main); }
+
+/* --- Responsive tweaks ---------------------------------------------------- */
+@media (max-width: 480px) {
+  .tour-grid {
+    grid-template-columns: 1fr;
+  }
+  .wizard-cta-group {
+    flex-direction: column;
+  }
+  .wiz-btn { justify-content: center; }
+}
