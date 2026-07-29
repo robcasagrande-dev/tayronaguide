@@ -123,6 +123,7 @@ window.ConciergeTool = (function () {
   const ACTIVITIES = [
     {
       id: 'free-time-santa-marta',
+      image: '/images/tours/free_time_santa_marta.jpg',
       emoji: '☕',
       isFreeTime: true,
       location: 'city',
@@ -138,6 +139,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'free-time-villa-maria',
+      image: '/images/tours/free_time_villa_maria.jpg',
       emoji: '🌅',
       isFreeTime: true,
       location: 'jungle',
@@ -154,6 +156,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'city-tour-santa-marta',
+      image: '/images/tours/city_tour_santa_marta.jpg',
       emoji: '🗺️',
       location: 'city',
       name: { en: 'Santa Marta City Tour (3 hrs)', es: 'City Tour Santa Marta (3 h)', it: 'City Tour Santa Marta (3 h)', fr: 'City Tour Santa Marta (3 h)', de: 'Stadtrundfahrt Santa Marta (3 Std.)' },
@@ -168,6 +171,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'cabo-san-juan-tayrona',
+      image: '/images/tours/cabo_san_juan_tour.jpg',
       emoji: '🏖️',
       location: 'tayrona',
       name: { en: 'Cabo San Juan — Tayrona Park Trek', es: 'Cabo San Juan — Caminata Parque Tayrona', it: 'Cabo San Juan — Trek Parco Tayrona', fr: 'Cabo San Juan — Randonnée Tayrona', de: 'Cabo San Juan — Tayrona Wanderung' },
@@ -182,6 +186,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'tubbing-rio-guachaca',
+      image: '/images/tours/river_tubing_guachaca.jpg',
       emoji: '🛟',
       location: 'jungle',
       name: { en: 'River Tubing — Guachaca River', es: 'Tubbing Río Guachaca', it: 'Tubing Fiume Guachaca', fr: 'Tubing Rivière Guachaca', de: 'River Tubing — Guachaca-Fluss' },
@@ -196,6 +201,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'ruinas-bunkuany',
+      image: '/images/tours/bunkuany_ruins_tour.jpg',
       emoji: '🏛️',
       location: 'tayrona',
       name: { en: 'Bunkuany Ruins (Mini Lost City)', es: 'Ruinas Bunkuany (Mini Ciudad Perdida)', it: 'Rovine Bunkuany (Mini Città Perduta)', fr: 'Ruines Bunkuany (Mini Cité Perdue)', de: 'Bunkuany-Ruinen (Mini Verlorene Stadt)' },
@@ -210,6 +216,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'comunidades-indigenas-kogui-tayku',
+      image: '/images/tours/kogui_tayku.jpg',
       emoji: '🪶',
       location: 'jungle',
       name: { en: 'Kogui Indigenous Community Visit', es: 'Visita Comunidades Indígenas Kogui', it: 'Visita Comunità Indigene Kogui', fr: 'Visite Communautés Indigènes Kogui', de: 'Kogui-Gemeinschaft Besuch' },
@@ -224,6 +231,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'tour-coguis-cabalgata-orinoco',
+      image: '/images/tours/kogui_horseback_orinoco.jpg',
       emoji: '🐴',
       location: 'jungle',
       name: { en: 'Kogui Horseback & Orinoco Waterfall', es: 'Coguis Cabalgata y Cascada Orinoco', it: 'Kogui a Cavallo e Cascata Orinoco', fr: 'Kogui à Cheval et Cascade Orinoco', de: 'Kogui-Reittour & Orinoco-Wasserfall' },
@@ -238,6 +246,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'tour-del-cacao',
+      image: '/images/tours/cacao_tour.jpg',
       emoji: '🍫',
       location: 'jungle',
       name: { en: 'Cacao Farm Tour (Flavors of the Sierra)', es: 'Tour del Cacao (Del Paladar de la Sierra)', it: 'Tour del Cacao (Sapori della Sierra)', fr: 'Circuit du Cacao (Saveurs de la Sierra)', de: 'Kakao-Tour (Gaumenfreuden der Sierra)' },
@@ -252,6 +261,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'poza-encantada',
+      image: '/images/tours/poza_encantada.jpg',
       emoji: '💧',
       location: 'jungle',
       name: { en: 'Enchanted Sacred Pool (Poza Encantada)', es: 'Tour Poza Encantada - Sagrada', it: 'Tour Poza Encantada - Sacra', fr: 'Circuit Poza Encantada - Sacrée', de: 'Heiliger Naturpool (Poza Encantada)' },
@@ -266,6 +276,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'cabalgata-playa-los-naranjos',
+      image: '/images/tours/los_naranjos_horseback.jpg',
       emoji: '🐎',
       location: 'tayrona',
       name: { en: 'Los Naranjos Beach Horseback Ride', es: 'Cabalgata Playa Los Naranjos (Tayrona)', it: 'Cavallo Playa Los Naranjos (Tayrona)', fr: 'Cheval Playa Los Naranjos (Tayrona)', de: 'Reittour Los Naranjos Strand (Tayrona)' },
@@ -280,6 +291,7 @@ window.ConciergeTool = (function () {
     },
     {
       id: 'avistamiento-de-aves-tayrona',
+      image: '/images/tours/birdwatching_tayrona.jpg',
       emoji: '🦜',
       location: 'tayrona',
       name: { en: 'Bird Watching — Tayrona Reserve', es: 'Avistamiento Aves Parque Tayrona', it: 'Birdwatching Riserva Tayrona', fr: 'Observation Oiseaux Tayrona', de: 'Vogelbeobachtung Tayrona' },
@@ -909,10 +921,12 @@ window.ConciergeTool = (function () {
     html += `<div class="concierge-options-grid cols-2">`;
     ACTIVITIES.forEach(act => {
       const selected = state.wishlist.includes(act.id) ? 'selected' : '';
-      html += `<button class="concierge-option ${selected}" data-wishlist="${act.id}" style="text-align:left;">
-        <div style="font-size:1.5rem;margin-bottom:5px;">${act.emoji}</div>
-        <div class="option-label" style="text-align:left;">${txt(act.name)}</div>
-        <div class="option-sub" style="text-align:left;margin-top:4px;opacity:0.8;">${txt(act.desc)}</div>
+      html += `<button class="concierge-option ${selected}" data-wishlist="${act.id}" style="text-align:left; padding: 0; overflow: hidden; display: flex; flex-direction: column; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--c-border); transition: all 0.3s ease;">
+        ${act.image ? `<img src="${act.image}" alt="" style="width: 100%; height: 160px; object-fit: cover; border-bottom: 1px solid var(--c-border);">` : `<div style="font-size:1.5rem; padding: 15px 15px 0 15px;">${act.emoji}</div>`}
+        <div style="padding: 16px;">
+          <div class="option-label" style="text-align:left; font-size: 1.05rem; margin-bottom: 8px; font-weight: 600; color: white;">${txt(act.name)}</div>
+          <div class="option-sub" style="text-align:left; opacity:0.75; font-size: 0.85rem; line-height: 1.4;">${txt(act.desc)}</div>
+        </div>
       </button>`;
     });
     html += `</div></div>`;
