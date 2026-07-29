@@ -20,18 +20,26 @@
     "id": "cabo-san-juan-tayrona",
     "nombre": {
       "es": "Cabo San Juan - Parque Tayrona",
-      "en": "Cabo San Juan - Tayrona National Park",
+      "en": "Cabo San Juan Day Trek + Fast-Track Entry",
       "it": "Cabo San Juan - Parco Nazionale Tayrona",
       "fr": "Cabo San Juan - Parc National Tayrona",
       "de": "Cabo San Juan - Tayrona Nationalpark"
     },
     "descripcion": {
       "es": "El tour privado al Parque Tayrona ofrece una experiencia exclusiva y personalizada para disfrutar de un viaje sin prisas. Incluye una caminata de aproximadamente 2 horas y 30 minutos desde El Zaino hasta Cabo San Juan del Guía, pasando por playas icónicas como Arrecifes, La Piscina Natural y Arenilla, culminando en Cabo San Juan, donde la arena blanca se encuentra con el agua cristalina del mar.",
-      "en": "The private tour to Tayrona National Park offers an exclusive, personalized experience to enjoy an unhurried journey. It includes an approximate 2.5-hour trek from El Zaino entrance to Cabo San Juan del Guía, passing iconic beaches such as Arrecifes, La Piscina Natural, and Arenilla, ending at Cabo San Juan where white sand meets crystal-clear ocean waters.",
+      "en": "Embark on a spectacular full-day guided hike through the dense jungle trails of Tayrona National Park to the iconic Cabo San Juan beach. Enjoy early fast-track ticket handling by Girona Travels, ensuring you skip the 2-hour queue. Discover hidden beaches, spot diverse wildlife with your bilingual guide, and indulge in exotic fruit tasting along the way.",
       "it": "Il tour privato al Parco Nazionale Tayrona offre un'esperienza esclusiva e personalizzata per godersi un viaggio senza fretta. Include un'escursione a piedi di circa 2 ore e 30 minuti dall'ingresso El Zaino fino a Cabo San Juan del Guía, attraversando spiagge iconiche come Arrecifes, La Piscina Natural e Arenilla, per poi culminare a Cabo San Juan dove la sabbia bianca incontra il mare cristallino.",
       "fr": "La visite privée du parc national Tayrona offre une expérience exclusive et personnalisée pour profiter d'un voyage sans hâte. Elle comprend une randonnée d'environ 2h30 depuis l'entrée El Zaino jusqu'à Cabo San Juan del Guía, en passant par des plages emblématiques telles qu'Arrecifes, La Piscina Natural et Arenilla, pour s'achever à Cabo San Juan où le sable blanc rencontre l'eau cristalline de la mer.",
       "de": "Die private Tour zum Tayrona-Nationalpark bietet ein exklusives und personalisiertes Erlebnis, um die Reise ohne Hektik zu genießen. Sie beinhaltet eine ca. 2,5-stündige Wanderung vom Eingang El Zaino nach Cabo San Juan del Guía, vorbei an ikonischen Stränden wie Arrecifes, La Piscina Natural und Arenilla, bis hin zu Cabo San Juan, wo weißer Sand auf kristallklares Meerwasser trifft."
-    }
+    },
+    "badge": "Most Popular",
+    "badge_class": "badge-green",
+    "image": "/images/tours/cabo_san_juan_tour.jpg",
+    "highlights": [
+      "⏱️ 8-9 Hours",
+      "🥾 Moderate Trek",
+      "⚡ Queue Fast-Track"
+    ]
   },
   {
     "id": "tubbing-rio-guachaca",
@@ -54,18 +62,26 @@
     "id": "ruinas-bunkuany",
     "nombre": {
       "es": "Ruinas Bunkuany (Mini Ciudad Perdida)",
-      "en": "Bunkuany Ruins (Mini Lost City)",
+      "en": "Bunkuany Ruins & Kogui Indigenous Experience",
       "it": "Rovine di Bunkuany (Mini Città Perduta)",
       "fr": "Ruines de Bunkuany (Mini Cité Perdue)",
       "de": "Bunkuany-Ruinen (Mini Verlorene Stadt)"
     },
     "descripcion": {
       "es": "Un recorrido arqueológico y de senderismo de 7 km por la Sierra Nevada de Santa Marta. Permite explorar vestigios de los antiguos antepasados Tayrona rodeados de exuberante biodiversidad, flora y fauna nativa.",
-      "en": "A 7 km archaeological and trekking tour through the Sierra Nevada de Santa Marta. Explore ancient Tayrona ancestral ruins surrounded by lush biodiversity and native wildlife.",
+      "en": "Discover the \"Mini Lost City\" on a private archaeological trek through the Sierra Nevada de Santa Marta. Guided by certified Girona Travels experts, explore the ancient stone terraces of Bunkuany, visit the sacred Kogui village of Tayku, and swim in pristine mountain rivers.",
       "it": "Un percorso archeologico e trekking di 7 km attraverso la Sierra Nevada di Santa Marta. Permette di esplorare le vestigia degli antichi antenati Tayrona circondati da una rigogliosa biodiversità e dalla flora e fauna indigena.",
       "fr": "Un parcours archéologique et de randonnée de 7 km à travers la Sierra Nevada de Santa Marta. Explorez les vestiges des anciens ancêtres Tayrona au cœur d'une biodiversité luxuriante et d'une faune et flore indigènes.",
       "de": "Eine 7 km lange archäologische Wanderung durch die Sierra Nevada de Santa Marta. Erkunden Sie Überreste der alten Tayrona-Vorfahren inmitten üppiger Artenvielfalt und heimischer Tier- und Pflanzenwelt."
-    }
+    },
+    "badge": "Cultural Trek",
+    "badge_class": "",
+    "image": "/images/tours/bunkuany_ruins_tour.jpg",
+    "highlights": [
+      "🐒 Wildlife Focus",
+      "🏛️ Cultural History",
+      "👨‍👩‍👧 Private Group"
+    ]
   },
   {
     "id": "comunidades-indigenas-kogui-tayku",
@@ -105,18 +121,26 @@
     "id": "tour-del-cacao",
     "nombre": {
       "es": "Tour del Cacao (Del Paladar de la Sierra)",
-      "en": "Cacao Tour (Flavors of the Sierra)",
+      "en": "Cacao Tour: Flavors of the Sierra",
       "it": "Tour del Cacao (I Sapori della Sierra)",
       "fr": "Circuit du Cacao (Saveurs de la Sierra)",
       "de": "Kakao-Tour (Gaumenfreuden der Sierra)"
     },
     "descripcion": {
       "es": "Experiencia agroturística de 2 a 3 horas muy cerca del Parque Tayrona. Incluye un recorrido guiado por una finca cacaotera, taller práctico para aprender la elaboración del chocolate (tueste y molienda) y degustación de productos derivados del cacao.",
-      "en": "A 2 to 3-hour agritourism experience near Tayrona National Park. Includes a guided walk through a cacao farm, a hands-on workshop to learn traditional chocolate making (roasting and grinding), and tasting of fresh artisan cacao products.",
+      "en": "Indulge in an immersive agritourism experience at a traditional cacao farm. Wander through lush plantations, learn the ancient art of chocolate making from bean to bar in a hands-on workshop, and savor the rich, authentic taste of freshly roasted artisan cacao.",
       "it": "Un'esperienza agrituristica da 2 a 3 ore molto vicina al Parco Nazionale Tayrona. Comprende una visita guidata in una piantagione di cacao, un laboratorio pratico per imparare la lavorazione del cioccolato (tostatura e macinazione) e la degustazione di prodotti derivati dal cacao.",
       "fr": "Une expérience d'agrotourisme de 2 à 3 heures à proximité du parc national Tayrona. Comprend une visite guidée d'une plantation de cacao, un atelier pratique pour apprendre la fabrication du chocolat (torréfaction et moulage) et une dégustation de produits au cacao.",
       "de": "Ein 2- bis 3-stündiges Agrotourismus-Erlebnis ganz in der Nähe des Tayrona-Nationalparks. Enthält eine geführte Tour über eine Kakaofarm, einen praktischen Workshop zur Schokoladenherstellung (Rösten und Mahlen) sowie eine Verkostung frischer Kakaoprodukte."
-    }
+    },
+    "badge": "Best Value",
+    "badge_class": "badge-gold",
+    "image": "/images/tours/cacao_tour.jpg",
+    "highlights": [
+      "🍫 Artisan Tasting",
+      "🌱 Farm to Bar",
+      "😋 Hands-on Workshop"
+    ]
   },
   {
     "id": "poza-encantada",

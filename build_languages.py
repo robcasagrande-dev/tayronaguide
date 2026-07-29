@@ -1,4 +1,5 @@
 import os
+import json
 
 languages = {
     "en": {
@@ -455,6 +456,49 @@ def render_html(lang_code, data):
         href = "/" if ldata["dir"] == "" else f"/{ldata['dir']}/"
         lang_links += f'<li><a href="{href}"{active_cls}>{ldata["lang_name"]} ({code.upper()})</a></li>\n'
 
+    
+    # Load tours from JSON
+    with open("tours_girona_travels.json", "r", encoding="utf-8") as tf:
+        tours_data = json.load(tf)
+    
+    target_tour_ids = ["cabo-san-juan-tayrona", "ruinas-bunkuany", "tour-del-cacao"]
+    selected_tours = [t for t in tours_data if t["id"] in target_tour_ids]
+    
+    # Sort them in the exact order requested
+    selected_tours.sort(key=lambda x: target_tour_ids.index(x["id"]))
+
+    dynamic_tours_html = ""
+    for t in selected_tours:
+        # Fallback to English if the current language is not available in the JSON
+        lang_key = lang_code if lang_code in t["nombre"] else "en"
+        
+        badge_html = f"""<span class="tour-img-badge {t.get("badge_class", "")}"> {t.get("badge", "")}</span>""" if t.get("badge") else ""
+        
+        highlights_html = ""
+        for h in t.get("highlights", []):
+            highlights_html += f"<span>{h}</span>\n                "
+            
+        dynamic_tours_html += f"""
+        <div class="tour-card reveal">
+          <div class="tour-image-wrapper">
+            {badge_html}
+            <img src="{t.get("image", "")}" alt="{t["nombre"][lang_key]}" />
+          </div>
+          <div class="tour-card-body">
+            <div>
+              <h3 class="tour-title">{t["nombre"][lang_key]}</h3>
+              <p class="tour-desc">{t["descripcion"][lang_key]}</p>
+              <div class="tour-highlights">
+                {highlights_html}
+              </div>
+            </div>
+            <div class="tour-footer">
+              <a href="#concierge" class="btn btn-primary btn-block">Reserve via Concierge &rarr;</a>
+            </div>
+          </div>
+        </div>
+        """
+
     html = f"""<!DOCTYPE html>
 <html lang="{lang_code}">
 <head>
@@ -717,68 +761,7 @@ def render_html(lang_code, data):
       </div>
 
       <div class="tours-grid">
-        <div class="tour-card reveal">
-          <div class="tour-image-wrapper">
-            <span class="tour-img-badge badge-green">Most Popular</span>
-            <img src="/images/tours/cabo_san_juan_tour.jpg" alt="Cabo San Juan Day Trek" />
-          </div>
-          <div class="tour-card-body">
-            <div>
-              <h3 class="tour-title">Cabo San Juan Day Trek + Fast-Track Entry</h3>
-              <p class="tour-desc">Full-day guided hike through jungle trails to Cabo San Juan beach. Includes early ticket queue handling by Girona Travels, bilingual guide, and fruit tasting.</p>
-              <div class="tour-highlights">
-                <span>⏱️ 8-9 Hours</span>
-                <span>🥾 Moderate Trek</span>
-                <span>⚡ Queue Fast-Track</span>
-              </div>
-            </div>
-            <div class="tour-footer">
-              <a href="#concierge" class="btn btn-primary btn-block">Reserve via Concierge &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="tour-card reveal">
-          <div class="tour-image-wrapper">
-            <span class="tour-img-badge badge-gold">Best Value</span>
-            <img src="/images/tours/tayrona_ecolodge_tour.jpg" alt="2-Day Tayrona Eco-Lodge" />
-          </div>
-          <div class="tour-card-body">
-            <div>
-              <h3 class="tour-title">2-Day Tayrona Eco-Lodge &amp; Trail Package</h3>
-              <p class="tour-desc">{data['tours']['pkg2_desc']}</p>
-              <div class="tour-highlights">
-                <span>🌙 2 Days / 1 Night</span>
-                <span>🏨 Lodging Included</span>
-                <span>🍽️ Kasankala Dining</span>
-              </div>
-            </div>
-            <div class="tour-footer">
-              <a href="#concierge" class="btn btn-accent btn-block">Book Stay &amp; Tour Package &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="tour-card reveal">
-          <div class="tour-image-wrapper">
-            <span class="tour-img-badge">Cultural Trek</span>
-            <img src="/images/tours/bunkuany_ruins_tour.jpg" alt="Bunkuany Ruins &amp; Kogui Indigenous Experience" />
-          </div>
-          <div class="tour-card-body">
-            <div>
-              <h3 class="tour-title">Bunkuany Ruins &amp; Kogui Indigenous Experience</h3>
-              <p class="tour-desc">Private certified Girona Travels guide exploring ancient Bunkuany stone terraces, visiting the sacred Kogui village of Tayku, and mountain rivers.</p>
-              <div class="tour-highlights">
-                <span>🐒 Wildlife Focus</span>
-                <span>🏛️ Cultural History</span>
-                <span>👨‍👩‍👧 Private Group</span>
-              </div>
-            </div>
-            <div class="tour-footer">
-              <a href="#concierge" class="btn btn-primary btn-block">Inquire Private Tour &rarr;</a>
-            </div>
-          </div>
-        </div>
+        {dynamic_tours_html}
       </div>
 
       <div class="tours-cta-wrap">
