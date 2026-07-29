@@ -14,7 +14,8 @@
       "it": "Un tour guidato di 3 ore attraverso il cuore storico e culturale di Santa Marta, la città più antica della Colombia. Esplorerai il Parco Simón Bolívar e la Cattedrale Basilica, le vivaci strade del Centro Storico, la passeggiata lungomare di Paseo de Bastidas con vista sul mar dei Caraibi, il mercato artigianale e il leggendario Quartiere dei Pescatori. La tua guida locale ti racconterà le leggende coloniali, la storia e la vibrante cultura caraibica.",
       "fr": "Une visite guidée de 3 heures au cœur historique et culturel de Santa Marta, la plus ancienne ville de Colombie. Explorez le Parc Simón Bolívar et la Cathédrale Basilique, les rues colorées du Centre Historique, la promenade du Paseo de Bastidas avec vue sur la mer des Caraïbes, le marché artisanal et le légendaire Quartier des Pêcheurs. Votre guide local vous fera découvrir les légendes coloniales, l'histoire et la culture caribéenne vibrante.",
       "de": "Eine 3-stündige geführte Tour durch das historische Zentrum und die kulturelle Seele Santa Martas, der ältesten Stadt Kolumbiens. Erkunden Sie den Simón-Bolívar-Park und die Kathedrale, die farbenfrohen Gassen der Altstadt, die Uferpromenade Paseo de Bastidas mit Blick auf die Karibik, den Kunsthandwerksmarkt und das legendäre Fischerviertel. Ihr lokaler Guide teilt koloniale Legenden, Geschichte und die lebendige karibische Kultur."
-    }
+    },
+    "image": "/images/tours/city_tour_santa_marta.jpg"
   },
   {
     "id": "cabo-san-juan-tayrona",
@@ -63,7 +64,8 @@
       "it": "Un'esperienza che prevede un'escursione ecologica di 1 ora lungo sentieri immersi nella natura per apprezzare la flora e la fauna locale fino a raggiungere un punto elevato del fiume. Da lì si pratica il tubing, scivolando lungo il fiume a bordo di ciambelle gonfiabili in un ambiente naturale e rilassante.",
       "fr": "Une expérience comprenant une randonnée écologique d'une heure le long de sentiers préservés pour admirer la flore et la faune locales jusqu'à atteindre un point haut de la rivière. De là commence l'activité de tubing, en descendant la rivière sur des bouées au cœur d'un paysage naturel et apaisant.",
       "de": "Ein Erlebnis mit einer 1-stündigen ökologischen Wanderung auf Pfaden zur Beobachtung der heimischen Flora und Fauna bis zu einem hoch gelegenen Flusspunkt. Von dort geht es beim River Tubing auf Schwimmreifen flussabwärts durch eine ruhige, naturbelassene Landschaft."
-    }
+    },
+    "image": "/images/tours/river_tubing_guachaca.jpg"
   },
   {
     "id": "ruinas-bunkuany",
@@ -105,7 +107,8 @@
       "it": "Camminata ecologica in salita di 1 ora e 20 minuti verso un territorio sacro abitato dagli indigeni Kogui, discendenti diretti dei Tayrona. Un'esperienza culturale profonda per scoprire le loro tradizioni, la loro cosmovisione e il loro stile di vita in armonia con la Sierra Nevada.",
       "fr": "Randonnée écologique en montée de 1h20 vers un territoire sacré habité par les indigènes Kogui, descendants directs des Tayrona. Une immersion culturelle enrichissante pour découvrir leurs traditions, leur cosmovision et leur mode de vie en harmonie avec la Sierra Nevada.",
       "de": "Eine 1-stündige und 20-minütige Bergauf-Wanderung in ein heiliges Gebiet der Kogui-Ureinwohner, den direkten Nachfahren der Tayrona. Ein tiefes kulturelles Erlebnis, um ihre Traditionen, ihr Weltbild und ihr Leben im Einklang mit der Sierra Nevada kennenzulernen."
-    }
+    },
+    "image": "/images/tours/kogui_tayku.jpg"
   },
   {
     "id": "tour-coguis-cabalgata-orinoco",
@@ -122,7 +125,8 @@
       "it": "Un'avventura che parte da Los Cocos (km 35 via Palomino), risalendo un sentiero boschivo fino a un villaggio indigeno per apprendere la cultura locale e la coltivazione del cacao. Prosegue verso la maestosa Cascata Orinoco, un'oasi naturale ideale per fare il bagno in acque cristalline e rilassarsi nella natura.",
       "fr": "Une aventure débutant à Los Cocos (km 35 route Palomino), montant à travers un sentier boisé vers un village indigène pour découvrir la culture locale et la culture du cacao. Elle se poursuit vers la majestueuse cascade Orinoco, un havre naturel idéal pour se baigner dans des eaux limpides.",
       "de": "Ein Abenteuer ab Los Cocos (km 35 Richtung Palomino), das über einen Waldpfad zu einem indigenen Dorf führt, wo Sie mehr über die Kultur und den Kakaonanbau erfahren. Anschließend geht es zum majestätischen Orinoco-Wasserfall, einer natürlichen Oase zum Baden im kristallklaren Wasser."
-    }
+    },
+    "image": "/images/tours/kogui_horseback_orinoco.jpg"
   },
   {
     "id": "tour-del-cacao",
@@ -164,7 +168,8 @@
       "it": "Camminata ecologica di 35 minuti lungo splendidi sentieri immersi nella flora e fauna selvatica. La destinazione offre idromassaggi naturali e pozze d'acqua cristallina alimentate direttamente dalle vette della Sierra Nevada di Santa Marta.",
       "fr": "Une randonnée écologique de 35 minutes le long de magnifiques sentiers entourés d'une faune et flore sauvages. La destination offre des jacuzzis et bassins naturels d'eau pure descendant directamente des montagnes de la Sierra Nevada.",
       "de": "Eine 35-minütige ökologische Wanderung auf wunderschönen Pfaden inmitten wilder Flora und Fauna. Das Ziel bietet natürliche Jacuzzis und Flussbecken mit kristallklarem Wasser direkt aus den Bergen der Sierra Nevada."
-    }
+    },
+    "image": "/images/tours/poza_encantada.jpg"
   },
   {
     "id": "cabalgata-playa-los-naranjos",
@@ -181,7 +186,8 @@
       "it": "Un'escursione guidata di 2 ore con partenza dall'ingresso San Martín (km 33 via Palomino). Attraversa il fiume Piedra e si addentra nei sentieri boscosi del Parco Tayrona fino a raggiungere l'esclusiva Playa Los Naranjos per un'indimenticabile passeggiata a cavallo lungo il mare.",
       "fr": "Une excursion guidée de 2 heures commençant à l'entrée San Martín (km 33 route Palomino). Traversez la rivière Piedra et sillonnez les sentiers de la forêt du Tayrona avant d'arriver sur la plage exclusive de Los Naranjos pour une balade à cheval inoubliable au bord de l'eau.",
       "de": "Ein 2-stündiger geführter Ausflug ab dem Eingang San Martín (km 33 Richtung Palomino). Überqueren Sie den Fluss Piedra und reiten Sie durch schattige Tayrona-Waldpfade bis zum exklusiven Strand Los Naranjos für einen unvergesslichen Ausritt am Meer."
-    }
+    },
+    "image": "/images/tours/los_naranjos_horseback.jpg"
   },
   {
     "id": "avistamiento-de-aves-tayrona",
@@ -198,7 +204,8 @@
       "it": "Un'escursione di birdwatching pensata per gli amanti della natura (dalle 5:30 alle 11:00). Permette di osservare una ricca varietà di specie di uccelli nativi e migratori all'interno della riserva naturale di Tayrona, con l'ausilio di attrezzature specializzate e guida esperta.",
       "fr": "Une expédition d'observation ornithologique conçue pour les amoureux de la nature (de 5h30 à 11h00). Observez une grande variété d'espèces d'oiseaux indigènes et migrateurs au cœur de la réserve naturelle du Tayrona avec du matériel d'observation spécialisé.",
       "de": "Eine Vogelbeobachtungsexpedition für Naturliebhaber (von 5:30 bis 11:00 Uhr). Beobachten Sie eine Vielfalt an heimischen und zugewanderten Vogelarten im Tayrona-Naturschutzgebiet mit spezialisierter Ausrüstung und einem erfahrenen Guide."
-    }
+    },
+    "image": "/images/tours/birdwatching_tayrona.jpg"
   },
   {
     "id": "free-time-santa-marta",
@@ -215,7 +222,8 @@
       "it": "Santa Marta è la città più antica della Colombia e un paradiso per il viaggiatore curioso. Passeggia per il Centro Storico coloniale con i suoi vicoli acciottolati, le piazze ombreggiate e l'architettura spagnola. Prendi un caffè sul Paseo de Bastidas affacciato sui Caraibi, esplora il mercato locale ricco di colori e sapori, o visita l'elegante quartiere El Rodadero. La città ti invita ad immergerti nel suo ritmo caraibico, nella cucina di pesce fresco e nella sua ineguagliabile ospitalità.",
       "fr": "Santa Marta est la plus ancienne ville de Colombie et un paradis pour le voyageur curieux. Flânez dans le Centre Historique colonial avec ses ruelles pavées, ses places ombragées et son architecture espagnole. Savourez un café sur la promenade Paseo de Bastidas face à la mer des Caraïbes, explorez le marché local coloré et savoureux, ou déambulez dans l'élégant quartier d'El Rodadero. La ville vous invite à vous immerger dans son rythme caribéen, sa cuisine aux fruits de mer frais et son hospitalité incomparable.",
       "de": "Santa Marta ist Kolumbiens älteste Stadt und ein Paradies für neugierige Reisende. Schlendern Sie durch das koloniale Historische Zentrum mit seinen gepflasterten Gassen, schattigen Plätzen und spanischer Architektur. Trinken Sie einen Kaffee an der Uferpromenade Paseo de Bastidas mit Blick auf die Karibik, entdecken Sie den bunten lokalen Markt oder erkunden Sie das elegante Viertel El Rodadero. Die Stadt lädt Sie ein, sich in ihren karibischen Rhythmus, ihre frische Meeresküche und ihre unvergleichliche Gastfreundschaft zu vertiefen."
-    }
+    },
+    "image": "/images/tours/free_time_santa_marta.jpg"
   },
   {
     "id": "free-time-villa-maria",
@@ -232,6 +240,7 @@
       "it": "Villa María Tayrona è un rifugio di lusso nel cuore della giungla caraibica, dove la Sierra Nevada incontra il mare. Svegliati con il canto degli uccelli tropicali e il suono delle onde. Percorri i sentieri naturali che collegano la villa alla spiaggia privata, dove l'acqua turchese invita a nuotare. Rilassati nella piscina a sfioro che sembra fondersi con l'orizzonte oceanico, con viste panoramiche sui Caraibi e le cime innevate della Sierra. Osserva scimmie urlatrici, colibrì e tucani nella vegetazione circostante. Assapora la magia di un luogo dove la natura selvaggia convive con eleganza e comfort. La tranquillità qui è assoluta: il tempo si ferma e l'anima ritrova la pace.",
       "fr": "Villa María Tayrona est un sanctuaire de luxe niché au cœur de la jungle caribéenne, où la Sierra Nevada rencontre la mer. Réveillez-vous au chant des oiseaux tropicaux et au bruit des vagues. Empruntez les sentiers naturels reliant la villa à sa plage privée, où l'eau turquoise vous invite à nager. Détendez-vous dans la piscine à débordement qui semble se fondre dans l'horizon marin, avec des vues panoramiques sur la Caraïbe et les sommets enneigés de la Sierra. Observez singes hurleurs, colibris et toucans dans la végétation luxuriante environnante. Savourez la magie d'un lieu où la nature sauvage coexiste avec l'élégance et le confort. La tranquillité y est absolue : le temps s'arrête et l'âme trouve la paix.",
       "de": "Villa María Tayrona ist ein Luxusrefugium im Herzen des karibischen Dschungels, wo die Sierra Nevada auf das Meer trifft. Wachen Sie beim Gesang tropischer Vögel und dem Rauschen der Wellen auf. Spazieren Sie auf Naturpfaden, die die Villa mit ihrem Privatstrand verbinden, wo türkisfarbenes Wasser zum Schwimmen einlädt. Entspannen Sie im Infinity-Pool, der mit dem Meereshorizont zu verschmelzen scheint, mit Panoramablick auf die Karibik und die schneebedeckten Gipfel der Sierra Nevada. Beobachten Sie Brüllaffen, Kolibris und Tukane im üppigen Grün der Umgebung. Genießen Sie die Magie eines Ortes, an dem wilde Natur mit Eleganz und Komfort koexistiert. Die Stille hier ist absolut — die Zeit steht still und die Seele findet Ruhe."
-    }
+    },
+    "image": "/images/tours/free_time_villa_maria.jpg"
   }
 ]
