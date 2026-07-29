@@ -88,6 +88,22 @@ languages = {
             "villa_title": "🌿 Villa María Tayrona & Kasankala Restaurant",
             "villa_desc": "Villa María Tayrona is a luxury jungle eco-lodge located right near the El Zaino entrance, featuring eco-luxury rooms, pool, and gourmet dining at Kasankala Restaurant.",
             "villa_btn": "View Rooms at ParqueTayrona.org &rarr;"
+        },
+        "footer": {
+            "desc": "The official verified travel guide for Tayrona National Park & Santa Marta. Managed in partnership with Girona Travels, Kali Hotels & Villa María Tayrona.",
+            "nav_title": "Quick Navigation",
+            "nav_packages": "Bundled Packages",
+            "nav_concierge": "Concierge Request Tool",
+            "nav_truth": "Ticket Truth",
+            "partners_title": "Official Partners",
+            "partner_operator": "Official Operator",
+            "partner_restaurant": "Kasankala Restaurant",
+            "cert_title": "Certifications",
+            "cert_inclusion": "Seal of Inclusion",
+            "cert_transparencia": "Seal of Transparency",
+            "cert_gaula_alt": "Official GAULA Campaign",
+            "cert_gaula_text": "We support the official anti-kidnapping and anti-extortion campaign. Hotline: 165",
+            "copyright": "&copy; 2026 TayronaGuide.com. All rights reserved. Powered by Girona Travels & Kali Hotels."
         }
     },
     "es": {
@@ -176,6 +192,22 @@ languages = {
             "villa_title": "🌿 Villa María Tayrona y Restaurante Kasankala",
             "villa_desc": "Villa María Tayrona es un eco-lodge de lujo en la selva ubicado cerca de la entrada El Zaino, con habitaciones ecológicas de lujo, piscina y gastronomía gourmet en el Restaurante Kasankala.",
             "villa_btn": "Ver Habitaciones en ParqueTayrona.org &rarr;"
+        },
+        "footer": {
+            "desc": "La guía de viaje oficial verificada para el Parque Nacional Tayrona y Santa Marta. Gestionada en asociación con Girona Travels, Kali Hotels y Villa María Tayrona.",
+            "nav_title": "Navegación Rápida",
+            "nav_packages": "Paquetes Combinados",
+            "nav_concierge": "Diseñador de Viaje",
+            "nav_truth": "Verdad sobre Entradas",
+            "partners_title": "Socios Oficiales",
+            "partner_operator": "Operador Oficial",
+            "partner_restaurant": "Restaurante Kasankala",
+            "cert_title": "Certificaciones",
+            "cert_inclusion": "Sello de Inclusión",
+            "cert_transparencia": "Sello de Transparencia",
+            "cert_gaula_alt": "Campaña Oficial GAULA",
+            "cert_gaula_text": "Apoyamos la campaña oficial antisecuestro y antiextorsión. Línea: 165",
+            "copyright": "&copy; 2026 TayronaGuide.com. Todos los derechos reservados. Desarrollado por Girona Travels y Kali Hotels."
         }
     },
     "it": {
@@ -264,6 +296,22 @@ languages = {
             "villa_title": "🌿 Villa María Tayrona e Ristorante Kasankala",
             "villa_desc": "Villa María Tayrona è un eco-lodge di lusso situato vicino all'ingresso El Zaino, con camere ecologiche di lusso, piscina e ristorazione gourmet presso il Ristorante Kasankala.",
             "villa_btn": "Vedi Camere su ParqueTayrona.org &rarr;"
+        },
+        "footer": {
+            "desc": "La guida di viaggio ufficiale verificata per il Parco Nazionale Tayrona e Santa Marta. Gestita in collaborazione con Girona Travels, Kali Hotels e Villa María Tayrona.",
+            "nav_title": "Navigazione Rapida",
+            "nav_packages": "Pacchetti Inclusivi",
+            "nav_concierge": "Pianificatore di Viaggio",
+            "nav_truth": "Verità sui Biglietti",
+            "partners_title": "Partner Ufficiali",
+            "partner_operator": "Operatore Ufficiale",
+            "partner_restaurant": "Ristorante Kasankala",
+            "cert_title": "Certificazioni",
+            "cert_inclusion": "Sigillo di Inclusione",
+            "cert_transparencia": "Sigillo di Trasparenza",
+            "cert_gaula_alt": "Campagna Ufficiale GAULA",
+            "cert_gaula_text": "Sosteniamo la campagna ufficiale contro i sequestri e le estorsioni. Linea: 165",
+            "copyright": "&copy; 2026 TayronaGuide.com. Tutti i diritti riservati. Sviluppato da Girona Travels & Kali Hotels."
         }
     },
     "fr": {
@@ -352,6 +400,22 @@ languages = {
             "villa_title": "🌿 Villa María Tayrona et Restaurant Kasankala",
             "villa_desc": "Villa María Tayrona est un éco-lodge de luxe dans la jungle près de l'entrée El Zaino, proposant des chambres écologiques de luxe, une piscine et une cuisine gastronomique au Restaurant Kasankala.",
             "villa_btn": "Voir les Chambres sur ParqueTayrona.org &rarr;"
+        },
+        "footer": {
+            "desc": "Le guide de voyage officiel vérifié pour le parc national Tayrona et Santa Marta. Géré en partenariat avec Girona Travels, Kali Hotels et Villa María Tayrona.",
+            "nav_title": "Navigation Rapide",
+            "nav_packages": "Forfaits Combinés",
+            "nav_concierge": "Outil de Planification",
+            "nav_truth": "Vérité sur les Billets",
+            "partners_title": "Partenaires Officiels",
+            "partner_operator": "Opérateur Officiel",
+            "partner_restaurant": "Restaurant Kasankala",
+            "cert_title": "Certifications",
+            "cert_inclusion": "Sceau d'Inclusion",
+            "cert_transparencia": "Sceau de Transparence",
+            "cert_gaula_alt": "Campagne Officielle GAULA",
+            "cert_gaula_text": "Nous soutenons la campagne officielle contre les enlèvements et les extorsions. Ligne: 165",
+            "copyright": "&copy; 2026 TayronaGuide.com. Tous droits réservés. Propulsé par Girona Travels & Kali Hotels."
         }
     },
     "de": {
@@ -440,6 +504,22 @@ languages = {
             "villa_title": "🌿 Villa María Tayrona & Kasankala Restaurant",
             "villa_desc": "Villa María Tayrona ist eine Luxus-Dschungel-Ökolodge nahe dem Eingang El Zaino mit Öko-Luxuszimmern, Pool und Gourmet-Gastronomie im Kasankala Restaurant.",
             "villa_btn": "Zimmer auf ParqueTayrona.org Ansehen &rarr;"
+        },
+        "footer": {
+            "desc": "Der offizielle verifizierte Reiseführer für den Tayrona-Nationalpark und Santa Marta. Verwaltet in Partnerschaft mit Girona Travels, Kali Hotels und Villa María Tayrona.",
+            "nav_title": "Schnellnavigation",
+            "nav_packages": "Kombi-Pakete",
+            "nav_concierge": "Reiseplaner",
+            "nav_truth": "Ticket-Wahrheit",
+            "partners_title": "Offizielle Partner",
+            "partner_operator": "Offizieller Veranstalter",
+            "partner_restaurant": "Kasankala Restaurant",
+            "cert_title": "Zertifizierungen",
+            "cert_inclusion": "Siegel der Inklusion",
+            "cert_transparencia": "Siegel der Transparenz",
+            "cert_gaula_alt": "Offizielle GAULA-Kampagne",
+            "cert_gaula_text": "Wir unterstützen die offizielle Anti-Entführungs- und Anti-Erpressungs-Kampagne. Hotline: 165",
+            "copyright": "&copy; 2026 TayronaGuide.com. Alle Rechte vorbehalten. Unterstützt von Girona Travels & Kali Hotels."
         }
     }
 }
