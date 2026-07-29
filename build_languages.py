@@ -447,8 +447,8 @@ languages = {
 def render_html(lang_code, data):
     js_path = "/app.js"
     css_path = "/style.css"
-    hero_img = "/public/images/tayrona_hero.jpg"
-    trek_img = "/public/images/tayrona_trek.jpg"
+    hero_img = f"{data['img_prefix']}images/tayrona_hero.jpg"
+    trek_img = f"{data['img_prefix']}images/tayrona_guide_trek.jpg"
 
     lang_links = ""
     for code, ldata in languages.items():
