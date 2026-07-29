@@ -486,7 +486,7 @@ def render_html(lang_code, data):
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{css_path}">
-  <link rel="stylesheet" href="/concierge-module.css">
+  <link rel="stylesheet" href="/concierge-module.css?v=20260729_photos">
 </head>
 <body>
 
@@ -889,7 +889,7 @@ def render_html(lang_code, data):
     </div>
   </footer>
 
-  <script src="/concierge-module.js"></script>
+  <script src="/concierge-module.js?v=20260729_photos"></script>
   <script src="{js_path}"></script>
 </body>
 </html>"""
