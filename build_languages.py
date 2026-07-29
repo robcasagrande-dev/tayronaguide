@@ -453,7 +453,7 @@ def render_html(lang_code, data):
     for code, ldata in languages.items():
         active_cls = ' class="active-lang"' if code == lang_code else ""
         href = "/" if ldata["dir"] == "" else f"/{ldata['dir']}/"
-        lang_links += f'<li><a href="{href}"{active_cls}>{ldata["flag"]} {ldata["lang_name"]} ({code.upper()})</a></li>\n'
+        lang_links += f'<li><a href="{href}"{active_cls}>{ldata["lang_name"]} ({code.upper()})</a></li>\n'
 
     html = f"""<!DOCTYPE html>
 <html lang="{lang_code}">
@@ -479,14 +479,14 @@ def render_html(lang_code, data):
   <meta property="og:description" content="{data['description']}">
   <meta property="og:image" content="https://tayronaguide.com/public/images/tayrona_hero.jpg">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (Google Gemini / Inter Clean) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{css_path}">
-  <link rel="stylesheet" href="/concierge-module.css?v=20260729_rework_photos">
+  <link rel="stylesheet" href="/concierge-module.css?v=20260729_gemini_ui">
 </head>
 <body>
 
@@ -517,15 +517,12 @@ def render_html(lang_code, data):
       <div class="nav-actions">
         <!-- Language Switcher Dropdown -->
         <div class="lang-dropdown">
-          <button class="lang-btn">{data['flag']} {lang_code.upper()} ▾</button>
+          <button class="lang-btn">{lang_code.upper()} ▾</button>
           <ul class="lang-menu">
             {lang_links}
           </ul>
         </div>
 
-        <a href="https://parquetayrona.org" target="_blank" class="btn btn-primary btn-sm">
-          {data['nav']['btn']}
-        </a>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -889,7 +886,7 @@ def render_html(lang_code, data):
     </div>
   </footer>
 
-  <script src="/concierge-module.js?v=20260729_rework_photos"></script>
+  <script src="/concierge-module.js?v=20260729_gemini_ui"></script>
   <script src="{js_path}"></script>
 </body>
 </html>"""

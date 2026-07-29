@@ -27,8 +27,8 @@
   --wiz-radius-md: 16px;
   --wiz-radius-lg: 24px;
   --wiz-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Inter', 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* --- Wizard Section Wrapper ---------------------------------------------- */
