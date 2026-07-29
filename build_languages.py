@@ -104,6 +104,31 @@ languages = {
             "cert_gaula_alt": "Official GAULA Campaign",
             "cert_gaula_text": "We support the official anti-kidnapping and anti-extortion campaign. Hotline: 165",
             "copyright": "&copy; 2026 TayronaGuide.com. All rights reserved. Powered by Girona Travels & Kali Hotels."
+        },
+        "faq": {
+            "tag": "❓ Frequently Asked Questions",
+            "title": "Tayrona & Hotel FAQ",
+            "q1": "Why do Colombians pay 0% VAT (IVA) on hotel stays with Kali Hotels & Villa María Tayrona?",
+            "a1": "Under Colombian law, foreign tourists are tax-exempt from 19% VAT on lodging. As part of our 2026 Hospitality Equity Campaign, Girona Travel, Kali Hotel & Villa María Tayrona absorb the tax for Colombian residents so EVERY guest enjoys 0% VAT rates!",
+            "q2": "How does the Trip Builder tool work?",
+            "a2": "The Trip Builder allows you to combine stays at Kali Hotels in Santa Marta and Villa María Tayrona, along with private transfers and official guided tours. We customize the itinerary to fit your schedule.",
+            "q3": "Can I buy Tayrona entrance tickets online before I travel?",
+            "a3": "No. Official entrance passes cannot be reserved online in advance by individual tourists. However, when you book a guided tour with Girona Travels, your guide buys your entry passes early in the morning so you skip the line."
+        },
+        "cta": {
+            "title": "Ready for an Unforgettable Tayrona & Santa Marta Experience?",
+            "desc": "Enjoy 0% VAT rates at Kali Hotel & Villa María Tayrona with Girona Travel private transport and certified guides.",
+            "btn": "🚀 Launch Trip Builder &rarr;"
+        },
+        "tours_page": {
+            "reserve": "Reserve via Trip Builder &rarr;",
+            "home": "Home",
+            "title": "All Girona Travels Tours",
+            "lead": "Explore our full catalog of guided experiences, eco-treks, and cultural adventures."
+        },
+        "skip_extra": {
+            "save_time": "Save 1 to 2 Hours",
+            "skip_line": "Skip the hot morning gate line"
         }
     },
     "es": {
@@ -208,6 +233,31 @@ languages = {
             "cert_gaula_alt": "Campaña Oficial GAULA",
             "cert_gaula_text": "Apoyamos la campaña oficial antisecuestro y antiextorsión. Línea: 165",
             "copyright": "&copy; 2026 TayronaGuide.com. Todos los derechos reservados. Desarrollado por Girona Travels y Kali Hotels."
+        },
+        "faq": {
+            "tag": "❓ Preguntas Frecuentes",
+            "title": "Preguntas Frecuentes - Tayrona y Hoteles",
+            "q1": "¿Por qué los colombianos pagan 0% de IVA en estadías con Kali Hotels y Villa María Tayrona?",
+            "a1": "Según la ley colombiana, los turistas extranjeros están exentos del IVA del 19% en alojamiento. Como parte de nuestra Campaña de Equidad Hotelera 2026, Girona Travel, Kali Hotel y Villa María Tayrona absorben el impuesto para los residentes colombianos, ¡así TODOS disfrutan de 0% de IVA!",
+            "q2": "¿Cómo funciona la herramienta Diseñador de Viaje?",
+            "a2": "El Diseñador de Viaje te permite combinar estadías en Kali Hotels en Santa Marta y Villa María Tayrona, junto con traslados privados y tours guiados oficiales. Personalizamos el itinerario para adaptarnos a tus horarios.",
+            "q3": "¿Puedo comprar las entradas al Tayrona por internet antes de viajar?",
+            "a3": "No. Las entradas oficiales no pueden ser reservadas por internet con antelación por turistas individuales. Sin embargo, al reservar un tour guiado con Girona Travels, tu guía compra las entradas temprano en la mañana para que evites la fila."
+        },
+        "cta": {
+            "title": "¿Listo para una Experiencia Inolvidable en Santa Marta y Tayrona?",
+            "desc": "Disfruta de 0% de IVA en Kali Hotel y Villa María Tayrona con transporte privado de Girona Travel y guías certificados.",
+            "btn": "🚀 Iniciar Diseñador de Viaje &rarr;"
+        },
+        "tours_page": {
+            "reserve": "Reservar vía Diseñador de Viaje &rarr;",
+            "home": "Inicio",
+            "title": "Todos los Tours de Girona Travels",
+            "lead": "Explora nuestro catálogo completo de experiencias guiadas, caminatas ecológicas y aventuras culturales."
+        },
+        "skip_extra": {
+            "save_time": "Ahorra 1 a 2 Horas",
+            "skip_line": "Evita la fila bajo el sol"
         }
     },
     "it": {
@@ -312,6 +362,31 @@ languages = {
             "cert_gaula_alt": "Campagna Ufficiale GAULA",
             "cert_gaula_text": "Sosteniamo la campagna ufficiale contro i sequestri e le estorsioni. Linea: 165",
             "copyright": "&copy; 2026 TayronaGuide.com. Tutti i diritti riservati. Sviluppato da Girona Travels & Kali Hotels."
+        },
+        "faq": {
+            "tag": "❓ Domande Frequenti",
+            "title": "FAQ - Tayrona e Hotel",
+            "q1": "Perché i colombiani pagano lo 0% di IVA sui soggiorni presso Kali Hotels e Villa María Tayrona?",
+            "a1": "Secondo la legge colombiana, i turisti stranieri sono esenti dall'IVA del 19% sugli alloggi. Come parte della nostra Campagna di Equità Alberghiera 2026, Girona Travel, Kali Hotel e Villa María Tayrona assorbono la tassa per i residenti colombiani, così TUTTI gli ospiti godono dello 0% di IVA!",
+            "q2": "Come funziona lo strumento Pianificatore di Viaggio?",
+            "a2": "Il Pianificatore di Viaggio ti permette di combinare soggiorni presso Kali Hotels a Santa Marta e Villa María Tayrona, insieme a trasferimenti privati e tour guidati ufficiali. Personalizziamo l'itinerario in base ai tuoi orari.",
+            "q3": "Posso comprare i biglietti d'ingresso per Tayrona online prima di viaggiare?",
+            "a3": "No. I pass d'ingresso ufficiali non possono essere prenotati online in anticipo da singoli turisti. Tuttavia, se prenoti un tour guidato con Girona Travels, la tua guida acquista i biglietti la mattina presto per farti saltare la fila."
+        },
+        "cta": {
+            "title": "Pronto per un'Esperienza Indimenticabile a Santa Marta e Tayrona?",
+            "desc": "Approfitta dello 0% di IVA presso Kali Hotel e Villa María Tayrona con trasporto privato Girona Travel e guide certificate.",
+            "btn": "🚀 Avvia Pianificatore di Viaggio &rarr;"
+        },
+        "tours_page": {
+            "reserve": "Prenota via Pianificatore di Viaggio &rarr;",
+            "home": "Home",
+            "title": "Tutti i Tour Girona Travels",
+            "lead": "Esplora il nostro catalogo completo di esperienze guidate, eco-trekking e avventure culturali."
+        },
+        "skip_extra": {
+            "save_time": "Risparmia da 1 a 2 Ore",
+            "skip_line": "Salta la coda sotto il sole"
         }
     },
     "fr": {
@@ -520,6 +595,31 @@ languages = {
             "cert_gaula_alt": "Offizielle GAULA-Kampagne",
             "cert_gaula_text": "Wir unterstützen die offizielle Anti-Entführungs- und Anti-Erpressungs-Kampagne. Hotline: 165",
             "copyright": "&copy; 2026 TayronaGuide.com. Alle Rechte vorbehalten. Unterstützt von Girona Travels & Kali Hotels."
+        },
+        "faq": {
+            "tag": "❓ Häufig Gestellte Fragen",
+            "title": "Tayrona & Hotel FAQ",
+            "q1": "Warum zahlen Kolumbianer 0% Mehrwertsteuer (IVA) auf Hotelübernachtungen bei Kali Hotels & Villa María Tayrona?",
+            "a1": "Nach kolumbianischem Recht sind ausländische Touristen von der 19%igen Mehrwertsteuer auf Beherbergung befreit. Im Rahmen unserer Kampagne für Hotelgerechtigkeit 2026 übernehmen Girona Travel, Kali Hotel und Villa María Tayrona die Steuer für kolumbianische Staatsbürger, sodass JEDER Gast 0% Mehrwertsteuer zahlt!",
+            "q2": "Wie funktioniert der Reiseplaner?",
+            "a2": "Mit dem Reiseplaner können Sie Aufenthalte im Kali Hotel in Santa Marta und in der Villa María Tayrona mit privaten Transfers und offiziellen geführten Touren kombinieren. Wir passen die Reiseroute an Ihren Zeitplan an.",
+            "q3": "Kann ich Eintrittskarten für Tayrona vor meiner Reise online kaufen?",
+            "a3": "Nein. Offizielle Eintrittskarten können von individuellen Touristen nicht im Voraus online reserviert werden. Wenn Sie jedoch eine geführte Tour mit Girona Travels buchen, kauft Ihr Reiseleiter Ihre Eintrittskarten früh morgens, damit Sie die Warteschlange umgehen können."
+        },
+        "cta": {
+            "title": "Bereit für ein unvergessliches Erlebnis in Tayrona & Santa Marta?",
+            "desc": "Profitieren Sie von 0% MwSt. im Kali Hotel & Villa María Tayrona mit privatem Transport von Girona Travel und zertifizierten Reiseleitern.",
+            "btn": "🚀 Reiseplaner starten &rarr;"
+        },
+        "tours_page": {
+            "reserve": "Über Reiseplaner reservieren &rarr;",
+            "home": "Startseite",
+            "title": "Alle Girona Travels Touren",
+            "lead": "Entdecken Sie unseren vollständigen Katalog an geführten Erlebnissen, Öko-Treks und kulturellen Abenteuern."
+        },
+        "skip_extra": {
+            "save_time": "Sparen Sie 1 bis 2 Stunden",
+            "skip_line": "Vermeiden Sie die morgendliche Warteschlange"
         }
     }
 }
@@ -811,8 +911,8 @@ def render_html(lang_code, data):
           <div class="floating-badge">
             <span class="badge-icon">⚡</span>
             <div>
-              <strong>Save 1 to 2 Hours</strong>
-              <span>Skip the hot morning gate line</span>
+              <strong>{data['skip_extra']['save_time']}</strong>
+              <span>{data['skip_extra']['skip_line']}</span>
             </div>
           </div>
         </div>
@@ -933,38 +1033,38 @@ def render_html(lang_code, data):
   <section class="section section-dark" id="faq">
     <div class="container max-w-4xl">
       <div class="section-header text-center">
-        <span class="section-tag">❓ Frequently Asked Questions</span>
-        <h2 class="section-title">Tayrona & Hotel FAQ</h2>
+        <span class="section-tag">{data['faq']['tag']}</span>
+        <h2 class="section-title">{data['faq']['title']}</h2>
       </div>
 
       <div class="faq-accordion">
         <div class="faq-item">
           <button class="faq-question">
-            Why do Colombians pay 0% VAT (IVA) on hotel stays with Kali Hotels & Villa María Tayrona?
+            {data['faq']['q1']}
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Under Colombian law, foreign tourists are tax-exempt from 19% VAT on lodging. As part of our 2026 Hospitality Equity Campaign, Girona Travel, Kali Hotel & Villa María Tayrona absorb the tax for Colombian residents so EVERY guest enjoys 0% VAT rates!</p>
+            <p>{data['faq']['a1']}</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            How does the Concierge Request Tool work if my flight lands after 12:00 PM?
+            {data['faq']['q2']}
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>If your flight arrives in Santa Marta after 12:00 PM, the wizard automatically places your 1st night at Kali Hotel in Santa Marta historic center. On Day 2 afternoon, private Girona Travel transport moves you to Villa María Tayrona near Tayrona, allowing you to trek Tayrona Park on Day 2 afternoon or Day 3 without rushing!</p>
+            <p>{data['faq']['a2']}</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            Can I buy Tayrona entrance tickets online before I travel?
+            {data['faq']['q3']}
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>No. Official entrance passes cannot be reserved online in advance by individual tourists. However, when you book a guided tour with Girona Travels, your guide buys your entry passes early in the morning so you skip the line.</p>
+            <p>{data['faq']['a3']}</p>
           </div>
         </div>
       </div>
@@ -974,10 +1074,10 @@ def render_html(lang_code, data):
   <!-- CTA Banner Footer -->
   <section class="cta-banner">
     <div class="container text-center">
-      <h2>Ready for an Unforgettable Tayrona & Santa Marta Experience?</h2>
-      <p>Enjoy 0% VAT rates at Kali Hotel & Villa María Tayrona with Girona Travel private transport and certified guides.</p>
+      <h2>{data['cta']['title']}</h2>
+      <p>{data['cta']['desc']}</p>
       <a href="#concierge" class="btn btn-accent btn-xl glow-btn">
-        🚀 Launch Concierge Request Tool &rarr;
+        {data['cta']['btn']}
       </a>
     </div>
   </section>
@@ -1100,7 +1200,7 @@ def render_html(lang_code, data):
               </div>
             </div>
             <div class="tour-footer">
-              <a href="{data['img_prefix']}index.html#concierge" class="btn btn-primary btn-block">Reserve via Concierge &rarr;</a>
+              <a href="{data['img_prefix']}index.html#concierge" class="btn btn-primary btn-block">{data['tours_page']['reserve']}</a>
             </div>
           </div>
         </div>
@@ -1122,15 +1222,15 @@ def render_html(lang_code, data):
         <span class="brand-icon">🌿</span> TayronaGuide
       </a>
       <div class="nav-links">
-        <a href="{data['img_prefix']}index.html" class="nav-link">Home</a>
+        <a href="{data['img_prefix']}index.html" class="nav-link">{data['tours_page']['home']}</a>
       </div>
     </div>
   </header>
 
   <main style="padding-top: 120px; padding-bottom: 80px; max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px;">
     <div class="section-header">
-      <h2 class="section-title">All Girona Travels Tours</h2>
-      <p class="section-lead">Explore our full catalog of guided experiences, eco-treks, and cultural adventures.</p>
+      <h2 class="section-title">{data['tours_page']['title']}</h2>
+      <p class="section-lead">{data['tours_page']['lead']}</p>
     </div>
     <div class="tours-grid" style="margin-top: 40px;">
       {all_tours_html}
