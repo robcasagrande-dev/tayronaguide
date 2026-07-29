@@ -1518,7 +1518,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 56px;
   margin-bottom: 56px;
 }

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 120" width="650" height="120" fill="none">
+  <!-- GAULA Emblem Placeholder -->
+  <g transform="translate(10, 10)">
+    <path d="M50 0 L90 20 V60 C90 85 50 100 50 100 C50 100 10 85 10 60 V20 Z" fill="#ffffff" />
+    <path d="M50 5 L85 22 V58 C85 80 50 93 50 93 C50 93 15 80 15 58 V22 Z" fill="#0f172a" />
+    <path d="M30 45 L45 60 L70 35" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <!-- Text -->
+  <text x="120" y="55" font-family="Arial, sans-serif" font-size="32" font-weight="900" fill="#ffffff" letter-spacing="1">¡YO NO PAGO, YO DENUNCIO!</text>
+  <text x="120" y="85" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#cbd5e1" letter-spacing="0.5">CAMPAÑA OFICIAL GAULA • LÍNEA 165</text>
+</svg>
