@@ -969,6 +969,8 @@ def render_html(lang_code, data):
     # --- Generate tours.html ---
     all_tours_html = ""
     for t in tours_data:
+        if t.get("id", "").startswith("free-time-"):
+            continue
         lang_key = lang_code if lang_code in t["nombre"] else "en"
         badges_list = t.get("badges", [])
         if t.get("badge"):
