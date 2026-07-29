@@ -708,7 +708,7 @@ def render_html(lang_code, data):
   </section>
 
   <!-- Section 3: Concierge Request Tool -->
-  <div id="concierge-container"></div>
+  <div id="concierge" class="concierge-section"></div>
 
   <!-- Section 4: Ticket Truth & Scam Warning -->
   <section class="section section-dark" id="ticket-truth">

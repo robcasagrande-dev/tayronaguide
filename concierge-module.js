@@ -698,6 +698,7 @@ window.ConciergeTool = (function () {
     arrivalDate: '',
     departureDate: '',
     arrivalMode: 'plane',
+    arrivalTime: '12-16',
     adults: 2,
     babies: 0,
     wishlist: [], // array of selected IDs (acc or act)
@@ -727,35 +728,44 @@ window.ConciergeTool = (function () {
   function getAccById(id) { return ACCOMMODATIONS[id]; }
   function getActivityById(id) { return ACTIVITIES.find(a => a.id === id); }
 
-  function render() {
+  function render(scrollToTop = false) {
     if (!container) return;
+    const currentScrollY = window.scrollY;
     container.innerHTML = buildHTML();
     bindEvents();
     updateProgress();
     updateStepperState();
+
+    if (scrollToTop) {
+      const rect = container.getBoundingClientRect();
+      const absoluteTop = rect.top + window.pageYOffset - 80;
+      window.scrollTo({ top: Math.max(0, absoluteTop), behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: currentScrollY, behavior: 'instant' });
+    }
   }
 
   function buildHTML() {
     return `
-      <section class="trip-wizard-section" id="trip-wizard-module">
+      <section class="trip-concierge-section" id="trip-concierge-module">
         <div class="container">
-          <div class="wizard-section-header">
-            <div class="wizard-section-tag">${t('sectionTag')}</div>
-            <h2 class="wizard-section-title">${t('sectionTitle')}</h2>
-            <p class="wizard-section-subtitle">${t('sectionSubtitle')}</p>
+          <div class="concierge-section-header">
+            <div class="concierge-section-tag">${t('sectionTag')}</div>
+            <h2 class="concierge-section-title">${t('sectionTitle')}</h2>
+            <p class="concierge-section-subtitle">${t('sectionSubtitle')}</p>
           </div>
-          <div class="trip-wizard-box">
-            <div class="wizard-progress-bar">
-              <div class="wizard-progress-fill" id="wizProgress" style="width:${progressPct()}%"></div>
+          <div class="trip-concierge-box">
+            <div class="concierge-progress-bar">
+              <div class="concierge-progress-fill" id="wizProgress" style="width:${progressPct()}%"></div>
             </div>
             ${buildStepper()}
-            <div class="wizard-panels">
+            <div class="concierge-panels">
               ${buildPanel1()}
               ${buildPanel2()}
               ${buildPanel3()}
               ${buildPanel4()}
             </div>
-            <div class="wizard-nav-actions">
+            <div class="concierge-nav-actions">
               <button class="wiz-btn wiz-btn-ghost" id="wizRestart">↺ ${t('restartLabel')}</button>
               <div style="display:flex;gap:10px;align-items:center;">
                 ${state.step > 1 && state.step < 4 ? `<button class="wiz-btn wiz-btn-outline" id="wizBack">${t('back')}</button>` : ''}
@@ -778,14 +788,14 @@ window.ConciergeTool = (function () {
       {en:'4. Send', es:'4. Enviar', it:'4. Invia', fr:'4. Envoyer', de:'4. Senden'}
     ];
     return `
-      <div class="wizard-stepper" id="wizStepper">
+      <div class="concierge-stepper" id="wizStepper">
         ${steps.map((s, i) => {
           const n = i + 1;
           const cls = n < state.step ? 'completed' : n === state.step ? 'active' : '';
           return `
-            <div class="wizard-step-item ${cls}" data-step="${n}">
-              <div class="wizard-step-circle">${n < state.step ? '✓' : n}</div>
-              <span class="wizard-step-label">${s[state.lang] || s.en}</span>
+            <div class="concierge-step-item ${cls}" data-step="${n}">
+              <div class="concierge-step-circle">${n < state.step ? '✓' : n}</div>
+              <span class="concierge-step-label">${s[state.lang] || s.en}</span>
             </div>`;
         }).join('')}
       </div>`;
@@ -793,32 +803,53 @@ window.ConciergeTool = (function () {
 
   function buildPanel1() {
     return `
-      <div class="wizard-panel ${state.step === 1 ? 'active' : ''}" data-panel="1">
-        <h3 class="wizard-panel-title">${{en:'🗓️ Trip Basics', es:'🗓️ Datos Básicos', it:'🗓️ Dati di Base', fr:'🗓️ Informations de Base', de:'🗓️ Grunddaten'}[state.lang] || '🗓️ Trip Basics'}</h3>
-        <p class="wizard-panel-subtitle">${{en:'Tell us your dates and group size.', es:'Dinos tus fechas y tamaño del grupo.', it:'Indicaci le date e la dimensione del gruppo.', fr:'Indiquez vos dates et la taille du groupe.', de:'Teilen Sie uns Ihre Daten und Gruppengröße mit.'}[state.lang] || 'Tell us your dates and group size.'}</p>
+      <div class="concierge-panel ${state.step === 1 ? 'active' : ''}" data-panel="1">
+        <h3 class="concierge-panel-title">${{en:'🗓️ Trip Basics', es:'🗓️ Datos Básicos', it:'🗓️ Dati di Base', fr:'🗓️ Informations de Base', de:'🗓️ Grunddaten'}[state.lang] || '🗓️ Trip Basics'}</h3>
+        <p class="concierge-panel-subtitle">${{en:'Tell us your dates and group size.', es:'Dinos tus fechas y tamaño del grupo.', it:'Indicaci le date e la dimensione del gruppo.', fr:'Indiquez vos dates et la taille du groupe.', de:'Teilen Sie uns Ihre Daten und Gruppengröße mit.'}[state.lang] || 'Tell us your dates and group size.'}</p>
 
         <div style="display:flex;gap:20px;margin-bottom:24px;flex-wrap:wrap;">
           <div style="flex:1;min-width:140px;">
             <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:8px;color:var(--wiz-text-muted);">${{en:'Arrival Date', es:'Fecha de Llegada', it:'Data di Arrivo', fr:'Date d\'arrivée', de:'Ankunftsdatum'}[state.lang] || 'Arrival Date'}</label>
-            <input type="date" id="wizArrDate" class="wizard-input" value="${state.arrivalDate}" style="width:100%;">
+            <input type="date" id="wizArrDate" class="concierge-input" value="${state.arrivalDate}" style="width:100%;">
           </div>
           <div style="flex:1;min-width:140px;">
             <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:8px;color:var(--wiz-text-muted);">${{en:'Departure Date', es:'Fecha de Salida', it:'Data di Partenza', fr:'Date de départ', de:'Abreisedatum'}[state.lang] || 'Departure Date'}</label>
-            <input type="date" id="wizDepDate" class="wizard-input" value="${state.departureDate}" style="width:100%;">
+            <input type="date" id="wizDepDate" class="concierge-input" value="${state.departureDate}" style="width:100%;">
           </div>
         </div>
 
-        <div class="wizard-options-grid cols-2" style="margin-bottom:24px;">
-          <button class="wizard-option ${state.arrivalMode === 'plane' ? 'selected' : ''}" data-select="arrivalMode" data-val="plane">
+        <div class="concierge-options-grid cols-2" style="margin-bottom:24px;">
+          <button type="button" class="concierge-option ${state.arrivalMode === 'plane' ? 'selected' : ''}" data-select="arrivalMode" data-val="plane">
             <div class="option-emoji">✈️</div>
             <div class="option-label">${t('byPlane')}</div>
             <div class="option-sub">${t('byPlaneSub')}</div>
           </button>
-          <button class="wizard-option ${state.arrivalMode === 'car' ? 'selected' : ''}" data-select="arrivalMode" data-val="car">
+          <button type="button" class="concierge-option ${state.arrivalMode === 'car' ? 'selected' : ''}" data-select="arrivalMode" data-val="car">
             <div class="option-emoji">🚗</div>
             <div class="option-label">${t('byCar')}</div>
             <div class="option-sub">${t('byCarSub')}</div>
           </button>
+        </div>
+
+        <div style="margin-bottom:24px;">
+          <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:10px;color:var(--wiz-text-muted);">
+            ⏰ ${{en:'Estimated arrival time in Santa Marta', es:'Hora estimada de llegada a Santa Marta', it:'Orario di arrivo stimato a Santa Marta', fr:'Heure d\'arrivée estimée à Santa Marta', de:'Geschätzte Ankunftszeit in Santa Marta'}[state.lang] || 'Estimated arrival time in Santa Marta'}
+          </label>
+          <div class="concierge-options-grid cols-3">
+            ${[
+              { id: '00-04', emoji: '🌙', label: '00:00 – 04:00' },
+              { id: '04-08', emoji: '🌅', label: '04:00 – 08:00' },
+              { id: '08-12', emoji: '☀️', label: '08:00 – 12:00' },
+              { id: '12-16', emoji: '🌤️', label: '12:00 – 16:00' },
+              { id: '16-20', emoji: '🌆', label: '16:00 – 20:00' },
+              { id: '20-24', emoji: '🌌', label: '20:00 – 24:00' }
+            ].map(slot => `
+              <button type="button" class="concierge-option ${state.arrivalTime === slot.id ? 'selected' : ''}" data-select="arrivalTime" data-val="${slot.id}" style="padding:12px;text-align:center;">
+                <div style="font-size:1.3rem;margin-bottom:4px;">${slot.emoji}</div>
+                <div class="option-label" style="font-size:0.9rem;">${slot.label}</div>
+              </button>
+            `).join('')}
+          </div>
         </div>
 
         <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:8px;">
@@ -849,19 +880,19 @@ window.ConciergeTool = (function () {
     const invalid = {en:'Please select valid arrival and departure dates first.', es:'Por favor selecciona fechas válidas primero.', it:'Seleziona prima date valide.', fr:'Veuillez d\'abord sélectionner des dates valides.', de:'Bitte wählen Sie zuerst gültige Daten aus.'}[state.lang] || 'Please select valid dates.';
 
     if (tn <= 0) {
-      return `<div class="wizard-panel ${state.step === 2 ? 'active' : ''}" data-panel="2"><p>${invalid}</p></div>`;
+      return `<div class="concierge-panel ${state.step === 2 ? 'active' : ''}" data-panel="2"><p>${invalid}</p></div>`;
     }
 
-    let html = `<div class="wizard-panel ${state.step === 2 ? 'active' : ''}" data-panel="2">
-      <h3 class="wizard-panel-title">${title}</h3>
-      <p class="wizard-panel-subtitle">${sub}</p>`;
+    let html = `<div class="concierge-panel ${state.step === 2 ? 'active' : ''}" data-panel="2">
+      <h3 class="concierge-panel-title">${title}</h3>
+      <p class="concierge-panel-subtitle">${sub}</p>`;
 
     // Accommodations
     html += `<h4 style="margin-top:20px;margin-bottom:10px;">🏨 ${{en:'Accommodations',es:'Alojamientos',it:'Alloggi',fr:'Hébergements',de:'Unterkünfte'}[state.lang]}</h4>`;
-    html += `<div class="wizard-options-grid cols-3">`;
+    html += `<div class="concierge-options-grid cols-3">`;
     Object.values(ACCOMMODATIONS).forEach(acc => {
       const selected = state.wishlist.includes(acc.id) ? 'selected' : '';
-      html += `<button class="wizard-option ${selected}" data-wishlist="${acc.id}">
+      html += `<button class="concierge-option ${selected}" data-wishlist="${acc.id}">
         <div class="option-emoji">${acc.emoji}</div>
         <div class="option-label">${txt(acc.name)}</div>
       </button>`;
@@ -870,10 +901,10 @@ window.ConciergeTool = (function () {
 
     // Activities
     html += `<h4 style="margin-top:25px;margin-bottom:10px;">🌴 ${{en:'Experiences & Tours',es:'Experiencias y Tours',it:'Esperienze e Tour',fr:'Expériences et Tours',de:'Erlebnisse & Touren'}[state.lang]}</h4>`;
-    html += `<div class="wizard-options-grid cols-2">`;
+    html += `<div class="concierge-options-grid cols-2">`;
     ACTIVITIES.forEach(act => {
       const selected = state.wishlist.includes(act.id) ? 'selected' : '';
-      html += `<button class="wizard-option ${selected}" data-wishlist="${act.id}" style="text-align:left;">
+      html += `<button class="concierge-option ${selected}" data-wishlist="${act.id}" style="text-align:left;">
         <div style="font-size:1.5rem;margin-bottom:5px;">${act.emoji}</div>
         <div class="option-label" style="text-align:left;">${txt(act.name)}</div>
         <div class="option-sub" style="text-align:left;margin-top:4px;opacity:0.8;">${txt(act.desc)}</div>
@@ -893,15 +924,15 @@ window.ConciergeTool = (function () {
       { id: 'top', emoji: '👑', name: {en:'Suite / Premium', es:'Suite / Premium', it:'Suite / Premium', fr:'Suite / Premium', de:'Suite / Premium'}, desc: {en:'The ultimate luxury, best locations, and exclusive services.', es:'El máximo lujo, las mejores ubicaciones y servicios exclusivos.', it:'Il massimo lusso, le migliori posizioni e servizi esclusivi.', fr:'Le summum du luxe, les meilleurs emplacements et services exclusifs.', de:'Höchster Luxus, beste Lagen und exklusive Services.'} }
     ];
 
-    let html = `<div class="wizard-panel ${state.step === 3 ? 'active' : ''}" data-panel="3">
-      <h3 class="wizard-panel-title">${title}</h3>
-      <p class="wizard-panel-subtitle">${sub}</p>
+    let html = `<div class="concierge-panel ${state.step === 3 ? 'active' : ''}" data-panel="3">
+      <h3 class="concierge-panel-title">${title}</h3>
+      <p class="concierge-panel-subtitle">${sub}</p>
       
-      <div class="wizard-options-grid cols-3">`;
+      <div class="concierge-options-grid cols-3">`;
 
     tiers.forEach(t => {
       const selected = state.roomPreference === t.id ? 'selected' : '';
-      html += `<button class="wizard-option ${selected}" data-pref="${t.id}" style="padding:15px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;">
+      html += `<button class="concierge-option ${selected}" data-pref="${t.id}" style="padding:15px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;">
         <div class="room-photo-placeholder" style="background:var(--wiz-border); height:120px; border-radius:8px; margin-bottom:15px; display:flex; align-items:center; justify-content:center; color:var(--wiz-text-muted); font-size:0.8rem; width:100%;">
           [Photo Space]
         </div>
@@ -916,9 +947,9 @@ window.ConciergeTool = (function () {
   }
 
   function buildPanel4() {
-    if (state._sending) return `<div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4"><div style="text-align:center;padding:40px;"><h3>${t('sending')}</h3></div></div>`;
-    if (state._sent) return `<div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4"><div style="text-align:center;padding:40px;color:#10b981;"><h3 style="margin-bottom:15px;">${t('sentOk')}</h3><button class="wiz-btn wiz-btn-outline" id="wizRestartSent" style="margin:0 auto;">↺ ${t('restartLabel')}</button></div></div>`;
-    if (state._sendError) return `<div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4"><div style="text-align:center;padding:40px;color:#ef4444;"><h3 style="margin-bottom:15px;">${t('sentErr')}</h3><button class="wiz-btn wiz-btn-primary" id="wizRetrySent" style="margin:0 auto;">${t('sendProgram')}</button></div></div>`;
+    if (state._sending) return `<div class="concierge-panel ${state.step === 4 ? 'active' : ''}" data-panel="4"><div style="text-align:center;padding:40px;"><h3>${t('sending')}</h3></div></div>`;
+    if (state._sent) return `<div class="concierge-panel ${state.step === 4 ? 'active' : ''}" data-panel="4"><div style="text-align:center;padding:40px;color:#10b981;"><h3 style="margin-bottom:15px;">${t('sentOk')}</h3><button class="wiz-btn wiz-btn-outline" id="wizRestartSent" style="margin:0 auto;">↺ ${t('restartLabel')}</button></div></div>`;
+    if (state._sendError) return `<div class="concierge-panel ${state.step === 4 ? 'active' : ''}" data-panel="4"><div style="text-align:center;padding:40px;color:#ef4444;"><h3 style="margin-bottom:15px;">${t('sentErr')}</h3><button class="wiz-btn wiz-btn-primary" id="wizRetrySent" style="margin:0 auto;">${t('sendProgram')}</button></div></div>`;
 
     const title = {en:'📨 Send to Concierge', es:'📨 Enviar a Conserjería', it:'📨 Invia al Concierge', fr:'📨 Envoyer au Concierge', de:'📨 An Concierge senden'}[state.lang] || '📨 Send to Concierge';
     const sub = {en:'Our luxury concierge will design the perfect chronological itinerary using your wishlist, apply exclusive discounts, and send you the final plan.', es:'Nuestra conserjería de lujo diseñará el itinerario cronológico perfecto usando tu lista de deseos, aplicará descuentos exclusivos y te enviará el plan final.', it:'Il nostro concierge di lusso disegnerà l\'itinerario cronologico perfetto usando la tua lista dei desideri, applicherà sconti esclusivi e ti invierà il piano finale.', fr:'Notre concierge de luxe concevra l\'itinéraire chronologique parfait en utilisant votre liste de souhaits, appliquera des réductions exclusives et vous enverra le plan final.', de:'Unser Luxus-Concierge wird den perfekten chronologischen Reiseplan anhand Ihrer Wunschliste entwerfen, exklusive Rabatte anwenden und Ihnen den endgültigen Plan zusenden.'}[state.lang] || 'Our luxury concierge will design the perfect chronological itinerary using your wishlist, apply exclusive discounts, and send you the final plan.';
@@ -926,11 +957,11 @@ window.ConciergeTool = (function () {
     const tn = getTotalNights();
     
     return `
-      <div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4">
-        <h3 class="wizard-panel-title">${title}</h3>
-        <p class="wizard-panel-subtitle">${sub}</p>
+      <div class="concierge-panel ${state.step === 4 ? 'active' : ''}" data-panel="4">
+        <h3 class="concierge-panel-title">${title}</h3>
+        <p class="concierge-panel-subtitle">${sub}</p>
 
-        <div class="wizard-summary-box">
+        <div class="concierge-summary-box">
           <div class="summary-section">
             <h4>${t('groupInfo')}</h4>
             <div class="summary-line"><span class="summary-name">${state.adults} ${state.adults === 1 ? t('adultsCount') : t('adultsCountP')}${state.babies > 0 ? ` + ${state.babies} ${state.babies === 1 ? t('babiesCount') : t('babiesCountP')}` : ''}</span></div>
@@ -952,14 +983,14 @@ window.ConciergeTool = (function () {
         <div style="background:var(--wiz-surface); border:1px solid var(--wiz-border); padding:20px; border-radius:12px; margin-top:20px;">
           <div style="margin-bottom:15px;">
             <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:6px;">${t('guestNameLabel')}</label>
-            <input type="text" id="wizGuestName" class="wizard-input" style="width:100%" placeholder="${t('guestNamePlaceholder')}" value="${state.guestName}">
+            <input type="text" id="wizGuestName" class="concierge-input" style="width:100%" placeholder="${t('guestNamePlaceholder')}" value="${state.guestName}">
           </div>
           <div style="margin-bottom:20px;">
             <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:6px;">${t('guestEmailLabel')}</label>
-            <input type="email" id="wizGuestEmail" class="wizard-input" style="width:100%" placeholder="${t('guestEmailPlaceholder')}" value="${state.guestEmail}">
+            <input type="email" id="wizGuestEmail" class="concierge-input" style="width:100%" placeholder="${t('guestEmailPlaceholder')}" value="${state.guestEmail}">
           </div>
           
-          <div class="wizard-alert">
+          <div class="concierge-alert">
             ${t('vatNote')}<br>${t('discountNote')}
           </div>
 
@@ -1050,7 +1081,7 @@ window.ConciergeTool = (function () {
         };
 
         try {
-          const res = await fetch('https://api.kalihotels.com/wizard/send', {
+          const res = await fetch('https://api.kalihotels.com/concierge/send', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
@@ -1071,7 +1102,7 @@ window.ConciergeTool = (function () {
     if (fill) fill.style.width = progressPct() + '%';
   }
   function updateStepperState() {
-    container.querySelectorAll('.wizard-step-item').forEach(item => {
+    container.querySelectorAll('.concierge-step-item').forEach(item => {
       const n = parseInt(item.dataset.step);
       item.classList.remove('active', 'completed');
       if (n === state.step) item.classList.add('active');
