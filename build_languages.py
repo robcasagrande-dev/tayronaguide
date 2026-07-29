@@ -28,12 +28,12 @@ languages = {
             "subtitle": "Discover curated packages combining Kali Hotel Santa Marta, Villa María Tayrona, Girona Travel transfers, and an exclusive concierge trip builder with 0% hotel VAT for EVERYONE.",
             "btn1": "⚡ Build Your Trip (0% VAT)",
             "btn2": "🏨 View Bundled Packages",
-            "trust1_title": "0% VAT Guarantee",
-            "trust1_sub": "No IVA for Colombians & Foreigners",
+            "trust1_title": "TayronaGuide Exclusive",
+            "trust1_sub": "Multi-hotel discount & 0% VAT",
             "trust2_title": "Girona Travel Fast-Track",
             "trust2_sub": "Queue skip at park gate",
-            "trust3_title": "Kali Hotel + Villa María Tayrona",
-            "trust3_sub": "City & Jungle Luxury Duo"
+            "trust3_title": "Kali Hotels",
+            "trust3_sub": "Special rates & 0% VAT"
         },
         "no_vat": {
             "tag": "✨ 2026 Hospitality Equity Campaign",
@@ -116,12 +116,12 @@ languages = {
             "subtitle": "Descubre paquetes exclusivos combinando Kali Hotel Santa Marta, Villa María Tayrona, transportes Girona Travel y un diseñador elástico con tarifa SIN IVA para TODOS.",
             "btn1": "⚡ Diseña tu Viaje (0% IVA)",
             "btn2": "🏨 Ver Paquetes Combinados",
-            "trust1_title": "Garantía Sin IVA",
-            "trust1_sub": "0% IVA para colombianos y extranjeros",
+            "trust1_title": "Exclusivo TayronaGuide",
+            "trust1_sub": "Descuento multi-hotel y 0% IVA",
             "trust2_title": "Girona Travel Fast-Track",
             "trust2_sub": "Ingreso preferencial en taquilla",
-            "trust3_title": "Kali Hotel + Villa María Tayrona",
-            "trust3_sub": "Dúo Ciudad y Selva de Lujo"
+            "trust3_title": "Kali Hotels",
+            "trust3_sub": "Tarifas especiales y 0% IVA"
         },
         "no_vat": {
             "tag": "✨ Campaña de Equidad Hotelera 2026",
@@ -204,12 +204,12 @@ languages = {
             "subtitle": "Scopri i pacchetti che combinano Kali Hotel Santa Marta, Villa María Tayrona, trasferimenti Girona Travel e un servizio concierge con prezzo SENZA IVA per TUTTI.",
             "btn1": "⚡ Configura il Tuo Viaggio (0% IVA)",
             "btn2": "🏨 Vedi i Pacchetti",
-            "trust1_title": "Garanzia 0% IVA",
-            "trust1_sub": "No IVA per colombiani e stranieri",
+            "trust1_title": "Esclusiva TayronaGuide",
+            "trust1_sub": "Sconto multi-hotel e 0% IVA",
             "trust2_title": "Girona Travel Fast-Track",
             "trust2_sub": "Salta la coda all'ingresso",
-            "trust3_title": "Kali Hotel + Villa María Tayrona",
-            "trust3_sub": "Città e Natura di Lusso"
+            "trust3_title": "Kali Hotels",
+            "trust3_sub": "Tariffe speciali e 0% IVA"
         },
         "no_vat": {
             "tag": "✨ Campagna Equità Alberghiera 2026",
@@ -292,12 +292,12 @@ languages = {
             "subtitle": "Combinez Kali Hotel Santa Marta, Villa María Tayrona, les transports Girona Travel et un planificateur élastique avec 0% de TVA pour TOUS.",
             "btn1": "⚡ Créez votre Voyage (0% TVA)",
             "btn2": "🏨 Voir les Forfaits",
-            "trust1_title": "Garantie 0% TVA",
-            "trust1_sub": "Pas de TVA pour Colombiens et étrangers",
+            "trust1_title": "Exclusivité TayronaGuide",
+            "trust1_sub": "Remise multi-hôtels et 0% TVA",
             "trust2_title": "Girona Travel Fast-Track",
             "trust2_sub": "Entrée prioritaire au parc",
-            "trust3_title": "Kali Hotel + Villa María Tayrona",
-            "trust3_sub": "Luxe Ville et Jungle"
+            "trust3_title": "Kali Hotels",
+            "trust3_sub": "Tarifs spéciaux et 0% TVA"
         },
         "no_vat": {
             "tag": "✨ Campagne Équité Hôtelière 2026",
@@ -380,12 +380,12 @@ languages = {
             "subtitle": "Kombinieren Sie Kali Hotel Santa Marta, Villa María Tayrona, Girona Travel Transfers und einen elastischen Reiseplaner mit 0% MwSt. für ALLE.",
             "btn1": "⚡ Reise Planen (0% MwSt.)",
             "btn2": "🏨 Kombi-Pakete Ansehen",
-            "trust1_title": "0% MwSt. Garantie",
-            "trust1_sub": "Keine MwSt. für Kolumbianer & Ausländer",
+            "trust1_title": "Exklusiv TayronaGuide",
+            "trust1_sub": "Multi-Hotel Rabatt & 0% MwSt.",
             "trust2_title": "Girona Travel Fast-Track",
             "trust2_sub": "Einlass ohne Wartezeit",
-            "trust3_title": "Kali Hotel + Villa María Tayrona",
-            "trust3_sub": "Stadt & Dschungel Luxus"
+            "trust3_title": "Kali Hotels",
+            "trust3_sub": "Sondertarife & 0% MwSt."
         },
         "no_vat": {
             "tag": "✨ Hotel-Gerechtigkeits-Kampagne 2026",
@@ -603,22 +603,22 @@ def render_html(lang_code, data):
 
       <!-- Quick Trust Indicators -->
       <div class="hero-trust-grid">
-        <div class="trust-item">
-          <span class="trust-icon">🛡️</span>
+        <div class="trust-item" style="align-items: center;">
+          <img src="{data['img_prefix']}images/lodging/villa_maria.jpg" alt="TayronaGuide Discount" style="width: 56px; height: 56px; object-fit: cover; border-radius: 50%; border: 2px solid var(--c-accent); margin-right: 16px; flex-shrink: 0;">
           <div>
             <strong>{data['hero']['trust1_title']}</strong>
             <span>{data['hero']['trust1_sub']}</span>
           </div>
         </div>
-        <div class="trust-item">
-          <span class="trust-icon">⚡</span>
+        <div class="trust-item" style="align-items: center;">
+          <img src="{data['img_prefix']}images/vat_discount_travelers.jpg" alt="Fast-Track" style="width: 56px; height: 56px; object-fit: cover; border-radius: 50%; border: 2px solid var(--c-accent); margin-right: 16px; flex-shrink: 0;">
           <div>
             <strong>{data['hero']['trust2_title']}</strong>
             <span>{data['hero']['trust2_sub']}</span>
           </div>
         </div>
-        <div class="trust-item">
-          <span class="trust-icon">🌴</span>
+        <div class="trust-item" style="align-items: center;">
+          <img src="{data['img_prefix']}images/kali_hotels_discount.jpg" alt="Kali Hotels" style="width: 56px; height: 56px; object-fit: cover; border-radius: 50%; border: 2px solid var(--c-accent); margin-right: 16px; flex-shrink: 0;">
           <div>
             <strong>{data['hero']['trust3_title']}</strong>
             <span>{data['hero']['trust3_sub']}</span>
@@ -787,7 +787,7 @@ def render_html(lang_code, data):
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag">🏨 Official Lodging Partner</span>
-        <h2 class="section-title">Where to Stay: Kali Hotel & Villa María Tayrona</h2>
+        <h2 class="section-title">Where to Stay: Kali Hotels</h2>
         <p class="section-lead">Enjoy city vibe at Kali Hotel Santa Marta & jungle eco-luxury at Villa María Tayrona with 0% VAT.</p>
       </div>
 
