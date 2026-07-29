@@ -491,6 +491,31 @@ languages = {
             "cert_gaula_alt": "Campagne Officielle GAULA",
             "cert_gaula_text": "Nous soutenons la campagne officielle contre les enlèvements et les extorsions. Ligne: 165",
             "copyright": "&copy; 2026 TayronaGuide.com. Tous droits réservés. Propulsé par Girona Travels & Kali Hotels."
+        },
+        "faq": {
+            "tag": "❓ Foire Aux Questions",
+            "title": "FAQ Tayrona et Hôtels",
+            "q1": "Pourquoi les Colombiens paient-ils 0 % de TVA (IVA) sur les séjours à Kali Hotels et Villa María Tayrona ?",
+            "a1": "Selon la loi colombienne, les touristes étrangers sont exonérés de la TVA de 19 % sur l'hébergement. Dans le cadre de notre campagne d'équité hôtelière 2026, Girona Travel, Kali Hotel et Villa María Tayrona absorbent la taxe pour les résidents colombiens, de sorte que TOUS les clients bénéficient de 0 % de TVA !",
+            "q2": "Comment fonctionne l'outil de Planification de Voyage ?",
+            "a2": "L'outil de Planification vous permet de combiner des séjours dans les Kali Hotels à Santa Marta et la Villa María Tayrona, avec des transferts privés et des visites guidées officielles. Nous personnalisons l'itinéraire pour l'adapter à votre emploi du temps.",
+            "q3": "Puis-je acheter des billets d'entrée pour Tayrona en ligne avant de voyager ?",
+            "a3": "Non. Les billets d'entrée officiels ne peuvent pas être réservés en ligne à l'avance par des touristes individuels. Cependant, lorsque vous réservez une visite guidée avec Girona Travels, votre guide achète vos billets tôt le matin pour que vous évitiez la file d'attente."
+        },
+        "cta": {
+            "title": "Prêt pour une expérience inoubliable à Tayrona et Santa Marta ?",
+            "desc": "Profitez de 0 % de TVA à Kali Hotel et Villa María Tayrona avec le transport privé Girona Travel et des guides certifiés.",
+            "btn": "🚀 Lancer l'Outil de Planification &rarr;"
+        },
+        "tours_page": {
+            "reserve": "Réserver via l'Outil de Planification &rarr;",
+            "home": "Accueil",
+            "title": "Tous les Circuits Girona Travels",
+            "lead": "Explorez notre catalogue complet d'expériences guidées, de randonnées écologiques et d'aventures culturelles."
+        },
+        "skip_extra": {
+            "save_time": "Gagnez 1 à 2 heures",
+            "skip_line": "Évitez la file d'attente matinale"
         }
     },
     "de": {
