@@ -39,6 +39,16 @@
       "⏱️ 8-9 Hours",
       "🥾 Moderate Trek",
       "⚡ Queue Fast-Track"
+    ],
+    "badges": [
+      {
+        "label": "Best Selling",
+        "class": "badge-green"
+      },
+      {
+        "label": "⚡ Skip The Line",
+        "class": "badge-gold"
+      }
     ]
   },
   {

@@ -472,7 +472,17 @@ def render_html(lang_code, data):
         # Fallback to English if the current language is not available in the JSON
         lang_key = lang_code if lang_code in t["nombre"] else "en"
         
-        badge_html = f"""<span class="tour-img-badge {t.get("badge_class", "")}"> {t.get("badge", "")}</span>""" if t.get("badge") else ""
+        
+        badges_list = t.get("badges", [])
+        if t.get("badge"):
+            # legacy fallback
+            badges_list = [{"label": t.get("badge"), "class": t.get("badge_class", "")}]
+            
+        badge_html = "<div class=\"tour-img-badges\">"
+        for b in badges_list:
+            badge_html += f"""<span class="tour-img-badge {b.get('class', '')}">{b.get('label', '')}</span>"""
+        badge_html += "</div>"
+
         
         highlights_html = ""
         for h in t.get("highlights", []):
@@ -765,7 +775,7 @@ def render_html(lang_code, data):
       </div>
 
       <div class="tours-cta-wrap">
-        <a href="#concierge" class="btn btn-accent btn-lg glow-btn" style="padding:16px 40px;font-size:1.05rem;font-weight:700;border-radius:9999px;">
+        <a href="{data['img_prefix']}tours.html" class="btn btn-accent btn-lg glow-btn" style="padding:16px 40px;font-size:1.05rem;font-weight:700;border-radius:9999px;">
           See All Girona Travels Tours &rarr;
         </a>
       </div>
