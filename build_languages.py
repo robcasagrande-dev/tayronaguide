@@ -39,12 +39,12 @@ languages = {
             "tag": "✨ 2026 Hospitality Equity Campaign",
             "title": "Colombians Should Not Pay VAT at Hotels <span>As Foreigners Do</span>",
             "subtitle": "In Colombia, international tourists are exempt from 19% hotel VAT (IVA). We believe Colombian travelers deserve the exact same tax-free experience! At Kali Hotel Santa Marta & Villa María Tayrona, we offer a 0% VAT rate for ALL guests.",
-            "card1_title": "🇨🇴 Colombian Nationals",
-            "card1_desc": "Save 19% IVA automatically! We absorb hotel tax so domestic travelers enjoy the exact same 0% VAT pricing as foreign visitors.",
-            "card2_title": "🌎 International Travelers",
-            "card2_desc": "100% Tax-Exempt & Transparent pricing. No surprise fees, no hidden taxes, and clear upfront rate guarantees at check-in.",
-            "card3_title": "🏨 Kali Hotel & Villa María Tayrona",
-            "card3_desc": "Valid across all stay combinations: Kali Hotel in Santa Marta Historic Center and Villa María Tayrona Nature Sanctuary."
+            "card1_title": "TayronaGuide Exclusive",
+            "card1_desc": "Book through TayronaGuide to access our multi-hotel exclusive discount. We absorb the hotel tax, so Colombians and international travelers enjoy the exact same 0% VAT pricing.",
+            "card2_title": "0% VAT For Everyone",
+            "card2_desc": "Whether you are a Colombian national or an international traveler, enjoy 100% tax-exempt & transparent pricing. No surprise fees and clear upfront rate guarantees.",
+            "card3_title": "Kali Hotels",
+            "card3_desc": "Enjoy our special TayronaGuide discount at Kali Hotels. Experience premium stays in Santa Marta with an automatic 0% VAT tax benefit included."
         },
         "packages": {
             "tag": "📦 Curated All-Inclusive Combos",
@@ -127,12 +127,12 @@ languages = {
             "tag": "✨ Campaña de Equidad Hotelera 2026",
             "title": "Los Colombianos No Deberían Pagar IVA <span>Como los Extranjeros</span>",
             "subtitle": "En Colombia, los turistas internacionales están exentos del 19% de IVA hotelero. ¡Creemos que los viajeros colombianos merecen el mismo beneficio! En Kali Hotel Santa Marta y Villa María Tayrona ofrecemos tarifa 0% IVA para TODOS.",
-            "card1_title": "🇨🇴 Nacionales Colombianos",
-            "card1_desc": "¡Ahorra el 19% de IVA automáticamente! Absorbemos el impuesto hotelero para que disfrutes la misma tarifa exenta que los extranjeros.",
-            "card2_title": "🌎 Turistas Internacionales",
-            "card2_desc": "Tarifa 100% exenta de impuestos según la normativa oficial de turismo en Colombia. Transparencia total sin sorpresas al momento del check-in.",
-            "card3_title": "🏨 Kali Hotel y Villa María Tayrona",
-            "card3_desc": "Válido en todas las combinaciones: Kali Hotel en el Centro Histórico de Santa Marta y Villa María Tayrona en el Parque Tayrona."
+            "card1_title": "Exclusivo TayronaGuide",
+            "card1_desc": "Reserva a través de TayronaGuide para acceder a nuestro descuento exclusivo en múltiples hoteles. Absorbemos el impuesto hotelero para que colombianos y extranjeros disfruten del mismo precio sin IVA.",
+            "card2_title": "0% IVA Para Todos",
+            "card2_desc": "Ya sea nacional colombiano o viajero internacional, disfruta de precios transparentes y 100% libres de impuestos. Sin tarifas sorpresa ni cobros ocultos garantizados.",
+            "card3_title": "Kali Hotels",
+            "card3_desc": "Disfruta de nuestro descuento especial TayronaGuide en Kali Hotels. Vive estadías premium en Santa Marta con el beneficio automático del 0% de IVA incluido."
         },
         "packages": {
             "tag": "📦 Combos Todo Incluido",
@@ -215,12 +215,12 @@ languages = {
             "tag": "✨ Campagna Equità Alberghiera 2026",
             "title": "I Colombiani Non Dovrebbero Pagare l'IVA <span>Come gli Stranieri</span>",
             "subtitle": "In Colombia, i turisti internazionali sono esenti dall'IVA del 19% sugli hotel. Riteniamo che anche i viaggiatori colombiani debbano godere dello stesso beneficio! Presso Kali Hotel Santa Marta e Villa María Tayrona offriamo la tariffa 0% IVA per TUTTI.",
-            "card1_title": "🇨🇴 Cittadini Colombiani",
-            "card1_desc": "Risparmia l'IVA del 19% automaticamente! Assorbiamo la tassa alberghiera così paghi la stessa tariffa esente degli stranieri.",
-            "card2_title": "🌎 Turisti Internazionali",
-            "card2_desc": "Tariffa esente da imposte secondo le norme ufficiali colombiane. Trasparenza totale senza sorprese al check-in.",
-            "card3_title": "🏨 Kali Hotel & Villa María Tayrona",
-            "card3_desc": "Valido per tutte le combinazioni: Kali Hotel nel centro storico di Santa Marta e Villa María Tayrona nella riserva di Tayrona."
+            "card1_title": "Esclusiva TayronaGuide",
+            "card1_desc": "Prenota tramite TayronaGuide per accedere al nostro sconto esclusivo multi-hotel. Assorbiamo la tassa di soggiorno così colombiani e viaggiatori internazionali godono dello stesso prezzo 0% IVA.",
+            "card2_title": "0% IVA Per Tutti",
+            "card2_desc": "Che tu sia cittadino colombiano o viaggiatore internazionale, goditi un prezzo trasparente e 100% esente da tasse. Nessuna commissione a sorpresa e tariffe garantite.",
+            "card3_title": "Kali Hotels",
+            "card3_desc": "Approfitta del nostro speciale sconto TayronaGuide nei Kali Hotels. Vivi soggiorni premium a Santa Marta con il beneficio automatico dello 0% di IVA incluso."
         },
         "packages": {
             "tag": "📦 Pacchetti Tutto Incluso",
@@ -303,12 +303,12 @@ languages = {
             "tag": "✨ Campagne Équité Hôtelière 2026",
             "title": "Les Colombiens Ne Devraient Pas Payer la TVA <span>Comme les Étrangers</span>",
             "subtitle": "En Colombie, les touristes internationaux sont exonérés de 19% de TVA sur les hôtels. Nous pensons que les voyageurs colombiens méritent le même privilège! À Kali Hotel Santa Marta et Villa María Tayrona, nous offrons un tarif 0% TVA pour TOUS.",
-            "card1_title": "🇨🇴 Citoyens Colombiens",
-            "card1_desc": "Économisez 19% de TVA automatiquement! Nous prenons en charge la taxe pour vous offrir le même tarif exonéré que les visiteurs étrangers.",
-            "card2_title": "🌎 Touristes Internationaux",
-            "card2_desc": "Tarif 100% exonéré selon les règles du tourisme colombien. Transparence totale sans frais cachés au check-in.",
-            "card3_title": "🏨 Kali Hotel & Villa María Tayrona",
-            "card3_desc": "Valable pour toutes les combinaisons: Kali Hotel dans le centre historique de Santa Marta et Villa María Tayrona au Parc Tayrona."
+            "card1_title": "Exclusivité TayronaGuide",
+            "card1_desc": "Réservez via TayronaGuide pour accéder à notre remise exclusive multi-hôtels. Nous absorbons la taxe hôtelière pour que les Colombiens et les voyageurs internationaux bénéficient du même prix à 0% de TVA.",
+            "card2_title": "0% TVA Pour Tous",
+            "card2_desc": "Que vous soyez de nationalité colombienne ou un voyageur international, profitez de prix transparents et 100% exonérés de taxes. Pas de frais surprises et des tarifs garantis.",
+            "card3_title": "Kali Hotels",
+            "card3_desc": "Profitez de notre remise spéciale TayronaGuide dans les Kali Hotels. Vivez des séjours premium à Santa Marta avec l'avantage automatique de 0% de TVA inclus."
         },
         "packages": {
             "tag": "📦 Offres Combinées",
@@ -391,12 +391,12 @@ languages = {
             "tag": "✨ Hotel-Gerechtigkeits-Kampagne 2026",
             "title": "Kolumbianer Sollten Keine MwSt. Zahlen <span>Wie Ausländische Touristen</span>",
             "subtitle": "In Kolumbien sind ausländische Touristen von 19% Hotel-MwSt. befreit. Wir glauben, kolumbianische Reisende verdienen das gleiche Recht! Im Kali Hotel Santa Marta & Villa María Tayrona bieten wir 0% MwSt. für ALLE Gäste.",
-            "card1_title": "🇨🇴 Kolumbianische Staatsbürger",
-            "card1_desc": "Sparen Sie automatisch 19% MwSt.! Wir übernehmen die Steuer, sodass Sie den gleichen steuerfreien Preis wie internationale Gäste zahlen.",
-            "card2_title": "🌎 Internationale Touristen",
-            "card2_desc": "100% steuerfrei nach offiziellen kolumbianischen Tourismusregeln. Vollständige Transparenz ohne versteckte Gebühren beim Check-in.",
-            "card3_title": "🏨 Kali Hotel & Villa María Tayrona",
-            "card3_desc": "Gültig für alle Kombinationen: Kali Hotel im historischen Zentrum von Santa Marta & Villa María Tayrona im Tayrona-Park."
+            "card1_title": "Exklusiv TayronaGuide",
+            "card1_desc": "Buchen Sie über TayronaGuide, um unseren exklusiven Multi-Hotel-Rabatt zu nutzen. Wir übernehmen die Hotelsteuer, damit Kolumbianer und internationale Reisende den gleichen 0% MwSt.-Preis genießen.",
+            "card2_title": "0% MwSt. Für Alle",
+            "card2_desc": "Ob kolumbianischer Staatsbürger oder internationaler Reisender, genießen Sie 100% steuerfreie & transparente Preise. Keine Überraschungsgebühren und klare Preisgarantien.",
+            "card3_title": "Kali Hotels",
+            "card3_desc": "Genießen Sie unseren speziellen TayronaGuide-Rabatt in den Kali Hotels. Erleben Sie Premium-Aufenthalte in Santa Marta mit dem automatischen 0% MwSt.-Vorteil inklusive."
         },
         "packages": {
             "tag": "📦 All-Inclusive Pakete",
@@ -631,24 +631,24 @@ def render_html(lang_code, data):
 
       <div class="vat-grid">
         <div class="vat-card reveal">
-          <div class="vat-card-icon-wrap">🇨🇴</div>
+          <img src="{data['img_prefix']}images/lodging/villa_maria.jpg" alt="TayronaGuide Discount" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 16px;">
           <h3>{data['no_vat']['card1_title']}</h3>
           <p>{data['no_vat']['card1_desc']}</p>
           <span class="vat-highlight-pill">19% IVA Absorbed &amp; Exempt</span>
         </div>
 
         <div class="vat-card reveal">
-          <div class="vat-card-icon-wrap">🌎</div>
+          <img src="{data['img_prefix']}images/vat_discount_travelers.jpg" alt="0% VAT For Everyone" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 16px;">
           <h3>{data['no_vat']['card2_title']}</h3>
           <p>{data['no_vat']['card2_desc']}</p>
           <span class="vat-highlight-pill">Official 0% Tourist Rate</span>
         </div>
 
         <div class="vat-card reveal">
-          <div class="vat-card-icon-wrap">🏨</div>
+          <img src="{data['img_prefix']}images/kali_hotels_discount.jpg" alt="Kali Hotels Discount" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 16px;">
           <h3>{data['no_vat']['card3_title']}</h3>
           <p>{data['no_vat']['card3_desc']}</p>
-          <span class="vat-highlight-pill">City &amp; Jungle Eco-Duo</span>
+          <span class="vat-highlight-pill">Exclusive TayronaGuide Discount</span>
         </div>
       </div>
     </div>
