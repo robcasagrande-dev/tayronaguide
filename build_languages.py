@@ -10,45 +10,45 @@ languages = {
         "description": "Official 2026 Tayrona National Park Travel Guide. Learn how entry passes work, avoid online ticket scams, skip the 2-hour gate queue with certified local guides, and book stays near park entrances.",
         "announcement": "✨ <strong>0% HOTEL VAT CAMPAIGN:</strong> Colombians & Foreigners pay 0% IVA on hotel stays! <a href=\"#wizard\">Build your concierge trip &rarr;</a>",
         "nav": {
-            "truth": "Ticket Truth",
-            "no_vat": "0% VAT Campaign",
-            "packages": "Packages",
+            "truth": "🎫 Ticket Truth",
+            "no_vat": "🏷️ 0% VAT",
+            "guide": "🌿 Park Guide",
             "wizard": "🛎️ Concierge Request",
-            "skip": "Skip Queue",
-            "tours": "Guided Tours",
+            "skip": "⚡ Skip Queue",
+            "tours": "🥾 Tours",
             "trails": "Trails",
-            "stays": "Lodging",
-            "faq": "FAQ",
+            "stays": "🏨 Lodging",
+            "faq": "❓ FAQ",
             "btn": "Book Stay & Tours &rarr;"
         },
         "hero": {
             "badge": "Verified 2026 Park Travel Guide & Hospitality Hub",
             "title": "Experience <span>Santa Marta & Tayrona</span> Without the Stress",
-            "subtitle": "Discover curated packages combining Kali Hotel Santa Marta, Villa Matrix Tayrona, Girona Travel transfers, and an exclusive concierge trip builder with 0% hotel VAT for EVERYONE.",
+            "subtitle": "Discover curated packages combining Kali Hotel Santa Marta, Villa María Tayrona, Girona Travel transfers, and an exclusive concierge trip builder with 0% hotel VAT for EVERYONE.",
             "btn1": "⚡ Build Your Trip (0% VAT)",
             "btn2": "🏨 View Bundled Packages",
             "trust1_title": "0% VAT Guarantee",
             "trust1_sub": "No IVA for Colombians & Foreigners",
             "trust2_title": "Girona Travel Fast-Track",
             "trust2_sub": "Queue skip at park gate",
-            "trust3_title": "Kali Hotel + Villa Matrix",
+            "trust3_title": "Kali Hotel + Villa María Tayrona",
             "trust3_sub": "City & Jungle Luxury Duo"
         },
         "no_vat": {
             "tag": "✨ 2026 Hospitality Equity Campaign",
             "title": "Colombians Should Not Pay VAT at Hotels <span>As Foreigners Do</span>",
-            "subtitle": "In Colombia, international tourists are exempt from 19% hotel VAT (IVA). We believe Colombian travelers deserve the exact same tax-free experience! At Kali Hotel Santa Marta & Villa Matrix Tayrona, we offer a 0% VAT rate for ALL guests.",
+            "subtitle": "In Colombia, international tourists are exempt from 19% hotel VAT (IVA). We believe Colombian travelers deserve the exact same tax-free experience! At Kali Hotel Santa Marta & Villa María Tayrona, we offer a 0% VAT rate for ALL guests.",
             "card1_title": "🇨🇴 Colombian Nationals",
             "card1_desc": "Save 19% IVA automatically! We absorb hotel tax so domestic travelers enjoy the exact same 0% VAT pricing as foreign visitors.",
             "card2_title": "🌎 International Travelers",
             "card2_desc": "100% Tax-Exempt & Transparent pricing. No surprise fees, no hidden taxes, and clear upfront rate guarantees at check-in.",
-            "card3_title": "🏨 Kali Hotel & Villa Matrix",
-            "card3_desc": "Valid across all stay combinations: Kali Hotel in Santa Marta Historic Center and Villa Matrix Tayrona Nature Sanctuary."
+            "card3_title": "🏨 Kali Hotel & Villa María Tayrona",
+            "card3_desc": "Valid across all stay combinations: Kali Hotel in Santa Marta Historic Center and Villa María Tayrona Nature Sanctuary."
         },
         "packages": {
             "tag": "📦 Curated All-Inclusive Combos",
             "title": "Santa Marta, Tayrona & Girona Travel Packages",
-            "subtitle": "Turnkey travel packages combining Kali Hotel (City), Villa Matrix (Tayrona Nature), Girona Travel Transfers & Fast-Track Guided Tours."
+            "subtitle": "Turnkey travel packages combining Kali Hotel (City), Villa María Tayrona (Tayrona Nature), Girona Travel Transfers & Fast-Track Guided Tours."
         },
         "truth": {
             "tag": "⚠️ Essential Entry Knowledge",
@@ -98,45 +98,45 @@ languages = {
         "description": "Guía oficial 2026 del Parque Nacional Tayrona. Aprende cómo funcionan las entradas, evita estafas en línea y sáltate la fila de 2 horas con guías locales certificados.",
         "announcement": "✨ <strong>CAMPAÑA SIN IVA:</strong> ¡Colombianos y extranjeros pagan 0% IVA en hospedaje! <a href=\"#wizard\">Diseña tu viaje elástico &rarr;</a>",
         "nav": {
-            "truth": "Verdad Entradas",
-            "no_vat": "Campaña Sin IVA",
-            "packages": "Paquetes",
+            "truth": "🎫 Entradas",
+            "no_vat": "🏷️ Sin IVA",
+            "guide": "🌿 Guía Parque",
             "wizard": "🛎️ Solicitar Concierge",
-            "skip": "Saltarse Fila",
-            "tours": "Tours Guiados",
+            "skip": "⚡ Fila",
+            "tours": "🥾 Tours",
             "trails": "Senderos",
-            "stays": "Alojamientos",
-            "faq": "FAQ",
+            "stays": "🏨 Hospedaje",
+            "faq": "❓ FAQ",
             "btn": "Reservar Hospedaje y Tours &rarr;"
         },
         "hero": {
             "badge": "Guía de Viaje Verificada 2026 y Centro Turístico",
             "title": "Disfruta <span>Santa Marta y Tayrona</span> Sin Estrés",
-            "subtitle": "Descubre paquetes exclusivos combinando Kali Hotel Santa Marta, Villa Matrix Tayrona, transportes Girona Travel y un diseñador elástico con tarifa SIN IVA para TODOS.",
+            "subtitle": "Descubre paquetes exclusivos combinando Kali Hotel Santa Marta, Villa María Tayrona, transportes Girona Travel y un diseñador elástico con tarifa SIN IVA para TODOS.",
             "btn1": "⚡ Diseña tu Viaje (0% IVA)",
             "btn2": "🏨 Ver Paquetes Combinados",
             "trust1_title": "Garantía Sin IVA",
             "trust1_sub": "0% IVA para colombianos y extranjeros",
             "trust2_title": "Girona Travel Fast-Track",
             "trust2_sub": "Ingreso preferencial en taquilla",
-            "trust3_title": "Kali Hotel + Villa Matrix",
+            "trust3_title": "Kali Hotel + Villa María Tayrona",
             "trust3_sub": "Dúo Ciudad y Selva de Lujo"
         },
         "no_vat": {
             "tag": "✨ Campaña de Equidad Hotelera 2026",
             "title": "Los Colombianos No Deberían Pagar IVA <span>Como los Extranjeros</span>",
-            "subtitle": "En Colombia, los turistas internacionales están exentos del 19% de IVA hotelero. ¡Creemos que los viajeros colombianos merecen el mismo beneficio! En Kali Hotel Santa Marta y Villa Matrix Tayrona ofrecemos tarifa 0% IVA para TODOS.",
+            "subtitle": "En Colombia, los turistas internacionales están exentos del 19% de IVA hotelero. ¡Creemos que los viajeros colombianos merecen el mismo beneficio! En Kali Hotel Santa Marta y Villa María Tayrona ofrecemos tarifa 0% IVA para TODOS.",
             "card1_title": "🇨🇴 Nacionales Colombianos",
             "card1_desc": "¡Ahorra el 19% de IVA automáticamente! Absorbemos el impuesto hotelero para que disfrutes la misma tarifa exenta que los extranjeros.",
             "card2_title": "🌎 Turistas Internacionales",
             "card2_desc": "Tarifa 100% exenta de impuestos según la normativa oficial de turismo en Colombia. Transparencia total sin sorpresas al momento del check-in.",
-            "card3_title": "🏨 Kali Hotel y Villa Matrix",
-            "card3_desc": "Válido en todas las combinaciones: Kali Hotel en el Centro Histórico de Santa Marta y Villa Matrix en el Parque Tayrona."
+            "card3_title": "🏨 Kali Hotel y Villa María Tayrona",
+            "card3_desc": "Válido en todas las combinaciones: Kali Hotel en el Centro Histórico de Santa Marta y Villa María Tayrona en el Parque Tayrona."
         },
         "packages": {
             "tag": "📦 Combos Todo Incluido",
             "title": "Paquetes Santa Marta, Tayrona y Girona Travel",
-            "subtitle": "Paquetes turísticos completos que combinan Kali Hotel (Ciudad), Villa Matrix (Selva Tayrona), transportes Girona Travel y tours guiados preferenciales."
+            "subtitle": "Paquetes turísticos completos que combinan Kali Hotel (Ciudad), Villa María Tayrona (Selva Tayrona), transportes Girona Travel y tours guiados preferenciales."
         },
         "truth": {
             "tag": "⚠️ Información Esencial de Ingreso",
@@ -186,45 +186,45 @@ languages = {
         "description": "Guida ufficiale 2026 del Parco Nazionale Tayrona. Scopri come funzionano i biglietti d'ingresso, evita le truffe online e salta la coda di 2 ore con guide locali certificate.",
         "announcement": "✨ <strong>CAMPAGNA NO IVA HOTEL:</strong> Colombiani e stranieri pagano 0% IVA! <a href=\"#wizard\">Crea il tuo viaggio elastico &rarr;</a>",
         "nav": {
-            "truth": "Verità Biglietti",
-            "no_vat": "Campagna No IVA",
-            "packages": "Pacchetti",
+            "truth": "🎫 Biglietti",
+            "no_vat": "🏷️ 0% IVA",
+            "guide": "🌿 Guida Parco",
             "wizard": "🛎️ Richiedi Concierge",
-            "skip": "Salta Coda",
-            "tours": "Tour Guidati",
+            "skip": "⚡ Salta Coda",
+            "tours": "🥾 Tour",
             "trails": "Sentieri",
-            "stays": "Alloggi",
-            "faq": "FAQ",
+            "stays": "🏨 Alloggi",
+            "faq": "❓ FAQ",
             "btn": "Prenota Soggiorno e Tour &rarr;"
         },
         "hero": {
             "badge": "Guida di Viaggio Verificata 2026",
             "title": "Vivi <span>Santa Marta & Tayrona</span> Senza Stress",
-            "subtitle": "Scopri i pacchetti che combinano Kali Hotel Santa Marta, Villa Matrix Tayrona, trasferimenti Girona Travel e un servizio concierge con prezzo SENZA IVA per TUTTI.",
+            "subtitle": "Scopri i pacchetti che combinano Kali Hotel Santa Marta, Villa María Tayrona, trasferimenti Girona Travel e un servizio concierge con prezzo SENZA IVA per TUTTI.",
             "btn1": "⚡ Configura il Tuo Viaggio (0% IVA)",
             "btn2": "🏨 Vedi i Pacchetti",
             "trust1_title": "Garanzia 0% IVA",
             "trust1_sub": "No IVA per colombiani e stranieri",
             "trust2_title": "Girona Travel Fast-Track",
             "trust2_sub": "Salta la coda all'ingresso",
-            "trust3_title": "Kali Hotel + Villa Matrix",
+            "trust3_title": "Kali Hotel + Villa María Tayrona",
             "trust3_sub": "Città e Natura di Lusso"
         },
         "no_vat": {
             "tag": "✨ Campagna Equità Alberghiera 2026",
             "title": "I Colombiani Non Dovrebbero Pagare l'IVA <span>Come gli Stranieri</span>",
-            "subtitle": "In Colombia, i turisti internazionali sono esenti dall'IVA del 19% sugli hotel. Riteniamo che anche i viaggiatori colombiani debbano godere dello stesso beneficio! Presso Kali Hotel Santa Marta e Villa Matrix Tayrona offriamo la tariffa 0% IVA per TUTTI.",
+            "subtitle": "In Colombia, i turisti internazionali sono esenti dall'IVA del 19% sugli hotel. Riteniamo che anche i viaggiatori colombiani debbano godere dello stesso beneficio! Presso Kali Hotel Santa Marta e Villa María Tayrona offriamo la tariffa 0% IVA per TUTTI.",
             "card1_title": "🇨🇴 Cittadini Colombiani",
             "card1_desc": "Risparmia l'IVA del 19% automaticamente! Assorbiamo la tassa alberghiera così paghi la stessa tariffa esente degli stranieri.",
             "card2_title": "🌎 Turisti Internazionali",
             "card2_desc": "Tariffa esente da imposte secondo le norme ufficiali colombiane. Trasparenza totale senza sorprese al check-in.",
-            "card3_title": "🏨 Kali Hotel & Villa Matrix",
-            "card3_desc": "Valido per tutte le combinazioni: Kali Hotel nel centro storico di Santa Marta e Villa Matrix nella riserva di Tayrona."
+            "card3_title": "🏨 Kali Hotel & Villa María Tayrona",
+            "card3_desc": "Valido per tutte le combinazioni: Kali Hotel nel centro storico di Santa Marta e Villa María Tayrona nella riserva di Tayrona."
         },
         "packages": {
             "tag": "📦 Pacchetti Tutto Incluso",
             "title": "Pacchetti Santa Marta, Tayrona e Girona Travel",
-            "subtitle": "Pacchetti completi che combinano Kali Hotel (Città), Villa Matrix (Natura Tayrona), trasferimenti Girona Travel e tour guidati salta-coda."
+            "subtitle": "Pacchetti completi che combinano Kali Hotel (Città), Villa María Tayrona (Natura Tayrona), trasferimenti Girona Travel e tour guidati salta-coda."
         },
         "truth": {
             "tag": "⚠️ Informazioni Essenziali d'Ingresso",
@@ -274,45 +274,45 @@ languages = {
         "description": "Guide officiel 2026 du Parc National Tayrona. Découvrez le fonctionnement des billets, évitez les arnaques et évitez la file de 2 heures avec des guides locaux certifiés.",
         "announcement": "✨ <strong>CAMPAGNE HÔTEL SANS TVA:</strong> Colombiens et étrangers ne paient pas de TVA! <a href=\"#wizard\">Concevez votre voyage &rarr;</a>",
         "nav": {
-            "truth": "Vérité Billets",
-            "no_vat": "Campagne Sans TVA",
-            "packages": "Forfaits",
+            "truth": "🎫 Billets",
+            "no_vat": "🏷️ 0% TVA",
+            "guide": "🌿 Guide Parc",
             "wizard": "🛎️ Demande de Conciergerie",
-            "skip": "Éviter la File",
-            "tours": "Visites Guidées",
+            "skip": "⚡ Coupe-File",
+            "tours": "🥾 Tours",
             "trails": "Sentiers",
-            "stays": "Hébergements",
-            "faq": "FAQ",
+            "stays": "🏨 Hébergements",
+            "faq": "❓ FAQ",
             "btn": "Réserver Séjour et Tours &rarr;"
         },
         "hero": {
             "badge": "Guide Touristique Vérifié 2026",
             "title": "Découvrez <span>Santa Marta & Tayrona</span> Sans Stress",
-            "subtitle": "Combinez Kali Hotel Santa Marta, Villa Matrix Tayrona, les transports Girona Travel et un planificateur élastique avec 0% de TVA pour TOUS.",
+            "subtitle": "Combinez Kali Hotel Santa Marta, Villa María Tayrona, les transports Girona Travel et un planificateur élastique avec 0% de TVA pour TOUS.",
             "btn1": "⚡ Créez votre Voyage (0% TVA)",
             "btn2": "🏨 Voir les Forfaits",
             "trust1_title": "Garantie 0% TVA",
             "trust1_sub": "Pas de TVA pour Colombiens et étrangers",
             "trust2_title": "Girona Travel Fast-Track",
             "trust2_sub": "Entrée prioritaire au parc",
-            "trust3_title": "Kali Hotel + Villa Matrix",
+            "trust3_title": "Kali Hotel + Villa María Tayrona",
             "trust3_sub": "Luxe Ville et Jungle"
         },
         "no_vat": {
             "tag": "✨ Campagne Équité Hôtelière 2026",
             "title": "Les Colombiens Ne Devraient Pas Payer la TVA <span>Comme les Étrangers</span>",
-            "subtitle": "En Colombie, les touristes internationaux sont exonérés de 19% de TVA sur les hôtels. Nous pensons que les voyageurs colombiens méritent le même privilège! À Kali Hotel Santa Marta et Villa Matrix Tayrona, nous offrons un tarif 0% TVA pour TOUS.",
+            "subtitle": "En Colombie, les touristes internationaux sont exonérés de 19% de TVA sur les hôtels. Nous pensons que les voyageurs colombiens méritent le même privilège! À Kali Hotel Santa Marta et Villa María Tayrona, nous offrons un tarif 0% TVA pour TOUS.",
             "card1_title": "🇨🇴 Citoyens Colombiens",
             "card1_desc": "Économisez 19% de TVA automatiquement! Nous prenons en charge la taxe pour vous offrir le même tarif exonéré que les visiteurs étrangers.",
             "card2_title": "🌎 Touristes Internationaux",
             "card2_desc": "Tarif 100% exonéré selon les règles du tourisme colombien. Transparence totale sans frais cachés au check-in.",
-            "card3_title": "🏨 Kali Hotel & Villa Matrix",
-            "card3_desc": "Valable pour toutes les combinaisons: Kali Hotel dans le centre historique de Santa Marta et Villa Matrix au Parc Tayrona."
+            "card3_title": "🏨 Kali Hotel & Villa María Tayrona",
+            "card3_desc": "Valable pour toutes les combinaisons: Kali Hotel dans le centre historique de Santa Marta et Villa María Tayrona au Parc Tayrona."
         },
         "packages": {
             "tag": "📦 Offres Combinées",
             "title": "Forfaits Santa Marta, Tayrona et Girona Travel",
-            "subtitle": "Des séjours clés en main combinant Kali Hotel (Ville), Villa Matrix (Jungle Tayrona), transports Girona Travel et visites guidées prioritaires."
+            "subtitle": "Des séjours clés en main combinant Kali Hotel (Ville), Villa María Tayrona (Jungle Tayrona), transports Girona Travel et visites guidées prioritaires."
         },
         "truth": {
             "tag": "⚠️ Informations Essentielles d'Entrée",
@@ -362,45 +362,45 @@ languages = {
         "description": "Offizieller Reiseführer 2026 für den Tayrona-Nationalpark. Erfahren Sie, wie Eintrittskarten funktionieren, vermeiden Sie Online-Betrug und überspringen Sie die 2-Stunden-Schlange mit zertifizierten lokalen Guides.",
         "announcement": "✨ <strong>0% MWST. HOTEL-AKTION:</strong> Kolumbianer & Ausländer zahlen 0% MwSt.! <a href=\"#wizard\">Reise konfigurieren &rarr;</a>",
         "nav": {
-            "truth": "Ticket Wahrheiten",
-            "no_vat": "0% MwSt. Aktion",
-            "packages": "Pakete",
+            "truth": "🎫 Tickets",
+            "no_vat": "🏷️ 0% MwSt.",
+            "guide": "🌿 Park-Guide",
             "wizard": "🛎️ Concierge-Anfrage",
-            "skip": "Schlange Meiden",
-            "tours": "Geführte Touren",
+            "skip": "⚡ Fast-Track",
+            "tours": "🥾 Touren",
             "trails": "Wanderwege",
-            "stays": "Unterkünfte",
-            "faq": "FAQ",
+            "stays": "🏨 Unterkünfte",
+            "faq": "❓ FAQ",
             "btn": "Unterkunft & Touren Buchen &rarr;"
         },
         "hero": {
             "badge": "Verifizierter Reiseführer 2026",
             "title": "Erleben Sie <span>Santa Marta & Tayrona</span> Ohne Stress",
-            "subtitle": "Kombinieren Sie Kali Hotel Santa Marta, Villa Matrix Tayrona, Girona Travel Transfers und einen elastischen Reiseplaner mit 0% MwSt. für ALLE.",
+            "subtitle": "Kombinieren Sie Kali Hotel Santa Marta, Villa María Tayrona, Girona Travel Transfers und einen elastischen Reiseplaner mit 0% MwSt. für ALLE.",
             "btn1": "⚡ Reise Planen (0% MwSt.)",
             "btn2": "🏨 Kombi-Pakete Ansehen",
             "trust1_title": "0% MwSt. Garantie",
             "trust1_sub": "Keine MwSt. für Kolumbianer & Ausländer",
             "trust2_title": "Girona Travel Fast-Track",
             "trust2_sub": "Einlass ohne Wartezeit",
-            "trust3_title": "Kali Hotel + Villa Matrix",
+            "trust3_title": "Kali Hotel + Villa María Tayrona",
             "trust3_sub": "Stadt & Dschungel Luxus"
         },
         "no_vat": {
             "tag": "✨ Hotel-Gerechtigkeits-Kampagne 2026",
             "title": "Kolumbianer Sollten Keine MwSt. Zahlen <span>Wie Ausländische Touristen</span>",
-            "subtitle": "In Kolumbien sind ausländische Touristen von 19% Hotel-MwSt. befreit. Wir glauben, kolumbianische Reisende verdienen das gleiche Recht! Im Kali Hotel Santa Marta & Villa Matrix Tayrona bieten wir 0% MwSt. für ALLE Gäste.",
+            "subtitle": "In Kolumbien sind ausländische Touristen von 19% Hotel-MwSt. befreit. Wir glauben, kolumbianische Reisende verdienen das gleiche Recht! Im Kali Hotel Santa Marta & Villa María Tayrona bieten wir 0% MwSt. für ALLE Gäste.",
             "card1_title": "🇨🇴 Kolumbianische Staatsbürger",
             "card1_desc": "Sparen Sie automatisch 19% MwSt.! Wir übernehmen die Steuer, sodass Sie den gleichen steuerfreien Preis wie internationale Gäste zahlen.",
             "card2_title": "🌎 Internationale Touristen",
             "card2_desc": "100% steuerfrei nach offiziellen kolumbianischen Tourismusregeln. Vollständige Transparenz ohne versteckte Gebühren beim Check-in.",
-            "card3_title": "🏨 Kali Hotel & Villa Matrix",
-            "card3_desc": "Gültig für alle Kombinationen: Kali Hotel im historischen Zentrum von Santa Marta & Villa Matrix im Tayrona-Park."
+            "card3_title": "🏨 Kali Hotel & Villa María Tayrona",
+            "card3_desc": "Gültig für alle Kombinationen: Kali Hotel im historischen Zentrum von Santa Marta & Villa María Tayrona im Tayrona-Park."
         },
         "packages": {
             "tag": "📦 All-Inclusive Pakete",
             "title": "Santa Marta, Tayrona & Girona Travel Pakete",
-            "subtitle": "Komplettpakete kombiniert aus Kali Hotel (Stadt), Villa Matrix (Tayrona Natur), Girona Travel Transfers und geführten Touren."
+            "subtitle": "Komplettpakete kombiniert aus Kali Hotel (Stadt), Villa María Tayrona (Tayrona Natur), Girona Travel Transfers und geführten Touren."
         },
         "truth": {
             "tag": "⚠️ Wichtiges Wissen zum Einlass",
@@ -462,7 +462,7 @@ def render_html(lang_code, data):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{data['title']}</title>
   <meta name="description" content="{data['description']}">
-  <meta name="keywords" content="Tayrona National Park, Tayrona guide, Kali Hotel, Villa Matrix, Girona Travel, Tayrona tickets, Parque Tayrona, Cabo San Juan, Santa Marta">
+  <meta name="keywords" content="Tayrona National Park, Tayrona guide, Kali Hotel, Villa María Tayrona, Girona Travel, Tayrona tickets, Parque Tayrona, Cabo San Juan, Santa Marta">
   <link rel="canonical" href="https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}">
   
   <!-- Favicon & Site Icons -->
@@ -505,12 +505,12 @@ def render_html(lang_code, data):
 
       <nav class="nav-links" id="navLinks">
         <a href="#no-vat" class="nav-link">{data['nav']['no_vat']}</a>
-        <a href="#packages" class="nav-link">{data['nav']['packages']}</a>
         <a href="#concierge" class="nav-link highlight-link">{data['nav']['wizard']}</a>
         <a href="#ticket-truth" class="nav-link">{data['nav']['truth']}</a>
         <a href="#skip-queue" class="nav-link">{data['nav']['skip']}</a>
         <a href="#guided-tours" class="nav-link">{data['nav']['tours']}</a>
         <a href="#where-to-stay" class="nav-link">{data['nav']['stays']}</a>
+        <a href="https://parquetayrona.org" target="_blank" class="nav-link">{data['nav']['guide']}</a>
         <a href="#faq" class="nav-link">{data['nav']['faq']}</a>
       </nav>
 
@@ -545,11 +545,8 @@ def render_html(lang_code, data):
       <p class="hero-subtitle">{data['hero']['subtitle']}</p>
 
       <div class="hero-cta-group">
-        <a href="#concierge" class="btn btn-accent btn-lg">
+        <a href="#concierge" class="btn btn-accent btn-lg glow-btn" style="font-size:1.25rem;padding:18px 36px;font-weight:800;border-radius:12px;box-shadow:0 10px 30px rgba(245,158,11,0.4);">
           {data['hero']['btn1']}
-        </a>
-        <a href="#packages" class="btn btn-outline btn-lg">
-          {data['hero']['btn2']}
         </a>
       </div>
 
@@ -611,97 +608,6 @@ def render_html(lang_code, data):
           <h3>{data['no_vat']['card3_title']}</h3>
           <p>{data['no_vat']['card3_desc']}</p>
           <span class="vat-highlight-pill">City & Jungle Eco-Duo</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 2: Bundled Packages Showcase -->
-  <section class="packages-section" id="packages">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">{data['packages']['tag']}</span>
-        <h2 class="section-title">{data['packages']['title']}</h2>
-        <p class="section-desc">{data['packages']['subtitle']}</p>
-      </div>
-
-      <div class="packages-grid">
-        <!-- Package 1 -->
-        <div class="pkg-card">
-          <div class="pkg-header">
-            <div class="pkg-duration">3 Days / 2 Nights</div>
-            <h3 class="pkg-title">Express City & Tayrona Escape</h3>
-            <div class="pkg-price-box">
-              <span class="pkg-price-val">$180 USD</span>
-              <span class="pkg-price-unit">/ person</span>
-              <span class="pkg-vat-no-tax">0% VAT</span>
-            </div>
-          </div>
-          <div class="pkg-body">
-            <ul class="pkg-features-list">
-              <li><span class="check">✓</span> 1 Night Kali Hotel Santa Marta (Historic Center)</li>
-              <li><span class="check">✓</span> 1 Night Villa Matrix Tayrona (Eco-Lodge)</li>
-              <li><span class="check">✓</span> Girona Travel Airport Pick-up & Transfers</li>
-              <li><span class="check">✓</span> Tayrona Guided Expedition + Fast-Track Queue</li>
-              <li><span class="check">✓</span> 0% VAT Guarantee for Colombians & Foreigners</li>
-            </ul>
-            <div class="pkg-footer">
-              <a href="#concierge" class="btn btn-outline btn-block">Request via Concierge &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Package 2 (Featured) -->
-        <div class="pkg-card featured">
-          <div class="pkg-badge-popular">Most Popular</div>
-          <div class="pkg-header">
-            <div class="pkg-duration">4 Days / 3 Nights</div>
-            <h3 class="pkg-title">Complete Tayrona Eco & Coffee Trail</h3>
-            <div class="pkg-price-box">
-              <span class="pkg-price-val">$290 USD</span>
-              <span class="pkg-price-unit">/ person</span>
-              <span class="pkg-vat-no-tax">0% VAT</span>
-            </div>
-          </div>
-          <div class="pkg-body">
-            <ul class="pkg-features-list">
-              <li><span class="check">✓</span> 1 Night Kali Hotel Santa Marta</li>
-              <li><span class="check">✓</span> 2 Nights Villa Matrix Tayrona (Pool & Jungle)</li>
-              <li><span class="check">✓</span> Girona Travel Door-to-Door Private Transfers</li>
-              <li><span class="check">✓</span> Fast-Track Tayrona Park Expedition</li>
-              <li><span class="check">✓</span> Minca Coffee, Cocoa & Waterfall Day Tour</li>
-              <li><span class="check">✓</span> 0% VAT Rate Guarantee for All Guests</li>
-            </ul>
-            <div class="pkg-footer">
-              <a href="#concierge" class="btn btn-accent btn-block glow-btn">Request via Concierge &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Package 3 -->
-        <div class="pkg-card">
-          <div class="pkg-header">
-            <div class="pkg-duration">5 Days / 4 Nights</div>
-            <h3 class="pkg-title">Grand Caribbean Luxe & Sea Explorer</h3>
-            <div class="pkg-price-box">
-              <span class="pkg-price-val">$420 USD</span>
-              <span class="pkg-price-unit">/ person</span>
-              <span class="pkg-vat-no-tax">0% VAT</span>
-            </div>
-          </div>
-          <div class="pkg-body">
-            <ul class="pkg-features-list">
-              <li><span class="check">✓</span> 2 Nights Kali Hotel Santa Marta</li>
-              <li><span class="check">✓</span> 2 Nights Villa Matrix Tayrona Sanctuary</li>
-              <li><span class="check">✓</span> Private Girona Airport & Inter-Hotel Transfers</li>
-              <li><span class="check">✓</span> Tayrona Fast-Track Guided Hike</li>
-              <li><span class="check">✓</span> Santa Marta Bay Sunset Catamaran Cruise</li>
-              <li><span class="check">✓</span> Kasankala Gourmet Jungle Dinner</li>
-            </ul>
-            <div class="pkg-footer">
-              <a href="#concierge" class="btn btn-outline btn-block">Request via Concierge &rarr;</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -864,8 +770,8 @@ def render_html(lang_code, data):
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag">🏨 Official Lodging Partner</span>
-        <h2 class="section-title">Where to Stay: Kali Hotel & Villa Matrix</h2>
-        <p class="section-lead">Enjoy city vibe at Kali Hotel Santa Marta & jungle eco-luxury at Villa Matrix Tayrona with 0% VAT.</p>
+        <h2 class="section-title">Where to Stay: Kali Hotel & Villa María Tayrona</h2>
+        <p class="section-lead">Enjoy city vibe at Kali Hotel Santa Marta & jungle eco-luxury at Villa María Tayrona with 0% VAT.</p>
       </div>
 
       <div class="lodging-grid">
@@ -887,7 +793,7 @@ def render_html(lang_code, data):
 
         <div class="lodging-card">
           <div class="lodging-content">
-            <h3>🌴 Villa Matrix Tayrona Nature Sanctuary</h3>
+            <h3>🌴 Villa María Tayrona Nature Sanctuary</h3>
             <p>Eco-luxury sanctuary right near Tayrona entrance, featuring jungle suites, pool, river views & Kasankala dining.</p>
             <a href="#concierge" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
           </div>
@@ -907,11 +813,11 @@ def render_html(lang_code, data):
       <div class="faq-accordion">
         <div class="faq-item">
           <button class="faq-question">
-            Why do Colombians pay 0% VAT (IVA) on hotel stays with Kali Hotels & Villa Matrix?
+            Why do Colombians pay 0% VAT (IVA) on hotel stays with Kali Hotels & Villa María Tayrona?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Under Colombian law, foreign tourists are tax-exempt from 19% VAT on lodging. As part of our 2026 Hospitality Equity Campaign, Girona Travel, Kali Hotel & Villa Matrix absorb the tax for Colombian residents so EVERY guest enjoys 0% VAT rates!</p>
+            <p>Under Colombian law, foreign tourists are tax-exempt from 19% VAT on lodging. As part of our 2026 Hospitality Equity Campaign, Girona Travel, Kali Hotel & Villa María Tayrona absorb the tax for Colombian residents so EVERY guest enjoys 0% VAT rates!</p>
           </div>
         </div>
 
@@ -921,7 +827,7 @@ def render_html(lang_code, data):
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>If your flight arrives in Santa Marta after 12:00 PM, the wizard automatically places your 1st night at Kali Hotel in Santa Marta historic center. On Day 2 afternoon, private Girona Travel transport moves you to Villa Matrix near Tayrona, allowing you to trek Tayrona Park on Day 2 afternoon or Day 3 without rushing!</p>
+            <p>If your flight arrives in Santa Marta after 12:00 PM, the wizard automatically places your 1st night at Kali Hotel in Santa Marta historic center. On Day 2 afternoon, private Girona Travel transport moves you to Villa María Tayrona near Tayrona, allowing you to trek Tayrona Park on Day 2 afternoon or Day 3 without rushing!</p>
           </div>
         </div>
 
@@ -942,7 +848,7 @@ def render_html(lang_code, data):
   <section class="cta-banner">
     <div class="container text-center">
       <h2>Ready for an Unforgettable Tayrona & Santa Marta Experience?</h2>
-      <p>Enjoy 0% VAT rates at Kali Hotel & Villa Matrix with Girona Travel private transport and certified guides.</p>
+      <p>Enjoy 0% VAT rates at Kali Hotel & Villa María Tayrona with Girona Travel private transport and certified guides.</p>
       <a href="#concierge" class="btn btn-accent btn-xl glow-btn">
         🚀 Launch Concierge Request Tool &rarr;
       </a>
@@ -957,7 +863,7 @@ def render_html(lang_code, data):
           <span class="logo-icon">🌿</span>
           <span class="logo-text">Tayrona<strong>Guide</strong></span>
         </a>
-        <p class="footer-text">The official verified travel guide for Tayrona National Park & Santa Marta. Managed in partnership with Girona Travels, Kali Hotels & Villa Matrix.</p>
+        <p class="footer-text">The official verified travel guide for Tayrona National Park & Santa Marta. Managed in partnership with Girona Travels, Kali Hotels & Villa María Tayrona.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Navigation</h4>

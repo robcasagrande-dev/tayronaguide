@@ -918,10 +918,19 @@ window.ConciergeTool = (function () {
     const title = {en:'🛏️ Room Preferences', es:'🛏️ Preferencia de Habitación', it:'🛏️ Preferenze Camera', fr:'🛏️ Préférences de Chambre', de:'🛏️ Zimmerpräferenzen'}[state.lang] || '🛏️ Room Preferences';
     const sub = {en:'What level of luxury are you looking for during your stay?', es:'¿Qué nivel de lujo buscas durante tu estadía?', it:'Che livello di lusso cerchi durante il soggiorno?', fr:'Quel niveau de luxe recherchez-vous pendant votre séjour ?', de:'Welches Maß an Luxus suchen Sie während Ihres Aufenthalts?'}[state.lang] || 'What level of luxury are you looking for during your stay?';
 
+    // Determine photo source based on selected hotel in wishlist
+    const selectedHotel = state.wishlist.find(id => ['casa-isabella', 'casa-leda', 'villa-maria'].includes(id)) || 'villa-maria';
+    const roomPhotos = {
+      'casa-isabella': { base: '/images/rooms/isabella-base.jpg', mid: '/images/rooms/isabella-mid.jpg', top: '/images/rooms/isabella-top.jpg', name: 'Casa de Isabella' },
+      'casa-leda': { base: '/images/rooms/leda-base.jpg', mid: '/images/rooms/leda-mid.jpg', top: '/images/rooms/leda-top.jpg', name: 'Casa de Leda' },
+      'villa-maria': { base: '/images/rooms/villamaria-base.jpg', mid: '/images/rooms/villamaria-mid.jpg', top: '/images/rooms/villamaria-top.jpg', name: 'Villa María Tayrona' }
+    };
+    const activePhotos = roomPhotos[selectedHotel];
+
     const tiers = [
-      { id: 'base', emoji: '✨', name: {en:'Standard / Cozy', es:'Estándar / Acogedora', it:'Standard / Accogliente', fr:'Standard / Confortable', de:'Standard / Gemütlich'}, desc: {en:'Comfortable essentials and authentic charm.', es:'Comodidades esenciales y encanto auténtico.', it:'Comfort essenziali e fascino autentico.', fr:'Essentiels confortables et charme authentique.', de:'Komfortable Basics und authentischer Charme.'} },
-      { id: 'mid', emoji: '🌟', name: {en:'Superior / Deluxe', es:'Superior / Deluxe', it:'Superior / Deluxe', fr:'Supérieure / Deluxe', de:'Superior / Deluxe'}, desc: {en:'More space, premium amenities, and better views.', es:'Más espacio, amenidades premium y mejores vistas.', it:'Più spazio, servizi premium e viste migliori.', fr:'Plus d\'espace, équipements premium et meilleures vues.', de:'Mehr Platz, Premium-Ausstattung und bessere Aussicht.'} },
-      { id: 'top', emoji: '👑', name: {en:'Suite / Premium', es:'Suite / Premium', it:'Suite / Premium', fr:'Suite / Premium', de:'Suite / Premium'}, desc: {en:'The ultimate luxury, best locations, and exclusive services.', es:'El máximo lujo, las mejores ubicaciones y servicios exclusivos.', it:'Il massimo lusso, le migliori posizioni e servizi esclusivi.', fr:'Le summum du luxe, les meilleurs emplacements et services exclusifs.', de:'Höchster Luxus, beste Lagen und exklusive Services.'} }
+      { id: 'base', emoji: '✨', photo: activePhotos.base, name: {en:'Standard / Cozy', es:'Estándar / Acogedora', it:'Standard / Accogliente', fr:'Standard / Confortable', de:'Standard / Gemütlich'}, desc: {en:'Comfortable essentials and authentic charm.', es:'Comodidades esenciales y encanto auténtico.', it:'Comfort essenziali e fascino autentico.', fr:'Essentiels confortables et charme authentique.', de:'Komfortable Basics und authentischer Charme.'} },
+      { id: 'mid', emoji: '🌟', photo: activePhotos.mid, name: {en:'Superior / Deluxe', es:'Superior / Deluxe', it:'Superior / Deluxe', fr:'Supérieure / Deluxe', de:'Superior / Deluxe'}, desc: {en:'More space, premium amenities, and better views.', es:'Más espacio, amenidades premium y mejores vistas.', it:'Più spazio, servizi premium e viste migliori.', fr:'Plus d\'espace, équipements premium et meilleures vues.', de:'Mehr Platz, Premium-Ausstattung und bessere Aussicht.'} },
+      { id: 'top', emoji: '👑', photo: activePhotos.top, name: {en:'Suite / Premium', es:'Suite / Premium', it:'Suite / Premium', fr:'Suite / Premium', de:'Suite / Premium'}, desc: {en:'The ultimate luxury, best locations, and exclusive services.', es:'El máximo lujo, las mejores ubicaciones y servicios exclusivos.', it:'Il massimo lusso, le migliori posizioni e servizi esclusivi.', fr:'Le summum du luxe, les meilleurs emplacements et services exclusifs.', de:'Höchster Luxus, beste Lagen und exklusive Services.'} }
     ];
 
     let html = `<div class="concierge-panel ${state.step === 3 ? 'active' : ''}" data-panel="3">
@@ -966,6 +975,7 @@ window.ConciergeTool = (function () {
             <h4>${t('groupInfo')}</h4>
             <div class="summary-line"><span class="summary-name">${state.adults} ${state.adults === 1 ? t('adultsCount') : t('adultsCountP')}${state.babies > 0 ? ` + ${state.babies} ${state.babies === 1 ? t('babiesCount') : t('babiesCountP')}` : ''}</span></div>
             <div class="summary-line"><span class="summary-name">Dates: ${state.arrivalDate} ➔ ${state.departureDate} (${tn} ${t('nightsLabel')})</span></div>
+            <div class="summary-line"><span class="summary-name">Arrival Time Slot: ${state.arrivalTime}</span></div>
             <div class="summary-line"><span class="summary-name">Room Level: ${state.roomPreference.toUpperCase()}</span></div>
           </div>
           <div class="summary-section" style="margin-top:15px;">
@@ -994,7 +1004,7 @@ window.ConciergeTool = (function () {
             ${t('vatNote')}<br>${t('discountNote')}
           </div>
 
-          <button class="wiz-btn wiz-btn-primary" id="wizSubmit" style="width:100%;margin-top:15px;height:50px;">
+          <button type="button" class="wiz-btn wiz-btn-primary" id="wizSubmit" style="width:100%;margin-top:15px;height:50px;">
             ${t('sendProgram')}
           </button>
         </div>
@@ -1004,47 +1014,54 @@ window.ConciergeTool = (function () {
 
   function bindEvents() {
     // Nav
-    container.querySelector('#wizNext')?.addEventListener('click', () => {
+    container.querySelector('#wizNext')?.addEventListener('click', (e) => {
+      e.preventDefault();
       if (state.step === 1 && getTotalNights() <= 0) {
         alert('Please select valid dates.'); return;
       }
-      if (state.step < 4) { state.step++; render(); }
+      if (state.step < 4) { state.step++; render(true); }
     });
-    container.querySelector('#wizBack')?.addEventListener('click', () => {
-      if (state.step > 1) { state.step--; render(); }
+    container.querySelector('#wizBack')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (state.step > 1) { state.step--; render(true); }
     });
-    container.querySelector('#wizRestart')?.addEventListener('click', () => { state = defaultState(); render(); });
-    container.querySelector('#wizRestartSent')?.addEventListener('click', () => { state = defaultState(); render(); });
+    container.querySelector('#wizRestart')?.addEventListener('click', (e) => { e.preventDefault(); state = defaultState(); render(false); });
+    container.querySelector('#wizRestartSent')?.addEventListener('click', (e) => { e.preventDefault(); state = defaultState(); render(false); });
 
     // Panel 1
     container.querySelector('#wizArrDate')?.addEventListener('change', (e) => { state.arrivalDate = e.target.value; });
     container.querySelector('#wizDepDate')?.addEventListener('change', (e) => { state.departureDate = e.target.value; });
     container.querySelectorAll('[data-select="arrivalMode"]').forEach(b => {
-      b.addEventListener('click', (e) => { state.arrivalMode = e.currentTarget.dataset.val; render(); });
+      b.addEventListener('click', (e) => { e.preventDefault(); state.arrivalMode = e.currentTarget.dataset.val; render(false); });
     });
-    container.querySelector('#adultsDec')?.addEventListener('click', () => { if (state.adults > 1) { state.adults--; render(); } });
-    container.querySelector('#adultsInc')?.addEventListener('click', () => { if (state.adults < 20) { state.adults++; render(); } });
-    container.querySelector('#babiesDec')?.addEventListener('click', () => { if (state.babies > 0) { state.babies--; render(); } });
-    container.querySelector('#babiesInc')?.addEventListener('click', () => { if (state.babies < 10) { state.babies++; render(); } });
+    container.querySelectorAll('[data-select="arrivalTime"]').forEach(b => {
+      b.addEventListener('click', (e) => { e.preventDefault(); state.arrivalTime = e.currentTarget.dataset.val; render(false); });
+    });
+    container.querySelector('#adultsDec')?.addEventListener('click', (e) => { e.preventDefault(); if (state.adults > 1) { state.adults--; render(false); } });
+    container.querySelector('#adultsInc')?.addEventListener('click', (e) => { e.preventDefault(); if (state.adults < 20) { state.adults++; render(false); } });
+    container.querySelector('#babiesDec')?.addEventListener('click', (e) => { e.preventDefault(); if (state.babies > 0) { state.babies--; render(false); } });
+    container.querySelector('#babiesInc')?.addEventListener('click', (e) => { e.preventDefault(); if (state.babies < 10) { state.babies++; render(false); } });
 
     // Panel 2
     container.querySelectorAll('[data-wishlist]').forEach(b => {
       b.addEventListener('click', (e) => {
+        e.preventDefault();
         const id = e.currentTarget.dataset.wishlist;
         if (state.wishlist.includes(id)) {
           state.wishlist = state.wishlist.filter(x => x !== id);
         } else {
           state.wishlist.push(id);
         }
-        render();
+        render(false);
       });
     });
 
     // Panel 3
     container.querySelectorAll('[data-pref]').forEach(b => {
       b.addEventListener('click', (e) => {
+        e.preventDefault();
         state.roomPreference = e.currentTarget.dataset.pref;
-        render();
+        render(false);
       });
     });
 
@@ -1056,11 +1073,12 @@ window.ConciergeTool = (function () {
 
     const btnSubmit = container.querySelector('#wizSubmit') || container.querySelector('#wizRetrySent');
     if (btnSubmit) {
-      btnSubmit.addEventListener('click', async () => {
+      btnSubmit.addEventListener('click', async (e) => {
+        e.preventDefault();
         if (!state.guestName || !state.guestEmail) {
           alert('Please enter your name and email'); return;
         }
-        state._sending = true; render();
+        state._sending = true; render(false);
 
         const wishNames = state.wishlist.map(id => {
           let item = getAccById(id) || getActivityById(id);
@@ -1073,7 +1091,7 @@ window.ConciergeTool = (function () {
           data: {
             guest: { name: state.guestName, email: state.guestEmail },
             group: { adults: state.adults, babies: state.babies },
-            dates: { arrival: state.arrivalDate, departure: state.departureDate, nights: getTotalNights() },
+            dates: { arrival: state.arrivalDate, departure: state.departureDate, nights: getTotalNights(), arrivalTimeSlot: state.arrivalTime },
             transport: { arrival: state.arrivalMode },
             roomPreference: state.roomPreference,
             wishlist: wishNames

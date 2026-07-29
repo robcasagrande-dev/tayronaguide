@@ -132,23 +132,32 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 14px;
 }
 
 .nav-link {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-text-muted);
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
   color: #fff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .highlight-link {
   color: var(--color-gold) !important;
   font-weight: 700;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
 }
 
 /* Language Switcher Dropdown */
