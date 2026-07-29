@@ -698,11 +698,38 @@ img {
   background: var(--color-bg-card);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  padding: 36px 28px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: var(--transition);
+}
+
+.tour-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #071510;
+}
+
+.tour-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tour-card:hover .tour-image-wrapper img {
+  transform: scale(1.06);
+}
+
+.tour-card-body {
+  padding: 28px 24px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .tour-card:hover {

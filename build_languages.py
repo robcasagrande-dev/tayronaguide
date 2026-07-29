@@ -10,15 +10,15 @@ languages = {
         "description": "Official 2026 Tayrona National Park Travel Guide. Learn how entry passes work, avoid online ticket scams, skip the 2-hour gate queue with certified local guides, and book stays near park entrances.",
         "announcement": "✨ <strong>0% HOTEL VAT CAMPAIGN:</strong> Colombians & Foreigners pay 0% IVA on hotel stays! <a href=\"#wizard\">Build your concierge trip &rarr;</a>",
         "nav": {
-            "truth": "🎫 Ticket Truth",
-            "no_vat": "🏷️ 0% VAT",
-            "guide": "🌿 Park Guide",
-            "wizard": "🛎️ Concierge Request",
-            "skip": "⚡ Skip Queue",
-            "tours": "🥾 Tours",
+            "truth": "Park Passes",
+            "no_vat": "0% Tax Benefit",
+            "guide": "Tayrona Guide",
+            "wizard": "Trip Builder",
+            "skip": "Fast-Track",
+            "tours": "Girona Tours",
             "trails": "Trails",
-            "stays": "🏨 Lodging",
-            "faq": "❓ FAQ",
+            "stays": "Luxury Stays",
+            "faq": "FAQ",
             "btn": "Book Stay & Tours &rarr;"
         },
         "hero": {
@@ -98,15 +98,15 @@ languages = {
         "description": "Guía oficial 2026 del Parque Nacional Tayrona. Aprende cómo funcionan las entradas, evita estafas en línea y sáltate la fila de 2 horas con guías locales certificados.",
         "announcement": "✨ <strong>CAMPAÑA SIN IVA:</strong> ¡Colombianos y extranjeros pagan 0% IVA en hospedaje! <a href=\"#wizard\">Diseña tu viaje elástico &rarr;</a>",
         "nav": {
-            "truth": "🎫 Entradas",
-            "no_vat": "🏷️ Sin IVA",
-            "guide": "🌿 Guía Parque",
-            "wizard": "🛎️ Solicitar Concierge",
-            "skip": "⚡ Fila",
-            "tours": "🥾 Tours",
+            "truth": "Entradas Parque",
+            "no_vat": "Beneficio 0% IVA",
+            "guide": "Guía Tayrona",
+            "wizard": "Diseñador de Viaje",
+            "skip": "Fast-Track",
+            "tours": "Tours Girona",
             "trails": "Senderos",
-            "stays": "🏨 Hospedaje",
-            "faq": "❓ FAQ",
+            "stays": "Hospedajes de Lujo",
+            "faq": "FAQ",
             "btn": "Reservar Hospedaje y Tours &rarr;"
         },
         "hero": {
@@ -186,15 +186,15 @@ languages = {
         "description": "Guida ufficiale 2026 del Parco Nazionale Tayrona. Scopri come funzionano i biglietti d'ingresso, evita le truffe online e salta la coda di 2 ore con guide locali certificate.",
         "announcement": "✨ <strong>CAMPAGNA NO IVA HOTEL:</strong> Colombiani e stranieri pagano 0% IVA! <a href=\"#wizard\">Crea il tuo viaggio elastico &rarr;</a>",
         "nav": {
-            "truth": "🎫 Biglietti",
-            "no_vat": "🏷️ 0% IVA",
-            "guide": "🌿 Guida Parco",
-            "wizard": "🛎️ Richiedi Concierge",
-            "skip": "⚡ Salta Coda",
-            "tours": "🥾 Tour",
+            "truth": "Pass Parco",
+            "no_vat": "Beneficio 0% IVA",
+            "guide": "Guida Tayrona",
+            "wizard": "Pianificatore Viaggio",
+            "skip": "Ingresso Rapido",
+            "tours": "Tour Girona",
             "trails": "Sentieri",
-            "stays": "🏨 Alloggi",
-            "faq": "❓ FAQ",
+            "stays": "Soggiorni di Lusso",
+            "faq": "FAQ",
             "btn": "Prenota Soggiorno e Tour &rarr;"
         },
         "hero": {
@@ -274,15 +274,15 @@ languages = {
         "description": "Guide officiel 2026 du Parc National Tayrona. Découvrez le fonctionnement des billets, évitez les arnaques et évitez la file de 2 heures avec des guides locaux certifiés.",
         "announcement": "✨ <strong>CAMPAGNE HÔTEL SANS TVA:</strong> Colombiens et étrangers ne paient pas de TVA! <a href=\"#wizard\">Concevez votre voyage &rarr;</a>",
         "nav": {
-            "truth": "🎫 Billets",
-            "no_vat": "🏷️ 0% TVA",
-            "guide": "🌿 Guide Parc",
-            "wizard": "🛎️ Demande de Conciergerie",
-            "skip": "⚡ Coupe-File",
-            "tours": "🥾 Tours",
+            "truth": "Passes du Parc",
+            "no_vat": "Avantage 0% TVA",
+            "guide": "Guide Tayrona",
+            "wizard": "Planificateur de Voyage",
+            "skip": "Fast-Track",
+            "tours": "Tours Girona",
             "trails": "Sentiers",
-            "stays": "🏨 Hébergements",
-            "faq": "❓ FAQ",
+            "stays": "Séjours de Luxe",
+            "faq": "FAQ",
             "btn": "Réserver Séjour et Tours &rarr;"
         },
         "hero": {
@@ -362,15 +362,15 @@ languages = {
         "description": "Offizieller Reiseführer 2026 für den Tayrona-Nationalpark. Erfahren Sie, wie Eintrittskarten funktionieren, vermeiden Sie Online-Betrug und überspringen Sie die 2-Stunden-Schlange mit zertifizierten lokalen Guides.",
         "announcement": "✨ <strong>0% MWST. HOTEL-AKTION:</strong> Kolumbianer & Ausländer zahlen 0% MwSt.! <a href=\"#wizard\">Reise konfigurieren &rarr;</a>",
         "nav": {
-            "truth": "🎫 Tickets",
-            "no_vat": "🏷️ 0% MwSt.",
-            "guide": "🌿 Park-Guide",
-            "wizard": "🛎️ Concierge-Anfrage",
-            "skip": "⚡ Fast-Track",
-            "tours": "🥾 Touren",
+            "truth": "Park-Pässe",
+            "no_vat": "0% MwSt. Vorteil",
+            "guide": "Tayrona Führer",
+            "wizard": "Reise-Builder",
+            "skip": "Fast-Track",
+            "tours": "Girona Touren",
             "trails": "Wanderwege",
-            "stays": "🏨 Unterkünfte",
-            "faq": "❓ FAQ",
+            "stays": "Luxus-Unterkünfte",
+            "faq": "FAQ",
             "btn": "Unterkunft & Touren Buchen &rarr;"
         },
         "hero": {
@@ -486,7 +486,7 @@ def render_html(lang_code, data):
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{css_path}">
-  <link rel="stylesheet" href="/concierge-module.css?v=20260729_gemini_ui">
+  <link rel="stylesheet" href="/concierge-module.css?v=20260729_girona_tours_ui">
 </head>
 <body>
 
@@ -712,52 +712,79 @@ def render_html(lang_code, data):
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag">🌿 Girona Travels Experiences</span>
-        <h2 class="section-title">Explore Guided Tour Packages</h2>
+        <h2 class="section-title">Girona Travels Direct Tours</h2>
         <p class="section-lead">Combine professional Girona Travels guides, seamless gate access, and comfortable lodging.</p>
       </div>
 
       <div class="tours-grid">
         <div class="tour-card">
-          <div class="tour-badge">Most Popular</div>
-          <h3 class="tour-title">Cabo San Juan Day Trek + Fast-Track Entry</h3>
-          <p class="tour-desc">Full-day guided hike through jungle trails to Cabo San Juan beach. Includes early ticket queue handling by Girona Travels, bilingual guide, and fruit tasting.</p>
-          <div class="tour-highlights">
-            <span>⏱️ 8-9 Hours</span>
-            <span>🥾 Moderate Trek</span>
-            <span>⚡ Queue Fast-Track</span>
+          <div class="tour-image-wrapper">
+            <img src="/images/tours/cabo_san_juan_tour.jpg" alt="Cabo San Juan Day Trek" />
           </div>
-          <div class="tour-footer">
-            <a href="#concierge" class="btn btn-primary btn-block">Reserve via Concierge &rarr;</a>
+          <div class="tour-card-body">
+            <div>
+              <div class="tour-badge">Most Popular</div>
+              <h3 class="tour-title">Cabo San Juan Day Trek + Fast-Track Entry</h3>
+              <p class="tour-desc">Full-day guided hike through jungle trails to Cabo San Juan beach. Includes early ticket queue handling by Girona Travels, bilingual guide, and fruit tasting.</p>
+              <div class="tour-highlights">
+                <span>⏱️ 8-9 Hours</span>
+                <span>🥾 Moderate Trek</span>
+                <span>⚡ Queue Fast-Track</span>
+              </div>
+            </div>
+            <div class="tour-footer">
+              <a href="#concierge" class="btn btn-primary btn-block">Reserve via Concierge &rarr;</a>
+            </div>
           </div>
         </div>
 
         <div class="tour-card featured-card">
-          <div class="tour-badge badge-accent">Best Value</div>
-          <h3 class="tour-title">2-Day Tayrona Eco-Lodge & Trail Package</h3>
-          <p class="tour-desc">{data['tours']['pkg2_desc']}</p>
-          <div class="tour-highlights">
-            <span>🌙 2 Days / 1 Night</span>
-            <span>🏨 Lodging Included</span>
-            <span>🍽️ Kasankala Dining</span>
+          <div class="tour-image-wrapper">
+            <img src="/images/tours/tayrona_ecolodge_tour.jpg" alt="2-Day Tayrona Eco-Lodge" />
           </div>
-          <div class="tour-footer">
-            <a href="#concierge" class="btn btn-accent btn-block">Book Stay & Tour Package &rarr;</a>
+          <div class="tour-card-body">
+            <div>
+              <div class="tour-badge badge-accent">Best Value</div>
+              <h3 class="tour-title">2-Day Tayrona Eco-Lodge & Trail Package</h3>
+              <p class="tour-desc">{data['tours']['pkg2_desc']}</p>
+              <div class="tour-highlights">
+                <span>🌙 2 Days / 1 Night</span>
+                <span>🏨 Lodging Included</span>
+                <span>🍽️ Kasankala Dining</span>
+              </div>
+            </div>
+            <div class="tour-footer">
+              <a href="#concierge" class="btn btn-accent btn-block">Book Stay & Tour Package &rarr;</a>
+            </div>
           </div>
         </div>
 
         <div class="tour-card">
-          <div class="tour-badge">Cultural Trek</div>
-          <h3 class="tour-title">Bunkuany Ruins & Kogui Indigenous Experience</h3>
-          <p class="tour-desc">Private certified Girona Travels guide exploring ancient Bunkuany stone terraces, visiting the sacred Kogui village of Tayku, and mountain rivers.</p>
-          <div class="tour-highlights">
-            <span>🐒 Wildlife Focus</span>
-            <span>🏛️ Cultural History</span>
-            <span>👨‍👩‍👧 Private Group</span>
+          <div class="tour-image-wrapper">
+            <img src="/images/tours/bunkuany_ruins_tour.jpg" alt="Bunkuany Ruins & Kogui Indigenous Experience" />
           </div>
-          <div class="tour-footer">
-            <a href="#concierge" class="btn btn-primary btn-block">Inquire Private Tour &rarr;</a>
+          <div class="tour-card-body">
+            <div>
+              <div class="tour-badge">Cultural Trek</div>
+              <h3 class="tour-title">Bunkuany Ruins & Kogui Indigenous Experience</h3>
+              <p class="tour-desc">Private certified Girona Travels guide exploring ancient Bunkuany stone terraces, visiting the sacred Kogui village of Tayku, and mountain rivers.</p>
+              <div class="tour-highlights">
+                <span>🐒 Wildlife Focus</span>
+                <span>🏛️ Cultural History</span>
+                <span>👨‍👩‍👧 Private Group</span>
+              </div>
+            </div>
+            <div class="tour-footer">
+              <a href="#concierge" class="btn btn-primary btn-block">Inquire Private Tour &rarr;</a>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div style="text-align:center;margin-top:40px;">
+        <a href="#concierge" class="btn btn-accent btn-lg glow-btn" style="padding:16px 36px;font-size:1.05rem;font-weight:600;border-radius:9999px;">
+          See All Girona Travels Tours &rarr;
+        </a>
       </div>
     </div>
   </section>
@@ -886,7 +913,7 @@ def render_html(lang_code, data):
     </div>
   </footer>
 
-  <script src="/concierge-module.js?v=20260729_gemini_ui"></script>
+  <script src="/concierge-module.js?v=20260729_girona_tours_ui"></script>
   <script src="{js_path}"></script>
 </body>
 </html>"""
