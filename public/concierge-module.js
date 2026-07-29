@@ -941,9 +941,10 @@ window.ConciergeTool = (function () {
 
     tiers.forEach(t => {
       const selected = state.roomPreference === t.id ? 'selected' : '';
-      html += `<button class="concierge-option ${selected}" data-pref="${t.id}" style="padding:15px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;">
-        <div class="room-photo-placeholder" style="background:var(--wiz-border); height:120px; border-radius:8px; margin-bottom:15px; display:flex; align-items:center; justify-content:center; color:var(--wiz-text-muted); font-size:0.8rem; width:100%;">
-          [Photo Space]
+      html += `<button type="button" class="concierge-option ${selected}" data-pref="${t.id}" style="padding:15px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;">
+        <div class="room-photo-wrapper" style="width:100%; height:130px; border-radius:8px; overflow:hidden; margin-bottom:12px; position:relative; background:#071510;">
+          <img src="${t.photo}" alt="${txt(t.name)}" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <span style="position:absolute; bottom:6px; left:6px; background:rgba(7,21,16,0.85); backdrop-filter:blur(6px); color:#fff; font-size:0.75rem; padding:2px 8px; border-radius:4px; font-weight:600; border:1px solid rgba(255,255,255,0.15);">${activePhotos.name}</span>
         </div>
         <div class="option-emoji" style="margin-bottom:8px;">${t.emoji}</div>
         <div class="option-label" style="font-size:1.1rem;margin-bottom:6px;">${txt(t.name)}</div>
