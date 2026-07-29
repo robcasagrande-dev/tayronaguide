@@ -1,9 +1,9 @@
 /* ==========================================================================
    TAYRONA GUIDE — TRIP WIZARD MODULE JS (2026)
-   Self-contained module. Call TripWizard.init('#container-id') to mount.
+   Self-contained module. Call ConciergeTool.init('#container-id') to mount.
    ========================================================================== */
 
-window.TripWizard = (function () {
+window.ConciergeTool = (function () {
 
   /* -------------------------------------------------------------------------
    * DATA — Accommodations
@@ -1086,7 +1086,7 @@ window.TripWizard = (function () {
    * ----------------------------------------------------------------------- */
   function init(selector, options = {}) {
     container = typeof selector === 'string' ? document.querySelector(selector) : selector;
-    if (!container) { console.warn('TripWizard: container not found:', selector); return; }
+    if (!container) { console.warn('ConciergeTool: container not found:', selector); return; }
 
     // Detect language from page URL or option
     if (options.lang) {

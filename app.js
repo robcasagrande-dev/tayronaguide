@@ -83,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initTripWizard() {
-  if (window.TripWizard) {
-    TripWizard.init('#wizard-container');
+  if (window.ConciergeTool) {
+    ConciergeTool.init('#concierge-container');
   } else {
-    console.warn('TripWizard module not loaded');
+    console.warn('ConciergeTool module not loaded');
   }
 }

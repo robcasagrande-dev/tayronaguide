@@ -8,12 +8,12 @@ languages = {
         "flag": "🇬🇧",
         "title": "Tayrona National Park Guide 2026 | Official Ticket Info & Guided Tours",
         "description": "Official 2026 Tayrona National Park Travel Guide. Learn how entry passes work, avoid online ticket scams, skip the 2-hour gate queue with certified local guides, and book stays near park entrances.",
-        "announcement": "✨ <strong>0% HOTEL VAT CAMPAIGN:</strong> Colombians & Foreigners pay 0% IVA on hotel stays! <a href=\"#wizard\">Build your elastic trip &rarr;</a>",
+        "announcement": "✨ <strong>0% HOTEL VAT CAMPAIGN:</strong> Colombians & Foreigners pay 0% IVA on hotel stays! <a href=\"#wizard\">Build your concierge trip &rarr;</a>",
         "nav": {
             "truth": "Ticket Truth",
             "no_vat": "0% VAT Campaign",
             "packages": "Packages",
-            "wizard": "⚡ Trip Architect",
+            "wizard": "🛎️ Concierge Request",
             "skip": "Skip Queue",
             "tours": "Guided Tours",
             "trails": "Trails",
@@ -24,7 +24,7 @@ languages = {
         "hero": {
             "badge": "Verified 2026 Park Travel Guide & Hospitality Hub",
             "title": "Experience <span>Santa Marta & Tayrona</span> Without the Stress",
-            "subtitle": "Discover curated packages combining Kali Hotel Santa Marta, Villa Matrix Tayrona, Girona Travel transfers, and an exclusive elastic trip builder with 0% hotel VAT for EVERYONE.",
+            "subtitle": "Discover curated packages combining Kali Hotel Santa Marta, Villa Matrix Tayrona, Girona Travel transfers, and an exclusive concierge trip builder with 0% hotel VAT for EVERYONE.",
             "btn1": "⚡ Build Your Trip (0% VAT)",
             "btn2": "🏨 View Bundled Packages",
             "trust1_title": "0% VAT Guarantee",
@@ -101,7 +101,7 @@ languages = {
             "truth": "Verdad Entradas",
             "no_vat": "Campaña Sin IVA",
             "packages": "Paquetes",
-            "wizard": "⚡ Diseñador de Viaje",
+            "wizard": "🛎️ Solicitar Concierge",
             "skip": "Saltarse Fila",
             "tours": "Tours Guiados",
             "trails": "Senderos",
@@ -189,7 +189,7 @@ languages = {
             "truth": "Verità Biglietti",
             "no_vat": "Campagna No IVA",
             "packages": "Pacchetti",
-            "wizard": "⚡ Configura Viaggio",
+            "wizard": "🛎️ Richiedi Concierge",
             "skip": "Salta Coda",
             "tours": "Tour Guidati",
             "trails": "Sentieri",
@@ -200,7 +200,7 @@ languages = {
         "hero": {
             "badge": "Guida di Viaggio Verificata 2026",
             "title": "Vivi <span>Santa Marta & Tayrona</span> Senza Stress",
-            "subtitle": "Scopri i pacchetti che combinano Kali Hotel Santa Marta, Villa Matrix Tayrona, trasferimenti Girona Travel e un wizard elastico con prezzo SENZA IVA per TUTTI.",
+            "subtitle": "Scopri i pacchetti che combinano Kali Hotel Santa Marta, Villa Matrix Tayrona, trasferimenti Girona Travel e un servizio concierge con prezzo SENZA IVA per TUTTI.",
             "btn1": "⚡ Configura il Tuo Viaggio (0% IVA)",
             "btn2": "🏨 Vedi i Pacchetti",
             "trust1_title": "Garanzia 0% IVA",
@@ -277,7 +277,7 @@ languages = {
             "truth": "Vérité Billets",
             "no_vat": "Campagne Sans TVA",
             "packages": "Forfaits",
-            "wizard": "⚡ Planificateur",
+            "wizard": "🛎️ Demande de Conciergerie",
             "skip": "Éviter la File",
             "tours": "Visites Guidées",
             "trails": "Sentiers",
@@ -365,7 +365,7 @@ languages = {
             "truth": "Ticket Wahrheiten",
             "no_vat": "0% MwSt. Aktion",
             "packages": "Pakete",
-            "wizard": "⚡ Reise-Planer",
+            "wizard": "🛎️ Concierge-Anfrage",
             "skip": "Schlange Meiden",
             "tours": "Geführte Touren",
             "trails": "Wanderwege",
@@ -486,7 +486,7 @@ def render_html(lang_code, data):
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{css_path}">
-  <link rel="stylesheet" href="/wizard-module.css">
+  <link rel="stylesheet" href="/concierge-module.css">
 </head>
 <body>
 
@@ -506,7 +506,7 @@ def render_html(lang_code, data):
       <nav class="nav-links" id="navLinks">
         <a href="#no-vat" class="nav-link">{data['nav']['no_vat']}</a>
         <a href="#packages" class="nav-link">{data['nav']['packages']}</a>
-        <a href="#wizard" class="nav-link highlight-link">{data['nav']['wizard']}</a>
+        <a href="#concierge" class="nav-link highlight-link">{data['nav']['wizard']}</a>
         <a href="#ticket-truth" class="nav-link">{data['nav']['truth']}</a>
         <a href="#skip-queue" class="nav-link">{data['nav']['skip']}</a>
         <a href="#guided-tours" class="nav-link">{data['nav']['tours']}</a>
@@ -545,7 +545,7 @@ def render_html(lang_code, data):
       <p class="hero-subtitle">{data['hero']['subtitle']}</p>
 
       <div class="hero-cta-group">
-        <a href="#wizard" class="btn btn-accent btn-lg">
+        <a href="#concierge" class="btn btn-accent btn-lg">
           {data['hero']['btn1']}
         </a>
         <a href="#packages" class="btn btn-outline btn-lg">
@@ -646,7 +646,7 @@ def render_html(lang_code, data):
               <li><span class="check">✓</span> 0% VAT Guarantee for Colombians & Foreigners</li>
             </ul>
             <div class="pkg-footer">
-              <a href="#wizard" class="btn btn-outline btn-block">Customize in Wizard &rarr;</a>
+              <a href="#concierge" class="btn btn-outline btn-block">Request via Concierge &rarr;</a>
             </div>
           </div>
         </div>
@@ -673,7 +673,7 @@ def render_html(lang_code, data):
               <li><span class="check">✓</span> 0% VAT Rate Guarantee for All Guests</li>
             </ul>
             <div class="pkg-footer">
-              <a href="#wizard" class="btn btn-accent btn-block glow-btn">Customize in Wizard &rarr;</a>
+              <a href="#concierge" class="btn btn-accent btn-block glow-btn">Request via Concierge &rarr;</a>
             </div>
           </div>
         </div>
@@ -699,7 +699,7 @@ def render_html(lang_code, data):
               <li><span class="check">✓</span> Kasankala Gourmet Jungle Dinner</li>
             </ul>
             <div class="pkg-footer">
-              <a href="#wizard" class="btn btn-outline btn-block">Customize in Wizard &rarr;</a>
+              <a href="#concierge" class="btn btn-outline btn-block">Request via Concierge &rarr;</a>
             </div>
           </div>
         </div>
@@ -707,8 +707,8 @@ def render_html(lang_code, data):
     </div>
   </section>
 
-  <!-- Section 3: Interactive Elastic Trip Builder Wizard -->
-  <div id="wizard-container"></div>
+  <!-- Section 3: Concierge Request Tool -->
+  <div id="concierge-container"></div>
 
   <!-- Section 4: Ticket Truth & Scam Warning -->
   <section class="section section-dark" id="ticket-truth">
@@ -736,7 +736,7 @@ def render_html(lang_code, data):
             <div class="banner-text">
               <h4>{data['truth']['sol_title']}</h4>
               <p>{data['truth']['sol_desc']}</p>
-              <a href="#wizard" class="btn btn-accent btn-sm margin-top-sm">{data['truth']['sol_btn']}</a>
+              <a href="#concierge" class="btn btn-accent btn-sm margin-top-sm">{data['truth']['sol_btn']}</a>
             </div>
           </div>
 
@@ -794,7 +794,7 @@ def render_html(lang_code, data):
           </div>
 
           <div class="feature-cta">
-            <a href="#wizard" class="btn btn-accent btn-lg glow-btn">
+            <a href="#concierge" class="btn btn-accent btn-lg glow-btn">
               {data['skip']['btn']}
             </a>
             <span class="sub-text">Direct booking available at GironaTravels.com & ParqueTayrona.org</span>
@@ -824,7 +824,7 @@ def render_html(lang_code, data):
             <span>⚡ Queue Fast-Track</span>
           </div>
           <div class="tour-footer">
-            <a href="#wizard" class="btn btn-primary btn-block">Reserve Tour in Wizard &rarr;</a>
+            <a href="#concierge" class="btn btn-primary btn-block">Reserve via Concierge &rarr;</a>
           </div>
         </div>
 
@@ -838,7 +838,7 @@ def render_html(lang_code, data):
             <span>🍽️ Kasankala Dining</span>
           </div>
           <div class="tour-footer">
-            <a href="#wizard" class="btn btn-accent btn-block">Book Stay & Tour Package &rarr;</a>
+            <a href="#concierge" class="btn btn-accent btn-block">Book Stay & Tour Package &rarr;</a>
           </div>
         </div>
 
@@ -852,7 +852,7 @@ def render_html(lang_code, data):
             <span>👨‍👩‍👧 Private Group</span>
           </div>
           <div class="tour-footer">
-            <a href="#wizard" class="btn btn-primary btn-block">Inquire Private Tour &rarr;</a>
+            <a href="#concierge" class="btn btn-primary btn-block">Inquire Private Tour &rarr;</a>
           </div>
         </div>
       </div>
@@ -873,7 +873,7 @@ def render_html(lang_code, data):
           <div class="lodging-content">
             <h3>{data['stays']['villa_title']}</h3>
             <p>{data['stays']['villa_desc']}</p>
-            <a href="#wizard" class="btn btn-outline btn-sm">Book in Wizard &rarr;</a>
+            <a href="#concierge" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
           </div>
         </div>
 
@@ -881,7 +881,7 @@ def render_html(lang_code, data):
           <div class="lodging-content">
             <h3>🏛️ Kali Hotel Santa Marta</h3>
             <p>Boutique hotel in the heart of Santa Marta historic center, featuring stylish rooms, rooftop pool, and fine dining.</p>
-            <a href="#wizard" class="btn btn-outline btn-sm">Book in Wizard &rarr;</a>
+            <a href="#concierge" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
           </div>
         </div>
 
@@ -889,7 +889,7 @@ def render_html(lang_code, data):
           <div class="lodging-content">
             <h3>🌴 Villa Matrix Tayrona Nature Sanctuary</h3>
             <p>Eco-luxury sanctuary right near Tayrona entrance, featuring jungle suites, pool, river views & Kasankala dining.</p>
-            <a href="#wizard" class="btn btn-outline btn-sm">Book in Wizard &rarr;</a>
+            <a href="#concierge" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
           </div>
         </div>
       </div>
@@ -917,7 +917,7 @@ def render_html(lang_code, data):
 
         <div class="faq-item">
           <button class="faq-question">
-            How does the Elastic Trip Architect wizard work if my flight lands after 12:00 PM?
+            How does the Concierge Request Tool work if my flight lands after 12:00 PM?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
@@ -943,8 +943,8 @@ def render_html(lang_code, data):
     <div class="container text-center">
       <h2>Ready for an Unforgettable Tayrona & Santa Marta Experience?</h2>
       <p>Enjoy 0% VAT rates at Kali Hotel & Villa Matrix with Girona Travel private transport and certified guides.</p>
-      <a href="#wizard" class="btn btn-accent btn-xl glow-btn">
-        🚀 Launch Trip Architect &rarr;
+      <a href="#concierge" class="btn btn-accent btn-xl glow-btn">
+        🚀 Launch Concierge Request Tool &rarr;
       </a>
     </div>
   </section>
@@ -964,7 +964,7 @@ def render_html(lang_code, data):
         <ul>
           <li><a href="#no-vat">0% VAT Campaign</a></li>
           <li><a href="#packages">Bundled Packages</a></li>
-          <li><a href="#wizard">Elastic Trip Architect</a></li>
+          <li><a href="#concierge">Concierge Request Tool</a></li>
           <li><a href="#ticket-truth">Ticket Truth</a></li>
         </ul>
       </div>
@@ -983,7 +983,7 @@ def render_html(lang_code, data):
     </div>
   </footer>
 
-  <script src="/wizard-module.js"></script>
+  <script src="/concierge-module.js"></script>
   <script src="{js_path}"></script>
 </body>
 </html>"""
@@ -1006,7 +1006,7 @@ def sync_to_dirs():
     for target in ["public", "dist"]:
         target_dir = os.path.join(base_dir, target)
         os.makedirs(target_dir, exist_ok=True)
-        for f in ["index.html", "app.js", "style.css", "wizard-module.js", "wizard-module.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
+        for f in ["index.html", "app.js", "style.css", "concierge-module.js", "concierge-module.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
             src = os.path.join(base_dir, f)
             if os.path.exists(src):
                 shutil.copy2(src, os.path.join(target_dir, f))

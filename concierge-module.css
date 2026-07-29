@@ -1,6 +1,6 @@
 /* ==========================================================================
    TAYRONA GUIDE — TRIP WIZARD MODULE (2026)
-   Standalone CSS for wizard-module. Inherits design tokens from parent site
+   Standalone CSS for concierge-module. Inherits design tokens from parent site
    but is fully self-contained for independent development/testing.
    ========================================================================== */
 
@@ -32,26 +32,26 @@
 }
 
 /* --- Wizard Section Wrapper ---------------------------------------------- */
-.trip-wizard-section {
+.trip-concierge-section {
   padding: 80px 0;
   background: var(--wiz-bg-dark);
   font-family: var(--font-body);
   color: var(--wiz-text-main);
 }
 
-.trip-wizard-section .container {
+.trip-concierge-section .container {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
 }
 
 /* --- Section Header ------------------------------------------------------- */
-.wizard-section-header {
+.concierge-section-header {
   text-align: center;
   margin-bottom: 48px;
 }
 
-.wizard-section-tag {
+.concierge-section-tag {
   display: inline-block;
   background: rgba(16, 185, 129, 0.15);
   color: var(--wiz-accent);
@@ -65,7 +65,7 @@
   margin-bottom: 14px;
 }
 
-.wizard-section-title {
+.concierge-section-title {
   font-family: var(--font-heading);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 800;
@@ -74,11 +74,11 @@
   color: var(--wiz-text-main);
 }
 
-.wizard-section-title span {
+.concierge-section-title span {
   color: var(--wiz-accent);
 }
 
-.wizard-section-subtitle {
+.concierge-section-subtitle {
   font-size: 1rem;
   color: var(--wiz-text-muted);
   max-width: 560px;
@@ -87,7 +87,7 @@
 }
 
 /* --- Wizard Box ----------------------------------------------------------- */
-.trip-wizard-box {
+.trip-concierge-box {
   background: var(--wiz-bg-card);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -98,13 +98,13 @@
 }
 
 /* --- Progress Bar --------------------------------------------------------- */
-.wizard-progress-bar {
+.concierge-progress-bar {
   height: 4px;
   background: rgba(255, 255, 255, 0.06);
   position: relative;
 }
 
-.wizard-progress-fill {
+.concierge-progress-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--wiz-accent), var(--wiz-gold));
   border-radius: 4px;
@@ -113,7 +113,7 @@
 }
 
 /* --- Stepper -------------------------------------------------------------- */
-.wizard-stepper {
+.concierge-stepper {
   display: flex;
   justify-content: center;
   gap: 0;
@@ -122,9 +122,9 @@
   scrollbar-width: none;
 }
 
-.wizard-stepper::-webkit-scrollbar { display: none; }
+.concierge-stepper::-webkit-scrollbar { display: none; }
 
-.wizard-step-item {
+.concierge-step-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,7 +137,7 @@
   min-width: 80px;
 }
 
-.wizard-step-item:not(:last-child)::after {
+.concierge-step-item:not(:last-child)::after {
   content: '';
   position: absolute;
   top: 16px;
@@ -149,11 +149,11 @@
   transition: background 0.3s ease;
 }
 
-.wizard-step-item.completed:not(:last-child)::after {
+.concierge-step-item.completed:not(:last-child)::after {
   background: var(--wiz-accent);
 }
 
-.wizard-step-circle {
+.concierge-step-circle {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -170,20 +170,20 @@
   transition: var(--wiz-transition);
 }
 
-.wizard-step-item.active .wizard-step-circle {
+.concierge-step-item.active .concierge-step-circle {
   border-color: var(--wiz-accent);
   background: rgba(16, 185, 129, 0.2);
   color: var(--wiz-accent);
   box-shadow: 0 0 14px rgba(16, 185, 129, 0.4);
 }
 
-.wizard-step-item.completed .wizard-step-circle {
+.concierge-step-item.completed .concierge-step-circle {
   border-color: var(--wiz-accent);
   background: var(--wiz-accent);
   color: #fff;
 }
 
-.wizard-step-label {
+.concierge-step-label {
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -194,29 +194,29 @@
   transition: color 0.3s ease;
 }
 
-.wizard-step-item.active .wizard-step-label {
+.concierge-step-item.active .concierge-step-label {
   color: var(--wiz-accent);
 }
 
-.wizard-step-item.completed .wizard-step-label {
+.concierge-step-item.completed .concierge-step-label {
   color: var(--wiz-text-muted);
 }
 
 /* --- Panel Container ------------------------------------------------------ */
-.wizard-panels {
+.concierge-panels {
   padding: 36px 36px 28px;
 }
 
 @media (max-width: 600px) {
-  .wizard-panels { padding: 24px 20px 20px; }
+  .concierge-panels { padding: 24px 20px 20px; }
 }
 
-.wizard-panel {
+.concierge-panel {
   display: none;
   animation: panelFadeIn 0.4s ease forwards;
 }
 
-.wizard-panel.active {
+.concierge-panel.active {
   display: block;
 }
 
@@ -225,7 +225,7 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.wizard-panel-title {
+.concierge-panel-title {
   font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 700;
@@ -233,11 +233,11 @@
   color: var(--wiz-text-main);
 }
 
-.wizard-panel-title .step-emoji {
+.concierge-panel-title .step-emoji {
   margin-right: 8px;
 }
 
-.wizard-panel-subtitle {
+.concierge-panel-subtitle {
   font-size: 0.875rem;
   color: var(--wiz-text-muted);
   margin-bottom: 28px;
@@ -245,35 +245,35 @@
 }
 
 /* --- Option Grid ---------------------------------------------------------- */
-.wizard-options-grid {
+.concierge-options-grid {
   display: grid;
   gap: 12px;
 }
 
-.wizard-options-grid.cols-2 {
+.concierge-options-grid.cols-2 {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.wizard-options-grid.cols-3 {
+.concierge-options-grid.cols-3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.wizard-options-grid.cols-4 {
+.concierge-options-grid.cols-4 {
   grid-template-columns: repeat(4, 1fr);
 }
 
 @media (max-width: 600px) {
-  .wizard-options-grid.cols-3,
-  .wizard-options-grid.cols-4 {
+  .concierge-options-grid.cols-3,
+  .concierge-options-grid.cols-4 {
     grid-template-columns: repeat(2, 1fr);
   }
-  .wizard-options-grid.cols-2 {
+  .concierge-options-grid.cols-2 {
     grid-template-columns: 1fr;
   }
 }
 
 /* --- Option Card ---------------------------------------------------------- */
-.wizard-option {
+.concierge-option {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -288,19 +288,19 @@
   font-family: var(--font-body);
 }
 
-.wizard-option:hover {
+.concierge-option:hover {
   border-color: rgba(16, 185, 129, 0.4);
   background: var(--wiz-bg-card-hover);
   transform: translateY(-2px);
 }
 
-.wizard-option.selected {
+.concierge-option.selected {
   border-color: var(--wiz-accent);
   background: var(--wiz-bg-option-selected);
   box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
 }
 
-.wizard-option.disabled {
+.concierge-option.disabled {
   opacity: 0.4;
   cursor: not-allowed;
   pointer-events: none;
@@ -324,13 +324,13 @@
 }
 
 /* --- Check Icon on selected options --------------------------------------- */
-.wizard-option.selected .option-label::after {
+.concierge-option.selected .option-label::after {
   content: ' ✓';
   color: var(--wiz-accent);
 }
 
 /* --- Info Boxes ----------------------------------------------------------- */
-.wizard-info-box {
+.concierge-info-box {
   background: rgba(16, 185, 129, 0.07);
   border: 1px solid rgba(16, 185, 129, 0.2);
   border-radius: var(--wiz-radius-sm);
@@ -341,11 +341,11 @@
   margin-top: 16px;
 }
 
-.wizard-info-box strong {
+.concierge-info-box strong {
   color: var(--wiz-accent);
 }
 
-.wizard-gold-box {
+.concierge-gold-box {
   background: rgba(245, 158, 11, 0.08);
   border: 1px solid rgba(245, 158, 11, 0.25);
   border-radius: var(--wiz-radius-sm);
@@ -356,12 +356,12 @@
   margin-top: 14px;
 }
 
-.wizard-gold-box strong {
+.concierge-gold-box strong {
   color: var(--wiz-gold);
 }
 
 /* --- Night Counter -------------------------------------------------------- */
-.wizard-night-counter {
+.concierge-night-counter {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -435,20 +435,20 @@
 }
 
 /* --- Day Builder (Panel 4) ------------------------------------------------ */
-.wizard-day-builder {
+.concierge-day-builder {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.wizard-day-card {
+.concierge-day-card {
   background: var(--wiz-bg-option);
   border: 1px solid var(--wiz-border);
   border-radius: var(--wiz-radius-md);
   overflow: hidden;
 }
 
-.wizard-day-header {
+.concierge-day-header {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -602,7 +602,7 @@
 }
 
 /* --- Summary (Panel 5) ---------------------------------------------------- */
-.wizard-summary {
+.concierge-summary {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -622,7 +622,7 @@
 }
 
 /* Timeline */
-.wizard-timeline {
+.concierge-timeline {
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -630,7 +630,7 @@
   padding-left: 32px;
 }
 
-.wizard-timeline::before {
+.concierge-timeline::before {
   content: '';
   position: absolute;
   left: 10px;
@@ -735,7 +735,7 @@
 }
 
 /* --- CTA Buttons ---------------------------------------------------------- */
-.wizard-cta-group {
+.concierge-cta-group {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -803,7 +803,7 @@
 }
 
 /* --- Nav Actions ---------------------------------------------------------- */
-.wizard-nav-actions {
+.concierge-nav-actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -813,7 +813,7 @@
 }
 
 @media (max-width: 600px) {
-  .wizard-nav-actions { padding: 16px 20px 20px; }
+  .concierge-nav-actions { padding: 16px 20px 20px; }
 }
 
 /* --- Divider ------------------------------------------------------------- */
@@ -945,7 +945,7 @@
   .tour-grid {
     grid-template-columns: 1fr;
   }
-  .wizard-cta-group {
+  .concierge-cta-group {
     flex-direction: column;
   }
   .wiz-btn { justify-content: center; }
