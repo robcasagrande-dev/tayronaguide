@@ -691,6 +691,7 @@ window.TripWizard = (function () {
    * STATE
    * ----------------------------------------------------------------------- */
 
+
   const defaultState = () => ({
     step: 1,
     lang: 'en',
@@ -699,15 +700,8 @@ window.TripWizard = (function () {
     arrivalMode: 'plane',
     adults: 2,
     babies: 0,
-    itinerary: [], // array of { nightAcc, dayAct } length = (departure - arrival)
-    roomTypes: {
-      'casa-isabella': 'base',
-      'casa-leda': 'base',
-      'villa-maria': 'base'
-    },
-    kasankala: false,
-    returnTransfer: true,
-    customRequest: false,
+    wishlist: [], // array of selected IDs (acc or act)
+    roomPreference: 'mid', // 'base', 'mid', 'top'
     guestName: '',
     guestEmail: '',
     _sending: false,
@@ -777,16 +771,21 @@ window.TripWizard = (function () {
   function progressPct() { return Math.round(((state.step - 1) / 3) * 100); }
 
   function buildStepper() {
-    const steps = t('steps');
+    const steps = [
+      {en:'1. Basics', es:'1. Básico', it:'1. Basi', fr:'1. Bases', de:'1. Basis'},
+      {en:'2. Wishlist', es:'2. Deseos', it:'2. Desideri', fr:'2. Souhaits', de:'2. Wunschliste'},
+      {en:'3. Rooms', es:'3. Cuartos', it:'3. Camere', fr:'3. Chambres', de:'3. Zimmer'},
+      {en:'4. Send', es:'4. Enviar', it:'4. Invia', fr:'4. Envoyer', de:'4. Senden'}
+    ];
     return `
       <div class="wizard-stepper" id="wizStepper">
-        ${steps.map((label, i) => {
+        ${steps.map((s, i) => {
           const n = i + 1;
           const cls = n < state.step ? 'completed' : n === state.step ? 'active' : '';
           return `
             <div class="wizard-step-item ${cls}" data-step="${n}">
               <div class="wizard-step-circle">${n < state.step ? '✓' : n}</div>
-              <span class="wizard-step-label">${label}</span>
+              <span class="wizard-step-label">${s[state.lang] || s.en}</span>
             </div>`;
         }).join('')}
       </div>`;
@@ -795,16 +794,16 @@ window.TripWizard = (function () {
   function buildPanel1() {
     return `
       <div class="wizard-panel ${state.step === 1 ? 'active' : ''}" data-panel="1">
-        <h3 class="wizard-panel-title">${t('p1Title')}</h3>
-        <p class="wizard-panel-subtitle">${t('p1Sub')}</p>
+        <h3 class="wizard-panel-title">${{en:'🗓️ Trip Basics', es:'🗓️ Datos Básicos', it:'🗓️ Dati di Base', fr:'🗓️ Informations de Base', de:'🗓️ Grunddaten'}[state.lang] || '🗓️ Trip Basics'}</h3>
+        <p class="wizard-panel-subtitle">${{en:'Tell us your dates and group size.', es:'Dinos tus fechas y tamaño del grupo.', it:'Indicaci le date e la dimensione del gruppo.', fr:'Indiquez vos dates et la taille du groupe.', de:'Teilen Sie uns Ihre Daten und Gruppengröße mit.'}[state.lang] || 'Tell us your dates and group size.'}</p>
 
         <div style="display:flex;gap:20px;margin-bottom:24px;flex-wrap:wrap;">
           <div style="flex:1;min-width:140px;">
-            <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:8px;color:var(--wiz-text-muted);">${t('arrivalDate')}</label>
+            <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:8px;color:var(--wiz-text-muted);">${{en:'Arrival Date', es:'Fecha de Llegada', it:'Data di Arrivo', fr:'Date d\'arrivée', de:'Ankunftsdatum'}[state.lang] || 'Arrival Date'}</label>
             <input type="date" id="wizArrDate" class="wizard-input" value="${state.arrivalDate}" style="width:100%;">
           </div>
           <div style="flex:1;min-width:140px;">
-            <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:8px;color:var(--wiz-text-muted);">${t('departureDate')}</label>
+            <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:8px;color:var(--wiz-text-muted);">${{en:'Departure Date', es:'Fecha de Salida', it:'Data di Partenza', fr:'Date de départ', de:'Abreisedatum'}[state.lang] || 'Departure Date'}</label>
             <input type="date" id="wizDepDate" class="wizard-input" value="${state.departureDate}" style="width:100%;">
           </div>
         </div>
@@ -845,213 +844,108 @@ window.TripWizard = (function () {
 
   function buildPanel2() {
     const tn = getTotalNights();
-    if (tn <= 0) {
-      return `<div class="wizard-panel ${state.step === 2 ? 'active' : ''}" data-panel="2">
-        <p>${t('invalidDates')}</p>
-      </div>`;
-    }
+    const title = {en:'✨ Your Wishlist', es:'✨ Tu Lista de Deseos', it:'✨ La Tua Lista dei Desideri', fr:'✨ Votre Liste de Souhaits', de:'✨ Ihre Wunschliste'}[state.lang] || '✨ Your Wishlist';
+    const sub = {en:'Select the hotels and experiences you are interested in. We will organize them optimally.', es:'Selecciona los hoteles y experiencias que te interesan. Nosotros los organizaremos óptimamente.', it:'Seleziona gli hotel e le esperienze che ti interessano. Noi li organizzeremo al meglio.', fr:'Sélectionnez les hôtels et expériences qui vous intéressent. Nous les organiserons de manière optimale.', de:'Wählen Sie Hotels und Erlebnisse, an denen Sie interessiert sind. Wir organisieren sie optimal.'}[state.lang] || 'Select the hotels and experiences you are interested in. We will organize them optimally.';
+    const invalid = {en:'Please select valid arrival and departure dates first.', es:'Por favor selecciona fechas válidas primero.', it:'Seleziona prima date valide.', fr:'Veuillez d\'abord sélectionner des dates valides.', de:'Bitte wählen Sie zuerst gültige Daten aus.'}[state.lang] || 'Please select valid dates.';
 
-    // Sync itinerary array length
-    if (state.itinerary.length !== tn) {
-      const newItinerary = [];
-      for (let i = 0; i < tn; i++) {
-        newItinerary.push(state.itinerary[i] || { nightAcc: '', dayAct: '' });
-      }
-      state.itinerary = newItinerary;
+    if (tn <= 0) {
+      return `<div class="wizard-panel ${state.step === 2 ? 'active' : ''}" data-panel="2"><p>${invalid}</p></div>`;
     }
 
     let html = `<div class="wizard-panel ${state.step === 2 ? 'active' : ''}" data-panel="2">
-      <h3 class="wizard-panel-title">${t('p2Title')}</h3>
-      <p class="wizard-panel-subtitle">${t('p2Sub')}</p>
-      <div class="wizard-timeline">`;
+      <h3 class="wizard-panel-title">${title}</h3>
+      <p class="wizard-panel-subtitle">${sub}</p>`;
 
-    const getLocalDate = (base, offsetDays) => {
-      const d = new Date(base);
-      d.setDate(d.getDate() + offsetDays);
-      return d.toLocaleDateString(state.lang, { weekday: 'short', month: 'short', day: 'numeric' });
-    };
+    // Accommodations
+    html += `<h4 style="margin-top:20px;margin-bottom:10px;">🏨 ${{en:'Accommodations',es:'Alojamientos',it:'Alloggi',fr:'Hébergements',de:'Unterkünfte'}[state.lang]}</h4>`;
+    html += `<div class="wizard-options-grid cols-3">`;
+    Object.values(ACCOMMODATIONS).forEach(acc => {
+      const selected = state.wishlist.includes(acc.id) ? 'selected' : '';
+      html += `<button class="wizard-option ${selected}" data-wishlist="${acc.id}">
+        <div class="option-emoji">${acc.emoji}</div>
+        <div class="option-label">${txt(acc.name)}</div>
+      </button>`;
+    });
+    html += `</div>`;
 
-    for (let i = 0; i < tn; i++) {
-      const dayDate = getLocalDate(state.arrivalDate, i);
-      const accId = state.itinerary[i].nightAcc;
-      
-      html += `
-        <div class="timeline-item" style="padding:15px; background:var(--wiz-surface); border:1px solid var(--wiz-border); border-radius:12px; margin-bottom:15px;">
-          <div style="font-weight:600;margin-bottom:10px;">${t('dayLabel')} ${i+1} • ${dayDate}</div>
-      `;
-
-      // Activity Dropdown (only for day 2+)
-      if (i > 0) {
-        const prevAcc = state.itinerary[i-1].nightAcc;
-        const acts = ACTIVITIES.filter(a => !a.requiresVillaMariaStay || prevAcc === 'villa-maria');
-        
-        html += `
-          <div style="margin-bottom:10px;">
-            <label style="font-size:0.85rem;color:var(--wiz-text-muted);">${t('chooseAct')}</label>
-            <select class="wizard-input act-select" data-index="${i}" style="width:100%;margin-top:4px;">
-              <option value="">-- ${t('noActivity')} --</option>
-              ${acts.map(a => `
-                <option value="${a.id}" ${state.itinerary[i].dayAct === a.id ? 'selected' : ''}>
-                  ${a.emoji} ${txt(a.name)}
-                </option>
-              `).join('')}
-            </select>
-          </div>
-        `;
-      }
-
-      // Accommodation Dropdown for this night
-      html += `
-          <div>
-            <label style="font-size:0.85rem;color:var(--wiz-text-muted);">${t('nightLabel')} ${i+1} (${t('chooseAcc')})</label>
-            <select class="wizard-input acc-select" data-index="${i}" style="width:100%;margin-top:4px;">
-              <option value="">-- ${t('chooseAcc')} --</option>
-              ${Object.values(ACCOMMODATIONS).map(a => `
-                <option value="${a.id}" ${state.itinerary[i].nightAcc === a.id ? 'selected' : ''}>
-                  ${a.emoji} ${txt(a.name)}
-                </option>
-              `).join('')}
-            </select>
-          </div>
-        </div>
-      `;
-    }
+    // Activities
+    html += `<h4 style="margin-top:25px;margin-bottom:10px;">🌴 ${{en:'Experiences & Tours',es:'Experiencias y Tours',it:'Esperienze e Tour',fr:'Expériences et Tours',de:'Erlebnisse & Touren'}[state.lang]}</h4>`;
+    html += `<div class="wizard-options-grid cols-2">`;
+    ACTIVITIES.forEach(act => {
+      const selected = state.wishlist.includes(act.id) ? 'selected' : '';
+      html += `<button class="wizard-option ${selected}" data-wishlist="${act.id}" style="text-align:left;">
+        <div style="font-size:1.5rem;margin-bottom:5px;">${act.emoji}</div>
+        <div class="option-label" style="text-align:left;">${txt(act.name)}</div>
+        <div class="option-sub" style="text-align:left;margin-top:4px;opacity:0.8;">${txt(act.desc)}</div>
+      </button>`;
+    });
     html += `</div></div>`;
     return html;
   }
 
   function buildPanel3() {
-    let vmSelected = state.itinerary.some(day => day.nightAcc === 'villa-maria');
+    const title = {en:'🛏️ Room Preferences', es:'🛏️ Preferencia de Habitación', it:'🛏️ Preferenze Camera', fr:'🛏️ Préférences de Chambre', de:'🛏️ Zimmerpräferenzen'}[state.lang] || '🛏️ Room Preferences';
+    const sub = {en:'What level of luxury are you looking for during your stay?', es:'¿Qué nivel de lujo buscas durante tu estadía?', it:'Che livello di lusso cerchi durante il soggiorno?', fr:'Quel niveau de luxe recherchez-vous pendant votre séjour ?', de:'Welches Maß an Luxus suchen Sie während Ihres Aufenthalts?'}[state.lang] || 'What level of luxury are you looking for during your stay?';
 
-    // Gather unique accommodations selected
-    const selectedAccs = new Set(state.itinerary.map(d => d.nightAcc).filter(Boolean));
+    const tiers = [
+      { id: 'base', emoji: '✨', name: {en:'Standard / Cozy', es:'Estándar / Acogedora', it:'Standard / Accogliente', fr:'Standard / Confortable', de:'Standard / Gemütlich'}, desc: {en:'Comfortable essentials and authentic charm.', es:'Comodidades esenciales y encanto auténtico.', it:'Comfort essenziali e fascino autentico.', fr:'Essentiels confortables et charme authentique.', de:'Komfortable Basics und authentischer Charme.'} },
+      { id: 'mid', emoji: '🌟', name: {en:'Superior / Deluxe', es:'Superior / Deluxe', it:'Superior / Deluxe', fr:'Supérieure / Deluxe', de:'Superior / Deluxe'}, desc: {en:'More space, premium amenities, and better views.', es:'Más espacio, amenidades premium y mejores vistas.', it:'Più spazio, servizi premium e viste migliori.', fr:'Plus d\'espace, équipements premium et meilleures vues.', de:'Mehr Platz, Premium-Ausstattung und bessere Aussicht.'} },
+      { id: 'top', emoji: '👑', name: {en:'Suite / Premium', es:'Suite / Premium', it:'Suite / Premium', fr:'Suite / Premium', de:'Suite / Premium'}, desc: {en:'The ultimate luxury, best locations, and exclusive services.', es:'El máximo lujo, las mejores ubicaciones y servicios exclusivos.', it:'Il massimo lusso, le migliori posizioni e servizi esclusivi.', fr:'Le summum du luxe, les meilleurs emplacements et services exclusifs.', de:'Höchster Luxus, beste Lagen und exklusive Services.'} }
+    ];
 
     let html = `<div class="wizard-panel ${state.step === 3 ? 'active' : ''}" data-panel="3">
-      <h3 class="wizard-panel-title">${t('p3Title')}</h3>
-      <p class="wizard-panel-subtitle">${t('p3Sub')}</p>
+      <h3 class="wizard-panel-title">${title}</h3>
+      <p class="wizard-panel-subtitle">${sub}</p>
       
-      <div style="margin-bottom:24px;">
-        <h4 style="margin-bottom:12px;font-size:1.05rem;">${t('roomTypeLabel')}</h4>
-        <div class="wizard-options-grid cols-1">`;
+      <div class="wizard-options-grid cols-3">`;
 
-    for (const accId of selectedAccs) {
-      const acc = getAccById(accId);
-      html += `
-        <div style="padding:12px; background:var(--wiz-surface); border-radius:8px; border:1px solid var(--wiz-border);">
-          <div style="font-weight:600; margin-bottom:8px;">${acc.emoji} ${txt(acc.name)}</div>
-          <div class="wizard-options-grid cols-3" style="gap:10px;">
-            ${acc.rooms.map(r => `
-              <button class="wizard-option ${state.roomTypes[accId] === r.tier ? 'selected' : ''}" data-room="${accId}" data-tier="${r.tier}" style="padding:10px;text-align:center;">
-                <div class="option-label" style="font-size:0.9rem;">${txt(r.name)}</div>
-              </button>
-            `).join('')}
-          </div>
+    tiers.forEach(t => {
+      const selected = state.roomPreference === t.id ? 'selected' : '';
+      html += `<button class="wizard-option ${selected}" data-pref="${t.id}" style="padding:15px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;">
+        <div class="room-photo-placeholder" style="background:var(--wiz-border); height:120px; border-radius:8px; margin-bottom:15px; display:flex; align-items:center; justify-content:center; color:var(--wiz-text-muted); font-size:0.8rem; width:100%;">
+          [Photo Space]
         </div>
-      `;
-    }
-
-    if (selectedAccs.size === 0) {
-      html += `<p style="color:var(--wiz-text-muted);">No accommodations selected yet.</p>`;
-    }
+        <div class="option-emoji" style="margin-bottom:8px;">${t.emoji}</div>
+        <div class="option-label" style="font-size:1.1rem;margin-bottom:6px;">${txt(t.name)}</div>
+        <div class="option-sub" style="opacity:0.8;">${txt(t.desc)}</div>
+      </button>`;
+    });
 
     html += `</div></div>`;
-
-    html += `<div class="wizard-checkbox-list">`;
-    
-    if (vmSelected) {
-      html += `
-        <label class="wizard-checkbox-item ${state.kasankala ? 'selected' : ''}">
-          <input type="checkbox" id="chkKasankala" ${state.kasankala ? 'checked' : ''}>
-          <div class="wizard-checkbox-content">
-            <div class="wizard-checkbox-title">${t('kasankalaAddon')}</div>
-            <div class="wizard-checkbox-desc">${t('kasankalaSub')}</div>
-          </div>
-        </label>`;
-    }
-
-    if (state.arrivalMode === 'plane') {
-      html += `
-        <label class="wizard-checkbox-item ${state.returnTransfer ? 'selected' : ''}">
-          <input type="checkbox" id="chkReturn" ${state.returnTransfer ? 'checked' : ''}>
-          <div class="wizard-checkbox-content">
-            <div class="wizard-checkbox-title">${t('addAirportReturn')}</div>
-            <div class="wizard-checkbox-desc">${t('transportNote')}</div>
-          </div>
-        </label>`;
-    }
-
-    html += `
-        <label class="wizard-checkbox-item ${state.customRequest ? 'selected' : ''}">
-          <input type="checkbox" id="chkCustom" ${state.customRequest ? 'checked' : ''}>
-          <div class="wizard-checkbox-content">
-            <div class="wizard-checkbox-title">${t('requestCustom')}</div>
-          </div>
-        </label>
-      </div>
-    </div>`;
-
     return html;
   }
 
   function buildPanel4() {
-    if (state._sending) {
-      return `<div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4">
-        <div style="text-align:center;padding:40px;"><h3>${t('sending')}</h3></div>
-      </div>`;
-    }
-    if (state._sent) {
-      return `<div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4">
-        <div style="text-align:center;padding:40px;color:#10b981;">
-          <h3 style="margin-bottom:15px;">${t('sentOk')}</h3>
-          <button class="wiz-btn wiz-btn-outline" id="wizRestartSent" style="margin:0 auto;">↺ ${t('restartLabel')}</button>
-        </div>
-      </div>`;
-    }
-    if (state._sendError) {
-      return `<div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4">
-        <div style="text-align:center;padding:40px;color:#ef4444;">
-          <h3 style="margin-bottom:15px;">${t('sentErr')}</h3>
-          <button class="wiz-btn wiz-btn-primary" id="wizRetrySent" style="margin:0 auto;">${t('sendProgram')}</button>
-        </div>
-      </div>`;
-    }
+    if (state._sending) return `<div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4"><div style="text-align:center;padding:40px;"><h3>${t('sending')}</h3></div></div>`;
+    if (state._sent) return `<div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4"><div style="text-align:center;padding:40px;color:#10b981;"><h3 style="margin-bottom:15px;">${t('sentOk')}</h3><button class="wiz-btn wiz-btn-outline" id="wizRestartSent" style="margin:0 auto;">↺ ${t('restartLabel')}</button></div></div>`;
+    if (state._sendError) return `<div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4"><div style="text-align:center;padding:40px;color:#ef4444;"><h3 style="margin-bottom:15px;">${t('sentErr')}</h3><button class="wiz-btn wiz-btn-primary" id="wizRetrySent" style="margin:0 auto;">${t('sendProgram')}</button></div></div>`;
 
+    const title = {en:'📨 Send to Concierge', es:'📨 Enviar a Conserjería', it:'📨 Invia al Concierge', fr:'📨 Envoyer au Concierge', de:'📨 An Concierge senden'}[state.lang] || '📨 Send to Concierge';
+    const sub = {en:'Our luxury concierge will design the perfect chronological itinerary using your wishlist, apply exclusive discounts, and send you the final plan.', es:'Nuestra conserjería de lujo diseñará el itinerario cronológico perfecto usando tu lista de deseos, aplicará descuentos exclusivos y te enviará el plan final.', it:'Il nostro concierge di lusso disegnerà l\'itinerario cronologico perfetto usando la tua lista dei desideri, applicherà sconti esclusivi e ti invierà il piano finale.', fr:'Notre concierge de luxe concevra l\'itinéraire chronologique parfait en utilisant votre liste de souhaits, appliquera des réductions exclusives et vous enverra le plan final.', de:'Unser Luxus-Concierge wird den perfekten chronologischen Reiseplan anhand Ihrer Wunschliste entwerfen, exklusive Rabatte anwenden und Ihnen den endgültigen Plan zusenden.'}[state.lang] || 'Our luxury concierge will design the perfect chronological itinerary using your wishlist, apply exclusive discounts, and send you the final plan.';
+    
     const tn = getTotalNights();
+    
     return `
       <div class="wizard-panel ${state.step === 4 ? 'active' : ''}" data-panel="4">
-        <h3 class="wizard-panel-title">${t('p4Title')}</h3>
-        <p class="wizard-panel-subtitle">${t('p4Sub')}</p>
+        <h3 class="wizard-panel-title">${title}</h3>
+        <p class="wizard-panel-subtitle">${sub}</p>
 
         <div class="wizard-summary-box">
           <div class="summary-section">
             <h4>${t('groupInfo')}</h4>
-            <div class="summary-line">
-              <span class="summary-name">${state.adults} ${state.adults === 1 ? t('adultsCount') : t('adultsCountP')}${state.babies > 0 ? ` + ${state.babies} ${state.babies === 1 ? t('babiesCount') : t('babiesCountP')}` : ''}</span>
-            </div>
-            <div class="summary-line">
-              <span class="summary-name">Dates: ${state.arrivalDate} ➔ ${state.departureDate} (${tn} ${t('nightsLabel')})</span>
-            </div>
+            <div class="summary-line"><span class="summary-name">${state.adults} ${state.adults === 1 ? t('adultsCount') : t('adultsCountP')}${state.babies > 0 ? ` + ${state.babies} ${state.babies === 1 ? t('babiesCount') : t('babiesCountP')}` : ''}</span></div>
+            <div class="summary-line"><span class="summary-name">Dates: ${state.arrivalDate} ➔ ${state.departureDate} (${tn} ${t('nightsLabel')})</span></div>
+            <div class="summary-line"><span class="summary-name">Room Level: ${state.roomPreference.toUpperCase()}</span></div>
           </div>
-          
-          <div class="summary-section">
-            <h4>${t('yourStay')}</h4>
-            ${state.itinerary.map((day, i) => {
-              const acc = day.nightAcc ? getAccById(day.nightAcc) : null;
-              const act = day.dayAct ? getActivityById(day.dayAct) : null;
-              return `
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-day-label">${t('dayLabel')} ${i+1}</div>
-                  <div class="timeline-day-title">${acc ? acc.emoji + ' ' + txt(acc.name) : '---'}</div>
-                  <div class="timeline-day-detail">${i === 0 ? t('arrival') : (act ? act.emoji + ' ' + txt(act.name) : t('noActivity'))}</div>
-                </div>
-              `;
-            }).join('')}
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-day-label">${t('departure')}</div>
-              <div class="timeline-day-detail">${state.returnTransfer ? 'Girona Travel Transfer' : ''}</div>
-            </div>
+          <div class="summary-section" style="margin-top:15px;">
+            <h4>✨ Wishlist</h4>
+            <ul style="padding-left:20px; color:var(--wiz-text-body); font-size:0.95rem; margin-top:8px;">
+              ${state.wishlist.map(id => {
+                let item = getAccById(id) || getActivityById(id);
+                return item ? `<li style="margin-bottom:4px;">${item.emoji} ${txt(item.name)}</li>` : '';
+              }).join('')}
+              ${state.wishlist.length === 0 ? '<li>No specific preferences selected.</li>' : ''}
+            </ul>
           </div>
         </div>
 
@@ -1081,70 +975,49 @@ window.TripWizard = (function () {
     // Nav
     container.querySelector('#wizNext')?.addEventListener('click', () => {
       if (state.step === 1 && getTotalNights() <= 0) {
-        alert(t('invalidDates'));
-        return;
+        alert('Please select valid dates.'); return;
       }
       if (state.step < 4) { state.step++; render(); }
     });
     container.querySelector('#wizBack')?.addEventListener('click', () => {
       if (state.step > 1) { state.step--; render(); }
     });
-    container.querySelector('#wizRestart')?.addEventListener('click', () => {
-      state = defaultState(); render();
-    });
-    container.querySelector('#wizRestartSent')?.addEventListener('click', () => {
-      state = defaultState(); render();
-    });
+    container.querySelector('#wizRestart')?.addEventListener('click', () => { state = defaultState(); render(); });
+    container.querySelector('#wizRestartSent')?.addEventListener('click', () => { state = defaultState(); render(); });
 
     // Panel 1
-    const arrDate = container.querySelector('#wizArrDate');
-    if (arrDate) arrDate.addEventListener('change', (e) => { state.arrivalDate = e.target.value; });
-    const depDate = container.querySelector('#wizDepDate');
-    if (depDate) depDate.addEventListener('change', (e) => { state.departureDate = e.target.value; });
-
+    container.querySelector('#wizArrDate')?.addEventListener('change', (e) => { state.arrivalDate = e.target.value; });
+    container.querySelector('#wizDepDate')?.addEventListener('change', (e) => { state.departureDate = e.target.value; });
     container.querySelectorAll('[data-select="arrivalMode"]').forEach(b => {
-      b.addEventListener('click', (e) => {
-        state.arrivalMode = e.currentTarget.dataset.val; render();
-      });
+      b.addEventListener('click', (e) => { state.arrivalMode = e.currentTarget.dataset.val; render(); });
     });
-
     container.querySelector('#adultsDec')?.addEventListener('click', () => { if (state.adults > 1) { state.adults--; render(); } });
     container.querySelector('#adultsInc')?.addEventListener('click', () => { if (state.adults < 20) { state.adults++; render(); } });
     container.querySelector('#babiesDec')?.addEventListener('click', () => { if (state.babies > 0) { state.babies--; render(); } });
     container.querySelector('#babiesInc')?.addEventListener('click', () => { if (state.babies < 10) { state.babies++; render(); } });
 
-    // Panel 2 Dropdowns
-    container.querySelectorAll('.acc-select').forEach(sel => {
-      sel.addEventListener('change', (e) => {
-        const idx = parseInt(e.target.dataset.index);
-        state.itinerary[idx].nightAcc = e.target.value;
+    // Panel 2
+    container.querySelectorAll('[data-wishlist]').forEach(b => {
+      b.addEventListener('click', (e) => {
+        const id = e.currentTarget.dataset.wishlist;
+        if (state.wishlist.includes(id)) {
+          state.wishlist = state.wishlist.filter(x => x !== id);
+        } else {
+          state.wishlist.push(id);
+        }
         render();
-      });
-    });
-    container.querySelectorAll('.act-select').forEach(sel => {
-      sel.addEventListener('change', (e) => {
-        const idx = parseInt(e.target.dataset.index);
-        state.itinerary[idx].dayAct = e.target.value;
-        // no render needed just for this unless dependencies change
       });
     });
 
     // Panel 3
-    container.querySelectorAll('[data-room]').forEach(b => {
+    container.querySelectorAll('[data-pref]').forEach(b => {
       b.addEventListener('click', (e) => {
-        const d = e.currentTarget.dataset;
-        state.roomTypes[d.room] = d.tier;
+        state.roomPreference = e.currentTarget.dataset.pref;
         render();
       });
     });
-    const chkKas = container.querySelector('#chkKasankala');
-    if (chkKas) chkKas.addEventListener('change', e => { state.kasankala = e.target.checked; });
-    const chkRet = container.querySelector('#chkReturn');
-    if (chkRet) chkRet.addEventListener('change', e => { state.returnTransfer = e.target.checked; });
-    const chkCus = container.querySelector('#chkCustom');
-    if (chkCus) chkCus.addEventListener('change', e => { state.customRequest = e.target.checked; });
 
-    // Panel 4 form sync & submit
+    // Panel 4
     const nameEl = container.querySelector('#wizGuestName');
     if (nameEl) nameEl.addEventListener('input', e => { state.guestName = e.target.value; });
     const emailEl = container.querySelector('#wizGuestEmail');
@@ -1154,26 +1027,25 @@ window.TripWizard = (function () {
     if (btnSubmit) {
       btnSubmit.addEventListener('click', async () => {
         if (!state.guestName || !state.guestEmail) {
-          alert('Please enter your name and email');
-          return;
+          alert('Please enter your name and email'); return;
         }
-        state._sending = true;
-        render();
+        state._sending = true; render();
+
+        const wishNames = state.wishlist.map(id => {
+          let item = getAccById(id) || getActivityById(id);
+          return item ? item.name.en : id;
+        });
 
         const payload = {
           to: 'reservas.kalihotels@gmail.com',
-          subject: `New Trip Wizard Itinerary: ${state.guestName}`,
+          subject: `Concierge Request (Wishlist): ${state.guestName}`,
           data: {
             guest: { name: state.guestName, email: state.guestEmail },
             group: { adults: state.adults, babies: state.babies },
             dates: { arrival: state.arrivalDate, departure: state.departureDate, nights: getTotalNights() },
-            transport: { arrival: state.arrivalMode, return_transfer: state.returnTransfer },
-            itinerary: state.itinerary.map(day => ({
-              accommodation: day.nightAcc ? getAccById(day.nightAcc).name.en : null,
-              activity: day.dayAct ? getActivityById(day.dayAct).name.en : null
-            })),
-            rooms: state.roomTypes,
-            addons: { kasankala: state.kasankala, custom: state.customRequest }
+            transport: { arrival: state.arrivalMode },
+            roomPreference: state.roomPreference,
+            wishlist: wishNames
           }
         };
 
@@ -1184,14 +1056,10 @@ window.TripWizard = (function () {
             body: JSON.stringify(payload)
           });
           if (!res.ok) throw new Error('HTTP ' + res.status);
-          state._sent = true;
-          state._sending = false;
-          state._sendError = false;
+          state._sent = true; state._sending = false; state._sendError = false;
         } catch (err) {
           console.error('Wizard send error:', err);
-          state._sent = false;
-          state._sending = false;
-          state._sendError = true;
+          state._sent = false; state._sending = false; state._sendError = true;
         }
         render();
       });
@@ -1212,6 +1080,7 @@ window.TripWizard = (function () {
   }
 
   /* -------------------------------------------------------------------------
+
 
    * PUBLIC API
    * ----------------------------------------------------------------------- */
