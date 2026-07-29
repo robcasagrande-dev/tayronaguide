@@ -486,7 +486,7 @@ def render_html(lang_code, data):
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{css_path}">
-  <link rel="stylesheet" href="/concierge-module.css?v=20260729_photos">
+  <link rel="stylesheet" href="/concierge-module.css?v=20260729_rework_photos">
 </head>
 <body>
 
@@ -889,7 +889,7 @@ def render_html(lang_code, data):
     </div>
   </footer>
 
-  <script src="/concierge-module.js?v=20260729_photos"></script>
+  <script src="/concierge-module.js?v=20260729_rework_photos"></script>
   <script src="{js_path}"></script>
 </body>
 </html>"""
@@ -916,6 +916,13 @@ def sync_to_dirs():
             src = os.path.join(base_dir, f)
             if os.path.exists(src):
                 shutil.copy2(src, os.path.join(target_dir, f))
+        
+        # Copy images directory
+        img_src = os.path.join(base_dir, "images")
+        img_dest = os.path.join(target_dir, "images")
+        if os.path.exists(img_src):
+            shutil.copytree(img_src, img_dest, dirs_exist_ok=True)
+
         for lang in ["es", "it", "fr", "de"]:
             lang_src = os.path.join(base_dir, lang)
             lang_dest = os.path.join(target_dir, lang)

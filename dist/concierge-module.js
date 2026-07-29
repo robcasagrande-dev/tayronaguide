@@ -870,6 +870,11 @@ window.ConciergeTool = (function () {
             </div>
           </div>
         </div>
+
+        <div class="concierge-alert" style="margin-top:20px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.3); border-radius:10px; padding:14px 18px; font-size:0.88rem; color:var(--wiz-text-body); line-height:1.5;">
+          🇨🇴 <strong>0% VAT Rate:</strong> ${{en:'Colombian nationals & foreign tourists pay 0% VAT on all hotel stays.', es:'Nacionales colombianos y turistas extranjeros pagan 0% IVA en hospedaje.', it:'Colombiani e stranieri pagano 0% IVA su tutti i soggiorni.', fr:'Colombiens et étrangers ne paient pas de TVA sur les séjours.', de:'Kolumbianer & Ausländer zahlen 0% MwSt. auf alle Aufenthalte.'}[state.lang]}<br>
+          ✨ <strong>Multi-Stay Extra Discount:</strong> ${{en:'Additional discounts applied automatically for multi-night stays at Kali Hotels (Santa Marta & Tayrona).', es:'Descuentos adicionales aplicados automáticamente para estadías de varias noches en Kali Hotels (Santa Marta y Tayrona).', it:'Sconti extra applicati automaticamente per soggiorni di più notti negli Hotel Kali (Santa Marta e Tayrona).', fr:'Remises supplémentaires appliquées automatiquement pour les séjours de plusieurs nuits aux Hôtels Kali (Santa Marta et Tayrona).', de:'Zusätzlicher Rabatt wird automatisch für Aufenthalte mehrerer Nächte in Kali Hotels gewährt.'}[state.lang]}
+        </div>
       </div>`;
   }
 
@@ -918,19 +923,20 @@ window.ConciergeTool = (function () {
     const title = {en:'🛏️ Room Preferences', es:'🛏️ Preferencia de Habitación', it:'🛏️ Preferenze Camera', fr:'🛏️ Préférences de Chambre', de:'🛏️ Zimmerpräferenzen'}[state.lang] || '🛏️ Room Preferences';
     const sub = {en:'What level of luxury are you looking for during your stay?', es:'¿Qué nivel de lujo buscas durante tu estadía?', it:'Che livello di lusso cerchi durante il soggiorno?', fr:'Quel niveau de luxe recherchez-vous pendant votre séjour ?', de:'Welches Maß an Luxus suchen Sie während Ihres Aufenthalts?'}[state.lang] || 'What level of luxury are you looking for during your stay?';
 
-    // Determine photo source based on selected hotel in wishlist
-    const selectedHotel = state.wishlist.find(id => ['casa-isabella', 'casa-leda', 'villa-maria'].includes(id)) || 'villa-maria';
-    const roomPhotos = {
-      'casa-isabella': { base: '/images/rooms/isabella-base.jpg', mid: '/images/rooms/isabella-mid.jpg', top: '/images/rooms/isabella-top.jpg', name: 'Casa de Isabella' },
-      'casa-leda': { base: '/images/rooms/leda-base.jpg', mid: '/images/rooms/leda-mid.jpg', top: '/images/rooms/leda-top.jpg', name: 'Casa de Leda' },
-      'villa-maria': { base: '/images/rooms/villamaria-base.jpg', mid: '/images/rooms/villamaria-mid.jpg', top: '/images/rooms/villamaria-top.jpg', name: 'Villa María Tayrona' }
+    // Gather selected hotels from wishlist or default to both Tayrona & City
+    const wishlistHotels = state.wishlist.filter(id => ['casa-isabella', 'casa-leda', 'villa-maria'].includes(id));
+    const activeHotels = wishlistHotels.length > 0 ? wishlistHotels : ['villa-maria', 'casa-isabella'];
+
+    const roomPhotosMap = {
+      'casa-isabella': { base: '/images/rooms/isabella-base.jpg', mid: '/images/rooms/isabella-mid.jpg', top: '/images/rooms/isabella-top.jpg' },
+      'casa-leda': { base: '/images/rooms/leda-base.jpg', mid: '/images/rooms/leda-mid.jpg', top: '/images/rooms/leda-top.jpg' },
+      'villa-maria': { base: '/images/rooms/villamaria-base.jpg', mid: '/images/rooms/villamaria-mid.jpg', top: '/images/rooms/villamaria-top.jpg' }
     };
-    const activePhotos = roomPhotos[selectedHotel];
 
     const tiers = [
-      { id: 'base', emoji: '✨', photo: activePhotos.base, name: {en:'Standard / Cozy', es:'Estándar / Acogedora', it:'Standard / Accogliente', fr:'Standard / Confortable', de:'Standard / Gemütlich'}, desc: {en:'Comfortable essentials and authentic charm.', es:'Comodidades esenciales y encanto auténtico.', it:'Comfort essenziali e fascino autentico.', fr:'Essentiels confortables et charme authentique.', de:'Komfortable Basics und authentischer Charme.'} },
-      { id: 'mid', emoji: '🌟', photo: activePhotos.mid, name: {en:'Superior / Deluxe', es:'Superior / Deluxe', it:'Superior / Deluxe', fr:'Supérieure / Deluxe', de:'Superior / Deluxe'}, desc: {en:'More space, premium amenities, and better views.', es:'Más espacio, amenidades premium y mejores vistas.', it:'Più spazio, servizi premium e viste migliori.', fr:'Plus d\'espace, équipements premium et meilleures vues.', de:'Mehr Platz, Premium-Ausstattung und bessere Aussicht.'} },
-      { id: 'top', emoji: '👑', photo: activePhotos.top, name: {en:'Suite / Premium', es:'Suite / Premium', it:'Suite / Premium', fr:'Suite / Premium', de:'Suite / Premium'}, desc: {en:'The ultimate luxury, best locations, and exclusive services.', es:'El máximo lujo, las mejores ubicaciones y servicios exclusivos.', it:'Il massimo lusso, le migliori posizioni e servizi esclusivi.', fr:'Le summum du luxe, les meilleurs emplacements et services exclusifs.', de:'Höchster Luxus, beste Lagen und exklusive Services.'} }
+      { id: 'base', emoji: '✨', name: {en:'Standard / Cozy', es:'Estándar / Acogedora', it:'Standard / Accogliente', fr:'Standard / Confortable', de:'Standard / Gemütlich'}, desc: {en:'Comfortable essentials and authentic charm.', es:'Comodidades esenciales y encanto auténtico.', it:'Comfort essenziali e fascino autentico.', fr:'Essentiels confortables et charme authentique.', de:'Komfortable Basics und authentischer Charme.'} },
+      { id: 'mid', emoji: '🌟', name: {en:'Superior / Deluxe', es:'Superior / Deluxe', it:'Superior / Deluxe', fr:'Supérieure / Deluxe', de:'Superior / Deluxe'}, desc: {en:'More space, premium amenities, and better views.', es:'Más espacio, amenidades premium y mejores vistas.', it:'Più spazio, servizi premium e viste migliori.', fr:'Plus d\'espace, équipements premium et meilleures vues.', de:'Mehr Platz, Premium-Ausstattung und bessere Aussicht.'} },
+      { id: 'top', emoji: '👑', name: {en:'Suite / Premium', es:'Suite / Premium', it:'Suite / Premium', fr:'Suite / Premium', de:'Suite / Premium'}, desc: {en:'The ultimate luxury, best locations, and exclusive services.', es:'El máximo lujo, las mejores ubicaciones y servicios exclusivos.', it:'Il massimo lusso, le migliori posizioni e servizi esclusivi.', fr:'Le summum du luxe, les meilleurs emplacements et services exclusifs.', de:'Höchster Luxus, beste Lagen und exklusive Services.'} }
     ];
 
     let html = `<div class="concierge-panel ${state.step === 3 ? 'active' : ''}" data-panel="3">
@@ -941,11 +947,23 @@ window.ConciergeTool = (function () {
 
     tiers.forEach(t => {
       const selected = state.roomPreference === t.id ? 'selected' : '';
+      const photos = activeHotels.map(hId => roomPhotosMap[hId]?.[t.id]).filter(Boolean);
+      
+      let photoContainerHTML = '';
+      if (photos.length === 1) {
+        photoContainerHTML = `
+          <div class="room-photo-wrapper" style="width:100%; height:210px; border-radius:10px; overflow:hidden; margin-bottom:14px; background:#071510; border:1px solid var(--wiz-border);">
+            <img src="${photos[0]}" alt="${txt(t.name)}" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>`;
+      } else {
+        photoContainerHTML = `
+          <div class="room-photo-wrapper" style="width:100%; height:210px; border-radius:10px; overflow:hidden; margin-bottom:14px; background:#071510; display:flex; gap:2px; border:1px solid var(--wiz-border);">
+            ${photos.map(p => `<img src="${p}" alt="${txt(t.name)}" style="flex:1; width:${100/photos.length}%; height:100%; object-fit:cover; display:block;" />`).join('')}
+          </div>`;
+      }
+
       html += `<button type="button" class="concierge-option ${selected}" data-pref="${t.id}" style="padding:15px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;">
-        <div class="room-photo-wrapper" style="width:100%; height:130px; border-radius:8px; overflow:hidden; margin-bottom:12px; position:relative; background:#071510;">
-          <img src="${t.photo}" alt="${txt(t.name)}" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          <span style="position:absolute; bottom:6px; left:6px; background:rgba(7,21,16,0.85); backdrop-filter:blur(6px); color:#fff; font-size:0.75rem; padding:2px 8px; border-radius:4px; font-weight:600; border:1px solid rgba(255,255,255,0.15);">${activePhotos.name}</span>
-        </div>
+        ${photoContainerHTML}
         <div class="option-emoji" style="margin-bottom:8px;">${t.emoji}</div>
         <div class="option-label" style="font-size:1.1rem;margin-bottom:6px;">${txt(t.name)}</div>
         <div class="option-sub" style="opacity:0.8;">${txt(t.desc)}</div>
