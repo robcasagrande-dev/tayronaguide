@@ -486,6 +486,7 @@ def render_html(lang_code, data):
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{css_path}">
+  <link rel="stylesheet" href="/wizard-module.css">
 </head>
 <body>
 
@@ -1005,7 +1006,7 @@ def sync_to_dirs():
     for target in ["public", "dist"]:
         target_dir = os.path.join(base_dir, target)
         os.makedirs(target_dir, exist_ok=True)
-        for f in ["index.html", "app.js", "style.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
+        for f in ["index.html", "app.js", "style.css", "wizard-module.js", "wizard-module.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
             src = os.path.join(base_dir, f)
             if os.path.exists(src):
                 shutil.copy2(src, os.path.join(target_dir, f))
