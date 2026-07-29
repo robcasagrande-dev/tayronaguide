@@ -800,6 +800,9 @@ def render_html(lang_code, data):
 
       <div class="lodging-grid">
         <div class="lodging-card reveal">
+          <div class="lodging-image-wrapper">
+            <img src="/images/lodging/villa_maria.jpg" alt="Villa María Tayrona" />
+          </div>
           <div class="lodging-card-body">
             <div class="lodging-icon-row">
               <div class="lodging-icon-wrap">🌿</div>
@@ -814,6 +817,9 @@ def render_html(lang_code, data):
         </div>
 
         <div class="lodging-card reveal">
+          <div class="lodging-image-wrapper">
+            <img src="/images/lodging/kali_hotel.jpg" alt="Kali Hotel Santa Marta" />
+          </div>
           <div class="lodging-card-body">
             <div class="lodging-icon-row">
               <div class="lodging-icon-wrap">🏛️</div>
@@ -828,6 +834,9 @@ def render_html(lang_code, data):
         </div>
 
         <div class="lodging-card reveal">
+          <div class="lodging-image-wrapper">
+            <img src="/images/lodging/kasankala.jpg" alt="Kasankala Restaurant" />
+          </div>
           <div class="lodging-card-body">
             <div class="lodging-icon-row">
               <div class="lodging-icon-wrap">🍽️</div>
