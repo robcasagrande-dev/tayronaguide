@@ -906,50 +906,50 @@ def render_html(lang_code, data):
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
-        <a href="/" class="brand-logo">
+        <a href="{data['img_prefix']}" class="brand-logo">
           <span class="logo-icon">🌿</span>
           <span class="logo-text">Tayrona<strong>Guide</strong></span>
         </a>
-        <p class="footer-text">The official verified travel guide for Tayrona National Park & Santa Marta. Managed in partnership with Girona Travels, Kali Hotels & Villa María Tayrona.</p>
+        <p class="footer-text">{data['footer']['desc']}</p>
       </div>
       <div class="footer-col">
-        <h4>Quick Navigation</h4>
+        <h4>{data['footer']['nav_title']}</h4>
         <ul>
-          <li><a href="#no-vat">0% VAT Campaign</a></li>
-          <li><a href="#packages">Bundled Packages</a></li>
-          <li><a href="#concierge">Concierge Request Tool</a></li>
-          <li><a href="#ticket-truth">Ticket Truth</a></li>
+          <li><a href="{data['img_prefix']}#no-vat">{data['nav']['no_vat']}</a></li>
+          <li><a href="{data['img_prefix']}#packages">{data['footer']['nav_packages']}</a></li>
+          <li><a href="{data['img_prefix']}#concierge">{data['footer']['nav_concierge']}</a></li>
+          <li><a href="{data['img_prefix']}#ticket-truth">{data['footer']['nav_truth']}</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Official Partners</h4>
+        <h4>{data['footer']['partners_title']}</h4>
         <ul>
-          <li><a href="https://gironatravels.com" target="_blank">Girona Travels (Official Operator)</a></li>
+          <li><a href="https://gironatravels.com" target="_blank">Girona Travels ({data['footer']['partner_operator']})</a></li>
           <li><a href="https://kalihotels.com" target="_blank">Kali Hotels Collection</a></li>
           <li><a href="https://parquetayrona.org" target="_blank">ParqueTayrona.org</a></li>
-          <li><a href="https://kasankala.com" target="_blank">Kasankala Restaurant</a></li>
+          <li><a href="https://kasankala.com" target="_blank">{data['footer']['partner_restaurant']}</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Certifications</h4>
+        <h4>{data['footer']['cert_title']}</h4>
         <a href="https://parquetayrona.org" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; text-decoration: none; color: #94a3b8;">
-          <img src="/images/icons/sello-inclusion.svg" alt="Sello de Inclusión" style="height: 40px; width: auto; flex-shrink: 0;">
-          <span style="font-size: 0.85rem; line-height: 1.3; font-weight: 500; color: white;">Sello de Inclusión<br><span style="opacity:0.7; font-weight: 400; font-size: 0.75rem; color: #94a3b8;">ParqueTayrona.org</span></span>
+          <img src="/images/icons/sello-inclusion.svg" alt="{data['footer']['cert_inclusion']}" style="height: 40px; width: auto; flex-shrink: 0;">
+          <span style="font-size: 0.85rem; line-height: 1.3; font-weight: 500; color: white;">{data['footer']['cert_inclusion']}<br><span style="opacity:0.7; font-weight: 400; font-size: 0.75rem; color: #94a3b8;">ParqueTayrona.org</span></span>
         </a>
         <a href="https://parquetayrona.org" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; text-decoration: none; color: #94a3b8;">
-          <img src="/images/icons/sello-transparencia.svg" alt="Sello de Transparencia" style="height: 40px; width: auto; flex-shrink: 0;">
-          <span style="font-size: 0.85rem; line-height: 1.3; font-weight: 500; color: white;">Sello de Transparencia<br><span style="opacity:0.7; font-weight: 400; font-size: 0.75rem; color: #94a3b8;">ParqueTayrona.org</span></span>
+          <img src="/images/icons/sello-transparencia.svg" alt="{data['footer']['cert_transparencia']}" style="height: 40px; width: auto; flex-shrink: 0;">
+          <span style="font-size: 0.85rem; line-height: 1.3; font-weight: 500; color: white;">{data['footer']['cert_transparencia']}<br><span style="opacity:0.7; font-weight: 400; font-size: 0.75rem; color: #94a3b8;">ParqueTayrona.org</span></span>
         </a>
         <div class="gaula-badge-container">
           <a href="https://adenunciar.policia.gov.co/Adenunciar/" target="_blank" rel="noopener noreferrer" style="display:block; color:#94a3b8; text-decoration:none;">
-            <img src="/images/icons/gaula-badge.svg" alt="Campaña Oficial GAULA" style="height: 46px; width: auto; margin-bottom: 8px;">
-            <div style="font-size: 0.8rem; line-height: 1.3;">Apoyamos la campaña oficial antisecuestro y antiextorsión. Línea: 165</div>
+            <img src="/images/icons/gaula-badge.svg" alt="{data['footer']['cert_gaula_alt']}" style="height: 46px; width: auto; margin-bottom: 8px;">
+            <div style="font-size: 0.8rem; line-height: 1.3;">{data['footer']['cert_gaula_text']}</div>
           </a>
         </div>
       </div>
     </div>
     <div class="footer-bottom text-center">
-      <p>&copy; 2026 TayronaGuide.com. All rights reserved. Powered by Girona Travels & Kali Hotels.</p>
+      <p>{data['footer']['copyright']}</p>
     </div>
   </footer>
 
