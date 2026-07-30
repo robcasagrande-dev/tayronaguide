@@ -13,6 +13,7 @@ languages = {
         "nav": {
             "truth": "Park Passes",
             "no_vat": "0% Tax Benefit",
+            "badge_new": "NEW",
             "guide": "Tayrona Guide",
             "wizard": "Trip Builder",
             "skip": "Fast-Track",
@@ -142,6 +143,7 @@ languages = {
         "nav": {
             "truth": "Entradas Parque",
             "no_vat": "Beneficio 0% IVA",
+            "badge_new": "NUEVO",
             "guide": "Guía Tayrona",
             "wizard": "Diseñador de Viaje",
             "skip": "Fast-Track",
@@ -271,6 +273,7 @@ languages = {
         "nav": {
             "truth": "Pass Parco",
             "no_vat": "Beneficio 0% IVA",
+            "badge_new": "NUOVO",
             "guide": "Guida Tayrona",
             "wizard": "Pianificatore Viaggio",
             "skip": "Ingresso Rapido",
@@ -400,6 +403,7 @@ languages = {
         "nav": {
             "truth": "Passes du Parc",
             "no_vat": "Avantage 0% TVA",
+            "badge_new": "NOUVEAU",
             "guide": "Guide Tayrona",
             "wizard": "Planificateur de Voyage",
             "skip": "Fast-Track",
@@ -529,6 +533,7 @@ languages = {
         "nav": {
             "truth": "Park-Pässe",
             "no_vat": "0% MwSt. Vorteil",
+            "badge_new": "NEU",
             "guide": "Tayrona Führer",
             "wizard": "Reise-Builder",
             "skip": "Fast-Track",
@@ -807,10 +812,18 @@ def render_html(lang_code, data):
       </a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#wizard" class="nav-link highlight" style="color: var(--c-gold); font-weight: bold;">{data['nav']['wizard']}</a>
-        <a href="#no-vat" class="nav-link">{data['nav']['no_vat']}</a>
+        <a href="#wizard" class="nav-link highlight" style="font-weight: bold; position: relative; display: inline-flex; align-items: center; gap: 6px;">
+          {data['nav']['wizard']}
+          <span style="background-color: var(--c-gold, #f59e0b); color: #111827; font-size: 10px; padding: 2px 6px; border-radius: 9999px; text-transform: uppercase; font-weight: 800; line-height: 1;">{data['nav']['badge_new']}</span>
+        </a>
+        <a href="#no-vat" class="nav-link highlight" style="color: var(--c-gold, #f59e0b); font-weight: bold;">{data['nav']['no_vat']}</a>
         <a href="#ticket-truth" class="nav-link">{data['nav']['truth']}</a>
-        <a href="#skip-queue" class="nav-link">{data['nav']['skip']}</a>
+        <a href="#skip-queue" class="nav-link" style="display: inline-flex; align-items: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;margin-right:4px;color:var(--c-gold, #f59e0b);">
+            <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+          </svg>
+          {data['nav']['skip']}
+        </a>
         <a href="#guided-tours" class="nav-link">{data['nav']['tours']}</a>
         <a href="#where-to-stay" class="nav-link">{data['nav']['stays']}</a>
         <a href="https://parquetayrona.org" target="_blank" class="nav-link">{data['nav']['guide']}</a>
