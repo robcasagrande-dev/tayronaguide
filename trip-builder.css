@@ -313,10 +313,11 @@
   box-shadow: 0 0 0 3px var(--tb-accent-dim);
 }
 
-/* Fallback for browsers that don't honour color-scheme on inputs */
-.tb-input[type="date"]::-webkit-calendar-picker-indicator,
-.tb-input[type="number"]::-webkit-inner-spin-button {
-  filter: invert(1) opacity(0.6);
+/* Force calendar icon to white — brightness(0) kills the original colour,
+   invert(1) flips it to white. Works regardless of color-scheme or OS theme. */
+.tb-input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1);
+  opacity: 0.65;
   cursor: pointer;
 }
 
