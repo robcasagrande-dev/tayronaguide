@@ -786,9 +786,11 @@ def render_html(lang_code, data):
         <!-- Language Switcher Dropdown -->
         <div class="lang-dropdown">
           <button class="lang-btn">{lang_code.upper()} ▾</button>
-          <ul class="lang-menu">
-            {lang_links}
-          </ul>
+          <div class="lang-menu-wrapper">
+            <ul class="lang-menu">
+              {lang_links}
+            </ul>
+          </div>
         </div>
 
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">

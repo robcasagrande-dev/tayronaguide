@@ -252,10 +252,18 @@ img { max-width: 100%; height: auto; display: block; }
   border-color: var(--c-border-g);
 }
 
-.lang-menu {
+.lang-menu-wrapper {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   right: 0;
+  padding-top: 8px; /* The invisible bridge! */
+  display: none;
+  z-index: 1050;
+}
+
+.lang-dropdown:hover .lang-menu-wrapper { display: block; }
+
+.lang-menu {
   background: rgba(5, 18, 12, 0.97);
   backdrop-filter: blur(20px);
   border: 1px solid var(--c-border-g);
@@ -264,11 +272,7 @@ img { max-width: 100%; height: auto; display: block; }
   list-style: none;
   min-width: 160px;
   box-shadow: var(--sh-lg);
-  display: none;
-  z-index: 1050;
 }
-
-.lang-dropdown:hover .lang-menu { display: block; }
 
 .lang-menu li a {
   display: block;
