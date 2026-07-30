@@ -989,7 +989,7 @@ def render_html(lang_code, data):
       </div>
 
       <div class="tours-cta-wrap">
-        <button onclick="document.querySelectorAll('.hidden-tour').forEach(el => { el.style.display = 'flex'; el.classList.remove('hidden-tour'); }); this.style.display='none';" class="btn btn-accent btn-lg glow-btn" style="padding:16px 40px;font-size:1.05rem;font-weight:700;border-radius:9999px;cursor:pointer;border:none;">
+        <button onclick="document.querySelectorAll('.hidden-tour').forEach(el => el.classList.remove('hidden-tour')); this.style.display='none';" class="btn btn-accent btn-lg glow-btn" style="padding:16px 40px;font-size:1.05rem;font-weight:700;border-radius:9999px;cursor:pointer;border:none;">
           {data['tours_page']['title']} &rarr;
         </button>
       </div>
