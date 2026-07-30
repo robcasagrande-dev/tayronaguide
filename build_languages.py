@@ -1136,7 +1136,7 @@ def render_html(lang_code, data):
         <ul>
           <li><a href="{data['img_prefix']}#no-vat">{data['nav']['no_vat']}</a></li>
           <li><a href="{data['img_prefix']}#packages">{data['footer']['nav_packages']}</a></li>
-          <li><a href="{data['img_prefix']}#concierge">{data['footer']['nav_concierge']}</a></li>
+          <li><a href="{data['img_prefix']}#guided-tours">{data['nav']['tours']}</a></li>
           <li><a href="{data['img_prefix']}#ticket-truth">{data['footer']['nav_truth']}</a></li>
         </ul>
       </div>
