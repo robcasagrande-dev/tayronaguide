@@ -424,35 +424,6 @@
     }
   },
   {
-    "id": "free-time-santa-marta",
-    "nombre": {
-      "es": "Tiempo Libre en Santa Marta",
-      "en": "Free Time in Santa Marta",
-      "it": "Tempo Libero a Santa Marta",
-      "fr": "Temps Libre à Santa Marta",
-      "de": "Freizeit in Santa Marta"
-    },
-    "descripcion": {
-      "es": "Explora Santa Marta a tu propio ritmo y déjate cautivar por la calidez de la ciudad más antigua de Colombia. Tómate un tiempo libre para perderte en las pintorescas callejuelas del Centro Histórico, donde la arquitectura colonial alberga vibrantes cafés, restaurantes de clase mundial y boutiques de diseño. Disfruta de un atardecer inolvidable caminando por el malecón del Paseo de Bastidas, o prueba la exquisita gastronomía de mariscos frescos en el Parque de los Novios. ¡Santa Marta es una invitación abierta a vivir la alegría caribeña sin reloj!",
-      "en": "Explore Santa Marta at your own pace and let yourself be captivated by the warmth of Colombia's oldest city. Take some free time to get delightfully lost in the picturesque cobblestone streets of the Historic Center, where colorful colonial architecture houses vibrant cafes, world-class restaurants, and boutique shops. Enjoy an unforgettable golden sunset strolling along the Paseo de Bastidas waterfront, or taste exquisite fresh seafood cuisine at the romantic Parque de los Novios. Santa Marta is an open invitation to experience Caribbean joy with no schedule!",
-      "it": "Esplora Santa Marta al tuo ritmo e lasciati affascinare dal calore della città più antica della Colombia. Prenditi del tempo libero per perderti nelle pittoresche strade acciottolate del Centro Storico, dove l'architettura coloniale ospita vivaci caffè, ristoranti di prima classe e boutique. Goditi un tramonto indimenticabile passeggiando sul lungomare di Paseo de Bastidas, o assapora l'eccellente cucina di pesce fresco nel romantico Parque de los Novios. Santa Marta è un invito a vivere la gioia caraibica senza orologio!",
-      "fr": "Explorez Santa Marta à votre rythme et laissez-vous séduire par la chaleur de la plus ancienne ville de Colombie. Prenez du temps libre pour vous perdre dans les pittoresques rues pavées du Centre Historique, où l'architecture coloniale abrite des cafés animés, d'excellents restaurants et des boutiques. Profitez d'un coucher de soleil inoubliable en vous promenant sur la promenade du Paseo de Bastidas, ou dégustez des fruits de mer frais au romantique Parque de los Novios. Une invitation à vivre la joie caribéenne sans contrainte !",
-      "de": "Erkunden Sie Santa Marta in Ihrem eigenen Tempo und lassen Sie sich von der Wärme der ältesten Stadt Kolumbiens verzaubern. Nehmen Sie sich Zeit, um sich in den malerischen gepflasterten Gassen des historischen Zentrums zu verlieren, wo bunte koloniale Architektur lebhafte Cafés, erstklassige Restaurants und Boutiquen beherbergt. Genießen Sie einen unvergesslichen Sonnenuntergang an der Uferpromenade Paseo de Bastidas oder probieren Sie frische Meeresfrüchte im romantischen Parque de los Novios. Erleben Sie karibische Lebensfreude ohne Zeitplan!"
-    },
-    "image": "/images/tours/free_time_santa_marta.jpg",
-    "emoji": "☕",
-    "location": "city",
-    "priceUSD": 0,
-    "descripcion_corta": {
-      "en": "Explore the colonial Historic Center, the Paseo de Bastidas waterfront, artisan markets and the city's vibrant Caribbean rhythm at your own pace.",
-      "es": "Explora el Centro Histórico colonial, el malecón del Paseo de Bastidas, mercados artesanales y el vibrante ritmo caribeño de la ciudad a tu propio ritmo.",
-      "it": "Esplora il Centro Storico coloniale, il lungomare del Paseo de Bastidas, i mercati artigianali e il vivace ritmo caraibico della città al tuo ritmo.",
-      "fr": "Explorez le Centre Historique colonial, la promenade Paseo de Bastidas, les marchés artisanaux et le rythme caribéen vibrant de la ville à votre propre rythme.",
-      "de": "Erkunden Sie das koloniale Historische Zentrum, die Uferpromenade Paseo de Bastidas, Kunsthandwerksmärkte und den lebhaften karibischen Rhythmus der Stadt in Ihrem eigenen Tempo."
-    },
-    "isFreeTime": true
-  },
-  {
     "id": "free-time-villa-maria",
     "nombre": {
       "es": "Tiempo Libre en Villa María Tayrona",
@@ -468,7 +439,7 @@
       "fr": "Transformez votre temps libre en une expérience de luxe absolu à la Villa María Tayrona, un majestueux écolodge caché où la jungle de la Sierra Nevada se fond de manière spectaculaire dans la mer des Caraïbes. Passez des heures à vous détendre dans une superbe piscine sur une colline surplombant l'océan et les sommets de la Sierra Nevada, bercé par le chant des oiseaux tropicaux et des singes hurleurs. Promenez-vous sur le chemin privé à travers la plantation de la ferme jusqu'à la plage, profitez de soins spa et d'une cuisine gastronomique, et laissez la tranquillité profonde ressourcer votre corps et votre âme.",
       "de": "Verwandeln Sie Ihre Freizeit in ein Erlebnis absoluten Luxus in der Villa María Tayrona, einer majestätischen versteckten Eco-Lodge, wo der Dschungel spektakulär mit dem Karibischen Meer verschmilzt. Entspannen Sie stundenlang in einem atemberaubenden Pool auf einem Hügel mit Blick auf das Meer und die Gipfel der Sierra Nevada, begleitet von den exotischen Klängen tropischer Vögel. Spazieren Sie den privaten Weg durch die Farmplantage hinunter zum Strand, gönnen Sie sich erstklassige Spa-Behandlungen und Gourmet-Küche und lassen Sie die tiefe Ruhe Körper, Geist und Seele vollständig aufladen."
     },
-    "image": "/images/tours/free_time_villa_maria_v4.jpg",
+    "image": "/images/tours/free_time_villa_maria_v3.jpg",
     "emoji": "🌅",
     "location": "jungle",
     "priceUSD": 0,
