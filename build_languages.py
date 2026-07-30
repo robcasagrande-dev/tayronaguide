@@ -649,6 +649,14 @@ languages = {
     }
 }
 
+TB_STRINGS = {
+    "es": { "step1_title": "Planea tu Viaje", "step1_subtitle": "Dinos cómo llegas", "step2_title": "Elige tus Tours", "step2_subtitle": "Selecciona los tours que más te gusten", "step3_title": "Resumen y Envío", "step3_subtitle": "Revisa tu plan y envíalo", "transport_label": "¿Cómo llegas a Santa Marta?", "flight": "Vuelo", "car": "Carro", "time_label": "¿A qué hora llega tu vuelo?", "time_before_6": "Antes 6 AM", "time_6_12": "6 AM - 12 PM", "time_12_18": "12 PM - 6 PM", "time_after_18": "Después 6 PM", "adults_label": "Adultos", "kids_label": "Niños (<2 años)", "btn_next": "Siguiente", "btn_back": "Atrás", "btn_send": "Enviar por WhatsApp", "resume_transport": "Transporte", "resume_time": "Llegada", "resume_guests": "Huéspedes", "resume_tours": "Tours Seleccionados", "name_label": "Nombre completo", "email_label": "Correo electrónico" },
+    "en": { "step1_title": "Plan Your Trip", "step1_subtitle": "Tell us how you arrive", "step2_title": "Choose Your Tours", "step2_subtitle": "Select the tours you like most", "step3_title": "Summary & Send", "step3_subtitle": "Review your plan and send it", "transport_label": "How are you arriving in Santa Marta?", "flight": "Flight", "car": "Car", "time_label": "What time does your flight arrive?", "time_before_6": "Before 6 AM", "time_6_12": "6 AM - 12 PM", "time_12_18": "12 PM - 6 PM", "time_after_18": "After 6 PM", "adults_label": "Adults", "kids_label": "Kids (<2 years)", "btn_next": "Next", "btn_back": "Back", "btn_send": "Send via WhatsApp", "resume_transport": "Transport", "resume_time": "Arrival Time", "resume_guests": "Guests", "resume_tours": "Selected Tours", "name_label": "Full Name", "email_label": "Email Address" },
+    "it": { "step1_title": "Pianifica il tuo Viaggio", "step1_subtitle": "Dicci come arrivi", "step2_title": "Scegli i tuoi Tour", "step2_subtitle": "Seleziona i tour che ti piacciono di più", "step3_title": "Riepilogo e Invio", "step3_subtitle": "Rivedi il tuo piano e invialo", "transport_label": "Come arrivi a Santa Marta?", "flight": "Volo", "car": "Macchina", "time_label": "A che ora arriva il tuo volo?", "time_before_6": "Prima delle 6", "time_6_12": "6 - 12", "time_12_18": "12 - 18", "time_after_18": "Dopo le 18", "adults_label": "Adulti", "kids_label": "Bambini (<2 anni)", "btn_next": "Avanti", "btn_back": "Indietro", "btn_send": "Invia via WhatsApp", "resume_transport": "Trasporto", "resume_time": "Arrivo", "resume_guests": "Ospiti", "resume_tours": "Tour Selezionati", "name_label": "Nome e cognome", "email_label": "Indirizzo Email" },
+    "fr": { "step1_title": "Planifiez votre Voyage", "step1_subtitle": "Dites-nous comment vous arrivez", "step2_title": "Choisissez vos Visites", "step2_subtitle": "Sélectionnez les visites que vous aimez le plus", "step3_title": "Résumé et Envoi", "step3_subtitle": "Révisez votre plan et envoyez-le", "transport_label": "Comment arrivez-vous à Santa Marta ?", "flight": "Vol", "car": "Voiture", "time_label": "À quelle heure arrive votre vol ?", "time_before_6": "Avant 6h", "time_6_12": "6h - 12h", "time_12_18": "12h - 18h", "time_after_18": "Après 18h", "adults_label": "Adultes", "kids_label": "Enfants (<2 ans)", "btn_next": "Suivant", "btn_back": "Retour", "btn_send": "Envoyer via WhatsApp", "resume_transport": "Transport", "resume_time": "Arrivée", "resume_guests": "Invités", "resume_tours": "Visites Sélectionnées", "name_label": "Nom complet", "email_label": "Adresse Email" },
+    "de": { "step1_title": "Planen Sie Ihre Reise", "step1_subtitle": "Sagen Sie uns, wie Sie ankommen", "step2_title": "Wählen Sie Ihre Touren", "step2_subtitle": "Wählen Sie die Touren aus, die Ihnen am meisten gefallen", "step3_title": "Zusammenfassung & Senden", "step3_subtitle": "Überprüfen Sie Ihren Plan und senden Sie ihn", "transport_label": "Wie kommen Sie in Santa Marta an?", "flight": "Flug", "car": "Auto", "time_label": "Wann kommt Ihr Flug an?", "time_before_6": "Vor 6 Uhr", "time_6_12": "6 - 12 Uhr", "time_12_18": "12 - 18 Uhr", "time_after_18": "Nach 18 Uhr", "adults_label": "Erwachsene", "kids_label": "Kinder (<2 Jahre)", "btn_next": "Weiter", "btn_back": "Zurück", "btn_send": "Über WhatsApp senden", "resume_transport": "Transport", "resume_time": "Ankunft", "resume_guests": "Gäste", "resume_tours": "Ausgewählte Touren", "name_label": "Vollständiger Name", "email_label": "E-Mail-Adresse" }
+}
+
 def render_html(lang_code, data):
     js_path = "/app.js"
     css_path = "/style.css"
@@ -733,6 +741,23 @@ def render_html(lang_code, data):
         </div>
         """
 
+    # Prepare Trip Builder Data
+    tb_tours = []
+    for t in valid_tours:
+        lang_key = lang_code if lang_code in t["nombre"] else "en"
+        tb_tours.append({
+            "id": t["id"],
+            "name": t["nombre"].get(lang_key, t["nombre"].get("en", "")),
+            "desc": t.get("descripcion_corta", {}).get(lang_key, t.get("descripcion_corta", {}).get("en", "")),
+            "image": f"{data['img_prefix']}{t['image'].lstrip('/')}" if t.get("image") else ""
+        })
+    tb_config = {
+        "strings": TB_STRINGS.get(lang_code, TB_STRINGS["en"]),
+        "tours": tb_tours,
+        "whatsappNumber": "573001234567"
+    }
+    tb_config_json = json.dumps(tb_config)
+
     html = f"""<!DOCTYPE html>
 <html lang="{lang_code}">
 <head>
@@ -764,6 +789,7 @@ def render_html(lang_code, data):
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{css_path}">
+  <link rel="stylesheet" href="{data['img_prefix']}trip-builder.css">
 </head>
 <body>
 
@@ -849,6 +875,13 @@ def render_html(lang_code, data):
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Trip Builder Module -->
+  <section class="trip-builder-section" style="position: relative; z-index: 10;">
+    <div class="container">
+      <div id="trip-builder-container"><div id="trip-builder"></div></div>
     </div>
   </section>
 
@@ -1174,8 +1207,10 @@ def render_html(lang_code, data):
 
   <script>
     window.GIRONA_TOURS_DATA = {json.dumps(tours_data)};
+    window.TB_CONFIG = {tb_config_json};
   </script>
   <script src="{js_path}"></script>
+  <script src="{data['img_prefix']}trip-builder.js"></script>
 
   <!-- Scroll Reveal Observer -->
   <script>
@@ -1216,7 +1251,7 @@ def sync_to_dirs():
     for target in ["public", "dist"]:
         target_dir = os.path.join(base_dir, target)
         os.makedirs(target_dir, exist_ok=True)
-        for f in ["index.html", "tours_test.html", "app.js", "style.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
+        for f in ["index.html", "tours_test.html", "app.js", "style.css", "trip-builder.css", "trip-builder.js", "favicon.ico", "robots.txt", "sitemap.xml"]:
             src = os.path.join(base_dir, f)
             if os.path.exists(src):
                 shutil.copy2(src, os.path.join(target_dir, f))
