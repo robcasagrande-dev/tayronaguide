@@ -7,6 +7,8 @@
   let currentStep = 1;
   const state = {
     transport: null, // 'flight' or 'car'
+    arrivalDate: '',
+    departureDate: '',
     arrivalTime: null,
     adults: 2,
     kids: 0,
@@ -74,6 +76,18 @@
               <span class="tb-option-icon">🌃</span>
               <span class="tb-option-text">${strings.time_after_18}</span>
             </div>
+          </div>
+        </div>
+
+        
+        <div class="tb-form-group tb-input-grid">
+          <div>
+            <label class="tb-label">${strings.arrival_date_label}</label>
+            <input type="date" id="tb-arrival-date" class="tb-input" min="${new Date().toISOString().split('T')[0]}">
+          </div>
+          <div>
+            <label class="tb-label">${strings.departure_date_label}</label>
+            <input type="date" id="tb-departure-date" class="tb-input" min="${new Date().toISOString().split('T')[0]}">
           </div>
         </div>
 
@@ -149,6 +163,17 @@
       });
     });
 
+
+    document.getElementById('tb-arrival-date').addEventListener('change', (e) => {
+      state.arrivalDate = e.target.value;
+      document.getElementById('tb-departure-date').min = e.target.value;
+      checkStep1Valid();
+    });
+    document.getElementById('tb-departure-date').addEventListener('change', (e) => {
+      state.departureDate = e.target.value;
+      checkStep1Valid();
+    });
+
     document.getElementById('tb-adults').addEventListener('input', (e) => {
       state.adults = e.target.value;
       checkStep1Valid();
@@ -161,8 +186,9 @@
   function checkStep1Valid() {
     const btnNext = document.getElementById('tb-btn-next');
     let valid = false;
-    if (state.transport === 'car' && state.adults > 0) valid = true;
-    if (state.transport === 'flight' && state.arrivalTime && state.adults > 0) valid = true;
+    const hasDates = state.arrivalDate !== '' && state.departureDate !== '';
+    if (state.transport === 'car' && state.adults > 0 && hasDates) valid = true;
+    if (state.transport === 'flight' && state.arrivalTime && state.adults > 0 && hasDates) valid = true;
     
     btnNext.disabled = !valid;
   }
@@ -215,6 +241,15 @@
     const timeDisplay = state.arrivalTime ? timeLabels[state.arrivalTime] : '-';
 
     container.innerHTML = `
+
+      <div class="tb-resume-item">
+        <span class="tb-resume-label">${strings.resume_arrival_date}</span>
+        <span class="tb-resume-value">${state.arrivalDate}</span>
+      </div>
+      <div class="tb-resume-item">
+        <span class="tb-resume-label">${strings.resume_departure_date}</span>
+        <span class="tb-resume-value">${state.departureDate}</span>
+      </div>
       <div class="tb-resume-item">
         <span class="tb-resume-label">${strings.resume_transport}</span>
         <span class="tb-resume-value">${transportLabel}</span>
@@ -323,8 +358,11 @@
     const timeDisplay = state.arrivalTime ? timeLabels[state.arrivalTime] : 'N/A';
 
     const message = `Hello! I would like to plan my trip:
+
 Name: ${state.name}
 Email: ${state.email}
+Arrival Date: ${state.arrivalDate}
+Departure Date: ${state.departureDate}
 Transport: ${transportLabel}
 Arrival Time: ${timeDisplay}
 Guests: ${state.adults} Adults, ${state.kids} Kids under 2
