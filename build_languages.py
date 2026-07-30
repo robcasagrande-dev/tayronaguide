@@ -668,10 +668,12 @@ def render_html(lang_code, data):
     
     all_tours = [t for t in tours_data if not t.get("id", "").startswith("free-time-")]
     
+    valid_tours = [t for t in all_tours if not t.get("isFreeTime", False)]
+    
     target_tour_ids = ["cabo-san-juan-tayrona", "ruinas-bunkuany", "tour-del-cacao"]
-    top_tours = [t for t in all_tours if t["id"] in target_tour_ids]
+    top_tours = [t for t in valid_tours if t["id"] in target_tour_ids]
     top_tours.sort(key=lambda x: target_tour_ids.index(x["id"]))
-    other_tours = [t for t in all_tours if t["id"] not in target_tour_ids]
+    other_tours = [t for t in valid_tours if t["id"] not in target_tour_ids]
     
     selected_tours = top_tours + other_tours
 
@@ -701,6 +703,10 @@ def render_html(lang_code, data):
             
         hidden_class = " hidden-tour" if idx >= 3 else ""
 
+        read_more_text = {"en": "Read more", "es": "Leer más", "it": "Leggi di più", "fr": "Lire la suite", "de": "Weiterlesen"}.get(lang_code, "Read more")
+        short_desc = t.get("descripcion_corta", t.get("descripcion", {})).get(lang_key, "")
+        long_desc = t.get("descripcion", {}).get(lang_key, "")
+
         dynamic_tours_html += f"""
         <div class="tour-card reveal{hidden_class}">
           <div class="tour-image-wrapper">
@@ -711,7 +717,11 @@ def render_html(lang_code, data):
           <div class="tour-card-body">
             <div>
               <h3 class="tour-title">{t["nombre"][lang_key]}</h3>
-              <p class="tour-desc">{t["descripcion"][lang_key]}</p>
+              <p class="tour-desc" id="short-desc-{idx}">{short_desc}</p>
+              <div id="long-desc-{idx}" style="display:none; margin-bottom: 15px;">
+                <p class="tour-desc" style="white-space: pre-line;">{long_desc}</p>
+              </div>
+              <button onclick="document.getElementById('long-desc-{idx}').style.display='block'; document.getElementById('short-desc-{idx}').style.display='none'; this.style.display='none';" style="background:none; border:none; color:var(--primary); font-weight:bold; cursor:pointer; padding:0; margin-bottom:15px; text-decoration:underline;">{read_more_text}</button>
               <div class="tour-highlights">
                 {highlights_html}
               </div>
@@ -1167,145 +1177,13 @@ def render_html(lang_code, data):
     </div>
   </footer>
 
+  <script>
+    window.GIRONA_TOURS_DATA = {json.dumps(tours_data)};
+  </script>
   <script src="/concierge-module.js?v=20260729_premium_ui"></script>
   <script src="{js_path}"></script>
 
   <!-- Scroll Reveal Observer -->
-  <script>
-    (function() {{
-      var els = document.querySelectorAll('.reveal');
-      if (!els.length) return;
-      var obs = new IntersectionObserver(function(entries) {{
-        entries.forEach(function(e) {{
-          if (e.isIntersecting) {{
-            e.target.classList.add('visible');
-            obs.unobserve(e.target);
-          }}
-        }});
-      }}, {{ threshold: 0.10, rootMargin: '0px 0px -40px 0px' }});
-      els.forEach(function(el) {{ obs.observe(el); }});
-    }})();
-  </script>
-</body>
-</html>"""
-    
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    out_dir = base_dir if data["dir"] == "" else os.path.join(base_dir, data["dir"])
-    os.makedirs(out_dir, exist_ok=True)
-    file_path = os.path.join(out_dir, "index.html")
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(html)
-    print(f"Generated {lang_code.upper()} -> {file_path}")
-
-    # --- Generate tours.html ---
-    all_tours_html = ""
-    for t in tours_data:
-        if t.get("id", "").startswith("free-time-"):
-            continue
-        lang_key = lang_code if lang_code in t["nombre"] else "en"
-        badges_list = t.get("badges", [])
-        if t.get("badge"):
-            badges_list = [{"label": t.get("badge"), "class": t.get("badge_class", "")}]
-            
-        badge_html = "<div class=\"tour-img-badges\">"
-        for b in badges_list:
-            badge_html += f"""<span class="tour-img-badge {b.get('class', '')}">{b.get('label', '')}</span>"""
-        badge_html += "</div>"
-        
-        ribbon_html = f"""<div class="tour-ribbon">{t.get('ribbon', '')}</div>""" if t.get('ribbon') else ""
-        
-        highlights_html = ""
-        for h in t.get("highlights", []):
-            highlights_html += f"<span>{h}</span>\n                "
-            
-        all_tours_html += f"""
-        <div class="tour-card reveal">
-          <div class="tour-image-wrapper">
-            {ribbon_html}
-            {badge_html}
-            <img src="{t.get('image', '/images/tours/cabo_san_juan_tour.jpg')}" alt="{t['nombre'][lang_key]}" />
-          </div>
-          <div class="tour-card-body">
-            <div>
-              <h3 class="tour-title">{t['nombre'][lang_key]}</h3>
-              <p class="tour-desc">{t['descripcion'][lang_key]}</p>
-              <div class="tour-highlights">
-                {highlights_html}
-              </div>
-            </div>
-            <div class="tour-footer">
-              <a href="{data['img_prefix']}index.html#concierge" class="btn btn-primary btn-block">{data['tours_page']['reserve']}</a>
-            </div>
-          </div>
-        </div>
-        """
-
-    tours_page_html = f"""<!DOCTYPE html>
-<html lang="{lang_code}">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Girona Travels Tours | TayronaGuide</title>
-  <link rel="stylesheet" href="{data['img_prefix']}style.css">
-</head>
-<body>
-  <!-- HEADER -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="{data['img_prefix']}index.html" class="brand">
-        <span class="brand-icon">🌿</span> TayronaGuide
-      </a>
-      <div class="nav-links">
-        <a href="{data['img_prefix']}index.html" class="nav-link">{data['tours_page']['home']}</a>
-      </div>
-    </div>
-  </header>
-
-  <main style="padding-top: 120px; padding-bottom: 80px; max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px;">
-    <div class="section-header">
-      <h2 class="section-title">{data['tours_page']['title']}</h2>
-      <p class="section-lead">{data['tours_page']['lead']}</p>
-    </div>
-    <div class="tours-grid" style="margin-top: 40px;">
-      {all_tours_html}
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <a href="/" class="brand-logo" style="margin-bottom: 15px; display: inline-block; color: white; text-decoration: none;">
-          <span class="logo-icon">🌿</span>
-          <span class="logo-text">Tayrona<strong>Guide</strong></span>
-        </a>
-        <p class="footer-text">The official verified travel guide for Tayrona National Park & Santa Marta. Managed in partnership with Girona Travels, Kali Hotels & Villa María Tayrona.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Navigation</h4>
-        <ul>
-          <li><a href="/index.html#no-vat">0% VAT Campaign</a></li>
-          <li><a href="/index.html#packages">Bundled Packages</a></li>
-          <li><a href="/index.html#concierge">Concierge Request Tool</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Certifications</h4>
-        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-          <img src="/images/icons/sello-inclusion.svg" alt="Sello de Inclusión" style="height: 48px; width: auto;">
-          <img src="/images/icons/sello-transparencia.svg" alt="Sello de Transparencia" style="height: 48px; width: auto;">
-        </div>
-        <div class="gaula-badge-container">
-          <a href="https://adenunciar.policia.gov.co/Adenunciar/" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:10px; color:#94a3b8; text-decoration:none;">
-            <img src="/images/icons/gaula-badge.svg" alt="Campaña Oficial GAULA" style="height: 40px; width: auto;">
-            <span style="font-size: 0.8rem; line-height: 1.2;">Apoyamos la campaña oficial antisecuestro y antiextorsión. Línea: 165</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom text-center">
-      <p>&copy; 2026 TayronaGuide.com. All rights reserved. Powered by Girona Travels & Kali Hotels.</p>
-    </div>
-  </footer>
   <script>
     (function() {{
       const els = document.querySelectorAll('.reveal');
@@ -1324,10 +1202,14 @@ def render_html(lang_code, data):
 </body>
 </html>
 """
-    tours_file_path = os.path.join(out_dir, 'tours.html')
-    with open(tours_file_path, 'w', encoding='utf-8') as f:
-        f.write(tours_page_html)
-    print(f"Generated {lang_code.upper()} tours -> {tours_file_path}")
+    
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    out_dir = base_dir if data["dir"] == "" else os.path.join(base_dir, data["dir"])
+    os.makedirs(out_dir, exist_ok=True)
+    file_path = os.path.join(out_dir, "index.html")
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(html)
+    print(f"Generated {lang_code.upper()} -> {file_path}")
 
 
 for lang_code, data in languages.items():
@@ -1340,7 +1222,7 @@ def sync_to_dirs():
     for target in ["public", "dist"]:
         target_dir = os.path.join(base_dir, target)
         os.makedirs(target_dir, exist_ok=True)
-        for f in ["index.html", "tours.html", "tours_test.html", "app.js", "style.css", "concierge-module.js", "concierge-module.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
+        for f in ["index.html", "tours_test.html", "app.js", "style.css", "concierge-module.js", "concierge-module.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
             src = os.path.join(base_dir, f)
             if os.path.exists(src):
                 shutil.copy2(src, os.path.join(target_dir, f))

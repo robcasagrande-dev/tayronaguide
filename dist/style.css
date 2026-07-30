@@ -252,11 +252,19 @@ img { max-width: 100%; height: auto; display: block; }
   border-color: var(--c-border-g);
 }
 
-.lang-menu-wrapper {
+.lang-dropdown::after {
+  content: '';
   position: absolute;
   top: 100%;
+  left: 0;
+  width: 100%;
+  height: 15px;
+}
+
+.lang-menu-wrapper {
+  position: absolute;
+  top: calc(100% + 5px);
   right: 0;
-  padding-top: 8px; /* The invisible bridge! */
   display: none;
   z-index: 1050;
 }
