@@ -735,7 +735,7 @@ def render_html(lang_code, data):
               </div>
             </div>
             <div class="tour-footer">
-              <a href="#guided-tours" class="btn btn-primary btn-block">{data["tours_page"]["reserve"]}</a>
+              <a href="#wizard" class="btn btn-primary btn-block">{data["tours_page"]["reserve"]}</a>
             </div>
           </div>
         </div>
@@ -847,7 +847,7 @@ def render_html(lang_code, data):
       <p class="hero-subtitle">{data['hero']['subtitle']}</p>
 
       <div class="hero-cta-group">
-        <a href="#guided-tours" class="btn btn-accent btn-lg glow-btn" style="font-size:1.25rem;padding:18px 36px;font-weight:800;border-radius:12px;box-shadow:0 10px 30px rgba(245,158,11,0.4);">
+        <a href="#wizard" class="btn btn-accent btn-lg glow-btn" style="font-size:1.25rem;padding:18px 36px;font-weight:800;border-radius:12px;box-shadow:0 10px 30px rgba(245,158,11,0.4);">
           {data['hero']['btn1']}
         </a>
       </div>
@@ -948,7 +948,7 @@ def render_html(lang_code, data):
             <div class="banner-text">
               <h4>{data['truth']['sol_title']}</h4>
               <p>{data['truth']['sol_desc']}</p>
-              <a href="#guided-tours" class="btn btn-accent btn-sm margin-top-sm">{data['truth']['sol_btn']}</a>
+              <a href="#wizard" class="btn btn-accent btn-sm margin-top-sm">{data['truth']['sol_btn']}</a>
             </div>
           </div>
 
@@ -1006,7 +1006,7 @@ def render_html(lang_code, data):
           </div>
 
           <div class="feature-cta">
-            <a href="#guided-tours" class="btn btn-accent btn-lg glow-btn">
+            <a href="#wizard" class="btn btn-accent btn-lg glow-btn">
               {data['skip']['btn']}
             </a>
             <span class="sub-text">Direct booking available at GironaTravels.com & ParqueTayrona.org</span>
@@ -1059,7 +1059,7 @@ def render_html(lang_code, data):
             <div class="lodging-content">
               <h3>Villa María Tayrona</h3>
               <p>{data['stays']['villa_desc']}</p>
-              <a href="#guided-tours" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
+              <a href="#wizard" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
             </div>
           </div>
         </div>
@@ -1076,7 +1076,7 @@ def render_html(lang_code, data):
             <div class="lodging-content">
               <h3>Kali Hotel Santa Marta</h3>
               <p>Boutique hotel in the heart of Santa Marta historic center, featuring stylish rooms, rooftop pool, and fine dining. 0% VAT for all guests.</p>
-              <a href="#guided-tours" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
+              <a href="#wizard" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
             </div>
           </div>
         </div>
@@ -1149,7 +1149,7 @@ def render_html(lang_code, data):
     <div class="container text-center">
       <h2>{data['cta']['title']}</h2>
       <p>{data['cta']['desc']}</p>
-      <a href="#guided-tours" class="btn btn-accent btn-xl glow-btn">
+      <a href="#wizard" class="btn btn-accent btn-xl glow-btn">
         {data['cta']['btn']}
       </a>
     </div>
