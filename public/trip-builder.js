@@ -20,7 +20,8 @@
   // ── Inline Lucide-style SVG icons ──────────────────────────────────────────
   const ICONS = {
     flight: `<svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+      <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      <line x1="22" y1="2" x2="11" y2="13"/>
     </svg>`,
     car: `<svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1"/>
@@ -65,11 +66,13 @@
   }
 
   // ── Helpers ────────────────────────────────────────────────────────────────
-  // Build a card with icon on the left and text-wrap (title + optional sub) on the right
-  function optionCard(attrs, iconName, label, subLabel) {
+  // Build a card with icon on the left and text-wrap (title + optional sub) on the right.
+  // extraClass is merged into the single class attribute to avoid duplicate class= attributes.
+  function optionCard(dataAttr, extraClass, iconName, label, subLabel) {
+    const cls = extraClass ? `tb-option-card ${extraClass}` : 'tb-option-card';
     const sub = subLabel ? `<span class="tb-option-sub">${subLabel}</span>` : '';
     return `
-      <div class="tb-option-card" ${attrs}>
+      <div class="${cls}" ${dataAttr}>
         ${icon(iconName)}
         <span class="tb-option-text-wrap">
           <span class="tb-option-text">${label}</span>
@@ -107,18 +110,18 @@
         <div class="tb-form-group">
           <label class="tb-label">${strings.transport_label}</label>
           <div class="tb-options-grid">
-            ${optionCard('data-transport="flight"', 'flight', strings.flight, strings.flight_sub || '')}
-            ${optionCard('data-transport="car"', 'car', strings.car, strings.car_sub || '')}
+            ${optionCard('data-transport="flight"', '', 'flight', strings.flight, strings.flight_sub || '')}
+            ${optionCard('data-transport="car"',    '', 'car',    strings.car,    strings.car_sub    || '')}
           </div>
         </div>
 
         <div class="tb-form-group" id="tb-time-group" style="display:none;">
           <label class="tb-label">${strings.time_label}</label>
           <div class="tb-options-grid">
-            ${optionCard('data-time="before_6" class="tb-time-card"', 'moon',    strings.time_before_6, strings.time_before_6_sub || '')}
-            ${optionCard('data-time="6_12"    class="tb-time-card"', 'sunrise',  strings.time_6_12,     strings.time_6_12_sub || '')}
-            ${optionCard('data-time="12_18"   class="tb-time-card"', 'sun',      strings.time_12_18,    strings.time_12_18_sub || '')}
-            ${optionCard('data-time="after_18" class="tb-time-card"', 'sunset',  strings.time_after_18, strings.time_after_18_sub || '')}
+            ${optionCard('data-time="before_6"',  'tb-time-card', 'moon',    strings.time_before_6,  strings.time_before_6_sub  || '')}
+            ${optionCard('data-time="6_12"',      'tb-time-card', 'sunrise', strings.time_6_12,      strings.time_6_12_sub      || '')}
+            ${optionCard('data-time="12_18"',     'tb-time-card', 'sun',     strings.time_12_18,     strings.time_12_18_sub     || '')}
+            ${optionCard('data-time="after_18"',  'tb-time-card', 'sunset',  strings.time_after_18,  strings.time_after_18_sub  || '')}
           </div>
         </div>
 
