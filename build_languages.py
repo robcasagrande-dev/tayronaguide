@@ -743,7 +743,7 @@ def render_html(lang_code, data):
 
     # Prepare Trip Builder Data
     tb_tours = []
-    for t in valid_tours:
+    for t in tours_data:
         lang_key = lang_code if lang_code in t["nombre"] else "en"
         tb_tours.append({
             "id": t["id"],
