@@ -1340,7 +1340,7 @@ def sync_to_dirs():
     for target in ["public", "dist"]:
         target_dir = os.path.join(base_dir, target)
         os.makedirs(target_dir, exist_ok=True)
-        for f in ["index.html", "tours.html", "app.js", "style.css", "concierge-module.js", "concierge-module.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
+        for f in ["index.html", "tours.html", "tours_test.html", "app.js", "style.css", "concierge-module.js", "concierge-module.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
             src = os.path.join(base_dir, f)
             if os.path.exists(src):
                 shutil.copy2(src, os.path.join(target_dir, f))
