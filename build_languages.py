@@ -807,6 +807,7 @@ def render_html(lang_code, data):
       </a>
 
       <nav class="nav-links" id="navLinks">
+        <a href="#wizard" class="nav-link highlight" style="color: var(--c-gold); font-weight: bold;">{data['nav']['wizard']}</a>
         <a href="#no-vat" class="nav-link">{data['nav']['no_vat']}</a>
         <a href="#ticket-truth" class="nav-link">{data['nav']['truth']}</a>
         <a href="#skip-queue" class="nav-link">{data['nav']['skip']}</a>
@@ -879,7 +880,7 @@ def render_html(lang_code, data):
   </section>
 
   <!-- Trip Builder Module -->
-  <section class="trip-builder-section" style="position: relative; z-index: 10;">
+  <section id="wizard" class="trip-builder-section" style="position: relative; z-index: 10;">
     <div class="container">
       <div id="trip-builder-container"><div id="trip-builder"></div></div>
     </div>
