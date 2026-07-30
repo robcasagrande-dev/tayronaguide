@@ -666,36 +666,43 @@ def render_html(lang_code, data):
     with open("tours_girona_travels.json", "r", encoding="utf-8") as tf:
         tours_data = json.load(tf)
     
-    target_tour_ids = ["cabo-san-juan-tayrona", "ruinas-bunkuany", "tour-del-cacao"]
-    selected_tours = [t for t in tours_data if t["id"] in target_tour_ids]
+    all_tours = [t for t in tours_data if not t.get("id", "").startswith("free-time-")]
     
-    # Sort them in the exact order requested
-    selected_tours.sort(key=lambda x: target_tour_ids.index(x["id"]))
+    target_tour_ids = ["cabo-san-juan-tayrona", "ruinas-bunkuany", "tour-del-cacao"]
+    top_tours = [t for t in all_tours if t["id"] in target_tour_ids]
+    top_tours.sort(key=lambda x: target_tour_ids.index(x["id"]))
+    other_tours = [t for t in all_tours if t["id"] not in target_tour_ids]
+    
+    selected_tours = top_tours + other_tours
 
     dynamic_tours_html = ""
-    for t in selected_tours:
+    for idx, t in enumerate(selected_tours):
         # Fallback to English if the current language is not available in the JSON
         lang_key = lang_code if lang_code in t["nombre"] else "en"
         
-        
-        badges_list = t.get("badges", [])
+        badges_list = t.get("badges", {}).get(lang_key, t.get("badges", {}).get("en", [])) if isinstance(t.get("badges"), dict) else t.get("badges", [])
         if t.get("badge"):
-            # legacy fallback
-            badges_list = [{"label": t.get("badge"), "class": t.get("badge_class", "")}]
+            b_val = t["badge"].get(lang_key, t["badge"].get("en", "")) if isinstance(t["badge"], dict) else t["badge"]
+            b_class = t.get("badge_class", "")
+            badges_list = [{"label": b_val, "class": b_class}]
             
-        ribbon_html = f"""<div class=\"tour-ribbon\">{t.get("ribbon", "")}</div>""" if t.get("ribbon") else ""
+        r_val = t.get("ribbon", {}).get(lang_key, t.get("ribbon", {}).get("en", "")) if isinstance(t.get("ribbon"), dict) else t.get("ribbon", "")
+        ribbon_html = f"""<div class=\"tour-ribbon\">{r_val}</div>""" if r_val else ""
+        
         badge_html = "<div class=\"tour-img-badges\">"
         for b in badges_list:
             badge_html += f"""<span class="tour-img-badge {b.get('class', '')}">{b.get('label', '')}</span>"""
         badge_html += "</div>"
 
-        
         highlights_html = ""
-        for h in t.get("highlights", []):
+        h_list = t.get("highlights", {}).get(lang_key, t.get("highlights", {}).get("en", [])) if isinstance(t.get("highlights"), dict) else t.get("highlights", [])
+        for h in h_list:
             highlights_html += f"<span>{h}</span>\n                "
             
+        hidden_class = " hidden-tour" if idx >= 3 else ""
+
         dynamic_tours_html += f"""
-        <div class="tour-card reveal">
+        <div class="tour-card reveal{hidden_class}">
           <div class="tour-image-wrapper">
             {ribbon_html}
             {badge_html}
@@ -710,7 +717,7 @@ def render_html(lang_code, data):
               </div>
             </div>
             <div class="tour-footer">
-              <a href="#concierge" class="btn btn-primary btn-block">Reserve via Concierge &rarr;</a>
+              <a href="#concierge" class="btn btn-primary btn-block">{data["tours_page"]["reserve"]}</a>
             </div>
           </div>
         </div>
@@ -982,9 +989,9 @@ def render_html(lang_code, data):
       </div>
 
       <div class="tours-cta-wrap">
-        <a href="{data['img_prefix']}tours.html" target="_blank" class="btn btn-accent btn-lg glow-btn" style="padding:16px 40px;font-size:1.05rem;font-weight:700;border-radius:9999px;">
-          See All Girona Travels Tours &rarr;
-        </a>
+        <button onclick="document.querySelectorAll('.hidden-tour').forEach(el => { el.style.display = 'flex'; el.classList.remove('hidden-tour'); }); this.style.display='none';" class="btn btn-accent btn-lg glow-btn" style="padding:16px 40px;font-size:1.05rem;font-weight:700;border-radius:9999px;cursor:pointer;border:none;">
+          {data['tours_page']['title']} &rarr;
+        </button>
       </div>
     </div>
   </section>

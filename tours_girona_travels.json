@@ -33,21 +33,81 @@
       "fr": "Embarquez pour l'aventure ultime dans la jungle du parc national Tayrona jusqu'à l'emblématique plage de Cabo San Juan. Profitez d'un accès VIP coupe-file avec Girona Travels et pénétrez dans un paradis préservé de sable blanc et d'eaux cristallines. Au cours de cette spectaculaire randonnée guidée de 2h30, vous traverserez des sentiers tropicaux, découvrirez des plages paradisiaques comme Arrecifes et La Piscina, et observerez la faune tout en dégustant des fruits exotiques. Une expérience inoubliable !",
       "de": "Begeben Sie sich auf das ultimative Dschungelabenteuer durch den Tayrona-Nationalpark zum ikonischen Strand Cabo San Juan. Genießen Sie den exklusiven VIP-Fast-Track-Zugang mit Girona Travels, um die Warteschlangen zu überspringen. Während der spektakulären 2,5-stündigen geführten Wanderung durchqueren Sie dichte tropische Pfade, entdecken unberührte Traumstrände wie Arrecifes und La Piscina, beobachten die vielfältige Tierwelt und probieren exotische Früchte. Ein unvergessliches Ganztageserlebnis!"
     },
-    "badge": "Most Popular",
+    "badge": {
+      "en": "Most Popular",
+      "es": "Más Popular",
+      "it": "Più Popolare",
+      "fr": "Plus Populaire",
+      "de": "Am Beliebtesten"
+    },
     "badge_class": "badge-green",
     "image": "/images/tours/cabo_san_juan_tour.jpg",
-    "highlights": [
-      "⏱️ 8-9 Hours",
-      "🥾 Moderate Trek",
-      "⚡ Queue Fast-Track"
-    ],
-    "badges": [
-      {
-        "label": "Best Selling",
-        "class": "badge-green"
-      }
-    ],
-    "ribbon": "⚡ Fast-Track"
+    "highlights": {
+      "en": [
+        "⏱️ 8-9 Hours",
+        "🥾 Moderate Trek",
+        "⚡ Queue Fast-Track"
+      ],
+      "es": [
+        "⏱️ 8-9 Horas",
+        "🥾 Trekking Moderado",
+        "⚡ Fila Rápida"
+      ],
+      "it": [
+        "⏱️ 8-9 Ore",
+        "🥾 Trekking Moderato",
+        "⚡ Saltafila"
+      ],
+      "fr": [
+        "⏱️ 8-9 Heures",
+        "🥾 Trek Modéré",
+        "⚡ Coupe-file"
+      ],
+      "de": [
+        "⏱️ 8-9 Stunden",
+        "🥾 Mittelschwerer Trek",
+        "⚡ Fast-Track"
+      ]
+    },
+    "badges": {
+      "en": [
+        {
+          "label": "Best Selling",
+          "class": "badge-green"
+        }
+      ],
+      "es": [
+        {
+          "label": "Más Vendido",
+          "class": "badge-green"
+        }
+      ],
+      "it": [
+        {
+          "label": "Più Venduto",
+          "class": "badge-green"
+        }
+      ],
+      "fr": [
+        {
+          "label": "Meilleure Vente",
+          "class": "badge-green"
+        }
+      ],
+      "de": [
+        {
+          "label": "Bestseller",
+          "class": "badge-green"
+        }
+      ]
+    },
+    "ribbon": {
+      "en": "⚡ Fast-Track",
+      "es": "⚡ Fila Rápida",
+      "it": "⚡ Saltafila",
+      "fr": "⚡ Coupe-file",
+      "de": "⚡ Fast-Track"
+    }
   },
   {
     "id": "tubbing-rio-guachaca",
@@ -83,14 +143,42 @@
       "fr": "Osez découvrir le secret le mieux gardé de la Sierra Nevada : les ruines de Bunkuany, surnommées la 'Mini Cité Perdue'. Lors de ce trek archéologique privé de 7 km, vous marcherez sur d'anciennes terrasses en pierre construites par les ancêtres Tayrona. Guidé par des experts, vous vous immergerez dans la jungle luxuriante, observerez la faune exotique et visiterez le village sacré Kogui de Tayku. Couronnez ce voyage en nageant dans les eaux pures d'une rivière de montagne. Un véritable joyau culturel !",
       "de": "Wagen Sie es, das bestgehütete Geheimnis der Sierra Nevada zu entdecken: die Bunkuany-Ruinen, bekannt als die 'Mini Verlorene Stadt'. Auf diesem privaten 7 km langen archäologischen Trek wandern Sie über alte Steinterrassen der Tayrona-Vorfahren. Unter fachkundiger Führung tauchen Sie in den Dschungel ein, entdecken exotische Tiere und besuchen das heilige Kogui-Dorf Tayku. Krönen Sie diese Reise mit einem Bad im kristallklaren Wasser eines Bergflusses. Ein wahres kulturelles Juwel!"
     },
-    "badge": "Cultural Trek",
+    "badge": {
+      "en": "Cultural Trek",
+      "es": "Trekking Cultural",
+      "it": "Trekking Culturale",
+      "fr": "Trek Culturel",
+      "de": "Kultureller Trek"
+    },
     "badge_class": "",
     "image": "/images/tours/bunkuany_ruins_tour.jpg",
-    "highlights": [
-      "🐒 Wildlife Focus",
-      "🏛️ Cultural History",
-      "👨‍👩‍👧 Private Group"
-    ]
+    "highlights": {
+      "en": [
+        "🐒 Wildlife Focus",
+        "🏛️ Cultural History",
+        "👨‍👩‍👧 Private Group"
+      ],
+      "es": [
+        "🐒 Enfoque en Vida Silvestre",
+        "🏛️ Historia Cultural",
+        "👨‍👩‍👧 Grupo Privado"
+      ],
+      "it": [
+        "🐒 Focus sulla Fauna",
+        "🏛️ Storia Culturale",
+        "👨‍👩‍👧 Gruppo Privato"
+      ],
+      "fr": [
+        "🐒 Faune Sauvage",
+        "🏛️ Histoire Culturelle",
+        "👨‍👩‍👧 Groupe Privé"
+      ],
+      "de": [
+        "🐒 Wildtiere im Fokus",
+        "🏛️ Kulturgeschichte",
+        "👨‍👩‍👧 Private Gruppe"
+      ]
+    }
   },
   {
     "id": "comunidades-indigenas-kogui-tayku",
@@ -144,14 +232,42 @@
       "fr": "Éveillez vos sens avec le circuit du cacao, une expérience d'agrotourisme premium à quelques minutes du parc Tayrona. Vous vous promènerez dans des plantations luxuriantes, découvrant la magie de la 'nourriture des dieux'. Lors d'un atelier pratique et amusant, vous apprendrez le processus de fabrication du chocolat : de la torréfaction au moulage de votre propre tablette. Le voyage se termine par une délicieuse dégustation de chocolats artisanaux. Le circuit le plus doux et le plus authentique !",
       "de": "Erwecken Sie Ihre Sinne mit der Kakao-Tour, einem Premium-Agrotourismus-Erlebnis nur wenige Minuten vom Tayrona-Nationalpark entfernt. Schlendern Sie durch üppige Kakaoplantagen und entdecken Sie die Magie der 'Speise der Götter'. In einem interaktiven Workshop lernen Sie den alten Prozess der Schokoladenherstellung: vom Rösten und Mahlen der Bohnen bis zur Kreation Ihrer eigenen Tafel. Die Reise endet mit einer köstlichen Verkostung von handwerklicher Schokolade. Die süßeste und authentischste Tour!"
     },
-    "badge": "Best Value",
+    "badge": {
+      "en": "Best Value",
+      "es": "Mejor Precio",
+      "it": "Miglior Prezzo",
+      "fr": "Meilleur Prix",
+      "de": "Bester Preis"
+    },
     "badge_class": "badge-gold",
     "image": "/images/tours/cacao_tour.jpg",
-    "highlights": [
-      "🍫 Artisan Tasting",
-      "🌱 Farm to Bar",
-      "😋 Hands-on Workshop"
-    ]
+    "highlights": {
+      "en": [
+        "🍫 Artisan Tasting",
+        "🌱 Farm to Bar",
+        "😋 Hands-on Workshop"
+      ],
+      "es": [
+        "🍫 Degustación Artesanal",
+        "🌱 De la Finca a la Barra",
+        "😋 Taller Práctico"
+      ],
+      "it": [
+        "🍫 Degustazione Artigianale",
+        "🌱 Dalla Fabbrica alla Barretta",
+        "😋 Laboratorio Pratico"
+      ],
+      "fr": [
+        "🍫 Dégustation Artisanale",
+        "🌱 De la Ferme à la Tablette",
+        "😋 Atelier Pratique"
+      ],
+      "de": [
+        "🍫 Handwerkliche Verkostung",
+        "🌱 Vom Hof zur Tafel",
+        "😋 Praktischer Workshop"
+      ]
+    }
   },
   {
     "id": "poza-encantada",
