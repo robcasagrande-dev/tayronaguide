@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import TripBuilder from '../components/TripBuilder.astro';
+import TruthSection from '../components/TruthSection.astro';
+import ToursShowcase from '../components/ToursShowcase.astro';
+import FAQ from '../components/FAQ.astro';
+import Footer from '../components/Footer.astro';
+import { LANG_DATA } from '../i18n/langData';
+
+const lang = 'en';
+const data = LANG_DATA[lang];
+---
+
+<Layout title={data.title} description={data.description} lang={lang}>
+  <Header data={data} lang={lang} />
+  <main>
+    <Hero data={data} />
+    <TripBuilder lang={lang} />
+    <TruthSection data={data} />
+    <ToursShowcase data={data} lang={lang} />
+    <FAQ data={data} lang={lang} />
+  </main>
+  <Footer data={data} lang={lang} />
+</Layout>

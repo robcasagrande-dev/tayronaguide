@@ -1,0 +1,50 @@
+---
+interface Props {
+  data: any;
+  lang: string;
+}
+
+const { data } = Astro.props;
+---
+
+<!-- Section 8: FAQ Accordion -->
+<section class="section section-dark" id="faq">
+  <div class="container max-w-4xl">
+    <div class="section-header text-center">
+      <span class="section-tag">{data.faq.tag}</span>
+      <h2 class="section-title">{data.faq.title}</h2>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item">
+        <button class="faq-question">
+          {data.faq.q1}
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>{data.faq.a1}</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          {data.faq.q2}
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>{data.faq.a2}</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          {data.faq.q3}
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>{data.faq.a3}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

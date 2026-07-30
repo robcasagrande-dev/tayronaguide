@@ -1,0 +1,41 @@
+---
+import { TB_STRINGS } from '../i18n/translations';
+import toursData from '../../tours_girona_travels.json';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+
+const langStrings = TB_STRINGS[lang] || TB_STRINGS.en;
+
+const tbTours = toursData.map((t: any) => {
+  const langKey = lang in t.nombre ? lang : 'en';
+  return {
+    id: t.id,
+    title: t.nombre[langKey] || t.nombre.en,
+    priceUSD: t.priceUSD,
+    isFreeTime: t.isFreeTime || false
+  };
+});
+
+const tbConfig = {
+  lang,
+  strings: langStrings,
+  tours: tbTours,
+  whatsappNumber: "573001234567"
+};
+---
+
+<!-- Trip Builder Module -->
+<section id="wizard" class="trip-builder-section" style="position: relative; z-index: 10;">
+  <div class="container">
+    <div id="trip-builder-container"><div id="trip-builder"></div></div>
+  </div>
+</section>
+
+<script is:inline define:vars={{ toursData, tbConfig }}>
+  window.GIRONA_TOURS_DATA = toursData;
+  window.TB_CONFIG = tbConfig;
+</script>

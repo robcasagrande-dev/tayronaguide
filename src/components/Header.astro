@@ -1,0 +1,72 @@
+---
+interface Props {
+  data: any;
+  lang: string;
+}
+
+const { data, lang } = Astro.props;
+
+const languages = [
+  { code: 'en', name: 'English', flag: '🇺🇸', href: '/' },
+  { code: 'es', name: 'Español', flag: '🇪🇸', href: '/es/' },
+  { code: 'it', name: 'Italiano', flag: '🇮🇹', href: '/it/' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷', href: '/fr/' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪', href: '/de/' }
+];
+---
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  <span set:html={data.announcement}></span>
+</div>
+
+<!-- Header / Navigation -->
+<header class="navbar">
+  <div class="container nav-container">
+    <a href={lang === 'en' ? '/' : `/${lang}/`} class="brand-logo">
+      <span class="logo-icon">🌿</span>
+      <span class="logo-text">Tayrona<strong>Guide</strong></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#wizard" class="nav-link highlight" style="font-weight: bold; position: relative; display: inline-flex; align-items: center; gap: 6px;">
+        {data.nav.wizard}
+        <span style="background-color: var(--c-gold, #f59e0b); color: #111827; font-size: 10px; padding: 2px 6px; border-radius: 9999px; text-transform: uppercase; font-weight: 800; line-height: 1;">{data.nav.badge_new}</span>
+      </a>
+      <a href="#no-vat" class="nav-link highlight" style="color: var(--c-gold, #f59e0b); font-weight: bold;">{data.nav.no_vat}</a>
+      <a href="#ticket-truth" class="nav-link">{data.nav.truth}</a>
+      <a href="#skip-queue" class="nav-link" style="display: inline-flex; align-items: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;margin-right:4px;color:var(--c-gold, #f59e0b);">
+          <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+        </svg>
+        {data.nav.skip}
+      </a>
+      <a href="#guided-tours" class="nav-link">{data.nav.tours}</a>
+      <a href="#where-to-stay" class="nav-link">{data.nav.stays}</a>
+      <a href="https://parquetayrona.org" target="_blank" class="nav-link">{data.nav.guide}</a>
+      <a href="#faq" class="nav-link">{data.nav.faq}</a>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- Language Switcher Dropdown -->
+      <div class="lang-dropdown">
+        <button class="lang-btn">{lang.toUpperCase()} ▾</button>
+        <div class="lang-menu-wrapper">
+          <ul class="lang-menu">
+            {languages.map((l) => (
+              <li>
+                <a href={l.href} class={l.code === lang ? 'active' : ''}>
+                  <span class="flag">{l.flag}</span> {l.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>

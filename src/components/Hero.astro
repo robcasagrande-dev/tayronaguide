@@ -1,0 +1,51 @@
+---
+interface Props {
+  data: any;
+}
+
+const { data } = Astro.props;
+---
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-bg" style="background-image: url('/images/tayrona_hero.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span> {data.hero.badge}
+    </div>
+    <h1 class="hero-title" set:html={data.hero.title}></h1>
+    <p class="hero-subtitle">{data.hero.subtitle}</p>
+
+    <div class="hero-cta-group">
+      <a href="#wizard" class="btn btn-accent btn-lg glow-btn" style="font-size:1.25rem;padding:18px 36px;font-weight:800;border-radius:12px;box-shadow:0 10px 30px rgba(245,158,11,0.4);">
+        {data.hero.btn1}
+      </a>
+    </div>
+
+    <!-- Quick Trust Indicators -->
+    <div class="hero-trust-grid">
+      <div class="trust-item" style="align-items: center;">
+        <img src="/images/lodging/villa_maria.jpg" alt="TayronaGuide Discount" style="width: 56px; height: 56px; object-fit: cover; border-radius: 50%; border: 2px solid var(--c-accent); margin-right: 16px; flex-shrink: 0;">
+        <div>
+          <strong>{data.hero.trust1_title}</strong>
+          <span>{data.hero.trust1_sub}</span>
+        </div>
+      </div>
+      <div class="trust-item" style="align-items: center;">
+        <img src="/images/vat_discount_travelers.jpg" alt="Fast-Track" style="width: 56px; height: 56px; object-fit: cover; border-radius: 50%; border: 2px solid var(--c-accent); margin-right: 16px; flex-shrink: 0;">
+        <div>
+          <strong>{data.hero.trust2_title}</strong>
+          <span>{data.hero.trust2_sub}</span>
+        </div>
+      </div>
+      <div class="trust-item" style="align-items: center;">
+        <img src="/images/kali_hotels_discount.jpg" alt="Kali Hotels" style="width: 56px; height: 56px; object-fit: cover; border-radius: 50%; border: 2px solid var(--c-accent); margin-right: 16px; flex-shrink: 0;">
+        <div>
+          <strong>{data.hero.trust3_title}</strong>
+          <span>{data.hero.trust3_sub}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

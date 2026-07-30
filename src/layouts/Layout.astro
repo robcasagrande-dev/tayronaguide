@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  lang: string;
+  canonicalUrl?: string;
+}
+
+const { title, description, lang, canonicalUrl } = Astro.props;
+
+const langPrefix = lang === 'en' ? '/' : `/${lang}/`;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonicalUrl || `https://tayronaguide.com${langPrefix}`}>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/public/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="x-default" href="https://tayronaguide.com/">
+  <link rel="alternate" hreflang="en" href="https://tayronaguide.com/">
+  <link rel="alternate" hreflang="es" href="https://tayronaguide.com/es/">
+  <link rel="alternate" hreflang="it" href="https://tayronaguide.com/it/">
+  <link rel="alternate" hreflang="fr" href="https://tayronaguide.com/fr/">
+  <link rel="alternate" hreflang="de" href="https://tayronaguide.com/de/">
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content="https://tayronaguide.com/images/tayrona_hero.jpg">
+  <meta property="og:url" content={`https://tayronaguide.com${langPrefix}`}>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/trip-builder.css">
+</head>
+<body>
+  <slot />
+
+  <script is:inline src="/app.js"></script>
+  <script is:inline src="/trip-builder.js"></script>
+</body>
+</html>

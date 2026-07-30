@@ -1,0 +1,137 @@
+---
+interface Props {
+  data: any;
+}
+
+const { data } = Astro.props;
+---
+
+<!-- Section 1: No VAT Campaign Banner -->
+<section class="vat-campaign-section" id="no-vat">
+  <div class="container">
+    <div class="vat-hero-banner reveal">
+      <div class="vat-badge-tag">
+        <span>✨</span> {data.no_vat.tag}
+      </div>
+      <h2 class="vat-title">{data.no_vat.title}</h2>
+      <p class="vat-subtitle">{data.no_vat.subtitle}</p>
+    </div>
+
+    <div class="vat-grid">
+      <div class="vat-card reveal">
+        <img src="/images/lodging/villa_maria.jpg" alt="TayronaGuide Discount" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 16px;">
+        <h3>{data.no_vat.card1_title}</h3>
+        <p>{data.no_vat.card1_desc}</p>
+        <span class="vat-highlight-pill">19% IVA Absorbed & Exempt</span>
+      </div>
+
+      <div class="vat-card reveal">
+        <img src="/images/vat_discount_travelers.jpg" alt="0% VAT For Everyone" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 16px;">
+        <h3>{data.no_vat.card2_title}</h3>
+        <p>{data.no_vat.card2_desc}</p>
+        <span class="vat-highlight-pill">Official 0% Tourist Rate</span>
+      </div>
+
+      <div class="vat-card reveal">
+        <img src="/images/kali_hotels_discount.jpg" alt="Kali Hotels Discount" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 16px;">
+        <h3>{data.no_vat.card3_title}</h3>
+        <p>{data.no_vat.card3_desc}</p>
+        <span class="vat-highlight-pill">Exclusive TayronaGuide Discount</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Ticket Truth & Scam Warning -->
+<section class="section section-dark" id="ticket-truth">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-tag tag-warning">{data.truth.tag}</span>
+      <h2 class="section-title">{data.truth.title}</h2>
+      <p class="section-lead">{data.truth.lead}</p>
+    </div>
+
+    <div class="warning-card">
+      <div class="warning-header">
+        <span class="warning-icon">🛑</span>
+        <div>
+          <h3>{data.truth.warn_title}</h3>
+          <p>{data.truth.warn_desc}</p>
+        </div>
+      </div>
+      <div class="warning-body">
+        <p>{data.truth.warn_body}</p>
+        
+        <!-- Guided Solution Banner -->
+        <div class="guided-solution-banner">
+          <div class="banner-icon">⚡</div>
+          <div class="banner-text">
+            <h4>{data.truth.sol_title}</h4>
+            <p>{data.truth.sol_desc}</p>
+            <a href="#wizard" class="btn btn-accent btn-sm margin-top-sm">{data.truth.sol_btn}</a>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <h4>{data.truth.box1_title}</h4>
+            <ul>
+              <li>{data.truth.box1_item1}</li>
+              <li>{data.truth.box1_item2}</li>
+              <li>{data.truth.box1_item3}</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <h4>{data.truth.box2_title}</h4>
+            <ul>
+              <li>{data.truth.box2_item1}</li>
+              <li>{data.truth.box2_item2}</li>
+              <li>{data.truth.box2_item3}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: VIP Skip-The-Queue -->
+<section class="section section-feature" id="skip-queue">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature-media">
+        <img src="/images/tayrona_guide_trek.jpg" alt="Certified local guide leading group in Tayrona National Park" class="feature-img">
+        <div class="floating-badge">
+          <span class="badge-icon">⚡</span>
+          <div>
+            <strong>{data.skip_extra.save_time}</strong>
+            <span>{data.skip_extra.skip_line}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-content">
+        <span class="section-tag tag-success">{data.skip.tag}</span>
+        <h2 class="feature-title">{data.skip.title}</h2>
+        <p class="feature-desc">{data.skip.desc}</p>
+
+        <div class="solution-box">
+          <h3>{data.skip.box_title}</h3>
+          <p>{data.skip.box_desc}</p>
+          <ul class="checklist">
+            <li>{data.skip.item1}</li>
+            <li>{data.skip.item2}</li>
+            <li>{data.skip.item3}</li>
+          </ul>
+        </div>
+
+        <div class="feature-cta">
+          <a href="#wizard" class="btn btn-accent btn-lg glow-btn">
+            {data.skip.btn}
+          </a>
+          <span class="sub-text">Direct booking available at GironaTravels.com & ParqueTayrona.org</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

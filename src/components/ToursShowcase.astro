@@ -1,0 +1,143 @@
+---
+import toursData from '../../tours_girona_travels.json';
+
+interface Props {
+  data: any;
+  lang: string;
+}
+
+const { data, lang } = Astro.props;
+
+const allTours = toursData.filter((t: any) => !t.id.startsWith("free-time-"));
+const validTours = allTours.filter((t: any) => !t.isFreeTime);
+
+const targetIds = ["cabo-san-juan-tayrona", "ruinas-bunkuany", "tour-del-cacao"];
+const topTours = validTours
+  .filter((t: any) => targetIds.includes(t.id))
+  .sort((a: any, b: any) => targetIds.indexOf(a.id) - targetIds.indexOf(b.id));
+
+const otherTours = validTours.filter((t: any) => !targetIds.includes(t.id));
+const selectedTours = [...topTours, ...otherTours];
+---
+
+<!-- Section 6: Guided Tours Showcase -->
+<section class="section" id="guided-tours">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-tag">🌿 Girona Travels Experiences</span>
+      <h2 class="section-title">Girona Travels Direct Tours</h2>
+      <p class="section-lead">Combine professional Girona Travels guides, seamless gate access, and comfortable lodging.</p>
+    </div>
+
+    <div class="tours-grid">
+      {selectedTours.map((t: any, idx: number) => {
+        const langKey = lang in t.nombre ? lang : 'en';
+        const badgesList = t.badges && typeof t.badges === 'object' && !Array.isArray(t.badges) 
+          ? (t.badges[langKey] || t.badges.en || [])
+          : (t.badges || []);
+        
+        let ribbonVal = "";
+        if (t.ribbon) {
+          ribbonVal = typeof t.ribbon === 'object' ? (t.ribbon[langKey] || t.ribbon.en || "") : t.ribbon;
+        }
+
+        const isHidden = idx >= 3;
+
+        return (
+          <div class={`tour-card reveal ${isHidden ? 'hidden-tour' : ''}`} style={isHidden ? 'display: none;' : ''}>
+            {ribbonVal && <div class="tour-ribbon">{ribbonVal}</div>}
+            <div class="tour-img-wrap">
+              <img src={t.image} alt={t.nombre[langKey] || t.nombre.en} loading="lazy" />
+              <div class="tour-img-badges">
+                {badgesList.map((b: any) => (
+                  <span class={`tour-img-badge ${b.class || ''}`}>{b.label || b}</span>
+                ))}
+              </div>
+            </div>
+            <div class="tour-card-body">
+              <div class="tour-meta">
+                <span class="tour-loc">{t.emoji || '📍'} {t.location}</span>
+                <span class="tour-price">${t.priceUSD} USD</span>
+              </div>
+              <h3 class="tour-title">{t.nombre[langKey] || t.nombre.en}</h3>
+              <p class="tour-desc">{t.descripcion_corta?.[langKey] || t.descripcion?.[langKey] || t.descripcion?.en}</p>
+              <div class="tour-footer">
+                <a href="#wizard" class="btn btn-primary btn-block">{data.tours_page.reserve}</a>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <div class="tours-cta-wrap">
+      <button onclick="document.querySelectorAll('.hidden-tour').forEach(el => el.style.display='flex'); this.style.display='none';" class="btn btn-accent btn-lg glow-btn" style="padding:16px 40px;font-size:1.05rem;font-weight:700;border-radius:9999px;cursor:pointer;border:none;">
+        {data.tours_page.title} &rarr;
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Lodging Showcase -->
+<section class="section" id="where-to-stay">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-tag">🏨 Official Lodging Partner</span>
+      <h2 class="section-title">Where to Stay: Kali Hotels</h2>
+      <p class="section-lead">Enjoy city vibe at Kali Hotel Santa Marta & jungle eco-luxury at Villa María Tayrona with 0% VAT.</p>
+    </div>
+
+    <div class="lodging-grid">
+      <div class="lodging-card reveal">
+        <div class="lodging-image-wrapper">
+          <img src="/images/lodging/villa_maria.jpg" alt="Villa María Tayrona" />
+        </div>
+        <div class="lodging-card-body">
+          <div class="lodging-icon-row">
+            <div class="lodging-icon-wrap">🌿</div>
+            <span class="lodging-label">Nature Eco-Lodge</span>
+          </div>
+          <div class="lodging-content">
+            <h3>Villa María Tayrona</h3>
+            <p>{data.stays.villa_desc}</p>
+            <a href="#wizard" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lodging-card reveal">
+        <div class="lodging-image-wrapper">
+          <img src="/images/lodging/kali_hotel.jpg" alt="Kali Hotel Santa Marta" />
+        </div>
+        <div class="lodging-card-body">
+          <div class="lodging-icon-row">
+            <div class="lodging-icon-wrap">🏛️</div>
+            <span class="lodging-label">City Boutique Hotel</span>
+          </div>
+          <div class="lodging-content">
+            <h3>Kali Hotel Santa Marta</h3>
+            <p>Boutique hotel in the heart of Santa Marta historic center, featuring stylish rooms, rooftop pool, and fine dining. 0% VAT for all guests.</p>
+            <a href="#wizard" class="btn btn-outline btn-sm">Book via Concierge &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lodging-card reveal">
+        <div class="lodging-image-wrapper">
+          <img src="/images/lodging/kasankala.jpg" alt="Kasankala Restaurant" />
+        </div>
+        <div class="lodging-card-body">
+          <div class="lodging-icon-row">
+            <div class="lodging-icon-wrap">🍽️</div>
+            <span class="lodging-label">Jungle Dining</span>
+          </div>
+          <div class="lodging-content">
+            <h3>Kasankala Restaurant</h3>
+            <p>Gourmet jungle dining at Villa María Tayrona. Fresh Caribbean ingredients, al fresco ambiance overlooking the rainforest canopy.</p>
+            <a href="https://kasankala.com" target="_blank" class="btn btn-outline btn-sm">Visit Kasankala &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
