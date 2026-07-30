@@ -764,7 +764,6 @@ def render_html(lang_code, data):
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{css_path}">
-  <link rel="stylesheet" href="/concierge-module.css?v=20260729_premium_ui">
 </head>
 <body>
 
@@ -1180,7 +1179,6 @@ def render_html(lang_code, data):
   <script>
     window.GIRONA_TOURS_DATA = {json.dumps(tours_data)};
   </script>
-  <script src="/concierge-module.js?v=20260730_textonly_all"></script>
   <script src="{js_path}"></script>
 
   <!-- Scroll Reveal Observer -->
@@ -1222,7 +1220,7 @@ def sync_to_dirs():
     for target in ["public", "dist"]:
         target_dir = os.path.join(base_dir, target)
         os.makedirs(target_dir, exist_ok=True)
-        for f in ["index.html", "tours_test.html", "app.js", "style.css", "concierge-module.js", "concierge-module.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
+        for f in ["index.html", "tours_test.html", "app.js", "style.css", "favicon.ico", "robots.txt", "sitemap.xml"]:
             src = os.path.join(base_dir, f)
             if os.path.exists(src):
                 shutil.copy2(src, os.path.join(target_dir, f))
