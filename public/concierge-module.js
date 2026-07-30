@@ -145,11 +145,11 @@ window.ConciergeTool = (function () {
       location: 'jungle',
       name: { en: 'Free Time at Villa María Tayrona', es: 'Tiempo Libre en Villa María Tayrona', it: 'Tempo Libero a Villa María Tayrona', fr: 'Temps Libre à Villa María Tayrona', de: 'Freizeit in der Villa María Tayrona' },
       desc: {
-        en: 'Relax at Villa Maria. Explore private beach access, jungle paths, sightseeing, birdwatching, howler monkeys, and the infinity pool.',
-        es: 'Playa privada, piscina infinita, monos, aves y el horizonte oceánico infinito — el día definitivo de naturaleza y lujo sin agenda.',
-        it: 'Spiaggia privata, piscina a sfioro, scimmie, uccelli e l\'orizzonte oceanico infinito — la giornata definitiva di natura e lusso senza programma.',
-        fr: 'Plage privée, piscine à débordement, singes, oiseaux et l\'horizon océanique infini — la journée ultime de nature et de luxe sans agenda.',
-        de: 'Privatstrand, Infinity-Pool, Affen, Vögel und der endlose Meerhorizont — der ultimative Tag Natur und Luxus ohne Programm.'
+        en: 'Relax at Villa Maria. Explore the private path through the plantation to the beach, jungle paths, birdwatching, howler monkeys, and a hilltop pool overlooking the ocean and the peaks of the Sierra Nevada.',
+        es: 'Relájate en Villa María. Explora el sendero privado por la plantación hacia la playa, senderos en la selva, observación de aves, monos aulladores y una piscina en la colina con vistas al océano y a los picos de la Sierra Nevada.',
+        it: 'Rilassati a Villa Maria. Esplora il sentiero privato attraverso la piantagione fino alla spiaggia, i sentieri nella giungla, il birdwatching, le scimmie urlatrici e una piscina in collina con vista sull\'oceano e sulle cime della Sierra Nevada.',
+        fr: 'Détendez-vous à Villa Maria. Explorez le chemin privé à travers la plantation jusqu\'à la plage, les sentiers de la jungle, l\'observation des oiseaux, les singes hurleurs et une piscine sur la colline surplombant l\'océan et les sommets de la Sierra Nevada.',
+        de: 'Entspannen Sie in der Villa Maria. Erkunden Sie den privaten Weg durch die Plantage zum Strand, Dschungelpfade, Vogelbeobachtung, Brüllaffen und einen Pool auf einem Hügel mit Blick auf das Meer und die Gipfel der Sierra Nevada.'
       },
       priceUSD: 0,
       requiresVillaMariaStay: true
