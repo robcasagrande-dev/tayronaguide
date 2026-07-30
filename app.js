@@ -77,15 +77,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // 4. Elastic Trip Builder Wizard Logic
-  initTripWizard();
 });
-
-function initTripWizard() {
-  if (window.ConciergeTool) {
-    ConciergeTool.init('#concierge');
-  } else {
-    console.warn('ConciergeTool module not loaded');
-  }
-}
