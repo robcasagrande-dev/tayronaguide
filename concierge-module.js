@@ -787,24 +787,10 @@ window.ConciergeTool = (function () {
       const selected = state.roomPreference === t.id ? 'selected' : '';
       const photos = activeHotels.map(hId => roomPhotosMap[hId]?.[t.id]).filter(Boolean);
       
-      let photoContainerHTML = '';
-      if (photos.length === 1) {
-        photoContainerHTML = `
-          <div class="room-photo-wrapper" style="width:100%; height:210px; border-radius:10px; overflow:hidden; margin-bottom:14px; background:#071510; border:1px solid var(--wiz-border);">
-            <img src="${photos[0]}" alt="${txt(t.name)}" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          </div>`;
-      } else {
-        photoContainerHTML = `
-          <div class="room-photo-wrapper" style="width:100%; height:210px; border-radius:10px; overflow:hidden; margin-bottom:14px; background:#071510; display:flex; gap:2px; border:1px solid var(--wiz-border);">
-            ${photos.map(p => `<img src="${p}" alt="${txt(t.name)}" style="flex:1; width:${100/photos.length}%; height:100%; object-fit:cover; display:block;" />`).join('')}
-          </div>`;
-      }
-
-      html += `<button type="button" class="concierge-option ${selected}" data-pref="${t.id}" style="padding:15px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;">
-        ${photoContainerHTML}
-        <div class="option-emoji" style="margin-bottom:8px;">${t.emoji}</div>
-        <div class="option-label" style="font-size:1.1rem;margin-bottom:6px;">${txt(t.name)}</div>
-        <div class="option-sub" style="opacity:0.8;">${txt(t.desc)}</div>
+      html += `<button type="button" class="concierge-option ${selected}" data-pref="${t.id}" style="padding:18px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;">
+        <div class="option-emoji" style="font-size:1.6rem;margin-bottom:8px;">${t.emoji}</div>
+        <div class="option-label" style="font-size:1.1rem;margin-bottom:6px;font-weight:600;color:white;">${txt(t.name)}</div>
+        <div class="option-sub" style="opacity:0.8;font-size:0.85rem;line-height:1.4;">${txt(t.desc)}</div>
       </button>`;
     });
 
