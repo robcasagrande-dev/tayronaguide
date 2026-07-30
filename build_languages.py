@@ -1180,7 +1180,7 @@ def render_html(lang_code, data):
   <script>
     window.GIRONA_TOURS_DATA = {json.dumps(tours_data)};
   </script>
-  <script src="/concierge-module.js?v=20260730_v5_fix"></script>
+  <script src="/concierge-module.js?v=20260730_textonly"></script>
   <script src="{js_path}"></script>
 
   <!-- Scroll Reveal Observer -->

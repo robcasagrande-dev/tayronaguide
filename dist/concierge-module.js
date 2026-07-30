@@ -747,12 +747,10 @@ window.ConciergeTool = (function () {
     html += `<div class="concierge-options-grid cols-2">`;
     ACTIVITIES.forEach(act => {
       const selected = state.wishlist.includes(act.id) ? 'selected' : '';
-      html += `<button class="concierge-option ${selected}" data-wishlist="${act.id}" style="text-align:left; padding: 0; overflow: hidden; display: flex; flex-direction: column; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--c-border); transition: all 0.3s ease;">
-        ${act.image ? `<img src="${act.image}" alt="" style="width: 100%; height: 160px; object-fit: cover; border-bottom: 1px solid var(--c-border);">` : `<div style="font-size:1.5rem; padding: 15px 15px 0 15px;">${act.emoji}</div>`}
-        <div style="padding: 16px;">
-          <div class="option-label" style="text-align:left; font-size: 1.05rem; margin-bottom: 8px; font-weight: 600; color: white;">${txt(act.name)}</div>
-          <div class="option-sub" style="text-align:left; opacity:0.75; font-size: 0.85rem; line-height: 1.4;">${txt(act.desc)}</div>
-        </div>
+      html += `<button class="concierge-option ${selected}" data-wishlist="${act.id}" style="text-align:left; padding: 18px; display: flex; flex-direction: column; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--c-border); transition: all 0.3s ease;">
+        <div style="font-size:1.6rem; margin-bottom: 10px;">${act.emoji}</div>
+        <div class="option-label" style="text-align:left; font-size: 1.05rem; margin-bottom: 8px; font-weight: 600; color: white;">${txt(act.name)}</div>
+        <div class="option-sub" style="text-align:left; opacity:0.75; font-size: 0.85rem; line-height: 1.4;">${txt(act.desc)}</div>
       </button>`;
     });
     html += `</div></div>`;
