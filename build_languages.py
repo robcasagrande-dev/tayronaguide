@@ -7,8 +7,9 @@ languages = {
         "img_prefix": "/",
         "lang_name": "English",
         "flag": "🇬🇧",
-        "title": "Tayrona National Park Guide 2026 | Official Ticket Info & Guided Tours",
-        "description": "Official 2026 Tayrona National Park Travel Guide. Learn how entry passes work, avoid online ticket scams, skip the 2-hour gate queue with certified local guides, and book stays near park entrances.",
+        "title": "Tayrona National Park Official Guide 2026 | Tickets, Tours & 0% VAT Stays",
+        "description": "Official 2026 Tayrona National Park Travel Guide. Find entrance fee rates, skip the 2-hour gate queue with certified local guides, and enjoy 0% hotel VAT at Kali Hotels & Villa Maria Tayrona.",
+        "keywords": "Tayrona National Park, Tayrona guide, Tayrona tickets, Parque Tayrona, Cabo San Juan, Santa Marta hotels, 0% VAT exemption Colombia, Girona Travels",
         "announcement": "✨ <strong>0% HOTEL VAT CAMPAIGN:</strong> Colombians & Foreigners pay 0% IVA on hotel stays! <a href=\"#wizard\">Build your concierge trip &rarr;</a>",
         "nav": {
             "truth": "Park Passes",
@@ -137,8 +138,9 @@ languages = {
         "img_prefix": "/",
         "lang_name": "Español",
         "flag": "🇪🇸",
-        "title": "Guía Parque Nacional Tayrona 2026 | Entradas y Tours Guiados",
-        "description": "Guía oficial 2026 del Parque Nacional Tayrona. Aprende cómo funcionan las entradas, evita estafas en línea y sáltate la fila de 2 horas con guías locales certificados.",
+        "title": "Parque Nacional Tayrona Guía Oficial 2026 | Entradas, Boletas y Hoteles",
+        "description": "Guía oficial 2026 del Parque Nacional Natural Tayrona. Consulta precios de boletas El Zaino, tours guiados sin filas y hospedaje con 0% IVA en Santa Marta y Tayrona.",
+        "keywords": "Parque Tayrona, Parque Nacional Natural Tayrona, entradas parque tayrona 2026, boletas parque tayrona, como llegar al parque tayrona, hoteles santa marta, 0% IVA hoteles",
         "announcement": "✨ <strong>CAMPAÑA SIN IVA:</strong> ¡Colombianos y extranjeros pagan 0% IVA en hospedaje! <a href=\"#wizard\">Diseña tu viaje elástico &rarr;</a>",
         "nav": {
             "truth": "Entradas Parque",
@@ -267,8 +269,9 @@ languages = {
         "img_prefix": "/",
         "lang_name": "Italiano",
         "flag": "🇮🇹",
-        "title": "Guida Parco Nazionale Tayrona 2026 | Biglietti e Tour Guidati",
-        "description": "Guida ufficiale 2026 del Parco Nazionale Tayrona. Scopri come funzionano i biglietti d'ingresso, evita le truffe online e salta la coda di 2 ore con guide locali certificate.",
+        "title": "Parco Nazionale Tayrona Guida Ufficiale 2026 | Biglietti, Tour e Hotel",
+        "description": "Guida ufficiale 2026 del Parco Nazionale Naturale Tayrona. Prezzi biglietti El Zaino, tour salta-coda e alloggi con 0% IVA a Santa Marta e Tayrona.",
+        "keywords": "Parco Tayrona, Parco Nazionale Tayrona, parco tayrona sito ufficiale, biglietti parco tayrona 2026, come arrivare parco tayrona, hotel santa marta",
         "announcement": "✨ <strong>CAMPAGNA NO IVA HOTEL:</strong> Colombiani e stranieri pagano 0% IVA! <a href=\"#wizard\">Crea il tuo viaggio elastico &rarr;</a>",
         "nav": {
             "truth": "Pass Parco",
@@ -397,8 +400,9 @@ languages = {
         "img_prefix": "/",
         "lang_name": "Français",
         "flag": "🇫🇷",
-        "title": "Guide Parc National Tayrona 2026 | Billets et Visites Guidées",
-        "description": "Guide officiel 2026 du Parc National Tayrona. Découvrez le fonctionnement des billets, évitez les arnaques et évitez la file de 2 heures avec des guides locaux certifiés.",
+        "title": "Parc National Tayrona Guide Officiel 2026 | Billets, Visites et Hôtels",
+        "description": "Guide officiel 2026 du Parc National Naturel Tayrona. Tarifs des billets, accès sans file d'attente et hébergements d'exception avec 0% TVA à Santa Marta et Tayrona.",
+        "keywords": "Parc Tayrona, Parc National Tayrona, site officiel parc tayrona, billets parc tayrona 2026, visiter le parc tayrona, hôtels santa marta",
         "announcement": "✨ <strong>CAMPAGNE HÔTEL SANS TVA:</strong> Colombiens et étrangers ne paient pas de TVA! <a href=\"#wizard\">Concevez votre voyage &rarr;</a>",
         "nav": {
             "truth": "Passes du Parc",
@@ -527,8 +531,9 @@ languages = {
         "img_prefix": "/",
         "lang_name": "Deutsch",
         "flag": "🇩🇪",
-        "title": "Tayrona Nationalpark Reiseführer 2026 | Tickets & Geführte Touren",
-        "description": "Offizieller Reiseführer 2026 für den Tayrona-Nationalpark. Erfahren Sie, wie Eintrittskarten funktionieren, vermeiden Sie Online-Betrug und überspringen Sie die 2-Stunden-Schlange mit zertifizierten lokalen Guides.",
+        "title": "Nationalpark Tayrona Reiseführer 2026 | Eintrittskarten, Touren & Hotels",
+        "description": "Offizieller Reiseführer 2026 für den Nationalpark Tayrona in Kolumbien. Ticketpreise El Zaino, Touren ohne Wartezeit und Unterkünfte mit 0% MwSt. Vorteil.",
+        "keywords": "Nationalpark Tayrona, Park Tayrona, tayrona park tickets 2026, tayrona schließzeiten, santa marta hotels, unterkunft tayrona",
         "announcement": "✨ <strong>0% MWST. HOTEL-AKTION:</strong> Kolumbianer & Ausländer zahlen 0% MwSt.! <a href=\"#wizard\">Reise konfigurieren &rarr;</a>",
         "nav": {
             "truth": "Park-Pässe",
@@ -770,8 +775,14 @@ def render_html(lang_code, data):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{data['title']}</title>
   <meta name="description" content="{data['description']}">
-  <meta name="keywords" content="Tayrona National Park, Tayrona guide, Kali Hotel, Villa María Tayrona, Girona Travel, Tayrona tickets, Parque Tayrona, Cabo San Juan, Santa Marta">
+  <meta name="keywords" content="{data.get('keywords', 'Tayrona National Park, Tayrona guide, Kali Hotel, Villa María Tayrona, Girona Travel, Tayrona tickets, Parque Tayrona, Cabo San Juan, Santa Marta')}">
   <link rel="canonical" href="https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}">
+  <link rel="alternate" hreflang="en" href="https://tayronaguide.com/" />
+  <link rel="alternate" hreflang="es" href="https://tayronaguide.com/es/" />
+  <link rel="alternate" hreflang="fr" href="https://tayronaguide.com/fr/" />
+  <link rel="alternate" hreflang="it" href="https://tayronaguide.com/it/" />
+  <link rel="alternate" hreflang="de" href="https://tayronaguide.com/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://tayronaguide.com/" />
   
   <!-- Favicon & Site Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -782,10 +793,55 @@ def render_html(lang_code, data):
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tayronaguide.com/">
+  <meta property="og:url" content="https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}">
   <meta property="og:title" content="{data['title']}">
   <meta property="og:description" content="{data['description']}">
   <meta property="og:image" content="https://tayronaguide.com/public/images/tayrona_hero.jpg">
+
+  <!-- Structured Data JSON-LD Schemas -->
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": "Tayrona National Park / Parque Nacional Natural Tayrona",
+    "alternateName": ["Parque Tayrona", "Tayrona National Park", "Parc Tayrona", "Parco Tayrona", "Nationalpark Tayrona"],
+    "description": "Official travel information, entrance ticket rules, queue fast-track tours, and 0% VAT stays in Tayrona National Park, Santa Marta, Colombia.",
+    "url": "https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}",
+    "image": "https://tayronaguide.com/public/images/tayrona_hero.jpg"
+  }}
+  </script>
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {{
+        "@type": "Question",
+        "name": "{data['faq']['q1']}",
+        "acceptedAnswer": {{
+          "@type": "Answer",
+          "text": "{data['faq']['a1']}"
+        }}
+      }},
+      {{
+        "@type": "Question",
+        "name": "{data['faq']['q2']}",
+        "acceptedAnswer": {{
+          "@type": "Answer",
+          "text": "{data['faq']['a2']}"
+        }}
+      }},
+      {{
+        "@type": "Question",
+        "name": "{data['faq']['q3']}",
+        "acceptedAnswer": {{
+          "@type": "Answer",
+          "text": "{data['faq']['a3']}"
+        }}
+      }}
+    ]
+  }}
+  </script>
 
   <!-- Google Fonts (Google Gemini / Inter Clean) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
