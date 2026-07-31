@@ -85,12 +85,57 @@
     const container = document.getElementById('trip-builder');
     if (!container) return;
 
+    // Read URL parameters (they might be in search or hash depending on how it's linked)
+    let params;
+    let shouldScroll = false;
+    
+    if (window.location.hash.includes('?')) {
+      const queryString = window.location.hash.split('?')[1];
+      params = new URLSearchParams(queryString);
+    } else {
+      params = new URLSearchParams(window.location.search);
+    }
+
+    if (window.location.hash.startsWith('#wizard')) {
+      shouldScroll = true;
+    }
+
+    if (params.has('checkin')) {
+      state.arrivalDate = params.get('checkin');
+      shouldScroll = true;
+    }
+    if (params.has('checkout')) {
+      state.departureDate = params.get('checkout');
+      shouldScroll = true;
+    }
+
     renderBase(container);
+
+    // Set initial values in inputs
+    if (state.arrivalDate) {
+      const input = document.getElementById('tb-arrival-date');
+      if (input) input.value = state.arrivalDate;
+    }
+    if (state.departureDate) {
+      const input = document.getElementById('tb-departure-date');
+      if (input) {
+        input.value = state.departureDate;
+        input.min = state.arrivalDate || new Date().toISOString().split('T')[0];
+      }
+    }
+
     renderStep1();
     renderStep2();
     renderStep3();
     updateView();
     bindEvents();
+    
+    // Auto-scroll if wizard was requested
+    if (shouldScroll) {
+      setTimeout(() => {
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
   }
 
   function renderBase(container) {
