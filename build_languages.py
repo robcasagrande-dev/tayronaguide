@@ -107,6 +107,15 @@ languages = {
             "cert_gaula_text": "We support the official anti-kidnapping and anti-extortion campaign. Hotline: 165",
             "copyright": "&copy; 2026 TayronaGuide.com. All rights reserved. Powered by Girona Travels & Kali Hotels."
         },
+        "explore_responsibly": {
+            "title": "Explore Responsibly",
+            "subtitle": "We support conservation and sustainable tourism",
+            "humboldt": "Inst. Humboldt",
+            "proaves": "ProAves",
+            "ebird": "eBird Colombia",
+            "leave_no_trace": "Leave No Trace",
+            "ocean_conservancy": "Ocean Conservancy"
+        },
         "faq": {
             "tag": "❓ Frequently Asked Questions",
             "title": "Tayrona & Hotel FAQ",
@@ -237,6 +246,15 @@ languages = {
             "cert_gaula_alt": "Campaña Oficial GAULA",
             "cert_gaula_text": "Apoyamos la campaña oficial antisecuestro y antiextorsión. Línea: 165",
             "copyright": "&copy; 2026 TayronaGuide.com. Todos los derechos reservados. Desarrollado por Girona Travels y Kali Hotels."
+        },
+        "explore_responsibly": {
+            "title": "Explora Responsablemente",
+            "subtitle": "Apoyamos la conservación y el turismo sostenible",
+            "humboldt": "Inst. Humboldt",
+            "proaves": "ProAves",
+            "ebird": "eBird Colombia",
+            "leave_no_trace": "Leave No Trace",
+            "ocean_conservancy": "Ocean Conservancy"
         },
         "faq": {
             "tag": "❓ Preguntas Frecuentes",
@@ -369,6 +387,15 @@ languages = {
             "cert_gaula_text": "Sosteniamo la campagna ufficiale contro i sequestri e le estorsioni. Linea: 165",
             "copyright": "&copy; 2026 TayronaGuide.com. Tutti i diritti riservati. Sviluppato da Girona Travels & Kali Hotels."
         },
+        "explore_responsibly": {
+            "title": "Esplora Responsabilmente",
+            "subtitle": "Sosteniamo la conservazione e il turismo sostenibile",
+            "humboldt": "Inst. Humboldt",
+            "proaves": "ProAves",
+            "ebird": "eBird Colombia",
+            "leave_no_trace": "Leave No Trace",
+            "ocean_conservancy": "Ocean Conservancy"
+        },
         "faq": {
             "tag": "❓ Domande Frequenti",
             "title": "FAQ - Tayrona e Hotel",
@@ -500,6 +527,15 @@ languages = {
             "cert_gaula_text": "Nous soutenons la campagne officielle contre les enlèvements et les extorsions. Ligne: 165",
             "copyright": "&copy; 2026 TayronaGuide.com. Tous droits réservés. Propulsé par Girona Travels & Kali Hotels."
         },
+        "explore_responsibly": {
+            "title": "Explorez Responsablement",
+            "subtitle": "Nous soutenons la conservation et le tourisme durable",
+            "humboldt": "Inst. Humboldt",
+            "proaves": "ProAves",
+            "ebird": "eBird Colombia",
+            "leave_no_trace": "Leave No Trace",
+            "ocean_conservancy": "Ocean Conservancy"
+        },
         "faq": {
             "tag": "❓ Foire Aux Questions",
             "title": "FAQ Tayrona et Hôtels",
@@ -630,6 +666,15 @@ languages = {
             "cert_gaula_alt": "Offizielle GAULA-Kampagne",
             "cert_gaula_text": "Wir unterstützen die offizielle Anti-Entführungs- und Anti-Erpressungs-Kampagne. Hotline: 165",
             "copyright": "&copy; 2026 TayronaGuide.com. Alle Rechte vorbehalten. Unterstützt von Girona Travels & Kali Hotels."
+        },
+        "explore_responsibly": {
+            "title": "Verantwortungsvoll Reisen",
+            "subtitle": "Wir unterstützen Naturschutz und nachhaltigen Tourismus",
+            "humboldt": "Inst. Humboldt",
+            "proaves": "ProAves",
+            "ebird": "eBird Colombia",
+            "leave_no_trace": "Leave No Trace",
+            "ocean_conservancy": "Ocean Conservancy"
         },
         "faq": {
             "tag": "❓ Häufig Gestellte Fragen",
@@ -1221,6 +1266,46 @@ def render_html(lang_code, data):
       <a href="#wizard" class="btn btn-accent btn-xl glow-btn">
         {data['cta']['btn']}
       </a>
+    </div>
+  </section>
+
+  <!-- Explore Responsibly Section -->
+  <section class="explore-responsibly">
+    <div class="container text-center">
+      <h3 class="explore-title">{data['explore_responsibly']['title']}</h3>
+      <p class="explore-subtitle">{data['explore_responsibly']['subtitle']}</p>
+      <div class="eco-icons-grid">
+        <div class="eco-icon-item">
+          <div class="eco-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          </div>
+          <span>{data['explore_responsibly']['humboldt']}</span>
+        </div>
+        <div class="eco-icon-item">
+          <div class="eco-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c3-3 6-8 10-8s5 4 8 2c-2 4-6 6-9 6s-6-2-9 0Z"/><path d="M13 9c-1-3 0-5 2-7c2 2 2 4 1 7"/></svg>
+          </div>
+          <span>{data['explore_responsibly']['proaves']}</span>
+        </div>
+        <div class="eco-icon-item">
+          <div class="eco-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10h4"/><path d="M19 7a3 3 0 0 0-3-3h-1a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h1a3 3 0 0 0 3-3V7Z"/><path d="M8 7a3 3 0 0 0-3-3H4a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h1a3 3 0 0 0 3-3V7Z"/><path d="M5 14v4a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-4"/><path d="M15 14v4a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-4"/></svg>
+          </div>
+          <span>{data['explore_responsibly']['ebird']}</span>
+        </div>
+        <div class="eco-icon-item">
+          <div class="eco-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 7 10h-4l5 7H4l5-7H5l7-10z"/><path d="M12 19v3"/></svg>
+          </div>
+          <span>{data['explore_responsibly']['leave_no_trace']}</span>
+        </div>
+        <div class="eco-icon-item">
+          <div class="eco-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"/><path d="M2 12c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"/><path d="M2 18c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"/></svg>
+          </div>
+          <span>{data['explore_responsibly']['ocean_conservancy']}</span>
+        </div>
+      </div>
     </div>
   </section>
 
