@@ -85,7 +85,26 @@
     const container = document.getElementById('trip-builder');
     if (!container) return;
 
+    // Read URL parameters
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('checkin')) state.arrivalDate = params.get('checkin');
+    if (params.has('checkout')) state.departureDate = params.get('checkout');
+
     renderBase(container);
+
+    // Set initial values in inputs
+    if (state.arrivalDate) {
+      const input = document.getElementById('tb-arrival-date');
+      if (input) input.value = state.arrivalDate;
+    }
+    if (state.departureDate) {
+      const input = document.getElementById('tb-departure-date');
+      if (input) {
+        input.value = state.departureDate;
+        input.min = state.arrivalDate || new Date().toISOString().split('T')[0];
+      }
+    }
+
     renderStep1();
     renderStep2();
     renderStep3();

@@ -195,3 +195,4 @@ export const TB_STRINGS: Record<string, Record<string, string>> = {
     resume_departure_date: "Abreise" 
   }
 };
+
