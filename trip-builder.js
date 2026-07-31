@@ -2,7 +2,7 @@
   const config = window.TB_CONFIG;
   if (!config) return;
 
-  const { strings, tours, whatsappNumber } = config;
+  const { strings, tours, recipientEmail = 'reservas.kalihotels@gmail.com' } = config;
 
   let currentStep = 1;
   const state = {
@@ -429,7 +429,7 @@
     });
   }
 
-  function submitForm() {
+  async function submitForm() {
     const timeLabels = {
       'before_6':  strings.time_before_6,
       '6_12':      strings.time_6_12,
@@ -444,22 +444,74 @@
 
     const transportLabel = state.transport === 'flight' ? strings.flight : strings.car;
     const timeDisplay    = state.arrivalTime ? timeLabels[state.arrivalTime] : 'N/A';
+    const emailTo        = config.recipientEmail || recipientEmail || 'reservas.kalihotels@gmail.com';
 
-    const message = `Hello! I would like to plan my trip:
+    const btnNext = document.getElementById('tb-btn-next');
+    if (btnNext) {
+      btnNext.disabled = true;
+      btnNext.textContent = strings.sending || 'Sending...';
+    }
 
-Name: ${state.name}
-Email: ${state.email}
-Arrival Date: ${state.arrivalDate}
-Departure Date: ${state.departureDate}
-Transport: ${transportLabel}
-Arrival Time: ${timeDisplay}
-Guests: ${state.adults} Adults, ${state.kids} Kids under 2
-Tours interested in: ${selectedTourNames}`;
+    const payload = {
+      _subject: `Concierge Trip Request - ${state.name}`,
+      _replyto: state.email,
+      "Guest Name": state.name,
+      "Guest Email": state.email,
+      "Arrival Date": state.arrivalDate,
+      "Departure Date": state.departureDate,
+      "Transport": transportLabel,
+      "Arrival Time": timeDisplay,
+      "Guests": `${state.adults} Adults, ${state.kids} Kids`,
+      "Chosen Activities / Tours": selectedTourNames,
+      "Hotels / Accommodation": "Kali Hotels & Villa María Tayrona (0% VAT Tariff)"
+    };
 
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${emailTo}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
 
-    window.open(whatsappUrl, '_blank');
+      if (response.ok) {
+        showSuccessView();
+      } else {
+        throw new Error('Server returned error status');
+      }
+    } catch (err) {
+      console.error('Error sending form:', err);
+      if (btnNext) {
+        btnNext.disabled = false;
+        btnNext.textContent = strings.btn_send;
+      }
+      alert(strings.error_msg || 'An error occurred while sending your request. Please try again.');
+    }
+  }
+
+  function showSuccessView() {
+    const step3 = document.getElementById('tb-step-3');
+    const nav = document.querySelector('.tb-nav');
+    if (nav) nav.style.display = 'none';
+
+    const msg = (strings.success_msg || 'Thank you, {name}! Your request has been delivered to your concierge. We will get back to you shortly.')
+      .replace('{name}', state.name);
+
+    if (step3) {
+      step3.innerHTML = `
+        <div class="tb-success-box" style="text-align: center; padding: 40px 20px;">
+          <div style="width: 64px; height: 64px; background: rgba(34, 197, 94, 0.15); color: #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h2 class="tb-step-title" style="margin-bottom: 12px;">${strings.success_title || 'Request Sent!'}</h2>
+          <p class="tb-step-subtitle" style="max-width: 500px; margin: 0 auto; color: #a1a1aa; line-height: 1.6;">${msg}</p>
+        </div>
+      `;
+    }
   }
 
   // Initialize on DOMContentLoaded
