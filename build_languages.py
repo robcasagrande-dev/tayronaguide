@@ -831,17 +831,17 @@ def render_html(lang_code, data):
   
   <!-- Favicon & Site Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="96x96" href="/public/favicon-96x96.png">
-  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}">
   <meta property="og:title" content="{data['title']}">
   <meta property="og:description" content="{data['description']}">
-  <meta property="og:image" content="https://tayronaguide.com/public/images/tayrona_hero.jpg">
+  <meta property="og:image" content="https://tayronaguide.com/images/tayrona_hero.jpg">
 
   <!-- Structured Data JSON-LD Schemas -->
   <script type="application/ld+json">
@@ -852,7 +852,7 @@ def render_html(lang_code, data):
     "alternateName": ["Parque Tayrona", "Tayrona National Park", "Parc Tayrona", "Parco Tayrona", "Nationalpark Tayrona"],
     "description": "Official travel information, entrance ticket rules, queue fast-track tours, and 0% VAT stays in Tayrona National Park, Santa Marta, Colombia.",
     "url": "https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}",
-    "image": "https://tayronaguide.com/public/images/tayrona_hero.jpg"
+    "image": "https://tayronaguide.com/images/tayrona_hero.jpg"
   }}
   </script>
   <script type="application/ld+json">

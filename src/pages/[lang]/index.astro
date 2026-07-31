@@ -22,7 +22,7 @@ const { lang } = Astro.params;
 const data = LANG_DATA[lang] || LANG_DATA.es;
 ---
 
-<Layout title={data.title} description={data.description} lang={lang}>
+<Layout title={data.title} description={data.description} lang={lang} faq={data.faq}>
   <Header data={data} lang={lang} />
   <main>
     <Hero data={data} />
