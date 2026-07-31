@@ -2,7 +2,7 @@
   const config = window.TB_CONFIG;
   if (!config) return;
 
-  const { strings, tours, recipientEmail = 'reservas.kalihotels@gmail.com' } = config;
+  const { strings, tours, recipientEmail = 'rob.casagrande@gmail.com' } = config;
 
   let currentStep = 1;
   const state = {
@@ -544,7 +544,7 @@
 
     const transportLabel = state.transport === 'flight' ? strings.flight : strings.car;
     const timeDisplay    = state.arrivalTime ? timeLabels[state.arrivalTime] : 'N/A';
-    const emailTo        = config.recipientEmail || recipientEmail || 'reservas.kalihotels@gmail.com';
+    const emailTo        = config.recipientEmail || recipientEmail || 'rob.casagrande@gmail.com';
 
     const btnNext = document.getElementById('tb-btn-next');
     if (btnNext) {
