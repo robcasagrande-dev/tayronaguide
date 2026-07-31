@@ -13,6 +13,7 @@
     adults: 2,
     kids: 0,
     selectedTours: [],
+    selectedHotels: [], // ['casa_isabella', 'casa_leda', 'villa_maria']
     name: '',
     email: ''
   };
@@ -65,9 +66,6 @@
     return `<span class="tb-option-icon">${ICONS[name] || ''}</span>`;
   }
 
-  // ── Helpers ────────────────────────────────────────────────────────────────
-  // Build a card with icon on the left and text-wrap (title + optional sub) on the right.
-  // extraClass is merged into the single class attribute to avoid duplicate class= attributes.
   function optionCard(dataAttr, extraClass, iconName, label, subLabel) {
     const cls = extraClass ? `tb-option-card ${extraClass}` : 'tb-option-card';
     const sub = subLabel ? `<span class="tb-option-sub">${subLabel}</span>` : '';
@@ -85,7 +83,6 @@
     const container = document.getElementById('trip-builder');
     if (!container) return;
 
-    // Read URL parameters (they might be in search or hash depending on how it's linked)
     let params;
     let shouldScroll = false;
     
@@ -111,7 +108,6 @@
 
     renderBase(container);
 
-    // Set initial values in inputs
     if (state.arrivalDate) {
       const input = document.getElementById('tb-arrival-date');
       if (input) input.value = state.arrivalDate;
@@ -127,10 +123,10 @@
     renderStep1();
     renderStep2();
     renderStep3();
+    renderStep4();
     updateView();
     bindEvents();
     
-    // Auto-scroll if wizard was requested
     if (shouldScroll) {
       setTimeout(() => {
         container.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -146,6 +142,8 @@
         <div class="tb-step-dot" data-step="2">2</div>
         <div class="tb-step-line" data-line="2"></div>
         <div class="tb-step-dot" data-step="3">3</div>
+        <div class="tb-step-line" data-line="3"></div>
+        <div class="tb-step-dot" data-step="4">4</div>
       </div>
 
       <div id="tb-step-1" class="tb-step-content">
@@ -200,8 +198,14 @@
       </div>
 
       <div id="tb-step-3" class="tb-step-content">
-        <h2 class="tb-step-title">${strings.step3_title}</h2>
-        <p class="tb-step-subtitle">${strings.step3_subtitle}</p>
+        <h2 class="tb-step-title">${strings.step3_hotel_title || 'Choose Your Hotel(s)'}</h2>
+        <p class="tb-step-subtitle">${strings.step3_hotel_subtitle || 'Select one or more hotels for your stay in Santa Marta & Tayrona'}</p>
+        <div class="tb-tour-grid" id="tb-hotel-container"></div>
+      </div>
+
+      <div id="tb-step-4" class="tb-step-content">
+        <h2 class="tb-step-title">${strings.step4_title || strings.step3_title}</h2>
+        <p class="tb-step-subtitle">${strings.step4_subtitle || strings.step3_subtitle}</p>
 
         <div class="tb-resume-box" id="tb-resume-content"></div>
 
@@ -225,7 +229,6 @@
   }
 
   function renderStep1() {
-    // Transport selection
     document.querySelectorAll('[data-transport]').forEach(el => {
       el.addEventListener('click', () => {
         document.querySelectorAll('[data-transport]').forEach(c => c.classList.remove('selected'));
@@ -244,7 +247,6 @@
       });
     });
 
-    // Time slot selection
     document.querySelectorAll('.tb-time-card').forEach(el => {
       el.addEventListener('click', () => {
         document.querySelectorAll('.tb-time-card').forEach(c => c.classList.remove('selected'));
@@ -284,8 +286,9 @@
 
   function renderStep2() {
     const container = document.getElementById('tb-tour-container');
+    if (!container) return;
     container.innerHTML = tours.map(tour => `
-      <div class="tb-tour-card" data-tour-id="${tour.id}">
+      <div class="tb-tour-card ${state.selectedTours.includes(tour.id) ? 'selected' : ''}" data-tour-id="${tour.id}">
         <img src="${tour.image}" alt="${tour.name}" class="tb-tour-img">
         <div class="tb-tour-info">
           <div class="tb-tour-title">
@@ -297,7 +300,7 @@
       </div>
     `).join('');
 
-    document.querySelectorAll('.tb-tour-card').forEach(card => {
+    container.querySelectorAll('.tb-tour-card').forEach(card => {
       card.addEventListener('click', () => {
         const id = card.dataset.tourId;
         if (state.selectedTours.includes(id)) {
@@ -312,6 +315,67 @@
   }
 
   function renderStep3() {
+    const container = document.getElementById('tb-hotel-container');
+    if (!container) return;
+
+    const hotels = [
+      {
+        id: 'casa_isabella',
+        name: 'Casa de Isabella',
+        tag: 'Santa Marta Historic Center',
+        image: '/images/rooms/isabella-top.jpg',
+        desc: strings.hotel_isabella_desc || 'Boutique hotel in historic Santa Marta with rooftop pool & 0% VAT.'
+      },
+      {
+        id: 'casa_leda',
+        name: 'Casa de Leda',
+        tag: 'Santa Marta Historic Center',
+        image: '/images/rooms/leda-top.jpg',
+        desc: strings.hotel_leda_desc || 'Luxury spa & boutique hotel in Santa Marta with 0% VAT.'
+      },
+      {
+        id: 'villa_maria',
+        name: 'Villa María Tayrona',
+        tag: 'Tayrona National Park Area',
+        image: '/images/rooms/villamaria-top.jpg',
+        desc: strings.hotel_villamaria_desc || 'Eco-luxury jungle lodge near El Zaino entrance with 0% VAT.'
+      }
+    ];
+
+    container.innerHTML = hotels.map(hotel => {
+      const isSelected = state.selectedHotels.includes(hotel.id);
+      return `
+        <div class="tb-tour-card ${isSelected ? 'selected' : ''}" data-hotel-id="${hotel.id}">
+          <img src="${hotel.image}" alt="${hotel.name}" class="tb-tour-img">
+          <div class="tb-tour-info">
+            <div class="tb-tour-title">
+              <div>
+                ${hotel.name}
+                <div style="font-size:0.75rem; font-weight:600; color:var(--tb-accent); margin-top:2px;">${hotel.tag}</div>
+              </div>
+              <div class="tb-tour-check">✓</div>
+            </div>
+            <p class="tb-tour-desc">${hotel.desc}</p>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    container.querySelectorAll('.tb-tour-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const id = card.dataset.hotelId;
+        if (state.selectedHotels.includes(id)) {
+          state.selectedHotels = state.selectedHotels.filter(h => h !== id);
+          card.classList.remove('selected');
+        } else {
+          state.selectedHotels.push(id);
+          card.classList.add('selected');
+        }
+      });
+    });
+  }
+
+  function renderStep4() {
     const timeLabels = {
       'before_6':  strings.time_before_6,
       '6_12':      strings.time_6_12,
@@ -320,11 +384,19 @@
     };
 
     const container = document.getElementById('tb-resume-content');
+    if (!container) return;
 
     const selectedTourNames = state.selectedTours.map(id => {
       const tour = tours.find(t => t.id === id);
       return tour ? tour.name : '';
     }).join(', ') || 'None';
+
+    const hotelMap = {
+      'casa_isabella': 'Casa de Isabella',
+      'casa_leda': 'Casa de Leda',
+      'villa_maria': 'Villa María Tayrona'
+    };
+    const selectedHotelNames = state.selectedHotels.map(id => hotelMap[id] || id).join(', ') || 'None';
 
     const transportLabel = state.transport === 'flight' ? strings.flight : strings.car;
     const timeDisplay = state.arrivalTime ? timeLabels[state.arrivalTime] : '-';
@@ -355,25 +427,37 @@
         <span class="tb-resume-label">${strings.resume_tours}</span>
         <span class="tb-resume-value">${selectedTourNames}</span>
       </div>
+      <div class="tb-resume-item">
+        <span class="tb-resume-label">${strings.resume_hotels || 'Selected Hotel(s)'}</span>
+        <span class="tb-resume-value">${selectedHotelNames}</span>
+      </div>
     `;
 
-    document.getElementById('tb-name').addEventListener('input', e => {
-      state.name = e.target.value;
-      checkStep3Valid();
-    });
-    document.getElementById('tb-email').addEventListener('input', e => {
-      state.email = e.target.value;
-      checkStep3Valid();
-    });
+    const nameInput = document.getElementById('tb-name');
+    const emailInput = document.getElementById('tb-email');
+
+    if (nameInput) {
+      nameInput.addEventListener('input', e => {
+        state.name = e.target.value;
+        checkStep4Valid();
+      });
+    }
+    if (emailInput) {
+      emailInput.addEventListener('input', e => {
+        state.email = e.target.value;
+        checkStep4Valid();
+      });
+    }
   }
 
-  function checkStep3Valid() {
+  function checkStep4Valid() {
     const btnNext = document.getElementById('tb-btn-next');
-    btnNext.disabled = !(state.name.trim() && state.email.trim() && state.email.includes('@'));
+    if (btnNext) {
+      btnNext.disabled = !(state.name.trim() && state.email.trim() && state.email.includes('@'));
+    }
   }
 
   function updateView() {
-    // Update step dots
     document.querySelectorAll('.tb-step-dot').forEach(d => {
       const step = parseInt(d.dataset.step);
       d.classList.remove('active', 'completed');
@@ -381,52 +465,61 @@
       else if (step < currentStep) d.classList.add('completed');
     });
 
-    // Update connector lines
     document.querySelectorAll('.tb-step-line').forEach(l => {
       const line = parseInt(l.dataset.line);
       if (line < currentStep) l.classList.add('active');
       else l.classList.remove('active');
     });
 
-    // Show active step content
     document.querySelectorAll('.tb-step-content').forEach(c => c.classList.remove('active'));
-    document.getElementById(`tb-step-${currentStep}`).classList.add('active');
+    const activeContent = document.getElementById(`tb-step-${currentStep}`);
+    if (activeContent) activeContent.classList.add('active');
 
-    // Update nav buttons
     const btnBack = document.getElementById('tb-btn-back');
     const btnNext = document.getElementById('tb-btn-next');
 
-    btnBack.style.visibility = currentStep === 1 ? 'hidden' : 'visible';
+    if (btnBack) btnBack.style.visibility = currentStep === 1 ? 'hidden' : 'visible';
 
     if (currentStep === 1) {
       btnNext.textContent = strings.btn_next;
       checkStep1Valid();
     } else if (currentStep === 2) {
       btnNext.textContent = strings.btn_next;
-      btnNext.disabled = false; // Tours are optional
+      btnNext.disabled = false;
     } else if (currentStep === 3) {
-      btnNext.textContent = strings.btn_send;
+      btnNext.textContent = strings.btn_next;
+      btnNext.disabled = false;
       renderStep3();
-      checkStep3Valid();
+    } else if (currentStep === 4) {
+      btnNext.textContent = strings.btn_send;
+      renderStep4();
+      checkStep4Valid();
     }
   }
 
   function bindEvents() {
-    document.getElementById('tb-btn-next').addEventListener('click', () => {
-      if (currentStep < 3) {
-        currentStep++;
-        updateView();
-      } else {
-        submitForm();
-      }
-    });
+    const btnNext = document.getElementById('tb-btn-next');
+    const btnBack = document.getElementById('tb-btn-back');
 
-    document.getElementById('tb-btn-back').addEventListener('click', () => {
-      if (currentStep > 1) {
-        currentStep--;
-        updateView();
-      }
-    });
+    if (btnNext) {
+      btnNext.addEventListener('click', () => {
+        if (currentStep < 4) {
+          currentStep++;
+          updateView();
+        } else {
+          submitForm();
+        }
+      });
+    }
+
+    if (btnBack) {
+      btnBack.addEventListener('click', () => {
+        if (currentStep > 1) {
+          currentStep--;
+          updateView();
+        }
+      });
+    }
   }
 
   async function submitForm() {
@@ -441,6 +534,13 @@
       const tour = tours.find(t => t.id === id);
       return tour ? tour.name : '';
     }).join(', ') || 'None';
+
+    const hotelMap = {
+      'casa_isabella': 'Casa de Isabella',
+      'casa_leda': 'Casa de Leda',
+      'villa_maria': 'Villa María Tayrona'
+    };
+    const selectedHotelNames = state.selectedHotels.map(id => hotelMap[id] || id).join(', ') || 'None selected';
 
     const transportLabel = state.transport === 'flight' ? strings.flight : strings.car;
     const timeDisplay    = state.arrivalTime ? timeLabels[state.arrivalTime] : 'N/A';
@@ -463,7 +563,7 @@
       "Arrival Time": timeDisplay,
       "Guests": `${state.adults} Adults, ${state.kids} Kids`,
       "Chosen Activities / Tours": selectedTourNames,
-      "Hotels / Accommodation": "Kali Hotels & Villa María Tayrona (0% VAT Tariff)"
+      "Chosen Hotels": selectedHotelNames
     };
 
     try {
@@ -492,15 +592,15 @@
   }
 
   function showSuccessView() {
-    const step3 = document.getElementById('tb-step-3');
+    const step4 = document.getElementById('tb-step-4');
     const nav = document.querySelector('.tb-nav');
     if (nav) nav.style.display = 'none';
 
     const msg = (strings.success_msg || 'Thank you, {name}! Your request has been delivered to your concierge. We will get back to you shortly.')
       .replace('{name}', state.name);
 
-    if (step3) {
-      step3.innerHTML = `
+    if (step4) {
+      step4.innerHTML = `
         <div class="tb-success-box" style="text-align: center; padding: 40px 20px;">
           <div style="width: 64px; height: 64px; background: rgba(34, 197, 94, 0.15); color: #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -514,7 +614,5 @@
     }
   }
 
-  // Initialize on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', init);
-
 })();
