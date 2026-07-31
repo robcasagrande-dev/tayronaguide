@@ -322,21 +322,21 @@
       {
         id: 'casa_isabella',
         name: 'Casa de Isabella',
-        tag: 'Santa Marta Historic Center',
+        tag: strings.tag_historic_center || 'Santa Marta Historic Center',
         image: '/images/rooms/isabella-top.jpg',
         desc: strings.hotel_isabella_desc || 'Boutique hotel in historic Santa Marta with rooftop pool & 0% VAT.'
       },
       {
         id: 'casa_leda',
         name: 'Casa de Leda',
-        tag: 'Santa Marta Historic Center',
+        tag: strings.tag_historic_center || 'Santa Marta Historic Center',
         image: '/images/rooms/leda-top.jpg',
         desc: strings.hotel_leda_desc || 'Luxury spa & boutique hotel in Santa Marta with 0% VAT.'
       },
       {
         id: 'villa_maria',
         name: 'Villa María Tayrona',
-        tag: 'Tayrona National Park Area',
+        tag: strings.tag_tayrona_area || 'Tayrona National Park Area',
         image: '/images/rooms/villamaria-top.jpg',
         desc: strings.hotel_villamaria_desc || 'Eco-luxury jungle lodge near El Zaino entrance with 0% VAT.'
       }
