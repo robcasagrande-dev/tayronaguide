@@ -809,7 +809,7 @@ def render_html(lang_code, data):
     tb_config = {
         "strings": TB_STRINGS.get(lang_code, TB_STRINGS["en"]),
         "tours": tb_tours,
-        "recipientEmail": "rob.casagrande@gmail.com"
+        "recipientEmail": "reservas@kalihotels.com"
     }
     tb_config_json = json.dumps(tb_config)
 
