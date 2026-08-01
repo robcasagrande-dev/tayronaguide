@@ -567,7 +567,7 @@
     };
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${emailTo}`, {
+      let response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -575,6 +575,17 @@
         },
         body: JSON.stringify(payload)
       });
+
+      if (!response.ok) {
+        response = await fetch(`https://formsubmit.co/ajax/${emailTo}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+      }
 
       if (response.ok) {
         showSuccessView();
