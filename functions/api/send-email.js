@@ -78,7 +78,7 @@ export async function onRequestPost(context) {
         },
       ],
       from: {
-        email: "concierge@tayronaguide.com",
+        email: "reservas.kalihotels@gmail.com",
         name: "Tayrona Guide Concierge",
       },
       reply_to: {
