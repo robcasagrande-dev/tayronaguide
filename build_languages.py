@@ -829,6 +829,9 @@ def render_html(lang_code, data):
   <link rel="alternate" hreflang="de" href="https://tayronaguide.com/de/" />
   <link rel="alternate" hreflang="x-default" href="https://tayronaguide.com/" />
   
+  <!-- Core Web Vitals LCP Optimization -->
+  <link rel="preload" as="image" href="{hero_img}" fetchpriority="high">
+
   <!-- Favicon & Site Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
@@ -1262,6 +1265,30 @@ def render_html(lang_code, data):
     </div>
   </section>
 
+  <!-- Section 7.5: Deep Semantic SEO Guide -->
+  <section class="section" id="comprehensive-guide">
+    <div class="container max-w-4xl" style="background-color: var(--card-bg); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 60px; border: 1px solid var(--border);">
+      <div class="section-header text-center">
+        <span class="section-tag" style="background: rgba(33, 150, 243, 0.1); color: #2196F3;">COMPREHENSIVE 2026 GUIDE</span>
+        <h2 class="section-title">The Ultimate Guide to Parque Tayrona & Santa Marta</h2>
+      </div>
+      <div class="prose" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-light);">
+        <p>Located on the breathtaking Caribbean coast of Colombia, <strong>Parque Nacional Natural Tayrona</strong> (Tayrona National Park) is one of South America's most treasured ecological reserves. Characterized by lush rainforests, pristine white-sand beaches, and the towering backdrop of the Sierra Nevada de Santa Marta, the park attracts nature lovers and adventurers from across the globe.</p>
+        
+        <h3 style="color: var(--text); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">How to Get to Parque Tayrona from Santa Marta</h3>
+        <p>Reaching Parque Tayrona from Santa Marta is a journey that requires careful planning, especially during the peak 2026 travel season. The park has two primary entrances: <strong>El Zaino</strong> (the main and most accessible gate) and <strong>Calabazo</strong> (preferred for advanced hikers). Visitors can opt for public buses that depart from the Santa Marta central market, take private taxis, or book <a href="https://parquetayrona.org/transportation" style="color: var(--primary); font-weight: bold; text-decoration: underline;">private transportation transfers</a>. However, the most stress-free and efficient method to arrive at the gates—while bypassing the notorious 2-hour morning queues—is to book an official <a href="#guided-tours" style="color: var(--primary); font-weight: bold; text-decoration: underline;">guided tour with Girona Travels</a>.</p>
+
+        <h3 style="color: var(--text); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">Entrance Fees and Park Passes (Boletas Parque Tayrona 2026)</h3>
+        <p>Purchasing official entrance tickets (<em>boletas</em>) is the most critical step of your visit. It is essential to know that <strong>Parque Tayrona tickets cannot be legally reserved online by individual tourists in advance</strong>. All payments are strictly processed at the park gates in cash (COP) or credit card upon arrival. For the 2026 season, foreign tourists can expect to pay approximately 90,000 COP, while Colombian nationals pay around 35,000 COP. Furthermore, all entrants are required by Colombian law to purchase daily medical insurance (approx. 6,000 COP/day). For a complete breakdown of fees and strict eco-policies (such as the ban on single-use plastics), consult the <a href="https://parquetayrona.org/guides/fees-hours-closures" style="color: var(--primary); font-weight: bold; text-decoration: underline;">Official Tayrona Ticket & Fee Guide</a>.</p>
+
+        <h3 style="color: var(--text); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">Hiking to Cabo San Juan del Guía & Arrecifes</h3>
+        <p>Once inside the El Zaino entrance, visitors typically embark on the main coastal hiking trail. This trek winds through dense jungle canopy and skirts dramatic shorelines. The first major milestone is <strong>Arrecifes</strong>, a stunning boulder-strewn beach where swimming is strictly prohibited due to deadly rip currents. Continuing westward, hikers pass La Piscina (a safe snorkeling bay) before finally arriving at the iconic <strong>Cabo San Juan del Guía</strong>. Famous for its hilltop gazebo and dual curved coves, Cabo San Juan is the crown jewel of Parque Tayrona. For detailed itineraries and safety ratings, review the <a href="https://parquetayrona.org/guides/beaches-detailed" style="color: var(--primary); font-weight: bold; text-decoration: underline;">Detailed Tayrona Beaches Guide</a>.</p>
+
+        <h3 style="color: var(--text); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">Where to Stay: 0% VAT Hospitality</h3>
+        <p>Finding the right accommodation can make or break your trip. For travelers seeking city convenience with rooftop pools and gourmet dining, <a href="https://kalihotels.com" target="_blank" style="color: var(--primary); font-weight: bold; text-decoration: underline;">Kali Hotel Santa Marta</a> is the premier choice in the historic center. For those who want to sleep immersed in the jungle sounds just minutes from the El Zaino park gates, <strong>Villa María Tayrona</strong> offers unparalleled eco-luxury. Both official lodging partners are participating in the groundbreaking 2026 Hospitality Equity Campaign, meaning both Colombians and foreigners enjoy a <strong>0% VAT (IVA) rate</strong> on their stays when booked through the <a href="#wizard" style="color: var(--primary); font-weight: bold; text-decoration: underline;">TayronaGuide Concierge</a>.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Section 8: FAQ Accordion -->
   <section class="section section-dark" id="faq">
