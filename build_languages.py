@@ -847,42 +847,89 @@ def render_html(lang_code, data):
   <script type="application/ld+json">
   {{
     "@context": "https://schema.org",
-    "@type": "TouristAttraction",
-    "name": "Tayrona National Park / Parque Nacional Natural Tayrona",
-    "alternateName": ["Parque Tayrona", "Tayrona National Park", "Parc Tayrona", "Parco Tayrona", "Nationalpark Tayrona"],
-    "description": "Official travel information, entrance ticket rules, queue fast-track tours, and 0% VAT stays in Tayrona National Park, Santa Marta, Colombia.",
-    "url": "https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}",
-    "image": "https://tayronaguide.com/images/tayrona_hero.jpg"
-  }}
-  </script>
-  <script type="application/ld+json">
-  {{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {{
-        "@type": "Question",
-        "name": "{data['faq']['q1']}",
-        "acceptedAnswer": {{
-          "@type": "Answer",
-          "text": "{data['faq']['a1']}"
+        "@type": "TouristAttraction",
+        "@id": "https://tayronaguide.com/#tayrona-park",
+        "name": "Parque Nacional Natural Tayrona / Tayrona National Park",
+        "alternateName": ["Parque Tayrona", "Tayrona Park", "Santa Marta Tayrona", "Cabo San Juan Tayrona"],
+        "description": "Official 2026 travel guide for Tayrona National Park and Santa Marta, Colombia. Includes entrance rates, fast-track tour bookings, Cabo San Juan treks, and 0% VAT stays.",
+        "url": "https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}",
+        "image": "https://tayronaguide.com/images/tayrona_hero.jpg",
+        "geo": {{
+          "@type": "GeoCoordinates",
+          "latitude": 11.3045,
+          "longitude": -74.0435
+        }},
+        "address": {{
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Marta",
+          "addressRegion": "Magdalena",
+          "addressCountry": "CO"
+        }},
+        "isAccessibleForFree": false,
+        "touristType": ["Nature Tourism", "Adventure Tourism", "Ecotourism", "Beach & Jungle Treks"]
+      }},
+      {{
+        "@type": "TravelAgency",
+        "@id": "https://tayronaguide.com/#agency",
+        "name": "Tayrona Guide & Girona Travels",
+        "url": "https://tayronaguide.com/",
+        "logo": "https://tayronaguide.com/images/tayrona_hero.jpg",
+        "telephone": "+573000000000",
+        "priceRange": "$$",
+        "address": {{
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Marta",
+          "addressRegion": "Magdalena",
+          "addressCountry": "CO"
         }}
       }},
       {{
-        "@type": "Question",
-        "name": "{data['faq']['q2']}",
-        "acceptedAnswer": {{
-          "@type": "Answer",
-          "text": "{data['faq']['a2']}"
-        }}
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Santa Marta & Tayrona Guide",
+            "item": "https://tayronaguide.com/"
+          }},
+          {{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "{data['lang_name']}",
+            "item": "https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}"
+          }}
+        ]
       }},
       {{
-        "@type": "Question",
-        "name": "{data['faq']['q3']}",
-        "acceptedAnswer": {{
-          "@type": "Answer",
-          "text": "{data['faq']['a3']}"
-        }}
+        "@type": "FAQPage",
+        "mainEntity": [
+          {{
+            "@type": "Question",
+            "name": "{data['faq']['q1']}",
+            "acceptedAnswer": {{
+              "@type": "Answer",
+              "text": "{data['faq']['a1']}"
+            }}
+          }},
+          {{
+            "@type": "Question",
+            "name": "{data['faq']['q2']}",
+            "acceptedAnswer": {{
+              "@type": "Answer",
+              "text": "{data['faq']['a2']}"
+            }}
+          }},
+          {{
+            "@type": "Question",
+            "name": "{data['faq']['q3']}",
+            "acceptedAnswer": {{
+              "@type": "Answer",
+              "text": "{data['faq']['a3']}"
+            }}
+          }}
+        ]
       }}
     ]
   }}

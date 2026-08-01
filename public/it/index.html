@@ -32,42 +32,89 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TouristAttraction",
-    "name": "Tayrona National Park / Parque Nacional Natural Tayrona",
-    "alternateName": ["Parque Tayrona", "Tayrona National Park", "Parc Tayrona", "Parco Tayrona", "Nationalpark Tayrona"],
-    "description": "Official travel information, entrance ticket rules, queue fast-track tours, and 0% VAT stays in Tayrona National Park, Santa Marta, Colombia.",
-    "url": "https://tayronaguide.com/",
-    "image": "https://tayronaguide.com/images/tayrona_hero.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Perché i colombiani pagano lo 0% di IVA sui soggiorni presso Kali Hotels e Villa María Tayrona?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Secondo la legge colombiana, i turisti stranieri sono esenti dall'IVA del 19% sugli alloggi. Come parte della nostra Campagna di Equità Alberghiera 2026, Girona Travel, Kali Hotel e Villa María Tayrona assorbono la tassa per i residenti colombiani, così TUTTI gli ospiti godono dello 0% di IVA!"
+        "@type": "TouristAttraction",
+        "@id": "https://tayronaguide.com/#tayrona-park",
+        "name": "Parque Nacional Natural Tayrona / Tayrona National Park",
+        "alternateName": ["Parque Tayrona", "Tayrona Park", "Santa Marta Tayrona", "Cabo San Juan Tayrona"],
+        "description": "Official 2026 travel guide for Tayrona National Park and Santa Marta, Colombia. Includes entrance rates, fast-track tour bookings, Cabo San Juan treks, and 0% VAT stays.",
+        "url": "https://tayronaguide.com/",
+        "image": "https://tayronaguide.com/images/tayrona_hero.jpg",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 11.3045,
+          "longitude": -74.0435
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Marta",
+          "addressRegion": "Magdalena",
+          "addressCountry": "CO"
+        },
+        "isAccessibleForFree": false,
+        "touristType": ["Nature Tourism", "Adventure Tourism", "Ecotourism", "Beach & Jungle Treks"]
+      },
+      {
+        "@type": "TravelAgency",
+        "@id": "https://tayronaguide.com/#agency",
+        "name": "Tayrona Guide & Girona Travels",
+        "url": "https://tayronaguide.com/",
+        "logo": "https://tayronaguide.com/images/tayrona_hero.jpg",
+        "telephone": "+573000000000",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Marta",
+          "addressRegion": "Magdalena",
+          "addressCountry": "CO"
         }
       },
       {
-        "@type": "Question",
-        "name": "Come funziona lo strumento Pianificatore di Viaggio?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Il Pianificatore di Viaggio ti permette di combinare soggiorni presso Kali Hotels a Santa Marta e Villa María Tayrona, insieme a trasferimenti privati e tour guidati ufficiali. Personalizziamo l'itinerario in base ai tuoi orari."
-        }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Santa Marta & Tayrona Guide",
+            "item": "https://tayronaguide.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Italiano",
+            "item": "https://tayronaguide.com/"
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Posso comprare i biglietti d'ingresso per Tayrona online prima di viaggiare?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. I pass d'ingresso ufficiali non possono essere prenotati online in anticipo da singoli turisti. Tuttavia, se prenoti un tour guidato con Girona Travels, la tua guida acquista i biglietti la mattina presto per farti saltare la fila."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Perché i colombiani pagano lo 0% di IVA sui soggiorni presso Kali Hotels e Villa María Tayrona?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Secondo la legge colombiana, i turisti stranieri sono esenti dall'IVA del 19% sugli alloggi. Come parte della nostra Campagna di Equità Alberghiera 2026, Girona Travel, Kali Hotel e Villa María Tayrona assorbono la tassa per i residenti colombiani, così TUTTI gli ospiti godono dello 0% di IVA!"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Come funziona lo strumento Pianificatore di Viaggio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Il Pianificatore di Viaggio ti permette di combinare soggiorni presso Kali Hotels a Santa Marta e Villa María Tayrona, insieme a trasferimenti privati e tour guidati ufficiali. Personalizziamo l'itinerario in base ai tuoi orari."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso comprare i biglietti d'ingresso per Tayrona online prima di viaggiare?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. I pass d'ingresso ufficiali non possono essere prenotati online in anticipo da singoli turisti. Tuttavia, se prenoti un tour guidato con Girona Travels, la tua guida acquista i biglietti la mattina presto per farti saltare la fila."
+            }
+          }
+        ]
       }
     ]
   }
