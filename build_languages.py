@@ -3,7 +3,7 @@ import json
 
 languages = {
     "en": {
-        "dir": "",
+        "dir": "en",
         "img_prefix": "/",
         "lang_name": "English",
         "flag": "🇬🇧",
@@ -143,7 +143,7 @@ languages = {
         }
     },
     "es": {
-        "dir": "es",
+        "dir": "",
         "img_prefix": "/",
         "lang_name": "Español",
         "flag": "🇪🇸",
@@ -1491,7 +1491,7 @@ def sync_to_dirs():
         if os.path.exists(img_src):
             shutil.copytree(img_src, img_dest, dirs_exist_ok=True)
 
-        for lang in ["es", "it", "fr", "de"]:
+        for lang in ["en", "it", "fr", "de"]:
             lang_src = os.path.join(base_dir, lang)
             lang_dest = os.path.join(target_dir, lang)
             if os.path.exists(lang_src):
