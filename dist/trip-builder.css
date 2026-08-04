@@ -417,3 +417,46 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Success Modal ───────────────────────────────────────── */
+.tb-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: tb-fade-in 0.3s ease;
+  padding: 20px;
+}
+
+.tb-modal-content {
+  background: var(--c-bg-mid, #1a1a1a);
+  border: 1px solid var(--c-border, #333);
+  border-radius: var(--r-xl, 16px);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  box-shadow: var(--sh-card, 0 10px 30px rgba(0,0,0,0.5));
+}
+
+.tb-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: var(--c-text-muted, #a1a1aa);
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.tb-modal-close:hover {
+  color: var(--c-text, #fff);
+}

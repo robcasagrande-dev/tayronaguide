@@ -614,26 +614,50 @@
   }
 
   function showSuccessView() {
-    const step4 = document.getElementById('tb-step-4');
-    const nav = document.querySelector('.tb-nav');
-    if (nav) nav.style.display = 'none';
+    const btnNext = document.getElementById('tb-btn-next');
+    if (btnNext) {
+      btnNext.disabled = false;
+      btnNext.textContent = strings.btn_send || 'Send Request';
+    }
+
+    if (window.history && window.history.pushState) {
+      const url = new URL(window.location);
+      url.searchParams.set('submission', 'success');
+      window.history.pushState({}, '', url);
+    }
 
     const msg = (strings.success_msg || 'Thank you, {name}! Your request has been delivered to your concierge. We will get back to you shortly.')
       .replace('{name}', state.name);
 
-    if (step4) {
-      step4.innerHTML = `
-        <div class="tb-success-box" style="text-align: center; padding: 40px 20px;">
-          <div style="width: 64px; height: 64px; background: rgba(34, 197, 94, 0.15); color: #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
+    const modalHtml = `
+      <div id="tb-success-modal" class="tb-modal-overlay">
+        <div class="tb-modal-content">
+          <button class="tb-modal-close" id="tb-close-modal" aria-label="Close">&times;</button>
+          <div class="tb-success-box" style="text-align: center;">
+            <div style="width: 64px; height: 64px; background: rgba(34, 197, 94, 0.15); color: #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h2 class="tb-step-title" style="margin-bottom: 12px;">${strings.success_title || 'Request Sent!'}</h2>
+            <p class="tb-step-subtitle" style="max-width: 500px; margin: 0 auto; color: #a1a1aa; line-height: 1.6;">${msg}</p>
           </div>
-          <h2 class="tb-step-title" style="margin-bottom: 12px;">${strings.success_title || 'Request Sent!'}</h2>
-          <p class="tb-step-subtitle" style="max-width: 500px; margin: 0 auto; color: #a1a1aa; line-height: 1.6;">${msg}</p>
         </div>
-      `;
-    }
+      </div>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+    document.getElementById('tb-close-modal').addEventListener('click', () => {
+      document.getElementById('tb-success-modal').remove();
+      currentStep = 1;
+      if (window.history && window.history.pushState) {
+        const url = new URL(window.location);
+        url.searchParams.delete('submission');
+        window.history.pushState({}, '', url);
+      }
+      updateView();
+    });
   }
 
   document.addEventListener('DOMContentLoaded', init);
