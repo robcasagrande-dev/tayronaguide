@@ -2,36 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tayronaguide.com/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tayronaguide.com/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://tayronaguide.com/es/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://tayronaguide.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tayronaguide.com/en/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://tayronaguide.com/it/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://tayronaguide.com/fr/" />
     <xhtml:link rel="alternate" hreflang="de" href="https://tayronaguide.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tayronaguide.com/" />
   </url>
   <url>
-    <loc>https://tayronaguide.com/es/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <loc>https://tayronaguide.com/en/</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tayronaguide.com/it/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tayronaguide.com/fr/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tayronaguide.com/de/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>

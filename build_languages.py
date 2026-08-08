@@ -813,6 +813,16 @@ def render_html(lang_code, data):
     }
     tb_config_json = json.dumps(tb_config)
 
+    canonical_path = f"/{data['dir']}/" if data.get("dir") else "/"
+    canonical_url = f"https://tayronaguide.com{canonical_path}"
+
+    hreflang_tags = ""
+    for code, ldata in languages.items():
+        l_path = f"/{ldata['dir']}/" if ldata.get("dir") else "/"
+        l_url = f"https://tayronaguide.com{l_path}"
+        hreflang_tags += f'  <link rel="alternate" hreflang="{code}" href="{l_url}" />\n'
+    hreflang_tags += '  <link rel="alternate" hreflang="x-default" href="https://tayronaguide.com/" />'
+
     html = f"""<!DOCTYPE html>
 <html lang="{lang_code}">
 <head>
@@ -821,13 +831,8 @@ def render_html(lang_code, data):
   <title>{data['title']}</title>
   <meta name="description" content="{data['description']}">
   <meta name="keywords" content="{data.get('keywords', 'Tayrona National Park, Tayrona guide, Kali Hotel, Villa María Tayrona, Girona Travel, Tayrona tickets, Parque Tayrona, Cabo San Juan, Santa Marta')}">
-  <link rel="canonical" href="https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}">
-  <link rel="alternate" hreflang="en" href="https://tayronaguide.com/" />
-  <link rel="alternate" hreflang="es" href="https://tayronaguide.com/es/" />
-  <link rel="alternate" hreflang="fr" href="https://tayronaguide.com/fr/" />
-  <link rel="alternate" hreflang="it" href="https://tayronaguide.com/it/" />
-  <link rel="alternate" hreflang="de" href="https://tayronaguide.com/de/" />
-  <link rel="alternate" hreflang="x-default" href="https://tayronaguide.com/" />
+  <link rel="canonical" href="{canonical_url}">
+{hreflang_tags}
   
   <!-- Core Web Vitals LCP Optimization -->
   <link rel="preload" as="image" href="{hero_img}" fetchpriority="high">
@@ -841,7 +846,7 @@ def render_html(lang_code, data):
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}">
+  <meta property="og:url" content="{canonical_url}">
   <meta property="og:title" content="{data['title']}">
   <meta property="og:description" content="{data['description']}">
   <meta property="og:image" content="https://tayronaguide.com/images/tayrona_hero.jpg">
@@ -857,7 +862,7 @@ def render_html(lang_code, data):
         "name": "Parque Nacional Natural Tayrona / Tayrona National Park",
         "alternateName": ["Parque Tayrona", "Tayrona Park", "Santa Marta Tayrona", "Cabo San Juan Tayrona"],
         "description": "Official 2026 travel guide for Tayrona National Park and Santa Marta, Colombia. Includes entrance rates, fast-track tour bookings, Cabo San Juan treks, and 0% VAT stays.",
-        "url": "https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}",
+        "url": "{canonical_url}",
         "image": "https://tayronaguide.com/images/tayrona_hero.jpg",
         "geo": {{
           "@type": "GeoCoordinates",
@@ -901,7 +906,7 @@ def render_html(lang_code, data):
             "@type": "ListItem",
             "position": 2,
             "name": "{data['lang_name']}",
-            "item": "https://tayronaguide.com{data['img_prefix'] if data['dir'] != '' else '/'}"
+            "item": "{canonical_url}"
           }}
         ]
       }},
